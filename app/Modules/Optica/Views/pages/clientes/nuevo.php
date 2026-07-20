@@ -140,6 +140,54 @@ Nuevo Cliente | Opticool
         >
     </div>
 
+    <div class="form-group">
+        <label for="fecha_nacimiento">
+            Fecha de Nacimiento
+        </label>
+
+        <input
+            type="date"
+            id="fecha_nacimiento"
+            name="fecha_nacimiento"
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="telefono">
+            Teléfono
+        </label>
+
+        <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="ocupacion">
+            Ocupación
+        </label>
+
+        <input
+            type="text"
+            id="ocupacion"
+            name="ocupacion"
+        >
+    </div>
+
+    <div class="form-group form-group--full">
+        <label for="domicilio">
+            Domicilio
+        </label>
+
+        <input
+            type="text"
+            id="domicilio"
+            name="domicilio"
+        >
+    </div>
+
 </div>
 
                     </section>
@@ -152,7 +200,166 @@ Nuevo Cliente | Opticool
 
                         <div class="clinical-history">
 
-                            <!-- Aquí van todos los campos del historial -->
+                            <div class="form-group">
+                                <label for="fecha_historial">
+                                    Fecha
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="fecha_historial"
+                                    name="fecha_historial">
+                            </div>
+
+                            <div class="form-group">
+                                <span class="form-group__label">
+                                    ¿Actualmente usa lentes?
+                                </span>
+
+                                <div class="radio-group">
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="usa_lentes_actualmente"
+                                            value="si">
+                                        Sí
+                                    </label>
+
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="usa_lentes_actualmente"
+                                            value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tipo_lente">
+                                    Tipo de lente
+                                </label>
+
+                                <select
+                                    id="tipo_lente"
+                                    name="tipo_lente">
+                                    <option value="">
+                                        Selecciona una opción
+                                    </option>
+
+                                    <option value="monofocal">
+                                        Monofocal
+                                    </option>
+
+                                    <option value="bifocal">
+                                        Bifocal
+                                    </option>
+
+                                    <option value="progresivo">
+                                        Progresivo
+                                    </option>
+
+                                    <option value="contacto">
+                                        Lente de contacto
+                                    </option>
+
+                                    <option value="otro">
+                                        Otro
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="form-group__label">
+                                    ¿Ha usado lentes anteriormente?
+                                </span>
+
+                                <div class="radio-group">
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="uso_lentes_anteriormente"
+                                            value="si">
+                                        Sí
+                                    </label>
+
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="uso_lentes_anteriormente"
+                                            value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tiempo_uso_lentes">
+                                    ¿Hace cuánto tiempo?
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="tiempo_uso_lentes"
+                                    name="tiempo_uso_lentes">
+                            </div>
+
+                            <div class="form-group">
+                                <span class="form-group__label">
+                                    Experiencia laboral
+                                </span>
+
+                                <div class="radio-group">
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="experiencia_laboral"
+                                            value="si">
+                                        Sí
+                                    </label>
+
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="experiencia_laboral"
+                                            value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tipo_exposicion">
+                                    Tipo de exposición
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="tipo_exposicion"
+                                    name="tipo_exposicion">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="antecedentes_patologicos">
+                                    Antecedentes patológicos
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="antecedentes_patologicos"
+                                    name="antecedentes_patologicos">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="antecedentes_familiares">
+                                    Antecedentes familiares
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="antecedentes_familiares"
+                                    name="antecedentes_familiares">
+                            </div>
 
                         </div>
 

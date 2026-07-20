@@ -1,24 +1,46 @@
-/* =====================================================
-   CONTENEDOR
-===================================================== */
+/*==================================================
+=            CONTENEDOR PRINCIPAL
+==================================================*/
 
 .new-client-page{
-    width:100%;
+
+    padding:40px 50px;
+
 }
 
 .new-client-form{
 
-    background:#fff;
+    background:#F7F4FD;
 
-    border-radius:20px;
+    border-radius:18px;
 
-    padding:40px;
+    padding:45px;
 
     display:flex;
 
     flex-direction:column;
 
-    gap:40px;
+    gap:45px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+=            TITULOS
+==================================================*/
+
+.new-client-page__heading{
+
+    margin:0;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:#1A1A1A;
+
 }
 
 .new-client-section{
@@ -31,15 +53,123 @@
 
 }
 
-.personal-data,
-.clinical-history {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
+.new-client-section__title{
+
+    margin:0;
+
+    color:#253BCE;
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+/*==================================================
+=            GRID
+==================================================*/
+
+.personal-data,
+.clinical-history{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:26px 35px;
+
+}
+
+/*==================================================
+=            INPUTS
+==================================================*/
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.form-group label,
+.form-group__label{
+
+    font-size:.9rem;
+
+    color:#5F5F5F;
+
+}
+
+.form-group input,
+.form-group select{
+
+    border:none;
+
+    border-bottom:2px solid #A8A8A8;
+
+    background:transparent;
+
+    padding:8px 2px;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+.form-group input:focus,
+.form-group select:focus{
+
+    border-color:#6D57FF;
+
+}
+
+.radio-group{
+
+    display:flex;
+
+    gap:25px;
+
+    margin-top:8px;
+
+}
+
+.new-client-page__actions{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.new-client-page__button{
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#FFF;
+
+    padding:12px 45px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.new-client-page__button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.form-group--full {
+    grid-column: 1 / -1;
 }
