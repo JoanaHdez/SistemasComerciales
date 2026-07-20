@@ -1,0 +1,71 @@
+/* ==========================================================
+   Utilidades globales
+   Archivo: utilities.css
+   Proyecto: Sistema de Gestión para Óptica
+
+   Contiene clases pequeñas y reutilizables.
+========================================================== */
+
+/* ==========================================================
+   Accesibilidad
+========================================================== */
+
+/*
+Oculta visualmente un elemento, pero lo mantiene disponible
+para lectores de pantalla.
+*/
+
+.sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ==========================================================
+   Visibilidad
+========================================================== */
+
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================================
+   Alineación de texto
+========================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* ==========================================================
+   Ancho
+========================================================== */
+
+.w-full {
+    width: 100%;
+}
+
+/* ==========================================================
+   Texto secundario
+========================================================== */
+
+.text-muted {
+    color: var(--color-text-muted);
+}

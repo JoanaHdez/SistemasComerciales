@@ -1,0 +1,45 @@
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.new-client-page{
+    width:100%;
+}
+
+.new-client-form{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+}
+
+.new-client-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.personal-data,
+.clinical-history {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

@@ -1,0 +1,24 @@
+/* ==========================================================
+   Layout: Auth
+   Archivo: auth.css
+   Proyecto: Sistema de Gestión para Óptica
+
+   Contiene únicamente la estructura del layout de
+   autenticación y pantallas de pantalla completa.
+========================================================== */
+
+/* ==========================================================
+   Layout principal
+========================================================== */
+
+.auth-layout {
+    min-height: 100vh;
+}
+
+/* ==========================================================
+   Contenedor principal
+========================================================== */
+
+.auth-layout__container {
+    min-height: inherit;
+}

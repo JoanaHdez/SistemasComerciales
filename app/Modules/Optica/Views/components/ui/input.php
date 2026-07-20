@@ -1,0 +1,3 @@
+<?php
+
+// Componente en desarrollo.
