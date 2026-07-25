@@ -13,5 +13,6 @@ $routes->group(
         $routes->get('menu', 'Inicio_Controller::menu');
         $routes->get('clientes', 'Clientes_Controller::index');
         $routes->get('clientes/nuevo', 'Clientes_Controller::nuevo');
+        $routes->get('clientes/nuevo/graduacion','Clientes_Controller::graduacion');
     }
 );

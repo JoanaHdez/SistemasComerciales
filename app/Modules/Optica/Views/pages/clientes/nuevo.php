@@ -104,91 +104,84 @@ Nuevo Cliente | Opticool
 
                         <div class="personal-data">
 
-    <div class="form-group">
-        <label for="apellido_paterno">
-            Apellido Paterno
-        </label>
+                            <div class="form-group">
+                                <label for="apellido_paterno">
+                                    Apellido Paterno
+                                </label>
 
-        <input
-            type="text"
-            id="apellido_paterno"
-            name="apellido_paterno"
-        >
-    </div>
+                                <input
+                                    type="text"
+                                    id="apellido_paterno"
+                                    name="apellido_paterno">
+                            </div>
 
-    <div class="form-group">
-        <label for="apellido_materno">
-            Apellido Materno
-        </label>
+                            <div class="form-group">
+                                <label for="apellido_materno">
+                                    Apellido Materno
+                                </label>
 
-        <input
-            type="text"
-            id="apellido_materno"
-            name="apellido_materno"
-        >
-    </div>
+                                <input
+                                    type="text"
+                                    id="apellido_materno"
+                                    name="apellido_materno">
+                            </div>
 
-    <div class="form-group">
-        <label for="nombre">
-            Nombre
-        </label>
+                            <div class="form-group">
+                                <label for="nombre">
+                                    Nombre
+                                </label>
 
-        <input
-            type="text"
-            id="nombre"
-            name="nombre"
-        >
-    </div>
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre">
+                            </div>
 
-    <div class="form-group">
-        <label for="fecha_nacimiento">
-            Fecha de Nacimiento
-        </label>
+                            <div class="form-group">
+                                <label for="fecha_nacimiento">
+                                    Fecha de Nacimiento
+                                </label>
 
-        <input
-            type="date"
-            id="fecha_nacimiento"
-            name="fecha_nacimiento"
-        >
-    </div>
+                                <input
+                                    type="date"
+                                    id="fecha_nacimiento"
+                                    name="fecha_nacimiento">
+                            </div>
 
-    <div class="form-group">
-        <label for="telefono">
-            Teléfono
-        </label>
+                            <div class="form-group">
+                                <label for="telefono">
+                                    Teléfono
+                                </label>
 
-        <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-        >
-    </div>
+                                <input
+                                    type="tel"
+                                    id="telefono"
+                                    name="telefono">
+                            </div>
 
-    <div class="form-group">
-        <label for="ocupacion">
-            Ocupación
-        </label>
+                            <div class="form-group">
+                                <label for="ocupacion">
+                                    Ocupación
+                                </label>
 
-        <input
-            type="text"
-            id="ocupacion"
-            name="ocupacion"
-        >
-    </div>
+                                <input
+                                    type="text"
+                                    id="ocupacion"
+                                    name="ocupacion">
+                            </div>
 
-    <div class="form-group form-group--full">
-        <label for="domicilio">
-            Domicilio
-        </label>
+                            <div class="form-group form-group--full">
+                                <label for="domicilio">
+                                    Domicilio
+                                </label>
 
-        <input
-            type="text"
-            id="domicilio"
-            name="domicilio"
-        >
-    </div>
+                                <input
+                                    type="text"
+                                    id="domicilio"
+                                    name="domicilio">
+                            </div>
 
-</div>
+                        </div>
 
                     </section>
 
@@ -365,13 +358,13 @@ Nuevo Cliente | Opticool
 
                     </section>
 
-                    <div class="new-client-page__actions">
-
-                        <button type="submit" class="new-client-page__button">
-                            Siguiente
-                        </button>
-
-                    </div>
+                    <button
+    type="button"
+    class="new-client-page__button"
+    onclick="window.location.href='<?= base_url('optica/clientes/nuevo/graduacion') ?>'"
+>
+    Siguiente
+</button>
 
                 </form>
 

@@ -1,0 +1,184 @@
+/* =====================================================
+   PÁGINA DE GRADUACIÓN
+===================================================== */
+
+.graduacion-page {
+    width: 100%;
+    padding: 28px 34px 36px;
+    background: #d8c3ff;
+}
+
+.graduacion-form {
+    width: 100%;
+    max-width: 1380px;
+
+    background: #f7f4fd;
+    border-radius: 18px;
+
+    padding: 36px 42px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    min-height: auto;
+}
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+.graduacion-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.graduacion-section__title {
+    margin: 0;
+    color: #1838d6;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.graduacion-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(320px, 0.8fr);
+    gap: 70px;
+    align-items: start;
+}
+
+/* =====================================================
+   COLUMNA DE OJOS
+===================================================== */
+
+.graduacion-left {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.graduacion-left h3 {
+    margin: 0;
+    text-align: center;
+    color: #777;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.eye-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    gap: 36px;
+}
+
+/* =====================================================
+   COLUMNA DERECHA
+===================================================== */
+
+.graduacion-right {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* =====================================================
+   CAMPOS
+===================================================== */
+
+.graduacion-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.graduacion-form .form-group label {
+    color: #777;
+    font-size: 1rem;
+}
+
+.graduacion-form .form-group input {
+    width: 100%;
+    min-height: 38px;
+    border: 0;
+    border-bottom: 1.5px solid #777;
+    background: transparent;
+    padding: 8px 2px;
+    color: #222;
+    font-size: 1rem;
+    outline: none;
+}
+
+.graduacion-form .form-group input:focus {
+    border-bottom-color: #6d57ff;
+}
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.graduacion-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2px;
+}
+
+.graduacion-actions button {
+    min-width: 110px;
+    border: 0;
+    border-radius: 10px;
+    background: #fff;
+    padding: 9px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.graduacion-actions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.09);
+}
+
+.graduacion-section + .graduacion-section {
+    margin-top: 4px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+    .graduacion-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .graduacion-right {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .graduacion-actions {
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .graduacion-page {
+        padding: 20px;
+    }
+
+    .graduacion-form {
+        padding: 24px 20px;
+    }
+
+    .eye-grid,
+    .graduacion-right {
+        grid-template-columns: 1fr;
+    }
+
+    .graduacion-actions {
+        justify-content: center;
+    }
+}

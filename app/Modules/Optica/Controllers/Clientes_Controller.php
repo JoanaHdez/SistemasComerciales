@@ -25,4 +25,11 @@ class Clientes_Controller extends BaseController
             'App\Modules\Optica\Views\pages\clientes\nuevo'
         );
     }
+
+    public function graduacion()
+    {
+        return view(
+            'App\Modules\Optica\Views\pages\clientes\graduacion'
+        );
+    }
 }
