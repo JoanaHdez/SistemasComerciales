@@ -1,0 +1,278 @@
+/* ==========================================================
+   Página Agenda
+========================================================== */
+
+.agenda-page{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+}
+
+.agenda-page__header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+    margin-bottom:32px;
+}
+
+.agenda-page__eyebrow{
+    display:block;
+    margin-bottom:6px;
+
+    color:#876ba5;
+    font-size:.76rem;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.agenda-page__title{
+    margin:0;
+
+    color:#2d203b;
+    font-size:2.35rem;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.agenda-page__description{
+    margin:12px 0 0;
+
+    max-width:620px;
+
+    color:#776b80;
+    line-height:1.6;
+}
+
+.agenda-page__button{
+    min-height:48px;
+    padding:0 22px;
+
+    border:0;
+    border-radius:12px;
+
+    background:#76539b;
+    color:#fff;
+
+    font:inherit;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.agenda-page__button:hover{
+    background:#624483;
+    transform:translateY(-1px);
+}
+
+/* ==========================================================
+   Layout principal
+========================================================== */
+
+.agenda-layout{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 340px;
+    gap:24px;
+    align-items:start;
+}
+
+.agenda-calendar,
+.agenda-sidebar{
+
+    background:#fff;
+
+    border:1px solid #e9e1ef;
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 14px 34px rgba(67,48,83,.07);
+
+    min-height:650px;
+
+}
+
+/* ==========================================================
+   Calendario
+========================================================== */
+
+.agenda-calendar__header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:28px;
+
+}
+
+.agenda-calendar__eyebrow{
+
+    display:block;
+
+    color:#876ba5;
+
+    font-size:.72rem;
+    font-weight:800;
+
+    letter-spacing:.08em;
+
+}
+
+.agenda-calendar__title{
+
+    margin:6px 0 0;
+
+    color:#2d203b;
+
+    font-size:1.8rem;
+    font-weight:800;
+
+}
+
+.agenda-calendar__navigation{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+.agenda-calendar__nav,
+.agenda-calendar__today{
+
+    height:42px;
+
+    padding:0 16px;
+
+    border:1px solid #e3d9eb;
+
+    background:#fff;
+
+    border-radius:11px;
+
+    cursor:pointer;
+
+    font:inherit;
+    font-weight:700;
+
+    transition:.2s;
+
+}
+
+.agenda-calendar__nav:hover,
+.agenda-calendar__today:hover{
+
+    background:#f7f3fa;
+
+}
+
+.agenda-weekdays{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    margin-bottom:14px;
+
+}
+
+.agenda-weekdays span{
+
+    text-align:center;
+
+    color:#867a90;
+
+    font-size:.78rem;
+    font-weight:700;
+
+}
+
+.agenda-calendar-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:10px;
+
+}
+
+/* ==========================================================
+   Día del calendario
+========================================================== */
+
+.agenda-day{
+
+    aspect-ratio:1;
+
+    border:1px solid #ece5f2;
+
+    border-radius:16px;
+
+    padding:12px;
+
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-end;
+
+    font-weight:700;
+
+    color:#453452;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.agenda-day:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 20px rgba(80,56,103,.10);
+
+}
+
+.agenda-day--other{
+
+    color:#c3b7cf;
+
+    background:#faf8fc;
+
+}
+
+.agenda-day--today{
+
+    background:#76539b;
+
+    color:#fff;
+
+    border-color:#76539b;
+
+}
+
+@media(max-width:1100px){
+
+    .agenda-layout{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .agenda-page__header{
+        flex-direction:column;
+    }
+
+    .agenda-page__button{
+        width:100%;
+    }
+
+}
