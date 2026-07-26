@@ -77,7 +77,7 @@
 
 .app-main {
     flex: 1;
-    padding: var(--spacing-xl);
+    padding: 32px 40px;
 }
 
 /* ==========================================================
@@ -129,15 +129,21 @@
 
 
 /* ==========================================================
-   Diseño visual del sidebar
+   Sidebar 2.0
 ========================================================== */
 
 .app-sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 1000;
+
+    width: var(--sidebar-width);
+    min-height: 100vh;
+    padding: 26px 18px 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    padding: 28px 22px;
 
     color: #ffffff;
     background:
@@ -149,114 +155,517 @@
 
     border-right: 0;
     box-shadow: 12px 0 30px rgba(55, 38, 72, 0.12);
+
+    overflow-y: auto;
+}
+
+.app-sidebar__top {
+    min-width: 0;
 }
 
 .app-sidebar__brand {
-    margin-bottom: 34px;
+    padding: 0 10px 24px;
+    margin-bottom: 18px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .app-sidebar__logo {
+    display: inline-block;
+
     color: #ffffff;
     font-size: 1.45rem;
     font-weight: 800;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
+    text-decoration: none;
 }
 
 .app-sidebar__subtitle {
     display: block;
-    margin-top: 4px;
+    margin-top: 5px;
 
-    color: rgba(255, 255, 255, 0.65);
-    font-size: 0.78rem;
-    font-weight: 600;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.7rem;
+    font-weight: 650;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
 .app-sidebar__nav {
     display: grid;
-    gap: 10px;
+    gap: 8px;
 }
 
-.app-sidebar__item {
+.app-sidebar__module {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.app-sidebar__module-button {
+    width: 100%;
+    min-height: 48px;
+    padding: 9px 11px;
+
     display: flex;
     align-items: center;
-    gap: 12px;
-
-    min-height: 48px;
-    padding: 10px 13px;
+    gap: 11px;
 
     color: rgba(255, 255, 255, 0.78);
+    background: transparent;
+    border: 0;
     border-radius: 14px;
 
-    font-size: 0.88rem;
-    font-weight: 650;
-    text-decoration: none;
+    font-family: inherit;
+    font-size: 0.87rem;
+    font-weight: 700;
+    text-align: left;
+
+    cursor: pointer;
 
     transition:
-        background-color 0.2s ease,
         color 0.2s ease,
+        background-color 0.2s ease,
         transform 0.2s ease;
 }
 
-.app-sidebar__item:hover {
+.app-sidebar__module-button:hover {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.1);
     transform: translateX(2px);
 }
 
-.app-sidebar__item--active {
+.app-sidebar__module-button--active {
     color: #4b365f;
     background: #ffffff;
     box-shadow: 0 10px 24px rgba(34, 22, 48, 0.2);
 }
 
-.app-sidebar__icon {
+.app-sidebar__module-icon {
+    width: 31px;
+    height: 31px;
+    flex: 0 0 31px;
+
     display: grid;
-    flex: 0 0 32px;
-
-    width: 32px;
-    height: 32px;
-
     place-items: center;
-
-    border-radius: 10px;
 
     color: inherit;
     background: rgba(255, 255, 255, 0.12);
-
-    font-size: 0.72rem;
-    font-weight: 800;
+    border-radius: 10px;
 }
 
-.app-sidebar__item--active .app-sidebar__icon {
+.app-sidebar__module-button--active
+.app-sidebar__module-icon {
     background: #eee8f5;
 }
 
+.app-sidebar__module-icon svg,
+.app-sidebar__chevron svg,
+.app-sidebar__footer-icon svg {
+    width: 17px;
+    height: 17px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.app-sidebar__module-label {
+    min-width: 0;
+    flex: 1;
+}
+
+.app-sidebar__chevron {
+    display: grid;
+    place-items: center;
+
+    transition: transform 0.25s ease;
+}
+
+.app-sidebar__chevron svg {
+    width: 15px;
+    height: 15px;
+}
+
+.app-sidebar__module--open
+.app-sidebar__chevron {
+    transform: rotate(90deg);
+}
+
+.app-sidebar__submenu {
+    max-height: 0;
+    overflow: hidden;
+
+    display: grid;
+    gap: 3px;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.3s ease,
+        opacity 0.2s ease,
+        padding 0.3s ease;
+}
+
+.app-sidebar__module--open
+.app-sidebar__submenu {
+    max-height: 220px;
+    padding: 7px 7px 8px 52px;
+
+    opacity: 1;
+}
+
+.app-sidebar__submenu-item {
+    position: relative;
+
+    padding: 8px 9px;
+
+    color: rgba(255, 255, 255, 0.64);
+    border-radius: 9px;
+
+    font-size: 0.74rem;
+    font-weight: 650;
+    line-height: 1.35;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.app-sidebar__submenu-item::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: -14px;
+
+    width: 5px;
+    height: 5px;
+
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+}
+
+.app-sidebar__submenu-item:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.app-sidebar__submenu-item--active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.app-sidebar__submenu-item--active::before {
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
 .app-sidebar__footer {
-    display: flex;
-    gap: 10px;
-    margin-top: 30px;
+    display: grid;
+    gap: 6px;
+
+    padding-top: 18px;
+    margin-top: 24px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .app-sidebar__footer-link {
-    display: grid;
+    min-height: 42px;
+    padding: 8px 10px;
 
-    width: 38px;
-    height: 38px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
 
-    place-items: center;
-
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.67);
     border-radius: 11px;
 
     font-size: 0.75rem;
-    font-weight: 800;
+    font-weight: 650;
     text-decoration: none;
 }
 
 .app-sidebar__footer-link:hover {
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.app-sidebar__footer-icon {
+    width: 28px;
+    height: 28px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.app-sidebar__overlay {
+    display: none;
+}
+
+/* ==========================================================
+   Sidebar responsive
+========================================================== */
+
+@media (max-width: 920px) {
+    .app-layout {
+        display: block;
+    }
+
+    .app-layout__content {
+        margin-left: 0;
+    }
+
+    .app-sidebar {
+        width: min(290px, 86vw);
+
+        transform: translateX(-105%);
+
+        transition: transform 0.3s ease;
+    }
+
+    .app-sidebar--open {
+        transform: translateX(0);
+    }
+
+    .app-sidebar__overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 950;
+
+        display: block;
+
+        background: rgba(29, 20, 38, 0.48);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease;
+    }
+
+    .app-sidebar__overlay--visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    body.app-sidebar-lock {
+        overflow: hidden;
+    }
+}
+
+/* ==========================================================
+   Header principal
+========================================================== */
+
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+
+    min-height: var(--header-height);
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid rgba(92, 71, 122, 0.1);
+    box-shadow: 0 4px 18px rgba(63, 43, 83, 0.04);
+    backdrop-filter: blur(14px);
+}
+
+.app-header__left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.app-header__brand {
+    color: #332743;
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.app-header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.app-header__nav a {
+    padding: 9px 12px;
+
+    color: #756a80;
+    border-radius: 10px;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.app-header__nav a:hover {
+    color: #583f75;
+    background: #f1ecf6;
+}
+
+.app-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-header__action {
+    display: grid;
+    width: 39px;
+    height: 39px;
+    place-items: center;
+
+    color: #684f83;
+    background: #f2edf7;
+    border: 0;
+    border-radius: 12px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.app-header__profile {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 5px 8px 5px 5px;
+
+    color: #3d314a;
+    background: transparent;
+    border: 0;
+    border-radius: 12px;
+
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.app-header__profile:hover {
+    background: #f7f4f9;
+}
+
+.app-header__avatar {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+
+    color: #ffffff;
+    background: #74599b;
+    border-radius: 11px;
+
+    font-size: 0.71rem;
+    font-weight: 800;
+}
+
+.app-header__profile-info {
+    display: grid;
+    line-height: 1.2;
+}
+
+.app-header__profile-info strong {
+    font-size: 0.77rem;
+}
+
+.app-header__profile-info small {
+    margin-top: 3px;
+    color: #978d9f;
+    font-size: 0.64rem;
+}
+
+.app-header__menu-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+
+    border: 0;
+    border-radius: 11px;
+    background: #f1ecf6;
+    cursor: pointer;
+}
+
+.app-header__menu-button span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 4px 0;
+
+    background: #654c81;
+    border-radius: 999px;
+}
+
+/* ==========================================================
+   Responsive del header
+========================================================== */
+
+@media (max-width: 1180px) {
+    .app-header__profile-info {
+        display: none;
+    }
+
+    .app-header__nav {
+        gap: 2px;
+    }
+
+    .app-header__nav a {
+        padding-inline: 9px;
+    }
+}
+
+@media (max-width: 920px) {
+    .app-header__menu-button {
+        display: block;
+    }
+
+    .app-header__nav {
+        display: none;
+    }
+
+    .app-header__brand {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .app-header {
+        padding: 0 14px;
+    }
+
+    .app-header__brand {
+        max-width: 180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .app-header__action {
+        display: none;
+    }
 }

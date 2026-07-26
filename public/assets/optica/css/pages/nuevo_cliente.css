@@ -1,175 +1,360 @@
-/*==================================================
-=            CONTENEDOR PRINCIPAL
-==================================================*/
+/* ==========================================================
+   Página: Nuevo cliente
+========================================================== */
 
-.new-client-page{
-
-    padding:40px 50px;
-
+.new-client-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.new-client-form{
+/* ==========================================================
+   Encabezado
+========================================================== */
 
-    background:#F7F4FD;
+.new-client-page__header {
+    margin-bottom: 30px;
 
-    border-radius:18px;
-
-    padding:45px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:45px;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.08);
-
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
 }
 
-/*==================================================
-=            TITULOS
-==================================================*/
+.new-client-page__eyebrow {
+    display: block;
+    margin-bottom: 6px;
 
-.new-client-page__heading{
-
-    margin:0;
-
-    font-size:2rem;
-
-    font-weight:700;
-
-    color:#1A1A1A;
-
+    color: #876ba5;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-.new-client-section{
+.new-client-page__heading {
+    margin: 0;
 
-    display:flex;
-
-    flex-direction:column;
-
-    gap:25px;
-
+    color: #2d203b;
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.1;
 }
 
-.new-client-section__title{
+.new-client-page__description {
+    margin: 12px 0 0;
 
-    margin:0;
-
-    color:#253BCE;
-
-    font-size:1.15rem;
-
-    font-weight:700;
-
+    color: #776b80;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-/*==================================================
-=            GRID
-==================================================*/
+.new-client-page__back {
+    min-height: 48px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #684d86;
+    background: #ffffff;
+
+    border: 1px solid #ded4e6;
+    border-radius: 13px;
+
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    box-shadow: 0 8px 20px rgba(67, 48, 83, 0.05);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.new-client-page__back:hover {
+    background: #f7f3fa;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Formulario
+========================================================== */
+
+.new-client-form {
+    width: 100%;
+
+    display: grid;
+    gap: 24px;
+}
+
+/* ==========================================================
+   Tarjetas de sección
+========================================================== */
+
+.new-client-section {
+    position: relative;
+
+    padding: 34px 40px;
+
+    background: #ffffff;
+    border: 1px solid #e9e1ef;
+    border-radius: 22px;
+
+    box-shadow: 0 14px 34px rgba(67, 48, 83, 0.07);
+}
+
+.new-client-section::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 40px;
+
+    width: 70px;
+    height: 4px;
+
+    background: #76539b;
+    border-radius: 0 0 999px 999px;
+}
+
+.new-client-section__title {
+    margin: 0 0 28px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #5e4679;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.new-client-section__title::before {
+    content: "";
+
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+
+    display: block;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #76539b 0 3px,
+            transparent 4px
+        ),
+        #efe8f5;
+
+    border-radius: 12px;
+}
+
+/* ==========================================================
+   Distribución de campos
+========================================================== */
 
 .personal-data,
-.clinical-history{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
-
-    gap:26px 35px;
-
-}
-
-/*==================================================
-=            INPUTS
-==================================================*/
-
-.form-group{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-
-}
-
-.form-group label,
-.form-group__label{
-
-    font-size:.9rem;
-
-    color:#5F5F5F;
-
-}
-
-.form-group input,
-.form-group select{
-
-    border:none;
-
-    border-bottom:2px solid #A8A8A8;
-
-    background:transparent;
-
-    padding:8px 2px;
-
-    outline:none;
-
-    font-size:15px;
-
-}
-
-.form-group input:focus,
-.form-group select:focus{
-
-    border-color:#6D57FF;
-
-}
-
-.radio-group{
-
-    display:flex;
-
-    gap:25px;
-
-    margin-top:8px;
-
-}
-
-.new-client-page__actions{
-
-    display:flex;
-
-    justify-content:center;
-
-}
-
-.new-client-page__button{
-
-    border:none;
-
-    border-radius:10px;
-
-    background:#FFF;
-
-    padding:12px 45px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.2s;
-
-}
-
-.new-client-page__button:hover{
-
-    transform:translateY(-2px);
-
+.clinical-history {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px 34px;
 }
 
 .form-group--full {
     grid-column: 1 / -1;
+}
+
+/* ==========================================================
+   Campos
+========================================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label,
+.form-group__label {
+    color: #5f5665;
+
+    font-size: 0.88rem;
+    font-weight: 650;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 13px;
+
+    color: #332b39;
+    background: #faf8fc;
+
+    border: 1px solid #ded6e5;
+    border-radius: 11px;
+    outline: none;
+
+    font: inherit;
+    font-size: 0.92rem;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #cbbfd4;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    background: #ffffff;
+    border-color: #8468a8;
+    box-shadow: 0 0 0 4px rgba(132, 104, 168, 0.12);
+}
+
+/* ==========================================================
+   Radios
+========================================================== */
+
+.radio-group {
+    min-height: 46px;
+    padding: 0 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    background: #faf8fc;
+    border: 1px solid #ded6e5;
+    border-radius: 11px;
+}
+
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #4f4655;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    min-height: auto;
+    padding: 0;
+
+    accent-color: #76539b;
+    box-shadow: none;
+}
+
+/* ==========================================================
+   Acciones
+========================================================== */
+
+.new-client-page__actions {
+    padding-top: 4px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.new-client-page__button {
+    min-width: 150px;
+    min-height: 50px;
+    padding: 0 28px;
+
+    color: #ffffff;
+    background: #76539b;
+
+    border: 0;
+    border-radius: 13px;
+
+    font: inherit;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 24px rgba(78, 52, 104, 0.18);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.new-client-page__button:hover {
+    background: #624483;
+    transform: translateY(-1px);
+    box-shadow: 0 13px 28px rgba(78, 52, 104, 0.22);
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 1050px) {
+    .personal-data,
+    .clinical-history {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .new-client-page__header {
+        flex-direction: column;
+    }
+
+    .new-client-page__back {
+        width: 100%;
+    }
+
+    .new-client-page__heading {
+        font-size: 1.9rem;
+    }
+
+    .new-client-section {
+        padding: 28px 22px;
+    }
+
+    .new-client-section::before {
+        left: 22px;
+    }
+
+    .personal-data,
+    .clinical-history {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group--full {
+        grid-column: auto;
+    }
+
+    .new-client-page__actions {
+        justify-content: stretch;
+    }
+
+    .new-client-page__button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .new-client-section {
+        padding: 24px 18px;
+        border-radius: 17px;
+    }
+
+    .radio-group {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding-block: 11px;
+    }
 }

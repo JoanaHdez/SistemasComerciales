@@ -1,15 +1,10 @@
-<?= $this->extend('App\Modules\Optica\Views\layouts\auth') ?>
+<?= $this->extend('App\Modules\Optica\Views\layouts\main') ?>
 
 <?= $this->section('title') ?>
-Nueva Venta | Opticool
+Nueva venta | Opticool
 <?= $this->endSection() ?>
 
 <?= $this->section('styles') ?>
-
-<link
-    rel="stylesheet"
-    href="<?= base_url('assets/optica/css/pages/clientes.css') ?>"
->
 
 <link
     rel="stylesheet"
@@ -20,194 +15,162 @@ Nueva Venta | Opticool
 
 <?= $this->section('content') ?>
 
-<section class="clients-page">
+<section class="sale-page">
 
-    <aside class="clients-sidebar">
+    <div class="sale-page__header">
 
-        <div class="clients-sidebar__brand">
-
-            <div class="clients-sidebar__logo">
-                Opticool
-            </div>
-
-            <span class="clients-sidebar__subtitle">
-                Óptica
+        <div>
+            <span class="sale-page__eyebrow">
+                GESTIÓN DE VENTAS
             </span>
 
+            <h1 class="sale-page__title">
+                Nueva venta
+            </h1>
+
+            <p class="sale-page__description">
+                Selecciona un cliente, agrega los productos y registra el pago de la venta.
+            </p>
         </div>
 
-        <nav
-            class="clients-sidebar__nav"
-            aria-label="Acciones de ventas"
+        <a
+            href="<?= base_url('optica/ventas/historial') ?>"
+            class="sale-page__back"
         >
+            Historial de ventas
+        </a>
 
-            <a
-                href="<?= base_url('optica/ventas/nueva') ?>"
-                class="clients-sidebar__item"
-            >
-                <span class="clients-sidebar__icon">+</span>
-                <span>Nueva Venta</span>
-            </a>
+    </div>
 
-            <a
-                href="#"
-                class="clients-sidebar__item"
-            >
-                <span class="clients-sidebar__icon">H</span>
-                <span>Historial Venta</span>
-            </a>
+    <form class="sale-form">
 
-        </nav>
+        <div class="sale-layout">
 
-        <div class="clients-sidebar__footer">
+            <div class="sale-content">
 
-            <a
-                href="#"
-                class="clients-sidebar__footer-link"
-                aria-label="Agenda"
-            >
-                A
-            </a>
+                <section class="sale-card">
 
-            <a
-                href="#"
-                class="clients-sidebar__footer-link"
-                aria-label="Perfil"
-            >
-                P
-            </a>
+                    <div class="sale-card__header">
 
-            <a
-                href="#"
-                class="clients-sidebar__footer-link"
-                aria-label="Configuración"
-            >
-                C
-            </a>
+                        <span class="sale-card__icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="8" r="4"></circle>
+                                <path d="M4 21a8 8 0 0 1 16 0"></path>
+                            </svg>
+                        </span>
 
-        </div>
-
-    </aside>
-
-    <div class="clients-page__main">
-
-        <nav
-            class="clients-topbar"
-            aria-label="Navegación principal"
-        >
-            <a href="<?= base_url('optica/menu') ?>">
-                Dashboard
-            </a>
-
-            <a href="#">
-                Pedidos
-            </a>
-
-            <a href="#">
-                Inventario
-            </a>
-
-            <a href="#">
-                Compras
-            </a>
-
-            <a href="#">
-                Reportes
-            </a>
-        </nav>
-
-        <main class="sale-page">
-
-            <form class="sale-form">
-
-                <div class="sale-layout">
-
-                    <section class="sale-main">
-
-                        <h1 class="sale-title">
-                            Venta
-                        </h1>
-
-                        <div class="sale-divider"></div>
-
-                        <section class="sale-section">
-
-                            <h2 class="sale-section__title">
-                                Cliente:
+                        <div>
+                            <h2 class="sale-card__title">
+                                Cliente
                             </h2>
 
-                            <div class="sale-client-row">
+                            <p class="sale-card__description">
+                                Busca un cliente registrado o crea uno nuevo.
+                            </p>
+                        </div>
 
-                                <div class="sale-client-search">
+                    </div>
 
-                                    <label
-                                        for="cliente_busqueda"
-                                        class="sr-only"
-                                    >
-                                        Buscar cliente
-                                    </label>
+                    <div class="sale-client-row">
 
-                                    <input
-                                        type="search"
-                                        id="cliente_busqueda"
-                                        name="cliente_busqueda"
-                                        placeholder="Buscar"
-                                    >
+                        <div class="sale-client-search">
 
-                                    <span class="sale-client-name">
-                                        Nombre del cliente
-                                    </span>
+                            <label
+                                for="cliente_busqueda"
+                                class="sr-only"
+                            >
+                                Buscar cliente
+                            </label>
 
-                                </div>
+                            <input
+                                type="search"
+                                id="cliente_busqueda"
+                                name="cliente_busqueda"
+                                placeholder="Ej. María López o 55 1234 5678"
+                            >
 
-                                <div class="sale-client-actions">
+                            <span class="sale-client-name">
+                                Ningún cliente seleccionado
+                            </span>
 
-                                    <button
-                                        type="button"
-                                        class="sale-small-button"
-                                    >
-                                        Buscar
-                                    </button>
+                        </div>
 
-                                    <a
-                                        href="<?= base_url('optica/clientes/nuevo') ?>"
-                                        class="sale-small-button"
-                                    >
-                                        Nuevo Cliente
-                                    </a>
+                        <div class="sale-client-actions">
 
-                                </div>
+                            <button
+                                type="button"
+                                class="sale-button sale-button--primary"
+                            >
+                                Buscar
+                            </button>
 
-                            </div>
+                            <a
+                                href="<?= base_url('optica/clientes/nuevo') ?>"
+                                class="sale-button sale-button--secondary"
+                            >
+                                Nuevo cliente
+                            </a>
 
-                        </section>
+                        </div>
 
-                        <section class="sale-section">
+                    </div>
 
-                            <h2 class="sale-section__title">
-                                Fecha:
+                </section>
+
+                <section class="sale-card">
+
+                    <div class="sale-card__header">
+
+                        <span class="sale-card__icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect
+                                    x="3"
+                                    y="5"
+                                    width="18"
+                                    height="16"
+                                    rx="2"
+                                ></rect>
+                                <path d="M16 3v4"></path>
+                                <path d="M8 3v4"></path>
+                                <path d="M3 11h18"></path>
+                            </svg>
+                        </span>
+
+                        <div>
+                            <h2 class="sale-card__title">
+                                Datos de la venta
                             </h2>
+
+                            <p class="sale-card__description">
+                                Define la fecha y el estado de pago.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="sale-data-grid">
+
+                        <div class="sale-form-group">
+                            <label for="fecha_venta">
+                                Fecha de venta
+                            </label>
 
                             <input
                                 type="date"
                                 id="fecha_venta"
                                 name="fecha_venta"
-                                class="sale-date-input"
                                 value="<?= date('Y-m-d') ?>"
                             >
+                        </div>
 
-                        </section>
-
-                        <section class="sale-section">
-
-                            <h2 class="sale-section__title">
-                                Estado de Pago
-                            </h2>
+                        <div class="sale-form-group">
+                            <label for="estado_pago">
+                                Estado de pago
+                            </label>
 
                             <select
                                 id="estado_pago"
                                 name="estado_pago"
-                                class="sale-payment-select"
                             >
                                 <option value="">
                                     Selecciona una opción
@@ -225,136 +188,166 @@ Nueva Venta | Opticool
                                     Pagado
                                 </option>
                             </select>
+                        </div>
 
-                        </section>
+                    </div>
 
-                        <div class="sale-divider"></div>
+                </section>
 
-                        <section class="sale-products">
+                <section class="sale-card">
 
-                            <div class="sale-products__header">
+                    <div class="sale-products__header">
 
-                                <h2 class="sale-section__title">
+                        <div class="sale-card__header">
+
+                            <span class="sale-card__icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M3 3h2l2.4 10.2a2 2 0 0 0 2 1.5h7.7a2 2 0 0 0 2-1.6L21 6H6"></path>
+                                    <circle cx="10" cy="20" r="1"></circle>
+                                    <circle cx="18" cy="20" r="1"></circle>
+                                </svg>
+                            </span>
+
+                            <div>
+                                <h2 class="sale-card__title">
                                     Productos
                                 </h2>
 
-                                <button
-                                    type="button"
-                                    class="sale-add-product"
-                                    aria-label="Agregar producto"
-                                >
-                                    +
-                                </button>
-
+                                <p class="sale-card__description">
+                                    Agrega los productos incluidos en la venta.
+                                </p>
                             </div>
 
-                            <div class="sale-table-wrapper">
-
-                                <table class="sale-table">
-
-                                    <thead>
-                                        <tr>
-                                            <th>Producto</th>
-                                            <th>Cantidad</th>
-                                            <th>Precio</th>
-                                            <th>Descuento</th>
-                                            <th>Subtotal</th>
-                                            <th>Eliminar</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-
-                                        <tr class="sale-table__empty">
-                                            <td colspan="6">
-                                                No hay productos agregados.
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-
-                                </table>
-
-                            </div>
-
-                        </section>
-
-                    </section>
-
-                    <aside class="sale-summary">
-
-                        <div class="sale-summary__item">
-
-                            <span class="sale-summary__label">
-                                Subtotal
-                            </span>
-
-                            <span class="sale-summary__value">
-                                $0.00
-                            </span>
-
                         </div>
 
-                        <div class="sale-summary__item">
+                        <button
+                            type="button"
+                            class="sale-add-product"
+                        >
+                            <span>+</span>
+                            Agregar producto
+                        </button>
 
-                            <label
-                                for="descuento_venta"
-                                class="sale-summary__label"
-                            >
-                                Descuento
-                            </label>
+                    </div>
 
-                            <input
-                                type="number"
-                                id="descuento_venta"
-                                name="descuento_venta"
-                                class="sale-summary__input"
-                                min="0"
-                                step="0.01"
-                                value="0"
-                            >
+                    <div class="sale-table-wrapper">
 
-                        </div>
+                        <table class="sale-table">
 
-                        <div class="sale-summary__item sale-summary__item--total">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio</th>
+                                    <th>Descuento</th>
+                                    <th>Subtotal</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
 
-                            <span class="sale-summary__label">
-                                Total
-                            </span>
+                            <tbody>
 
-                            <span class="sale-summary__value">
-                                $0.00
-                            </span>
+                                <tr class="sale-table__empty">
+                                    <td colspan="6">
+                                        No hay productos agregados.
+                                    </td>
+                                </tr>
 
-                        </div>
+                            </tbody>
 
-                        <div class="sale-summary__actions">
+                        </table>
 
-                            <button
-                                type="submit"
-                                class="sale-summary__button"
-                            >
-                                Guardar
-                            </button>
+                    </div>
 
-                            <button
-                                type="button"
-                                class="sale-summary__button"
-                            >
-                                Cancelar
-                            </button>
+                </section>
 
-                        </div>
+            </div>
 
-                    </aside>
+            <aside class="sale-summary">
+
+                <div class="sale-summary__header">
+
+                    <span class="sale-summary__icon">
+                        $
+                    </span>
+
+                    <div>
+                        <h2>Resumen</h2>
+                        <p>Importes de la venta</p>
+                    </div>
 
                 </div>
 
-            </form>
+                <div class="sale-summary__item">
 
-        </main>
+                    <span class="sale-summary__label">
+                        Subtotal
+                    </span>
 
-    </div>
+                    <strong class="sale-summary__value">
+                        $0.00
+                    </strong>
+
+                </div>
+
+                <div class="sale-summary__item">
+
+                    <label
+                        for="descuento_venta"
+                        class="sale-summary__label"
+                    >
+                        Descuento
+                    </label>
+
+                    <input
+                        type="number"
+                        id="descuento_venta"
+                        name="descuento_venta"
+                        class="sale-summary__input"
+                        min="0"
+                        step="0.01"
+                        value="0"
+                    >
+
+                </div>
+
+                <div class="sale-summary__separator"></div>
+
+                <div class="sale-summary__item sale-summary__item--total">
+
+                    <span class="sale-summary__label">
+                        Total
+                    </span>
+
+                    <strong class="sale-summary__total">
+                        $0.00
+                    </strong>
+
+                </div>
+
+                <div class="sale-summary__actions">
+
+                    <button
+                        type="submit"
+                        class="sale-button sale-button--primary"
+                    >
+                        Guardar venta
+                    </button>
+
+                    <button
+                        type="button"
+                        class="sale-button sale-button--secondary"
+                    >
+                        Cancelar
+                    </button>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </form>
 
 </section>
 

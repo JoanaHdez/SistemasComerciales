@@ -1,310 +1,618 @@
-/* =====================================================
-   PÁGINA DE VENTA
-===================================================== */
+/* ==========================================================
+   Página: Nueva venta
+========================================================== */
 
 .sale-page {
     width: 100%;
-    min-height: calc(100vh - 88px);
-    padding: 28px 34px 400px;
-    background: #d8c3ff;
+    max-width: 1400px;
+    margin: 0 auto;
 }
+
+/* ==========================================================
+   Encabezado
+========================================================== */
+
+.sale-page__header {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.sale-page__eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #876ba5;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.sale-page__title {
+    margin: 0;
+
+    color: #2d203b;
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.sale-page__description {
+    margin: 12px 0 0;
+
+    color: #776b80;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.sale-page__back {
+    min-height: 48px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #684d86;
+    background: #ffffff;
+
+    border: 1px solid #ded4e6;
+    border-radius: 13px;
+
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    box-shadow: 0 8px 20px rgba(67, 48, 83, 0.05);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sale-page__back:hover {
+    background: #f7f3fa;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Distribución general
+========================================================== */
 
 .sale-form {
     width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
 }
 
 .sale-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 300px;
-    gap: 44px;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 24px;
     align-items: start;
 }
 
-/* =====================================================
-   COLUMNA PRINCIPAL
-===================================================== */
-
-.sale-main {
-    width: 100%;
-    max-width: 720px;
-    min-width: 0;
+.sale-content {
+    display: grid;
+    gap: 24px;
 }
 
-.sale-title {
-    margin: 0 0 12px;
-    color: #1538d6;
-    font-size: 1.2rem;
-    font-weight: 700;
+/* ==========================================================
+   Tarjetas
+========================================================== */
+
+.sale-card {
+    position: relative;
+
+    padding: 30px 34px;
+
+    background: #ffffff;
+    border: 1px solid #e9e1ef;
+    border-radius: 22px;
+
+    box-shadow: 0 14px 34px rgba(67, 48, 83, 0.07);
 }
 
-.sale-divider {
-    width: 100%;
-    height: 1px;
-    margin: 10px 0 18px;
-    background: rgba(65, 65, 65, 0.55);
+.sale-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 34px;
+
+    width: 68px;
+    height: 4px;
+
+    background: #76539b;
+    border-radius: 0 0 999px 999px;
 }
 
-.sale-section {
-    margin-bottom: 22px;
+.sale-card__header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
-.sale-section__title {
-    margin: 0 0 10px;
-    color: #1538d6;
-    font-size: 1rem;
-    font-weight: 700;
+.sale-card__icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+
+    display: grid;
+    place-items: center;
+
+    color: #76539b;
+    background: #efe8f5;
+    border-radius: 13px;
 }
 
-/* =====================================================
-   CLIENTE
-===================================================== */
+.sale-card__icon svg {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sale-card__title {
+    margin: 0;
+
+    color: #49365d;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.sale-card__description {
+    margin: 5px 0 0;
+
+    color: #8a7f91;
+    font-size: 0.87rem;
+    line-height: 1.4;
+}
+
+/* ==========================================================
+   Cliente
+========================================================== */
 
 .sale-client-row {
+    margin-top: 24px;
+
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 105px;
-    gap: 14px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
     align-items: start;
 }
 
 .sale-client-search {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 10px;
 }
 
 .sale-client-search input {
     width: 100%;
-    min-height: 36px;
-    border: 0;
+    min-height: 50px;
+    padding: 0 15px;
+
+    color: #332b39;
+    background: #faf8fc;
+
+    border: 1px solid #ded6e5;
     border-radius: 12px;
-    background: #fff;
-    padding: 8px 14px;
     outline: none;
+
+    font: inherit;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.sale-client-search input:focus {
+    background: #ffffff;
+    border-color: #8468a8;
+    box-shadow: 0 0 0 4px rgba(132, 104, 168, 0.12);
 }
 
 .sale-client-name {
     color: #8b8191;
-    font-size: 0.95rem;
+    font-size: 0.84rem;
 }
 
 .sale-client-actions {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
-.sale-small-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 105px;
-    min-height: 34px;
-    border: 0;
+/* ==========================================================
+   Datos de la venta
+========================================================== */
+
+.sale-data-grid {
+    margin-top: 24px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.sale-form-group {
+    display: grid;
+    gap: 9px;
+}
+
+.sale-form-group label {
+    color: #5f5665;
+    font-size: 0.88rem;
+    font-weight: 650;
+}
+
+.sale-form-group input,
+.sale-form-group select {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 13px;
+
+    color: #332b39;
+    background: #faf8fc;
+
+    border: 1px solid #ded6e5;
     border-radius: 11px;
-    background: #fff;
-    padding: 7px 14px;
-    color: #171717;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* =====================================================
-   FECHA Y ESTADO DE PAGO
-===================================================== */
-
-.sale-date-input {
-    width: 190px;
-    border: 0;
-    background: transparent;
-    padding: 5px 0;
-    color: #7e7485;
-    font-size: 0.95rem;
     outline: none;
+
+    font: inherit;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.sale-payment-select {
-    width: 250px;
-    min-height: 34px;
-    border: 0;
-    border-radius: 10px;
-    background: #fff;
-    padding: 7px 12px;
-    color: #777;
-    outline: none;
+.sale-form-group input:focus,
+.sale-form-group select:focus {
+    background: #ffffff;
+    border-color: #8468a8;
+    box-shadow: 0 0 0 4px rgba(132, 104, 168, 0.12);
 }
 
-/* =====================================================
-   PRODUCTOS
-===================================================== */
+/* ==========================================================
+   Productos
+========================================================== */
 
 .sale-products__header {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.sale-products__header .sale-section__title {
-    margin: 0;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .sale-add-product {
-    width: 24px;
-    height: 24px;
+    min-height: 44px;
+    padding: 0 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    color: #684d86;
+    background: #f1ebf5;
+
     border: 0;
-    border-radius: 50%;
-    background: #fff;
-    color: #7f6aff;
-    font-weight: 700;
+    border-radius: 11px;
+
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 800;
+
     cursor: pointer;
+}
+
+.sale-add-product:hover {
+    background: #e6daee;
+}
+
+.sale-add-product span {
+    font-size: 1.1rem;
 }
 
 .sale-table-wrapper {
     width: 100%;
-    margin-top: 18px;
+    margin-top: 24px;
     overflow-x: auto;
+
+    border: 1px solid #e6deeb;
+    border-radius: 15px;
 }
 
 .sale-table {
     width: 100%;
+    min-width: 750px;
+
     border-collapse: collapse;
 }
 
 .sale-table th,
 .sale-table td {
-    padding: 10px 6px;
+    padding: 15px 16px;
+
     text-align: left;
-    white-space: nowrap;
+    vertical-align: middle;
+
+    border-bottom: 1px solid #eee8f1;
 }
 
 .sale-table th {
-    color: #2f2a32;
-    font-size: 0.9rem;
-    font-weight: 700;
+    color: #554761;
+    background: #f7f3fa;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    white-space: nowrap;
 }
 
 .sale-table td {
     color: #716a74;
-    font-size: 0.9rem;
+    background: #ffffff;
+    font-size: 0.87rem;
 }
 
 .sale-table__empty td {
-    padding-top: 28px;
+    padding: 34px 20px;
+
+    color: #918697;
     text-align: center;
-    color: #8b8191;
 }
 
-/* =====================================================
-   RESUMEN
-===================================================== */
+/* ==========================================================
+   Resumen
+========================================================== */
 
 .sale-summary {
-    width: 250px;
-    border-radius: 16px;
-    background: rgba(247, 244, 253, 0.92);
-    padding: 26px 28px;
-    display: flex;
-    flex-direction: column;
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+
+    padding: 28px;
+
+    display: grid;
     gap: 22px;
+
+    background: #ffffff;
+    border: 1px solid #e9e1ef;
+    border-radius: 22px;
+
+    box-shadow: 0 14px 34px rgba(67, 48, 83, 0.08);
+}
+
+.sale-summary__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sale-summary__icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    color: #ffffff;
+    background: #76539b;
+    border-radius: 13px;
+
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.sale-summary__header h2 {
+    margin: 0;
+
+    color: #49365d;
+    font-size: 1.1rem;
+}
+
+.sale-summary__header p {
+    margin: 4px 0 0;
+
+    color: #918697;
+    font-size: 0.8rem;
 }
 
 .sale-summary__item {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 8px;
 }
 
 .sale-summary__label {
-    color: #1538d6;
-    font-size: 1rem;
+    color: #6a5b75;
+    font-size: 0.84rem;
     font-weight: 700;
 }
 
 .sale-summary__value {
-    color: #817885;
-    font-size: 0.95rem;
+    color: #3d3147;
+    font-size: 1rem;
 }
 
 .sale-summary__input {
     width: 100%;
-    border: 0;
-    background: transparent;
-    padding: 2px 0;
-    color: #817885;
-    font-size: 0.95rem;
+    min-height: 44px;
+    padding: 0 12px;
+
+    color: #332b39;
+    background: #faf8fc;
+
+    border: 1px solid #ded6e5;
+    border-radius: 10px;
     outline: none;
+
+    font: inherit;
+}
+
+.sale-summary__input:focus {
+    border-color: #8468a8;
+    box-shadow: 0 0 0 4px rgba(132, 104, 168, 0.12);
+}
+
+.sale-summary__separator {
+    height: 1px;
+    background: #e8e0ed;
 }
 
 .sale-summary__item--total {
-    margin-top: 2px;
+    gap: 10px;
+}
+
+.sale-summary__total {
+    color: #5d4178;
+    font-size: 1.8rem;
+    font-weight: 800;
 }
 
 .sale-summary__actions {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: 8px;
+    display: grid;
+    gap: 10px;
 }
 
-.sale-summary__button {
-    min-width: 90px;
-    flex: 0 1 auto;
-    min-height: 34px;
-    padding: 7px 16px;
-    border: 0;
+/* ==========================================================
+   Botones
+========================================================== */
+
+.sale-button {
+    min-height: 46px;
+    padding: 0 18px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     border-radius: 11px;
-    background: #fff;
-    color: #171717;
-    font-weight: 700;
+
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none;
+
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-/* =====================================================
-   RESPONSIVE
-===================================================== */
+.sale-button--primary {
+    color: #ffffff;
+    background: #76539b;
+    border: 0;
+
+    box-shadow: 0 8px 18px rgba(78, 52, 104, 0.16);
+}
+
+.sale-button--primary:hover {
+    background: #624483;
+    transform: translateY(-1px);
+}
+
+.sale-button--secondary {
+    color: #684d86;
+    background: #ffffff;
+
+    border: 1px solid #ded4e6;
+}
+
+.sale-button--secondary:hover {
+    background: #f7f3fa;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Utilidades
+========================================================== */
+
+.sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+
+    border: 0;
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
 
 @media (max-width: 1100px) {
     .sale-layout {
         grid-template-columns: 1fr;
-        gap: 32px;
     }
 
     .sale-summary {
-        max-width: 520px;
+        position: static;
     }
 }
 
-@media (max-width: 768px) {
-    .sale-page {
-        padding: 24px 20px 34px;
+@media (max-width: 760px) {
+    .sale-page__header {
+        flex-direction: column;
     }
 
-    .sale-client-row {
+    .sale-page__back {
+        width: 100%;
+    }
+
+    .sale-page__title {
+        font-size: 1.9rem;
+    }
+
+    .sale-card {
+        padding: 28px 22px;
+    }
+
+    .sale-card::before {
+        left: 22px;
+    }
+
+    .sale-client-row,
+    .sale-data-grid {
         grid-template-columns: 1fr;
     }
 
     .sale-client-actions {
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
-    .sale-date-input,
-    .sale-payment-select {
+    .sale-client-actions .sale-button {
         width: 100%;
     }
 
-    .sale-summary {
-        max-width: none;
-        padding: 24px 20px;
+    .sale-products__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .sale-add-product {
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .sale-summary__actions {
-        flex-direction: column;
+    .sale-card,
+    .sale-summary {
+        padding: 22px 18px;
+        border-radius: 17px;
     }
 }

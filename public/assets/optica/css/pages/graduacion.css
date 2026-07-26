@@ -1,176 +1,389 @@
-/* =====================================================
-   PÁGINA DE GRADUACIÓN
-===================================================== */
+/* ==========================================================
+   Página: Graduación
+========================================================== */
 
 .graduacion-page {
     width: 100%;
-    padding: 28px 34px 36px;
-    background: #d8c3ff;
+    max-width: 1400px;
+    margin: 0 auto;
 }
+
+/* ==========================================================
+   Encabezado
+========================================================== */
+
+.graduacion-page__header {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.graduacion-page__eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #876ba5;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.graduacion-page__heading {
+    margin: 0;
+
+    color: #2d203b;
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.graduacion-page__description {
+    margin: 12px 0 0;
+
+    color: #776b80;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.graduacion-page__back {
+    min-height: 48px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #684d86;
+    background: #ffffff;
+
+    border: 1px solid #ded4e6;
+    border-radius: 13px;
+
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    box-shadow: 0 8px 20px rgba(67, 48, 83, 0.05);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.graduacion-page__back:hover {
+    background: #f7f3fa;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Formulario
+========================================================== */
 
 .graduacion-form {
     width: 100%;
-    max-width: 1380px;
 
-    background: #f7f4fd;
-    border-radius: 18px;
-
-    padding: 36px 42px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-
-    min-height: auto;
+    display: grid;
+    gap: 24px;
 }
 
-/* =====================================================
-   SECCIONES
-===================================================== */
+/* ==========================================================
+   Tarjetas principales
+========================================================== */
 
 .graduacion-section {
+    position: relative;
+
+    padding: 34px 40px;
+
+    background: #ffffff;
+    border: 1px solid #e9e1ef;
+    border-radius: 22px;
+
+    box-shadow: 0 14px 34px rgba(67, 48, 83, 0.07);
+}
+
+.graduacion-section::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 40px;
+
+    width: 70px;
+    height: 4px;
+
+    background: #76539b;
+    border-radius: 0 0 999px 999px;
+}
+
+.graduacion-section__header {
+    margin-bottom: 28px;
+
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    align-items: center;
+    gap: 14px;
+}
+
+.graduacion-section__icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+
+    display: grid;
+    place-items: center;
+
+    color: #76539b;
+    background: #efe8f5;
+    border-radius: 13px;
+}
+
+.graduacion-section__icon svg {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .graduacion-section__title {
     margin: 0;
-    color: #1838d6;
-    font-size: 1.2rem;
-    font-weight: 700;
+
+    color: #49365d;
+    font-size: 1.22rem;
+    font-weight: 800;
 }
+
+.graduacion-section__description {
+    margin: 5px 0 0;
+
+    color: #8a7f91;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+/* ==========================================================
+   Distribución
+========================================================== */
 
 .graduacion-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.8fr) minmax(320px, 0.8fr);
-    gap: 70px;
+    grid-template-columns:
+        minmax(0, 1.75fr)
+        minmax(280px, 0.75fr);
+
+    gap: 32px;
     align-items: start;
 }
 
-/* =====================================================
-   COLUMNA DE OJOS
-===================================================== */
-
 .graduacion-left {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+    display: grid;
+    gap: 18px;
 }
 
-.graduacion-left h3 {
-    margin: 0;
-    text-align: center;
-    color: #777;
-    font-size: 1rem;
-    font-weight: 400;
+.graduacion-right {
+    padding: 22px;
+
+    display: grid;
+    gap: 18px;
+
+    background: #faf8fc;
+    border: 1px solid #e7dfec;
+    border-radius: 17px;
+}
+
+/* ==========================================================
+   Tarjetas por ojo
+========================================================== */
+
+.eye-card {
+    padding: 22px;
+
+    background: #faf8fc;
+    border: 1px solid #e7dfec;
+    border-radius: 17px;
+}
+
+.eye-card h3 {
+    margin: 0 0 18px;
+
+    color: #5f4b72;
+    font-size: 0.92rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .eye-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(150px, 1fr));
-    gap: 36px;
-}
-
-/* =====================================================
-   COLUMNA DERECHA
-===================================================== */
-
-.graduacion-right {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
 
-/* =====================================================
-   CAMPOS
-===================================================== */
+/* ==========================================================
+   Campos
+========================================================== */
 
 .graduacion-form .form-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 9px;
 }
 
 .graduacion-form .form-group label {
-    color: #777;
-    font-size: 1rem;
+    color: #5f5665;
+    font-size: 0.88rem;
+    font-weight: 650;
 }
 
-.graduacion-form .form-group input {
+.graduacion-form .form-group input,
+.graduacion-form .form-group textarea {
     width: 100%;
-    min-height: 38px;
-    border: 0;
-    border-bottom: 1.5px solid #777;
-    background: transparent;
-    padding: 8px 2px;
-    color: #222;
-    font-size: 1rem;
+    min-height: 46px;
+    padding: 0 13px;
+
+    color: #332b39;
+    background: #ffffff;
+
+    border: 1px solid #ded6e5;
+    border-radius: 11px;
     outline: none;
+
+    font: inherit;
+    font-size: 0.92rem;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.graduacion-form .form-group input:focus {
-    border-bottom-color: #6d57ff;
+.graduacion-form .form-group textarea {
+    min-height: 110px;
+    padding-block: 12px;
+    resize: vertical;
 }
 
-/* =====================================================
-   BOTONES
-===================================================== */
+.graduacion-form .form-group input:hover,
+.graduacion-form .form-group textarea:hover {
+    border-color: #cbbfd4;
+}
+
+.graduacion-form .form-group input:focus,
+.graduacion-form .form-group textarea:focus {
+    border-color: #8468a8;
+    box-shadow: 0 0 0 4px rgba(132, 104, 168, 0.12);
+}
+
+/* ==========================================================
+   Acciones
+========================================================== */
 
 .graduacion-actions {
     display: flex;
     justify-content: flex-end;
-    margin-top: 2px;
 }
 
-.graduacion-actions button {
-    min-width: 110px;
-    border: 0;
-    border-radius: 10px;
-    background: #fff;
-    padding: 9px 24px;
-    font-weight: 700;
+.graduacion-form__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.graduacion-button {
+    min-height: 48px;
+    padding: 0 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-decoration: none;
+
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.graduacion-actions button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.09);
+.graduacion-button--primary {
+    color: #ffffff;
+    background: #76539b;
+    border: 0;
+
+    box-shadow: 0 10px 24px rgba(78, 52, 104, 0.18);
 }
 
-.graduacion-section + .graduacion-section {
-    margin-top: 4px;
+.graduacion-button--primary:hover {
+    background: #624483;
+    transform: translateY(-1px);
+
+    box-shadow: 0 13px 28px rgba(78, 52, 104, 0.22);
 }
 
-/* =====================================================
-   RESPONSIVE
-===================================================== */
+.graduacion-button--secondary {
+    color: #684d86;
+    background: #ffffff;
 
-@media (max-width: 1100px) {
+    border: 1px solid #ded4e6;
+}
+
+.graduacion-button--secondary:hover {
+    background: #f7f3fa;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 1050px) {
     .graduacion-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
     }
 
     .graduacion-right {
-        display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .graduacion-actions {
+    .graduacion-right .graduacion-actions {
         align-items: flex-end;
     }
 }
 
-@media (max-width: 768px) {
-    .graduacion-page {
-        padding: 20px;
+@media (max-width: 760px) {
+    .graduacion-page__header {
+        flex-direction: column;
     }
 
-    .graduacion-form {
-        padding: 24px 20px;
+    .graduacion-page__back {
+        width: 100%;
+    }
+
+    .graduacion-page__heading {
+        font-size: 1.9rem;
+    }
+
+    .graduacion-section {
+        padding: 28px 22px;
+    }
+
+    .graduacion-section::before {
+        left: 22px;
     }
 
     .eye-grid,
@@ -178,7 +391,23 @@
         grid-template-columns: 1fr;
     }
 
-    .graduacion-actions {
-        justify-content: center;
+    .graduacion-form__footer {
+        flex-direction: column-reverse;
+    }
+
+    .graduacion-form__footer .graduacion-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .graduacion-section {
+        padding: 24px 18px;
+        border-radius: 17px;
+    }
+
+    .eye-card,
+    .graduacion-right {
+        padding: 18px;
     }
 }
