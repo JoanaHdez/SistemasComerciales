@@ -115,19 +115,60 @@ Agenda | Opticool
 
         <aside class="agenda-sidebar">
 
-            <span class="agenda-calendar__eyebrow">
-                PRÓXIMAS CITAS
+    <div class="agenda-sidebar__header">
+
+        <span class="agenda-sidebar__eyebrow">
+            CITAS DEL DÍA
+        </span>
+
+        <h2
+            class="agenda-sidebar__title"
+            id="selected-date-title"
+        >
+            Selecciona un día
+        </h2>
+
+        <p
+            class="agenda-sidebar__summary"
+            id="selected-date-summary"
+        >
+            Consulta las citas programadas para la fecha seleccionada.
+        </p>
+
+    </div>
+
+    <div
+        class="agenda-appointments"
+        id="appointments-list"
+    >
+
+        <div class="agenda-empty">
+
+            <span class="agenda-empty__icon">
+                📅
             </span>
 
-            <h2 class="agenda-calendar__title">
-                Citas programadas
-            </h2>
+            <h3 class="agenda-empty__title">
+                Sin fecha seleccionada
+            </h3>
 
-            <p>
-                Aquí mostraremos las próximas citas registradas.
+            <p class="agenda-empty__text">
+                Selecciona un día del calendario para consultar sus citas.
             </p>
 
-        </aside>
+        </div>
+
+    </div>
+
+    <button
+        type="button"
+        class="agenda-sidebar__button"
+        id="sidebar-new-appointment"
+    >
+        + Agendar cita
+    </button>
+
+</aside>
 
     </div>
 
