@@ -113,3 +113,150 @@
 .page__description {
     color: var(--color-text-muted);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   Diseño visual del sidebar
+========================================================== */
+
+.app-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 28px 22px;
+
+    color: #ffffff;
+    background:
+        linear-gradient(
+            180deg,
+            #5f477d 0%,
+            #443254 100%
+        );
+
+    border-right: 0;
+    box-shadow: 12px 0 30px rgba(55, 38, 72, 0.12);
+}
+
+.app-sidebar__brand {
+    margin-bottom: 34px;
+}
+
+.app-sidebar__logo {
+    color: #ffffff;
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.app-sidebar__subtitle {
+    display: block;
+    margin-top: 4px;
+
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.app-sidebar__nav {
+    display: grid;
+    gap: 10px;
+}
+
+.app-sidebar__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 48px;
+    padding: 10px 13px;
+
+    color: rgba(255, 255, 255, 0.78);
+    border-radius: 14px;
+
+    font-size: 0.88rem;
+    font-weight: 650;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.app-sidebar__item:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(2px);
+}
+
+.app-sidebar__item--active {
+    color: #4b365f;
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(34, 22, 48, 0.2);
+}
+
+.app-sidebar__icon {
+    display: grid;
+    flex: 0 0 32px;
+
+    width: 32px;
+    height: 32px;
+
+    place-items: center;
+
+    border-radius: 10px;
+
+    color: inherit;
+    background: rgba(255, 255, 255, 0.12);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.app-sidebar__item--active .app-sidebar__icon {
+    background: #eee8f5;
+}
+
+.app-sidebar__footer {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.app-sidebar__footer-link {
+    display: grid;
+
+    width: 38px;
+    height: 38px;
+
+    place-items: center;
+
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 11px;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.app-sidebar__footer-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.18);
+}

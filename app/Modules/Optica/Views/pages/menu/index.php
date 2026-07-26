@@ -8,8 +8,7 @@ Menú principal | Opticool
 
 <link
     rel="stylesheet"
-    href="<?= base_url('assets/optica/css/pages/menu.css') ?>"
->
+    href="<?= base_url('assets/optica/css/pages/menu.css') ?>">
 
 <?= $this->endSection() ?>
 
@@ -49,13 +48,12 @@ Menú principal | Opticool
         <div class="main-menu__actions">
 
             <a
-    href="<?= base_url('optica/clientes') ?>"
-    class="main-menu__button"
->
-    Cliente
-</a>
+                href="<?= base_url('optica/clientes') ?>"
+                class="main-menu__button">
+                Cliente
+            </a>
 
-            <a href="#" class="main-menu__button">
+            <a href="<?= base_url('optica/consulta') ?>" class="main-menu__button">
                 Consulta
             </a>
 

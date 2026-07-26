@@ -1,0 +1,310 @@
+/* =====================================================
+   PÁGINA DE VENTA
+===================================================== */
+
+.sale-page {
+    width: 100%;
+    min-height: calc(100vh - 88px);
+    padding: 28px 34px 400px;
+    background: #d8c3ff;
+}
+
+.sale-form {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.sale-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 44px;
+    align-items: start;
+}
+
+/* =====================================================
+   COLUMNA PRINCIPAL
+===================================================== */
+
+.sale-main {
+    width: 100%;
+    max-width: 720px;
+    min-width: 0;
+}
+
+.sale-title {
+    margin: 0 0 12px;
+    color: #1538d6;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.sale-divider {
+    width: 100%;
+    height: 1px;
+    margin: 10px 0 18px;
+    background: rgba(65, 65, 65, 0.55);
+}
+
+.sale-section {
+    margin-bottom: 22px;
+}
+
+.sale-section__title {
+    margin: 0 0 10px;
+    color: #1538d6;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* =====================================================
+   CLIENTE
+===================================================== */
+
+.sale-client-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 105px;
+    gap: 14px;
+    align-items: start;
+}
+
+.sale-client-search {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sale-client-search input {
+    width: 100%;
+    min-height: 36px;
+    border: 0;
+    border-radius: 12px;
+    background: #fff;
+    padding: 8px 14px;
+    outline: none;
+}
+
+.sale-client-name {
+    color: #8b8191;
+    font-size: 0.95rem;
+}
+
+.sale-client-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sale-small-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 105px;
+    min-height: 34px;
+    border: 0;
+    border-radius: 11px;
+    background: #fff;
+    padding: 7px 14px;
+    color: #171717;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* =====================================================
+   FECHA Y ESTADO DE PAGO
+===================================================== */
+
+.sale-date-input {
+    width: 190px;
+    border: 0;
+    background: transparent;
+    padding: 5px 0;
+    color: #7e7485;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.sale-payment-select {
+    width: 250px;
+    min-height: 34px;
+    border: 0;
+    border-radius: 10px;
+    background: #fff;
+    padding: 7px 12px;
+    color: #777;
+    outline: none;
+}
+
+/* =====================================================
+   PRODUCTOS
+===================================================== */
+
+.sale-products__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sale-products__header .sale-section__title {
+    margin: 0;
+}
+
+.sale-add-product {
+    width: 24px;
+    height: 24px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    color: #7f6aff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.sale-table-wrapper {
+    width: 100%;
+    margin-top: 18px;
+    overflow-x: auto;
+}
+
+.sale-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sale-table th,
+.sale-table td {
+    padding: 10px 6px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.sale-table th {
+    color: #2f2a32;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.sale-table td {
+    color: #716a74;
+    font-size: 0.9rem;
+}
+
+.sale-table__empty td {
+    padding-top: 28px;
+    text-align: center;
+    color: #8b8191;
+}
+
+/* =====================================================
+   RESUMEN
+===================================================== */
+
+.sale-summary {
+    width: 250px;
+    border-radius: 16px;
+    background: rgba(247, 244, 253, 0.92);
+    padding: 26px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.sale-summary__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sale-summary__label {
+    color: #1538d6;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.sale-summary__value {
+    color: #817885;
+    font-size: 0.95rem;
+}
+
+.sale-summary__input {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 2px 0;
+    color: #817885;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.sale-summary__item--total {
+    margin-top: 2px;
+}
+
+.sale-summary__actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.sale-summary__button {
+    min-width: 90px;
+    flex: 0 1 auto;
+    min-height: 34px;
+    padding: 7px 16px;
+    border: 0;
+    border-radius: 11px;
+    background: #fff;
+    color: #171717;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+    .sale-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .sale-summary {
+        max-width: 520px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sale-page {
+        padding: 24px 20px 34px;
+    }
+
+    .sale-client-row {
+        grid-template-columns: 1fr;
+    }
+
+    .sale-client-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sale-date-input,
+    .sale-payment-select {
+        width: 100%;
+    }
+
+    .sale-summary {
+        max-width: none;
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sale-summary__actions {
+        flex-direction: column;
+    }
+}

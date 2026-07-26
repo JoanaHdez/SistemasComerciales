@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+        content="width=device-width, initial-scale=1.0">
 
     <title>
         <?= $this->renderSection('title') ?: 'Sistema de Gestión para Óptica' ?>
     </title>
 
     <link rel="stylesheet" href="<?= base_url('assets/optica/css/base/variables.css') ?>">
-<link rel="stylesheet" href="<?= base_url('assets/optica/css/base/global.css') ?>">
-<link rel="stylesheet" href="<?= base_url('assets/optica/css/base/utilities.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/base/global.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/base/utilities.css') ?>">
 
-<link rel="stylesheet" href="<?= base_url('assets/optica/css/layouts/main.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/layouts/main.css') ?>">
 
-<link rel="stylesheet" href="<?= base_url('assets/optica/css/components/breadcrumb.css') ?>">
-<link rel="stylesheet" href="<?= base_url('assets/optica/css/components/alerts.css') ?>">
-
-<?= $this->renderSection('styles') ?>
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/sidebar.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/navbar.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/breadcrumb.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/alerts.css') ?>">
 
     <?= $this->renderSection('styles') ?>
+
 </head>
 
 <body>
@@ -68,4 +69,5 @@
     <?= $this->renderSection('scripts') ?>
 
 </body>
+
 </html>

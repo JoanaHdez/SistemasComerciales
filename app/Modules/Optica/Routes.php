@@ -14,5 +14,7 @@ $routes->group(
         $routes->get('clientes', 'Clientes_Controller::index');
         $routes->get('clientes/nuevo', 'Clientes_Controller::nuevo');
         $routes->get('clientes/nuevo/graduacion','Clientes_Controller::graduacion');
+        $routes->get('ventas/nueva', 'Ventas_Controller::nueva');
+        $routes->get('consulta', 'Consulta_Controller::index');
     }
 );
