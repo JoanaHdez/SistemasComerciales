@@ -35,9 +35,12 @@
             Pedidos
         </a>
 
-        <a href="#">
-            Inventario
-        </a>
+        <a
+    href="<?= base_url('optica/inventario') ?>"
+    class="main-menu__nav-link"
+>
+    Inventario
+</a>
 
         <a href="#">
             Compras

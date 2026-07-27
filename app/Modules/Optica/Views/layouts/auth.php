@@ -15,7 +15,6 @@
 
     <?= $this->renderSection('styles') ?>
 
-    <?= $this->renderSection('styles') ?>
 </head>
 
 <body>

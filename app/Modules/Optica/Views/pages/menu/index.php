@@ -8,7 +8,8 @@ Menú principal | Opticool
 
 <link
     rel="stylesheet"
-    href="<?= base_url('assets/optica/css/pages/menu.css') ?>">
+    href="<?= base_url('assets/optica/css/pages/menu.css') ?>"
+>
 
 <?= $this->endSection() ?>
 
@@ -27,15 +28,8 @@ Menú principal | Opticool
 
     <div class="main-menu__container">
 
-        <nav class="main-menu__nav" aria-label="Navegación principal">
-            <a href="#" class="main-menu__nav-link">Dashboard</a>
-            <a href="#" class="main-menu__nav-link">Pedidos</a>
-            <a href="#" class="main-menu__nav-link">Inventario</a>
-            <a href="#" class="main-menu__nav-link">Compras</a>
-            <a href="#" class="main-menu__nav-link">Reportes</a>
-        </nav>
-
         <div class="main-menu__brand">
+
             <div class="main-menu__logo-placeholder">
                 Opticool
             </div>
@@ -43,41 +37,67 @@ Menú principal | Opticool
             <p class="main-menu__subtitle">
                 Óptica
             </p>
+
         </div>
 
         <div class="main-menu__actions">
 
             <a
                 href="<?= base_url('optica/clientes') ?>"
-                class="main-menu__button">
+                class="main-menu__button"
+            >
                 Cliente
             </a>
 
-            <a href="<?= base_url('optica/consulta') ?>" class="main-menu__button">
+            <a
+                href="<?= base_url('optica/consulta') ?>"
+                class="main-menu__button"
+            >
                 Consulta
             </a>
 
-            <a href="#" class="main-menu__button">
+            <a
+                href="<?= base_url('optica/agenda') ?>"
+                class="main-menu__button"
+            >
                 Agenda
             </a>
 
-            <a href="#" class="main-menu__button">
+            <a
+                href="#"
+                class="main-menu__button"
+            >
                 Nueva Venta
             </a>
 
         </div>
 
-        <div class="main-menu__footer-actions" aria-label="Acciones secundarias">
+        <div
+            class="main-menu__footer-actions"
+            aria-label="Acciones secundarias"
+        >
 
-            <a href="#" class="main-menu__footer-icon" aria-label="Configuración">
+            <a
+                href="#"
+                class="main-menu__footer-icon"
+                aria-label="Configuración"
+            >
                 <span>CF</span>
             </a>
 
-            <a href="#" class="main-menu__footer-icon" aria-label="Perfil">
+            <a
+                href="#"
+                class="main-menu__footer-icon"
+                aria-label="Perfil"
+            >
                 <span>PF</span>
             </a>
 
-            <a href="#" class="main-menu__footer-icon" aria-label="Salir">
+            <a
+                href="#"
+                class="main-menu__footer-icon"
+                aria-label="Salir"
+            >
                 <span>SA</span>
             </a>
 

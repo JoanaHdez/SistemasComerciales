@@ -65,7 +65,6 @@
 
     <script src="<?= base_url('assets/optica/js/global.js') ?>"></script>
     <script src="<?= base_url('assets/optica/js/layout.js') ?>"></script>
-    <script src="<?= base_url('assets/optica/js/agenda.js') ?>"></script>
 
     <?= $this->renderSection('scripts') ?>
 

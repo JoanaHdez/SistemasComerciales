@@ -21,13 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonHoy = document.getElementById("calendar-today");
     const botonSiguiente = document.getElementById("calendar-next");
 
-    const tituloFechaSeleccionada = document.getElementById(
-        "selected-date-title",
-    );
+    const tituloFechaSeleccionada = document.getElementById("selected-date-title",);
 
-    const resumenFechaSeleccionada = document.getElementById(
-        "selected-date-summary",
-    );
+    const resumenFechaSeleccionada = document.getElementById("selected-date-summary",);
+
+    const appointmentModal = new Modal("appointment-modal");
 
     const listaCitas = document.getElementById("appointments-list");
 
@@ -44,6 +42,30 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("No se encontraron los elementos de la agenda.");
         return;
     }
+
+    const botonNuevaCita = document.getElementById(
+        "open-appointment-modal",
+    );
+
+    const botonNuevaCitaSidebar = document.getElementById(
+        "sidebar-new-appointment",
+    );
+
+    const botonCancelarCita = document.getElementById(
+        "appointment-cancel",
+    );
+
+    botonNuevaCita?.addEventListener("click", () => {
+        appointmentModal.open();
+    });
+
+    botonNuevaCitaSidebar?.addEventListener("click", () => {
+        appointmentModal.open();
+    });
+
+    botonCancelarCita?.addEventListener("click", () => {
+        appointmentModal.close();
+    });
 
     const hoy = new Date();
 
@@ -249,8 +271,8 @@ document.addEventListener("DOMContentLoaded", () => {
         resumenFechaSeleccionada.textContent = `${citasSimuladas.length} citas programadas`;
 
         listaCitas.innerHTML = citasSimuladas
-    .map(
-        (cita) => `
+            .map(
+                (cita) => `
             <article
                 class="agenda-appointment"
                 data-appointment-id="${cita.id}"
@@ -320,11 +342,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </article>
         `,
-    )
-    .join("");
+            )
+            .join("");
 
-activarAccionesCitas(citasSimuladas);
- }
+        activarAccionesCitas(citasSimuladas);
+    }
 
     /*
      * Datos temporales para diseñar la interfaz.
@@ -421,69 +443,70 @@ activarAccionesCitas(citasSimuladas);
     }
 
     function activarAccionesCitas(citas) {
-    const botonesAccion = listaCitas.querySelectorAll(
-        ".agenda-appointment__action",
-    );
+        const botonesAccion = listaCitas.querySelectorAll(
+            ".agenda-appointment__action",
+        );
 
-    botonesAccion.forEach((boton) => {
-        boton.addEventListener("click", (evento) => {
-            evento.stopPropagation();
+        botonesAccion.forEach((boton) => {
+            boton.addEventListener("click", (evento) => {
+                evento.stopPropagation();
 
-            const tarjeta = boton.closest(
-                ".agenda-appointment",
-            );
-
-            if (!tarjeta) {
-                return;
-            }
-
-            const idCita = Number(
-                tarjeta.dataset.appointmentId,
-            );
-
-            const cita = citas.find(
-                (elemento) => elemento.id === idCita,
-            );
-
-            if (!cita) {
-                console.error(
-                    "No se encontró la cita seleccionada.",
+                const tarjeta = boton.closest(
+                    ".agenda-appointment",
                 );
 
-                return;
-            }
+                if (!tarjeta) {
+                    return;
+                }
 
-            const accion = boton.dataset.action;
+                const idCita = Number(
+                    tarjeta.dataset.appointmentId,
+                );
 
-            ejecutarAccionCita(accion, cita);
+                const cita = citas.find(
+                    (elemento) => elemento.id === idCita,
+                );
+
+                if (!cita) {
+                    console.error(
+                        "No se encontró la cita seleccionada.",
+                    );
+
+                    return;
+                }
+
+                const accion = boton.dataset.action;
+
+                ejecutarAccionCita(accion, cita);
+            });
         });
-    });
-}
-
-function ejecutarAccionCita(accion, cita) {
-    switch (accion) {
-        case "view":
-            console.log("Ver detalles de la cita:", cita);
-            break;
-
-        case "edit":
-            console.log("Editar cita:", cita);
-            break;
-
-        case "reschedule":
-            console.log("Reagendar cita:", cita);
-            break;
-
-        case "cancel":
-            console.log("Cancelar cita:", cita);
-            break;
-
-        default:
-            console.warn(
-                "La acción seleccionada no existe.",
-            );
     }
-}
+
+    function ejecutarAccionCita(accion, cita) {
+        switch (accion) {
+            case "view":
+                console.log("Ver detalles de la cita:", cita);
+                break;
+
+            case "edit":
+                appointmentModal.open();
+                console.log("Editar cita:", cita);
+                break;
+
+            case "reschedule":
+                console.log("Reagendar cita:", cita);
+                break;
+
+            case "cancel":
+                console.log("Cancelar cita:", cita);
+                break;
+
+            default:
+                console.warn(
+                    "La acción seleccionada no existe.",
+                );
+        }
+    }
 
     function obtenerClaseEstado(estado) {
         const estadoNormalizado = estado

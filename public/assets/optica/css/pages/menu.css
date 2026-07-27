@@ -191,6 +191,30 @@
     bottom: 8%;
 }
 
+.main-menu__decorations {
+    pointer-events: none;
+}
+
+.main-menu__decoration {
+    pointer-events: none;
+}
+
+.main-menu__container {
+    position: relative;
+    z-index: 2;
+}
+
+.main-menu__nav {
+    position: relative;
+    z-index: 3;
+}
+
+.main-menu__nav-link {
+    position: relative;
+    z-index: 4;
+    pointer-events: auto;
+}
+
 @media (max-width: 950px) {
     .main-menu {
         padding: 1.5rem;

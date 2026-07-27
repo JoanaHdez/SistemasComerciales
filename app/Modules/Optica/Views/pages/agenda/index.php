@@ -7,6 +7,7 @@ Agenda | Opticool
 <?= $this->section('styles') ?>
 
 <link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/agenda.css') ?>">
+<link rel="stylesheet" href="<?= base_url('assets/optica/css/components/modal.css') ?>">
 
 <?= $this->endSection() ?>
 
@@ -33,11 +34,7 @@ Agenda | Opticool
 
         </div>
 
-        <button
-            type="button"
-            class="agenda-page__button"
-            id="open-appointment-modal"
-        >
+        <button type="button" class="agenda-page__button" id="open-appointment-modal">
             + Nueva cita
         </button>
 
@@ -55,38 +52,21 @@ Agenda | Opticool
                         CALENDARIO
                     </span>
 
-                    <h2
-                        class="agenda-calendar__title"
-                        id="calendar-title"
-                    ></h2>
+                    <h2 class="agenda-calendar__title" id="calendar-title"></h2>
 
                 </div>
 
                 <div class="agenda-calendar__navigation">
 
-                    <button
-                        type="button"
-                        class="agenda-calendar__nav"
-                        id="calendar-prev"
-                        aria-label="Mes anterior"
-                    >
+                    <button type="button" class="agenda-calendar__nav" id="calendar-prev" aria-label="Mes anterior">
                         ←
                     </button>
 
-                    <button
-                        type="button"
-                        class="agenda-calendar__today"
-                        id="calendar-today"
-                    >
+                    <button type="button" class="agenda-calendar__today" id="calendar-today">
                         Hoy
                     </button>
 
-                    <button
-                        type="button"
-                        class="agenda-calendar__nav"
-                        id="calendar-next"
-                        aria-label="Mes siguiente"
-                    >
+                    <button type="button" class="agenda-calendar__nav" id="calendar-next" aria-label="Mes siguiente">
                         →
                     </button>
 
@@ -106,73 +86,68 @@ Agenda | Opticool
 
             </div>
 
-            <div
-                class="agenda-calendar-grid"
-                id="calendar-grid"
-            ></div>
+            <div class="agenda-calendar-grid" id="calendar-grid"></div>
 
         </section>
 
         <aside class="agenda-sidebar">
 
-    <div class="agenda-sidebar__header">
+            <div class="agenda-sidebar__header">
 
-        <span class="agenda-sidebar__eyebrow">
-            CITAS DEL DÍA
-        </span>
+                <span class="agenda-sidebar__eyebrow">
+                    CITAS DEL DÍA
+                </span>
 
-        <h2
-            class="agenda-sidebar__title"
-            id="selected-date-title"
-        >
-            Selecciona un día
-        </h2>
+                <h2 class="agenda-sidebar__title" id="selected-date-title">
+                    Selecciona un día
+                </h2>
 
-        <p
-            class="agenda-sidebar__summary"
-            id="selected-date-summary"
-        >
-            Consulta las citas programadas para la fecha seleccionada.
-        </p>
+                <p class="agenda-sidebar__summary" id="selected-date-summary">
+                    Consulta las citas programadas para la fecha seleccionada.
+                </p>
 
-    </div>
+            </div>
 
-    <div
-        class="agenda-appointments"
-        id="appointments-list"
-    >
+            <div class="agenda-appointments" id="appointments-list">
 
-        <div class="agenda-empty">
+                <div class="agenda-empty">
 
-            <span class="agenda-empty__icon">
-                📅
-            </span>
+                    <span class="agenda-empty__icon">
+                        📅
+                    </span>
 
-            <h3 class="agenda-empty__title">
-                Sin fecha seleccionada
-            </h3>
+                    <h3 class="agenda-empty__title">
+                        Sin fecha seleccionada
+                    </h3>
 
-            <p class="agenda-empty__text">
-                Selecciona un día del calendario para consultar sus citas.
-            </p>
+                    <p class="agenda-empty__text">
+                        Selecciona un día del calendario para consultar sus citas.
+                    </p>
 
-        </div>
+                </div>
 
-    </div>
+            </div>
 
-    <button
-        type="button"
-        class="agenda-sidebar__button"
-        id="sidebar-new-appointment"
-    >
-        + Agendar cita
-    </button>
+            <button type="button" class="agenda-sidebar__button" id="sidebar-new-appointment">
+                + Agendar cita
+            </button>
 
-</aside>
+        </aside>
 
     </div>
 
 </section>
 
+<?= view(
+    'App\Modules\Optica\Views\components\agenda\appointment-modal'
+) ?>
+
 <?= $this->endSection() ?>
 
+<?= $this->section('scripts') ?>
+
+<script src="<?= base_url('assets/optica/js/components/modal.js') ?>"></script>
+<script src="<?= base_url('assets/optica/js/agenda.js') ?>"></script>
+
+
+<?= $this->endSection() ?>
