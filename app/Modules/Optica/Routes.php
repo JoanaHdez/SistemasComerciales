@@ -38,5 +38,7 @@ $routes->group(
         $routes->get('dashboard', 'Dashboard_Controller::index');
 
         $routes->get('compras', 'Compras_Controller::index');
+
+        $routes->get('reportes', 'Reportes_Controller::index');
     }
 );
