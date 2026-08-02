@@ -1,0 +1,400 @@
+/* ==========================================================
+   Página
+========================================================== */
+
+.orders-page{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+}
+
+/* ==========================================================
+   Encabezado
+========================================================== */
+
+.orders-page__header{
+
+    margin-bottom:30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+
+}
+
+.orders-page__eyebrow{
+
+    display:block;
+    margin-bottom:6px;
+
+    color:#876ba5;
+
+    font-size:.76rem;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+
+}
+
+.orders-page__title{
+
+    margin:0;
+
+    color:#2d203b;
+
+    font-size:2.35rem;
+    font-weight:800;
+
+}
+
+.orders-page__description{
+
+    max-width:700px;
+
+    margin-top:12px;
+
+    color:#776b80;
+
+    line-height:1.6;
+
+}
+
+/* ==========================================================
+   Layout
+========================================================== */
+
+.orders-layout{
+
+    display:grid;
+    gap:24px;
+
+}
+
+/* ==========================================================
+   Resumen
+========================================================== */
+
+.orders-summary{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+
+}
+
+.orders-summary__card{
+
+    padding:24px;
+
+    background:#fff;
+
+    border:1px solid #e9e1ef;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(67,48,83,.06);
+
+}
+
+.orders-summary__label{
+
+    display:block;
+
+    color:#8d7d99;
+
+    font-size:.74rem;
+    font-weight:700;
+
+}
+
+.orders-summary__value{
+
+    display:block;
+
+    margin:14px 0 8px;
+
+    color:#47345c;
+
+    font-size:2rem;
+    font-weight:800;
+
+}
+
+.orders-summary__card small{
+
+    color:#9a909f;
+
+}
+
+/* ==========================================================
+   Filtros
+========================================================== */
+
+.orders-filters{
+
+    display:grid;
+
+    grid-template-columns:1fr 220px 220px;
+
+    gap:16px;
+
+    padding:22px;
+
+    background:#fff;
+
+    border:1px solid #e9e1ef;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(67,48,83,.06);
+
+}
+
+.orders-filters__search,
+.orders-filters__select{
+
+    width:100%;
+
+    min-height:48px;
+
+    padding:0 16px;
+
+    border:1px solid #ddd4e5;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font:inherit;
+
+}
+
+.orders-filters__search:focus,
+.orders-filters__select:focus{
+
+    border-color:#76539b;
+
+    box-shadow:0 0 0 4px rgba(118,83,155,.10);
+
+}
+
+/* ==========================================================
+   Tablero
+========================================================== */
+
+.orders-board{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    align-items:start;
+
+}
+
+.orders-column{
+
+    background:#f8f6fb;
+
+    border:1px solid #e5deec;
+
+    border-radius:20px;
+
+    min-height:600px;
+
+}
+
+.orders-column__header{
+
+    padding:18px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-bottom:1px solid #e8e1ee;
+
+}
+
+.orders-column__header h2{
+
+    margin:0;
+
+    color:#4d395f;
+
+    font-size:1rem;
+
+}
+
+.orders-column__header span{
+
+    width:30px;
+    height:30px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:50%;
+
+    background:#76539b;
+    color:#fff;
+
+    font-size:.75rem;
+    font-weight:700;
+
+}
+
+.orders-column__body{
+
+    padding:18px;
+
+    display:grid;
+
+    gap:16px;
+
+}
+
+/* ==========================================================
+   Tarjetas
+========================================================== */
+
+.order-card{
+
+    padding:18px;
+
+    background:#fff;
+
+    border-left:5px solid #76539b;
+
+    border-radius:16px;
+
+    box-shadow:0 8px 22px rgba(67,48,83,.08);
+
+}
+
+.order-card--progress{
+
+    border-left-color:#f2a93b;
+
+}
+
+.order-card--ready{
+
+    border-left-color:#2d9d78;
+
+}
+
+.order-card--done{
+
+    border-left-color:#4a90e2;
+
+}
+
+.order-card__number{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:#937fa3;
+
+    font-size:.72rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+}
+
+.order-card h3{
+
+    margin:0;
+
+    color:#433252;
+
+    font-size:1rem;
+
+}
+
+.order-card p{
+
+    margin:12px 0 18px;
+
+    color:#80748a;
+
+    line-height:1.5;
+
+    font-size:.86rem;
+
+}
+
+.order-card__footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.order-card__footer small{
+
+    color:#978ca1;
+
+}
+
+.order-card__footer strong{
+
+    color:#5d4579;
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media(max-width:1300px){
+
+    .orders-board{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .orders-summary{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .orders-filters{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:640px){
+
+    .orders-summary{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .orders-board{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

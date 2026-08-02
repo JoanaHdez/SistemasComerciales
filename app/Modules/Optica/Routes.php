@@ -32,5 +32,7 @@ $routes->group(
         $routes->get('consulta/expediente', 'Expediente_Controller::index');
 
         $routes->get('consulta/historial', 'Historial_Controller::index');
+
+        $routes->get('pedidos', 'Pedidos_Controller::index');
     }
 );
