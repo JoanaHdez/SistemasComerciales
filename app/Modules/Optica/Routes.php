@@ -34,5 +34,7 @@ $routes->group(
         $routes->get('consulta/historial', 'Historial_Controller::index');
 
         $routes->get('pedidos', 'Pedidos_Controller::index');
+
+        $routes->get('dashboard', 'Dashboard_Controller::index');
     }
 );
