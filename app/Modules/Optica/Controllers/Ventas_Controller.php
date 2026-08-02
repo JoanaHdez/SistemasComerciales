@@ -12,4 +12,11 @@ class Ventas_Controller extends BaseController
             'App\Modules\Optica\Views\pages\ventas\nueva'
         );
     }
+
+    public function historial()
+    {
+        return view(
+            'App\Modules\Optica\Views\pages\ventas\historial'
+        );
+    }
 }

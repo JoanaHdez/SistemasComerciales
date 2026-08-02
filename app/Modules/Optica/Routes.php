@@ -21,6 +21,8 @@ $routes->group(
 
         $routes->get('ventas/nueva', 'Ventas_Controller::nueva');
 
+        $routes->get('ventas/historial', 'Ventas_Controller::historial');
+
         $routes->get('agenda', 'Agenda_Controller::index');
 
         $routes->get('agenda/nueva', 'Agenda_Controller::nueva');

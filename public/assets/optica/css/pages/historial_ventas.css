@@ -1,0 +1,486 @@
+/* ==========================================================
+   Página
+========================================================== */
+
+.sales-history-page{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+}
+
+/* ==========================================================
+   Encabezado
+========================================================== */
+
+.sales-history-page__header{
+    margin-bottom:30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+}
+
+.sales-history-page__eyebrow{
+    display:block;
+    margin-bottom:6px;
+
+    color:#876ba5;
+
+    font-size:.76rem;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.sales-history-page__title{
+    margin:0;
+
+    color:#2d203b;
+
+    font-size:2.35rem;
+    font-weight:800;
+}
+
+.sales-history-page__description{
+    max-width:650px;
+
+    margin-top:12px;
+
+    color:#776b80;
+
+    line-height:1.6;
+}
+
+.sales-history-page__button{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:48px;
+
+    padding:0 22px;
+
+    border-radius:12px;
+
+    background:#76539b;
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.2s;
+}
+
+.sales-history-page__button:hover{
+
+    background:#624483;
+
+    transform:translateY(-1px);
+
+}
+
+/* ==========================================================
+   Layout
+========================================================== */
+
+.sales-history-layout{
+
+    display:grid;
+
+    gap:24px;
+
+}
+
+/* ==========================================================
+   Resumen
+========================================================== */
+
+.sales-summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+.sales-summary__card{
+
+    padding:24px;
+
+    background:#fff;
+
+    border:1px solid #e9e1ef;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(67,48,83,.06);
+
+}
+
+.sales-summary__label{
+
+    display:block;
+
+    color:#8d7d99;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+}
+
+.sales-summary__value{
+
+    display:block;
+
+    margin:14px 0 8px;
+
+    color:#47345c;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+}
+
+.sales-summary__card small{
+
+    color:#988d9f;
+
+}
+
+/* ==========================================================
+   Filtros
+========================================================== */
+
+.sales-filters{
+
+    display:grid;
+
+    grid-template-columns:1fr 220px 220px;
+
+    gap:16px;
+
+    padding:22px;
+
+    background:#fff;
+
+    border:1px solid #e9e1ef;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(67,48,83,.06);
+
+}
+
+.sales-filters__search,
+.sales-filters__select{
+
+    width:100%;
+
+    min-height:48px;
+
+    padding:0 16px;
+
+    border:1px solid #ddd4e5;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font:inherit;
+
+}
+
+.sales-filters__search:focus,
+.sales-filters__select:focus{
+
+    border-color:#76539b;
+
+    box-shadow:0 0 0 4px rgba(118,83,155,.10);
+
+}
+
+/* ==========================================================
+   Tarjetas de venta
+========================================================== */
+
+.sales-list{
+
+    display:grid;
+
+    gap:22px;
+
+}
+
+.sale-card{
+
+    padding:28px;
+
+    background:#fff;
+
+    border:1px solid #e9e1ef;
+    border-left:6px solid #76539b;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(67,48,83,.06);
+
+}
+
+.sale-card--warning{
+
+    border-left-color:#f2a93b;
+
+}
+
+.sale-card--success{
+
+    border-left-color:#46b36c;
+
+}
+
+/* ==========================================================
+   Encabezado
+========================================================== */
+
+.sale-card__header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+
+    margin-bottom:24px;
+
+}
+
+.sale-card__folio{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:#8d7d99;
+
+    font-size:.74rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+
+}
+
+.sale-card__client{
+
+    margin:0;
+
+    color:#433252;
+
+    font-size:1.35rem;
+    font-weight:800;
+
+}
+
+.sale-card__status{
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:#efe8f5;
+    color:#684d86;
+
+    font-size:.78rem;
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   Información
+========================================================== */
+
+.sale-card__body{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.sale-card__body strong{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#695c73;
+
+    font-size:.74rem;
+    font-weight:700;
+    text-transform:uppercase;
+
+}
+
+.sale-card__body p{
+
+    margin:0;
+
+    color:#3e3247;
+
+    font-size:.95rem;
+    font-weight:600;
+    line-height:1.5;
+
+}
+
+/* ==========================================================
+   Footer
+========================================================== */
+
+.sale-card__footer{
+
+    margin-top:28px;
+    padding-top:22px;
+
+    border-top:1px solid #ece5f1;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+
+}
+
+.sale-card__links{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+
+}
+
+.sale-card__links a{
+
+    color:#76539b;
+
+    text-decoration:none;
+
+    font-size:.82rem;
+    font-weight:700;
+
+}
+
+.sale-card__links a:hover{
+
+    text-decoration:underline;
+
+}
+
+.sale-card__button{
+
+    min-height:46px;
+
+    padding:0 22px;
+
+    border:0;
+    border-radius:12px;
+
+    background:#76539b;
+    color:#fff;
+
+    font:inherit;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.sale-card__button:hover{
+
+    background:#624483;
+
+    transform:translateY(-1px);
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width:1000px){
+
+    .sales-summary{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .sales-filters{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sale-card__body{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .sales-history-page__header{
+
+        flex-direction:column;
+
+    }
+
+    .sales-history-page__button{
+
+        width:100%;
+
+    }
+
+    .sales-summary{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sale-card__header{
+
+        flex-direction:column;
+
+    }
+
+    .sale-card__body{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sale-card__footer{
+
+        flex-direction:column;
+        align-items:stretch;
+
+    }
+
+    .sale-card__button{
+
+        width:100%;
+
+    }
+
+}
