@@ -43,25 +43,25 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    const botonNuevaCita = document.getElementById(
+    /* const botonNuevaCita = document.getElementById(
         "open-appointment-modal",
     );
 
     const botonNuevaCitaSidebar = document.getElementById(
         "sidebar-new-appointment",
     );
-
+ */
     const botonCancelarCita = document.getElementById(
         "appointment-cancel",
     );
 
-    botonNuevaCita?.addEventListener("click", () => {
+    /* botonNuevaCita?.addEventListener("click", () => {
         appointmentModal.open();
     });
 
     botonNuevaCitaSidebar?.addEventListener("click", () => {
         appointmentModal.open();
-    });
+    }); */
 
     botonCancelarCita?.addEventListener("click", () => {
         appointmentModal.close();

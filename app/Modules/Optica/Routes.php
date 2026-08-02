@@ -23,6 +23,8 @@ $routes->group(
 
         $routes->get('agenda', 'Agenda_Controller::index');
 
+        $routes->get('agenda/nueva', 'Agenda_Controller::nueva');
+
         $routes->get('inventario', 'Inventario_Controller::index');
 
         $routes->get('consulta/expediente', 'Expediente_Controller::index');

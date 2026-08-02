@@ -34,9 +34,12 @@ Agenda | Opticool
 
         </div>
 
-        <button type="button" class="agenda-page__button" id="open-appointment-modal">
-            + Nueva cita
-        </button>
+        <a
+    href="<?= base_url('optica/agenda/nueva') ?>"
+    class="agenda-page__button"
+>
+    + Nueva cita
+</a>
 
     </div>
 
@@ -128,9 +131,12 @@ Agenda | Opticool
 
             </div>
 
-            <button type="button" class="agenda-sidebar__button" id="sidebar-new-appointment">
-                + Agendar cita
-            </button>
+            <a
+    href="<?= base_url('optica/agenda/nueva') ?>"
+    class="agenda-sidebar__button"
+>
+    + Agendar cita
+</a>
 
         </aside>
 

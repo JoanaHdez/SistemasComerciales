@@ -15,4 +15,11 @@ class Agenda_Controller extends BaseController
             'App\Modules\Optica\Views\pages\agenda\index'
         );
     }
+
+    public function nueva()
+    {
+        return view(
+            'App\Modules\Optica\Views\pages\agenda\nueva'
+        );
+    }
 }

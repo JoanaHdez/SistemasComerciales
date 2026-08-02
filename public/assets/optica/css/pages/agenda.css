@@ -46,6 +46,10 @@
 }
 
 .agenda-page__button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
     min-height:48px;
     padding:0 22px;
 
@@ -54,6 +58,8 @@
 
     background:#76539b;
     color:#fff;
+
+    text-decoration:none;
 
     font:inherit;
     font-weight:700;
@@ -440,23 +446,21 @@
 }
 
 .agenda-sidebar__button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
     width:100%;
-    min-height:46px;
+    min-height:54px;
 
-    margin-top:22px;
-
-    border:0;
-    border-radius:12px;
+    border-radius:14px;
 
     background:#76539b;
     color:#fff;
 
-    font:inherit;
-    font-weight:800;
+    text-decoration:none;
 
-    cursor:pointer;
-
-    transition:.2s;
+    font-weight:700;
 }
 
 .agenda-sidebar__button:hover{
