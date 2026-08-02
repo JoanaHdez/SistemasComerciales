@@ -2,70 +2,49 @@
 
     <div class="app-header__left">
 
-        <button
-            type="button"
-            class="app-header__menu-button"
-            data-sidebar-toggle
-            aria-label="Abrir menú"
-            aria-expanded="false"
-        >
+        <button type="button" class="app-header__menu-button" data-sidebar-toggle aria-label="Abrir menú"
+            aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <a
-            href="<?= base_url('optica/menu') ?>"
-            class="app-header__brand"
-        >
+        <a href="<?= base_url('optica/menu') ?>" class="app-header__brand">
             Sistema de Gestión para Óptica
         </a>
 
     </div>
 
-    <nav
-        class="app-header__nav"
-        aria-label="Navegación administrativa"
-    >
-        <a href="<?= base_url('optica/menu') ?>">
+    <nav class="app-header__nav" aria-label="Navegación administrativa">
+
+        <a href="<?= base_url('optica/dashboard') ?>" class="main-menu__nav-link">
             Dashboard
         </a>
 
-        <a href="#">
+        <a href="<?= base_url('optica/pedidos') ?>" class="main-menu__nav-link">
             Pedidos
         </a>
 
-        <a
-    href="<?= base_url('optica/inventario') ?>"
-    class="main-menu__nav-link"
->
-    Inventario
-</a>
+        <a href="<?= base_url('optica/inventario') ?>" class="main-menu__nav-link">
+            Inventario
+        </a>
 
-        <a href="#">
+        <a href="<?= base_url('optica/compras') ?>" class="main-menu__nav-link">
             Compras
         </a>
 
-        <a href="#">
+        <a href="<?= base_url('optica/reportes') ?>" class="main-menu__nav-link">
             Reportes
         </a>
     </nav>
 
     <div class="app-header__actions">
 
-        <button
-            type="button"
-            class="app-header__action"
-            aria-label="Notificaciones"
-        >
+        <button type="button" class="app-header__action" aria-label="Notificaciones">
             N
         </button>
 
-        <button
-            type="button"
-            class="app-header__profile"
-            aria-label="Abrir perfil"
-        >
+        <button type="button" class="app-header__profile" aria-label="Abrir perfil">
             <span class="app-header__avatar">
                 JH
             </span>
