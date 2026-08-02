@@ -36,5 +36,7 @@ $routes->group(
         $routes->get('pedidos', 'Pedidos_Controller::index');
 
         $routes->get('dashboard', 'Dashboard_Controller::index');
+
+        $routes->get('compras', 'Compras_Controller::index');
     }
 );
