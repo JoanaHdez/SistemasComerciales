@@ -26,5 +26,7 @@ $routes->group(
         $routes->get('inventario', 'Inventario_Controller::index');
 
         $routes->get('consulta/expediente', 'Expediente_Controller::index');
+
+        $routes->get('consulta/historial', 'Historial_Controller::index');
     }
 );
