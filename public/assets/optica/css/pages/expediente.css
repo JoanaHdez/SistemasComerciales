@@ -1,0 +1,746 @@
+/* ==========================================================
+   Página: Expediente clínico
+========================================================== */
+
+.clinical-record-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   Encabezado principal
+========================================================== */
+
+.clinical-record-page__header {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.clinical-record-page__eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #876ba5;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.clinical-record-page__title {
+    margin: 0;
+
+    color: #2d203b;
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.clinical-record-page__description {
+    max-width: 680px;
+    margin: 12px 0 0;
+
+    color: #776b80;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.clinical-record-page__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.clinical-record-page__button {
+    min-height: 48px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.clinical-record-page__button--primary {
+    color: #ffffff;
+    background: #76539b;
+    border: 0;
+
+    box-shadow: 0 10px 24px rgba(78, 52, 104, 0.18);
+}
+
+.clinical-record-page__button--primary:hover {
+    background: #624483;
+    transform: translateY(-1px);
+
+    box-shadow: 0 13px 28px rgba(78, 52, 104, 0.22);
+}
+
+.clinical-record-page__button--secondary {
+    color: #684d86;
+    background: #ffffff;
+
+    border: 1px solid #ded4e6;
+}
+
+.clinical-record-page__button--secondary:hover {
+    background: #f7f3fa;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Distribución general
+========================================================== */
+
+.clinical-record-layout {
+    display: grid;
+    gap: 24px;
+}
+
+.clinical-record-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.clinical-record-grid--top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* ==========================================================
+   Resumen del paciente
+========================================================== */
+
+.clinical-record-patient {
+    position: relative;
+
+    padding: 28px 32px;
+
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 22px;
+
+    color: #ffffff;
+    background:
+        linear-gradient(
+            135deg,
+            #6a4a8c 0%,
+            #4c365f 100%
+        );
+
+    border-radius: 24px;
+
+    box-shadow: 0 18px 40px rgba(60, 40, 78, 0.18);
+
+    overflow: hidden;
+}
+
+.clinical-record-patient::after {
+    content: "";
+
+    position: absolute;
+    top: -80px;
+    right: -70px;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.clinical-record-patient__avatar {
+    position: relative;
+    z-index: 1;
+
+    width: 72px;
+    height: 72px;
+
+    display: grid;
+    place-items: center;
+
+    color: #5c3f78;
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    font-size: 1.35rem;
+    font-weight: 800;
+
+    box-shadow: 0 10px 24px rgba(28, 18, 40, 0.2);
+}
+
+.clinical-record-patient__main,
+.clinical-record-patient__status {
+    position: relative;
+    z-index: 1;
+}
+
+.clinical-record-patient__eyebrow {
+    display: block;
+    margin-bottom: 5px;
+
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.clinical-record-patient__name {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 800;
+}
+
+.clinical-record-patient__meta {
+    margin-top: 13px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.84rem;
+}
+
+.clinical-record-patient__meta strong {
+    color: #ffffff;
+}
+
+.clinical-record-patient__status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 9px;
+}
+
+.clinical-record-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    min-height: 32px;
+    padding: 0 12px;
+
+    color: #215c40;
+    background: #dff7e9;
+
+    border-radius: 999px;
+
+    font-size: 0.74rem;
+    font-weight: 800;
+}
+
+.clinical-record-status::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.clinical-record-patient__last-update {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.78rem;
+}
+
+/* ==========================================================
+   Tarjetas
+========================================================== */
+
+.clinical-record-card {
+    position: relative;
+
+    padding: 30px 34px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9e1ef;
+    border-radius: 22px;
+
+    box-shadow: 0 14px 34px rgba(67, 48, 83, 0.07);
+}
+
+.clinical-record-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 34px;
+
+    width: 68px;
+    height: 4px;
+
+    background: #76539b;
+    border-radius: 0 0 999px 999px;
+}
+
+.clinical-record-card__header {
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.clinical-record-card__header--with-action {
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.clinical-record-card__heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.clinical-record-card__icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+
+    display: grid;
+    place-items: center;
+
+    color: #76539b;
+    background: #efe8f5;
+
+    border-radius: 13px;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.clinical-record-card__eyebrow {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #8d7d99;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+}
+
+.clinical-record-card__title {
+    margin: 0;
+
+    color: #49365d;
+    font-size: 1.18rem;
+    font-weight: 800;
+}
+
+.clinical-record-card__action {
+    min-height: 42px;
+    padding: 0 15px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #684d86;
+    background: #f3edf7;
+
+    border-radius: 11px;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.clinical-record-card__action:hover {
+    background: #e7ddee;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Listas de información
+========================================================== */
+
+.clinical-record-info {
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 24px;
+}
+
+.clinical-record-info__item {
+    min-width: 0;
+}
+
+.clinical-record-info__item--full {
+    grid-column: 1 / -1;
+}
+
+.clinical-record-info dt {
+    margin-bottom: 6px;
+
+    color: #93889c;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.clinical-record-info dd {
+    margin: 0;
+
+    color: #43364d;
+    font-size: 0.9rem;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   Graduación actual
+========================================================== */
+
+.clinical-record-graduation {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr))
+        minmax(220px, 0.7fr);
+
+    gap: 18px;
+}
+
+.clinical-record-eye,
+.clinical-record-graduation__extras {
+    padding: 22px;
+
+    background: #faf8fc;
+    border: 1px solid #e7dfec;
+    border-radius: 17px;
+}
+
+.clinical-record-eye__header {
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.clinical-record-eye__header > span {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    color: #ffffff;
+    background: #76539b;
+
+    border-radius: 11px;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.clinical-record-eye__header h3 {
+    margin: 0;
+
+    color: #4d3a5e;
+    font-size: 1rem;
+}
+
+.clinical-record-eye__values {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.clinical-record-eye__values div,
+.clinical-record-graduation__extras div {
+    padding: 14px;
+
+    background: #ffffff;
+    border: 1px solid #e8e0ed;
+    border-radius: 12px;
+}
+
+.clinical-record-eye__values span,
+.clinical-record-graduation__extras span {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #94899c;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.clinical-record-eye__values strong,
+.clinical-record-graduation__extras strong {
+    color: #42324f;
+    font-size: 0.95rem;
+}
+
+.clinical-record-graduation__extras {
+    display: grid;
+    gap: 12px;
+}
+
+/* ==========================================================
+   Antecedentes
+========================================================== */
+
+.clinical-record-backgrounds {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.clinical-record-background {
+    padding: 22px;
+
+    background: #faf8fc;
+    border: 1px solid #e7dfec;
+    border-radius: 17px;
+}
+
+.clinical-record-background__label {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #62487b;
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.clinical-record-background p {
+    margin: 0;
+
+    color: #766d7d;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   Tabla de historial
+========================================================== */
+
+.clinical-record-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    border: 1px solid #e6deeb;
+    border-radius: 15px;
+}
+
+.clinical-record-table {
+    width: 100%;
+    min-width: 780px;
+
+    border-collapse: collapse;
+}
+
+.clinical-record-table th,
+.clinical-record-table td {
+    padding: 15px 16px;
+
+    text-align: left;
+    vertical-align: middle;
+
+    border-bottom: 1px solid #eee8f1;
+}
+
+.clinical-record-table th {
+    color: #554761;
+    background: #f7f3fa;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.clinical-record-table td {
+    color: #655b6c;
+    background: #ffffff;
+
+    font-size: 0.85rem;
+}
+
+.clinical-record-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.clinical-record-table tbody tr:hover td {
+    background: #fcfafd;
+}
+
+.clinical-record-table__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 10px;
+
+    color: #327a55;
+    background: #e4f5ec;
+
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.clinical-record-table__status::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.clinical-record-table__action {
+    min-height: 34px;
+    padding: 0 12px;
+
+    color: #684d86;
+    background: #f1ebf5;
+
+    border: 0;
+    border-radius: 9px;
+
+    font: inherit;
+    font-size: 0.74rem;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.clinical-record-table__action:hover {
+    background: #e5daed;
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 1100px) {
+    .clinical-record-grid--top {
+        grid-template-columns: 1fr;
+    }
+
+    .clinical-record-graduation {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .clinical-record-graduation__extras {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .clinical-record-page__header {
+        flex-direction: column;
+    }
+
+    .clinical-record-page__actions {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .clinical-record-page__button {
+        width: 100%;
+    }
+
+    .clinical-record-page__title {
+        font-size: 1.9rem;
+    }
+
+    .clinical-record-patient {
+        grid-template-columns: auto minmax(0, 1fr);
+        padding: 24px 22px;
+    }
+
+    .clinical-record-patient__status {
+        grid-column: 1 / -1;
+        align-items: flex-start;
+    }
+
+    .clinical-record-card {
+        padding: 28px 22px;
+    }
+
+    .clinical-record-card::before {
+        left: 22px;
+    }
+
+    .clinical-record-card__header--with-action {
+        flex-direction: column;
+    }
+
+    .clinical-record-card__action {
+        width: 100%;
+    }
+
+    .clinical-record-info,
+    .clinical-record-backgrounds,
+    .clinical-record-graduation {
+        grid-template-columns: 1fr;
+    }
+
+    .clinical-record-info__item--full,
+    .clinical-record-graduation__extras {
+        grid-column: auto;
+    }
+
+    .clinical-record-graduation__extras {
+        grid-template-columns: 1fr;
+    }
+
+    .clinical-record-eye__values {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .clinical-record-patient {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .clinical-record-patient__avatar {
+        margin: 0 auto;
+    }
+
+    .clinical-record-patient__meta {
+        justify-content: center;
+    }
+
+    .clinical-record-patient__status {
+        align-items: center;
+    }
+
+    .clinical-record-card {
+        padding: 24px 18px;
+        border-radius: 17px;
+    }
+}

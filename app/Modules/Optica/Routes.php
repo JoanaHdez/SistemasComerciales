@@ -22,8 +22,9 @@ $routes->group(
         $routes->get('ventas/nueva', 'Ventas_Controller::nueva');
 
         $routes->get('agenda', 'Agenda_Controller::index');
-        
+
         $routes->get('inventario', 'Inventario_Controller::index');
 
+        $routes->get('consulta/expediente', 'Expediente_Controller::index');
     }
 );
