@@ -448,44 +448,44 @@ $isHistorialVentas = str_starts_with(
     <div class="app-sidebar__footer">
 
         <a
-            href="#"
-            class="app-sidebar__footer-link"
+    href="<?= base_url('optica/perfil') ?>"
+    class="app-sidebar__footer-link"
+>
+    <span class="app-sidebar__footer-icon">
+
+        <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
         >
-            <span class="app-sidebar__footer-icon">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 21a8 8 0 0 1 16 0" />
+        </svg>
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <circle cx="12" cy="8" r="4" />
-                    <path d="M4 21a8 8 0 0 1 16 0" />
-                </svg>
+    </span>
 
-            </span>
-
-            <span>Mi perfil</span>
-        </a>
+    <span>Mi perfil</span>
+</a>
 
         <a
-            href="#"
-            class="app-sidebar__footer-link"
+    href="<?= base_url('optica/configuracion') ?>"
+    class="app-sidebar__footer-link"
+>
+    <span class="app-sidebar__footer-icon">
+
+        <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
         >
-            <span class="app-sidebar__footer-icon">
+            <circle cx="12" cy="12" r="3" />
+            <path
+                d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21h-4v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3v-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1L7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.5V3h4v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5 1h.1v4h-.1a1.7 1.7 0 0 0-1.5 1Z"
+            />
+        </svg>
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <circle cx="12" cy="12" r="3" />
-                    <path
-                        d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21h-4v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3v-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1L7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.5V3h4v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5 1h.1v4h-.1a1.7 1.7 0 0 0-1.5 1Z"
-                    />
-                </svg>
+    </span>
 
-            </span>
-
-            <span>Configuración</span>
-        </a>
+    <span>Configuración</span>
+</a>
 
     </div>
 

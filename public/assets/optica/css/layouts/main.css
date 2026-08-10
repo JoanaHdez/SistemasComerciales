@@ -114,20 +114,6 @@
     color: var(--color-text-muted);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================
    Sidebar 2.0
 ========================================================== */
@@ -620,6 +606,50 @@
 
     background: #654c81;
     border-radius: 999px;
+}
+
+/* ==========================================================
+   Navegación activa del header
+========================================================== */
+
+.app-header__nav a {
+    position: relative;
+
+    transition:
+        color .2s ease,
+        background-color .2s ease;
+}
+
+.app-header__nav a:hover {
+    color: #76539b;
+}
+
+.app-header__nav a.app-header__nav-link--active {
+    color: #76539b;
+    font-weight: 800;
+}
+
+.app-header__nav a.app-header__nav-link--active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -10px;
+
+    width: 26px;
+    height: 3px;
+
+    border-radius: 999px;
+
+    background: #76539b;
+
+    transform: translateX(-50%);
+}
+
+/* El perfil ahora es un enlace <a> */
+.app-header__profile {
+    text-decoration: none;
 }
 
 /* ==========================================================

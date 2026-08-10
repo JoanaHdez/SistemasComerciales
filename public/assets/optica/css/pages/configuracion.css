@@ -1,0 +1,377 @@
+/* ==========================================================
+   Página
+========================================================== */
+
+.settings-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   Encabezado
+========================================================== */
+
+.settings-page__header {
+    margin-bottom: 30px;
+}
+
+.settings-page__eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #876ba5;
+
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.settings-page__title {
+    margin: 0;
+
+    color: #2d203b;
+
+    font-size: 2.35rem;
+    font-weight: 800;
+}
+
+.settings-page__description {
+    max-width: 720px;
+    margin: 12px 0 0;
+
+    color: #776b80;
+
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   Layout
+========================================================== */
+
+.settings-layout {
+    display: grid;
+    gap: 24px;
+}
+
+/* ==========================================================
+   Cards
+========================================================== */
+
+.settings-card {
+    padding: 28px;
+
+    background: #fff;
+
+    border: 1px solid #e9e1ef;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, .06);
+}
+
+.settings-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 26px;
+}
+
+.settings-card__eyebrow {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #876ba5;
+
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+.settings-card__title {
+    margin: 0;
+
+    color: #3a2c4c;
+
+    font-size: 1.25rem;
+}
+
+.settings-card__description {
+    max-width: 650px;
+
+    margin: 8px 0 0;
+
+    color: #887d90;
+
+    font-size: .88rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   Datos del negocio
+========================================================== */
+
+.settings-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 0 36px;
+}
+
+.settings-info__item {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eee8f1;
+}
+
+.settings-info__item span {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #95899d;
+
+    font-size: .76rem;
+    font-weight: 700;
+}
+
+.settings-info__item strong {
+    color: #44364e;
+
+    font-size: .95rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Botón editar
+========================================================== */
+
+.settings-card__action {
+    min-height: 42px;
+    padding: 0 18px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #d9cde2;
+    border-radius: 11px;
+
+    background: #fff;
+    color: #76539b;
+
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.settings-card__action:hover {
+    background: #f5f1f8;
+    border-color: #76539b;
+}
+
+/* ==========================================================
+   Opciones
+========================================================== */
+
+.settings-options {
+    display: grid;
+}
+
+.settings-option {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eee8f1;
+}
+
+.settings-option:first-child {
+    padding-top: 0;
+}
+
+.settings-option:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.settings-option strong {
+    color: #44364e;
+
+    font-size: .94rem;
+}
+
+.settings-option p {
+    max-width: 720px;
+
+    margin: 6px 0 0;
+
+    color: #8b8092;
+
+    font-size: .84rem;
+    line-height: 1.55;
+}
+
+/* ==========================================================
+   Switch
+========================================================== */
+
+.settings-switch {
+    position: relative;
+
+    width: 48px;
+    height: 26px;
+
+    flex: 0 0 48px;
+
+    cursor: pointer;
+}
+
+.settings-switch input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+}
+
+.settings-switch__control {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 999px;
+
+    background: #d8d0de;
+
+    transition: .2s;
+}
+
+.settings-switch__control::after {
+    content: "";
+
+    position: absolute;
+
+    top: 4px;
+    left: 4px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .16);
+
+    transition: .2s;
+}
+
+.settings-switch input:checked + .settings-switch__control {
+    background: #76539b;
+}
+
+.settings-switch input:checked + .settings-switch__control::after {
+    transform: translateX(22px);
+}
+
+.settings-switch input:focus-visible + .settings-switch__control {
+    outline: 3px solid rgba(118, 83, 155, .18);
+    outline-offset: 3px;
+}
+
+/* ==========================================================
+   Usuarios y acceso
+========================================================== */
+
+.settings-access {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.settings-access strong {
+    color: #44364e;
+}
+
+.settings-access p {
+    max-width: 700px;
+
+    margin: 7px 0 0;
+
+    color: #887d90;
+
+    line-height: 1.6;
+}
+
+.settings-access__button {
+    min-height: 46px;
+    padding: 0 20px;
+
+    flex-shrink: 0;
+
+    border: 0;
+    border-radius: 12px;
+
+    background: #76539b;
+    color: #fff;
+
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.settings-access__button:hover {
+    background: #624483;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 750px) {
+
+    .settings-info {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-access {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .settings-access__button {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .settings-card__header {
+        flex-direction: column;
+    }
+
+    .settings-option {
+        align-items: flex-start;
+    }
+
+}

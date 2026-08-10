@@ -40,5 +40,9 @@ $routes->group(
         $routes->get('compras', 'Compras_Controller::index');
 
         $routes->get('reportes', 'Reportes_Controller::index');
+
+        $routes->get('perfil', 'Perfil_Controller::index');
+
+        $routes->get('configuracion', 'Configuracion_Controller::index');
     }
 );
