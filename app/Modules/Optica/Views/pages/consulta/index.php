@@ -56,30 +56,55 @@ Consulta | Sistema de Gestión para Óptica
             </div>
         </div>
 
-        <form class="consulta-search-form" action="#" method="get">
-            <div class="consulta-search-control">
-                <svg
-                    class="consulta-search-icon"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <circle cx="11" cy="11" r="7"></circle>
-                    <path d="m20 20-4-4"></path>
-                </svg>
+        <form
+    class="consulta-search-form"
+    id="consulta-search-form"
+    autocomplete="off"
+>
 
-                <input
-                    type="search"
-                    name="cliente"
-                    id="consulta-cliente"
-                    placeholder="Ej. María López o 55 1234 5678"
-                    autocomplete="off"
-                >
-            </div>
+    <div class="consulta-search-wrapper">
 
-            <button type="submit" class="consulta-search-button">
-                Buscar
-            </button>
-        </form>
+        <div class="consulta-search-control">
+
+            <svg
+                class="consulta-search-icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+            >
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="m20 20-4-4"></path>
+            </svg>
+
+            <input
+                type="search"
+                name="cliente"
+                id="consulta-cliente"
+                placeholder="Ej. María López o 55 1234 5678"
+                autocomplete="off"
+                aria-controls="consulta-search-results"
+                aria-expanded="false"
+            >
+
+        </div>
+
+        <!-- Resultados dinámicos -->
+
+        <div
+            class="consulta-search-results"
+            id="consulta-search-results"
+            hidden
+        ></div>
+
+    </div>
+
+    <button
+        type="submit"
+        class="consulta-search-button"
+    >
+        Buscar
+    </button>
+
+</form>
     </section>
 
     <!-- Resumen del cliente -->
@@ -578,5 +603,13 @@ Consulta | Sistema de Gestión para Óptica
     </div>
 
 </div>
+
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>
+
+<script
+    src="<?= base_url('assets/optica/js/pages/consulta.js') ?>"
+></script>
 
 <?= $this->endSection() ?>

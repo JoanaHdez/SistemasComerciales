@@ -227,7 +227,7 @@ $isHistorialVentas = str_starts_with(
                             ?>
                         "
                     >
-                        Buscar cliente
+                        Consulta
                     </a>
 
                     <a
