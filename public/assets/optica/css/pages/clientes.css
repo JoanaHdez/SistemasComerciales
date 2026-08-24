@@ -281,8 +281,19 @@
     gap: 8px;
 }
 
-.clients-table__actions button {
+.clients-table__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.clients-table__action {
+    min-height: 34px;
     padding: 8px 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     color: #5d4775;
     background: #f1ebf5;
@@ -293,8 +304,28 @@
     font: inherit;
     font-size: 0.75rem;
     font-weight: 700;
+    line-height: 1;
+
+    text-decoration: none;
 
     cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.clients-table__action:hover {
+    color: #4f3866;
+    background: #e5daed;
+
+    transform: translateY(-1px);
+}
+
+.clients-table__action:focus-visible {
+    outline: 3px solid rgba(118, 83, 155, 0.18);
+    outline-offset: 2px;
 }
 
 .clients-table__actions button:hover {

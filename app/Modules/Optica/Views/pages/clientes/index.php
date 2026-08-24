@@ -15,11 +15,48 @@ Clientes | Opticool
 
 <?= $this->section('content') ?>
 
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Datos simulados de clientes
+|--------------------------------------------------------------------------
+| Estos datos son temporales y sirven únicamente para el Front-End.
+| Posteriormente el backend deberá enviar este arreglo desde el controlador.
+|--------------------------------------------------------------------------
+*/
+
+$clientes = [
+    [
+        'id' => 1,
+        'nombre' => 'María López Hernández',
+        'telefono' => '55 1234 5678',
+        'correo' => 'maria@example.com',
+        'fecha_registro' => '19/07/2026',
+        'estado' => 'Activo',
+    ],
+    [
+        'id' => 2,
+        'nombre' => 'Carlos Martínez Ruiz',
+        'telefono' => '55 8765 4321',
+        'correo' => 'carlos@example.com',
+        'fecha_registro' => '18/07/2026',
+        'estado' => 'Inactivo',
+    ],
+];
+
+?>
+
 <section class="clients-page">
+
+    <!-- =====================================================
+         ENCABEZADO
+    ====================================================== -->
 
     <div class="clients-page__header">
 
         <div>
+
             <span class="clients-page__eyebrow">
                 GESTIÓN DE CLIENTES
             </span>
@@ -31,6 +68,7 @@ Clientes | Opticool
             <p class="clients-page__description">
                 Consulta y administra la información de los clientes registrados.
             </p>
+
         </div>
 
         <a
@@ -38,35 +76,61 @@ Clientes | Opticool
             class="clients-page__primary-action"
         >
             <span>+</span>
+
             Nuevo cliente
         </a>
 
     </div>
+
+
+    <!-- =====================================================
+         BUSCADOR
+    ====================================================== -->
 
     <section class="clients-search-card">
 
         <div class="clients-search-card__intro">
 
             <span class="clients-search-card__icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="11" cy="11" r="7"></circle>
-                    <path d="m20 20-3.5-3.5"></path>
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <circle
+                        cx="11"
+                        cy="11"
+                        r="7"
+                    ></circle>
+
+                    <path
+                        d="m20 20-3.5-3.5"
+                    ></path>
                 </svg>
+
             </span>
 
             <div>
-                <h2>Buscar cliente</h2>
+
+                <h2>
+                    Buscar cliente
+                </h2>
 
                 <p>
                     Ingresa el nombre, teléfono o correo del cliente.
                 </p>
+
             </div>
 
         </div>
 
+
         <div class="clients-search">
 
-            <label for="client-search" class="sr-only">
+            <label
+                for="client-search"
+                class="sr-only"
+            >
                 Buscar cliente
             </label>
 
@@ -76,11 +140,13 @@ Clientes | Opticool
                 name="search"
                 class="clients-search__input"
                 placeholder="Ej. María López o 55 1234 5678"
+                autocomplete="off"
             >
 
             <button
                 type="button"
                 class="clients-search__button"
+                id="client-search-button"
             >
                 Buscar
             </button>
@@ -89,11 +155,17 @@ Clientes | Opticool
 
     </section>
 
+
+    <!-- =====================================================
+         TABLA
+    ====================================================== -->
+
     <div class="clients-table-wrapper">
 
         <table class="clients-table">
 
             <thead>
+
                 <tr>
                     <th>ID</th>
                     <th>Nombre completo</th>
@@ -103,47 +175,87 @@ Clientes | Opticool
                     <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
+
             </thead>
 
-            <tbody>
+            <tbody id="clients-table-body">
 
-                <tr>
-                    <td>1</td>
-                    <td>María López Hernández</td>
-                    <td>55 1234 5678</td>
-                    <td>maria@example.com</td>
-                    <td>19/07/2026</td>
-                    <td>
-                        <span class="status-badge status-badge--active">
-                            Activo
-                        </span>
-                    </td>
-                    <td>
-                        <div class="clients-table__actions">
-                            <button type="button">Ver</button>
-                            <button type="button">Editar</button>
-                        </div>
-                    </td>
-                </tr>
+                <?php foreach ($clientes as $cliente): ?>
 
-                <tr>
-                    <td>2</td>
-                    <td>Carlos Martínez Ruiz</td>
-                    <td>55 8765 4321</td>
-                    <td>carlos@example.com</td>
-                    <td>18/07/2026</td>
-                    <td>
-                        <span class="status-badge status-badge--inactive">
-                            Inactivo
-                        </span>
-                    </td>
-                    <td>
-                        <div class="clients-table__actions">
-                            <button type="button">Ver</button>
-                            <button type="button">Editar</button>
-                        </div>
-                    </td>
-                </tr>
+                    <?php
+                        $esActivo =
+                            $cliente['estado'] === 'Activo';
+                    ?>
+
+                    <tr
+                        data-client-id="<?= esc($cliente['id']) ?>"
+                    >
+
+                        <td>
+                            <?= esc($cliente['id']) ?>
+                        </td>
+
+                        <td>
+                            <?= esc($cliente['nombre']) ?>
+                        </td>
+
+                        <td>
+                            <?= esc($cliente['telefono']) ?>
+                        </td>
+
+                        <td>
+                            <?= esc($cliente['correo']) ?>
+                        </td>
+
+                        <td>
+                            <?= esc($cliente['fecha_registro']) ?>
+                        </td>
+
+                        <td>
+
+                            <span
+                                class="
+                                    status-badge
+                                    <?= $esActivo
+                                        ? 'status-badge--active'
+                                        : 'status-badge--inactive'
+                                    ?>
+                                "
+                            >
+                                <?= esc($cliente['estado']) ?>
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <div class="clients-table__actions">
+
+                                <a
+                                    href="<?= base_url('optica/consulta/historial') ?>"
+                                    class="clients-table__action"
+                                    data-action="view"
+                                    data-client-id="<?= esc($cliente['id']) ?>"
+                                >
+                                    Ver
+                                </a>
+
+                                <a
+                                    href="<?= base_url('optica/consulta/expediente') ?>"
+                                    class="clients-table__action"
+                                    data-action="edit"
+                                    data-client-id="<?= esc($cliente['id']) ?>"
+                                >
+                                    Editar
+                                </a>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                <?php endforeach; ?>
 
             </tbody>
 
@@ -154,6 +266,7 @@ Clientes | Opticool
 </section>
 
 <?= $this->endSection() ?>
+
 
 <?= $this->section('scripts') ?>
 
