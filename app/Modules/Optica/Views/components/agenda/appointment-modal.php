@@ -1,7 +1,3 @@
-<!-- ==========================================================
-     Modal de citas
-========================================================== -->
-
 <div
     class="modal"
     id="appointment-modal"
@@ -18,9 +14,11 @@
         aria-modal="true"
         aria-labelledby="appointment-modal-title"
     >
+
         <div class="modal__header">
 
             <div>
+
                 <span class="modal__subtitle">
                     Agenda
                 </span>
@@ -29,14 +27,14 @@
                     class="modal__title"
                     id="appointment-modal-title"
                 >
-                    Nueva cita
+                    Editar cita
                 </h2>
+
             </div>
 
             <button
                 type="button"
                 class="modal__close"
-                id="appointment-modal-close"
                 aria-label="Cerrar modal"
             >
                 ✕
@@ -46,18 +44,28 @@
 
         <form id="appointment-form">
 
+            <!-- ID de la cita -->
             <input
                 type="hidden"
                 id="appointment-id"
+                name="id_cita"
             >
 
+            <!--
+                Modos disponibles:
+                view
+                edit
+                reschedule
+            -->
             <input
                 type="hidden"
                 id="appointment-mode"
-                value="create"
+                value="edit"
             >
 
             <div class="modal__grid">
+
+                <!-- Cliente -->
 
                 <div class="form-group">
 
@@ -76,6 +84,9 @@
 
                 </div>
 
+
+                <!-- Fecha -->
+
                 <div class="form-group">
 
                     <label for="appointment-date">
@@ -91,6 +102,9 @@
 
                 </div>
 
+
+                <!-- Hora -->
+
                 <div class="form-group">
 
                     <label for="appointment-time">
@@ -105,6 +119,9 @@
                     >
 
                 </div>
+
+
+                <!-- Estado -->
 
                 <div class="form-group">
 
@@ -129,12 +146,24 @@
                             En espera
                         </option>
 
+                        <option value="Reagendada">
+                            Reagendada
+                        </option>
+
+                        <option value="Atendida">
+                            Atendida
+                        </option>
+
                         <option value="Cancelada">
                             Cancelada
                         </option>
+
                     </select>
 
                 </div>
+
+
+                <!-- Motivo -->
 
                 <div class="form-group form-group--full">
 
@@ -154,14 +183,18 @@
 
             </div>
 
+
+            <!-- Acciones -->
+
             <div class="modal__footer">
 
                 <button
                     type="button"
                     class="btn btn-secondary"
                     id="appointment-cancel"
+                    data-modal-close
                 >
-                    Cancelar
+                    Cerrar
                 </button>
 
                 <button
@@ -169,7 +202,7 @@
                     class="btn btn-primary"
                     id="appointment-save"
                 >
-                    Guardar cita
+                    Guardar cambios
                 </button>
 
             </div>
@@ -177,4 +210,5 @@
         </form>
 
     </div>
+
 </div>
