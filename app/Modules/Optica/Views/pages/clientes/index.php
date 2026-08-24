@@ -6,10 +6,7 @@ Clientes | Opticool
 
 <?= $this->section('styles') ?>
 
-<link
-    rel="stylesheet"
-    href="<?= base_url('assets/optica/css/pages/clientes.css') ?>"
->
+<link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/clientes.css') ?>">
 
 <?= $this->endSection() ?>
 
@@ -71,10 +68,7 @@ $clientes = [
 
         </div>
 
-        <a
-            href="<?= base_url('optica/clientes/nuevo') ?>"
-            class="clients-page__primary-action"
-        >
+        <a href="<?= base_url('optica/clientes/nuevo') ?>" class="clients-page__primary-action">
             <span>+</span>
 
             Nuevo cliente
@@ -93,19 +87,10 @@ $clientes = [
 
             <span class="clients-search-card__icon">
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <circle
-                        cx="11"
-                        cy="11"
-                        r="7"
-                    ></circle>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"></circle>
 
-                    <path
-                        d="m20 20-3.5-3.5"
-                    ></path>
+                    <path d="m20 20-3.5-3.5"></path>
                 </svg>
 
             </span>
@@ -127,27 +112,14 @@ $clientes = [
 
         <div class="clients-search">
 
-            <label
-                for="client-search"
-                class="sr-only"
-            >
+            <label for="client-search" class="sr-only">
                 Buscar cliente
             </label>
 
-            <input
-                type="search"
-                id="client-search"
-                name="search"
-                class="clients-search__input"
-                placeholder="Ej. María López o 55 1234 5678"
-                autocomplete="off"
-            >
+            <input type="search" id="client-search" name="search" class="clients-search__input"
+                placeholder="Ej. María López o 55 1234 5678" autocomplete="off">
 
-            <button
-                type="button"
-                class="clients-search__button"
-                id="client-search-button"
-            >
+            <button type="button" class="clients-search__button" id="client-search-button">
                 Buscar
             </button>
 
@@ -182,78 +154,66 @@ $clientes = [
 
                 <?php foreach ($clientes as $cliente): ?>
 
-                    <?php
+                <?php
                         $esActivo =
                             $cliente['estado'] === 'Activo';
                     ?>
 
-                    <tr
-                        data-client-id="<?= esc($cliente['id']) ?>"
-                    >
+                <tr data-client-id="<?= esc($cliente['id']) ?>">
 
-                        <td>
-                            <?= esc($cliente['id']) ?>
-                        </td>
+                    <td>
+                        <?= esc($cliente['id']) ?>
+                    </td>
 
-                        <td>
-                            <?= esc($cliente['nombre']) ?>
-                        </td>
+                    <td>
+                        <?= esc($cliente['nombre']) ?>
+                    </td>
 
-                        <td>
-                            <?= esc($cliente['telefono']) ?>
-                        </td>
+                    <td>
+                        <?= esc($cliente['telefono']) ?>
+                    </td>
 
-                        <td>
-                            <?= esc($cliente['correo']) ?>
-                        </td>
+                    <td>
+                        <?= esc($cliente['correo']) ?>
+                    </td>
 
-                        <td>
-                            <?= esc($cliente['fecha_registro']) ?>
-                        </td>
+                    <td>
+                        <?= esc($cliente['fecha_registro']) ?>
+                    </td>
 
-                        <td>
+                    <td>
 
-                            <span
-                                class="
+                        <span class="
                                     status-badge
                                     <?= $esActivo
                                         ? 'status-badge--active'
                                         : 'status-badge--inactive'
                                     ?>
-                                "
-                            >
-                                <?= esc($cliente['estado']) ?>
-                            </span>
+                                ">
+                            <?= esc($cliente['estado']) ?>
+                        </span>
 
-                        </td>
+                    </td>
 
-                        <td>
+                    <td>
 
-                            <div class="clients-table__actions">
+                        <div class="clients-table__actions">
 
-                                <a
-                                    href="<?= base_url('optica/consulta/historial') ?>"
-                                    class="clients-table__action"
-                                    data-action="view"
-                                    data-client-id="<?= esc($cliente['id']) ?>"
-                                >
-                                    Ver
-                                </a>
+                            <a href="<?= base_url('optica/consulta/historial') ?>" class="clients-table__action"
+                                data-action="view" data-client-id="<?= esc($cliente['id']) ?>">
+                                Ver
+                            </a>
 
-                                <a
-                                    href="<?= base_url('optica/consulta/expediente') ?>"
-                                    class="clients-table__action"
-                                    data-action="edit"
-                                    data-client-id="<?= esc($cliente['id']) ?>"
-                                >
-                                    Editar
-                                </a>
+                            <a href="<?= base_url('optica/consulta/expediente') ?>" class="clients-table__action"
+                                data-action="edit" data-client-id="<?= esc($cliente['id']) ?>">
+                                Editar
+                            </a>
 
-                            </div>
+                        </div>
 
-                        </td>
+                    </td>
 
-                    </tr>
+                </tr>
 
                 <?php endforeach; ?>
 
@@ -270,8 +230,6 @@ $clientes = [
 
 <?= $this->section('scripts') ?>
 
-<script
-    src="<?= base_url('assets/optica/js/pages/clientes.js') ?>"
-></script>
+<script src="<?= base_url('assets/optica/js/pages/clientes.js') ?>"></script>
 
 <?= $this->endSection() ?>
