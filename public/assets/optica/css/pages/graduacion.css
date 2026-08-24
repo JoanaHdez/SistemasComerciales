@@ -348,6 +348,25 @@
 }
 
 /* ==========================================================
+   Graduación actual omitida
+========================================================== */
+
+.graduacion-section--disabled {
+    opacity: .62;
+}
+
+.graduacion-section--disabled .eye-card,
+.graduacion-section--disabled .graduacion-right {
+    background: #f5f2f7;
+}
+
+.graduacion-section--disabled input,
+.graduacion-section--disabled textarea,
+.graduacion-section--disabled select {
+    cursor: not-allowed;
+}
+
+/* ==========================================================
    Responsive
 ========================================================== */
 
