@@ -1,0 +1,256 @@
+/* =========================================================
+   BUSCADOR
+========================================================= */
+
+.consulta-search-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(230px, 0.8fr)
+        minmax(320px, 1.2fr);
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-bottom: 22px;
+}
+
+.consulta-search-card
+.consulta-card-heading {
+    margin-bottom: 0;
+}
+
+.consulta-search-form {
+    display: flex;
+
+    gap: 10px;
+}
+
+.consulta-search-wrapper {
+    position: relative;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.consulta-search-control {
+    position: relative;
+
+    flex: 1;
+}
+
+.consulta-search-control input {
+    width: 100%;
+    height: 47px;
+
+    padding:
+        0 16px 0 46px;
+
+    color: #3d324d;
+    background: #fbfafe;
+
+    border: 1px solid #ddd4e7;
+    border-radius: 13px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.consulta-search-control input::placeholder {
+    color: #a39aaa;
+}
+
+.consulta-search-control input:focus {
+    border-color: #9a80b8;
+
+    box-shadow:
+        0 0 0 4px rgba(137, 105, 171, 0.1);
+}
+
+.consulta-search-icon {
+    position: absolute;
+
+    top: 50%;
+    left: 16px;
+
+    width: 19px;
+    height: 19px;
+
+    fill: none;
+    stroke: #8c7b9f;
+
+    stroke-width: 1.8;
+    stroke-linecap: round;
+
+    transform:
+        translateY(-50%);
+}
+
+.consulta-search-button {
+    min-width: 105px;
+    height: 47px;
+
+    padding: 0 18px;
+
+    color: #ffffff;
+    background: #74599b;
+
+    border: 0;
+    border-radius: 13px;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.consulta-search-button:hover {
+    background: #624885;
+}
+
+
+/* =========================================================
+   RESULTADOS DEL BUSCADOR
+========================================================= */
+
+.consulta-search-results {
+    position: absolute;
+
+    z-index: 50;
+
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+
+    max-height: 330px;
+
+    overflow-y: auto;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3dbea;
+    border-radius: 15px;
+
+    box-shadow:
+        0 18px 42px rgba(53, 37, 68, 0.14);
+}
+
+.consulta-search-results[hidden] {
+    display: none;
+}
+
+.consulta-search-result {
+    width: 100%;
+
+    padding: 12px;
+
+    display: grid;
+
+    grid-template-columns:
+        42px
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: inherit;
+    background: transparent;
+
+    border: 0;
+    border-radius: 11px;
+
+    font: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.consulta-search-result:hover {
+    background: #f7f3fa;
+}
+
+.consulta-search-result__avatar {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #ffffff;
+    background: #8064a2;
+
+    border-radius: 12px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.consulta-search-result__content {
+    min-width: 0;
+}
+
+.consulta-search-result__content strong,
+.consulta-search-result__content small {
+    display: block;
+}
+
+.consulta-search-result__content strong {
+    margin-bottom: 4px;
+
+    color: #493b57;
+
+    font-size: 0.84rem;
+}
+
+.consulta-search-result__content small {
+    margin-top: 2px;
+
+    color: #91879b;
+
+    font-size: 0.7rem;
+    line-height: 1.4;
+}
+
+.consulta-search-empty {
+    padding: 18px;
+
+    text-align: center;
+}
+
+.consulta-search-empty strong,
+.consulta-search-empty span {
+    display: block;
+}
+
+.consulta-search-empty strong {
+    color: #493b57;
+
+    font-size: 0.84rem;
+}
+
+.consulta-search-empty span {
+    margin-top: 5px;
+
+    color: #91879b;
+
+    font-size: 0.73rem;
+    line-height: 1.5;
+}

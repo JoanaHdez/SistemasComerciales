@@ -2,28 +2,19 @@
      CONSULTAS ANTERIORES
 ========================================================= -->
 
-<section class="consulta-card">
+<section class="consulta-card" id="consulta-consultas-anteriores">
 
     <div class="consulta-card-heading">
 
-        <div
-            class="consulta-heading-icon"
-            aria-hidden="true"
-        >
+        <div class="consulta-heading-icon" aria-hidden="true">
 
             <svg viewBox="0 0 24 24">
 
-                <path
-                    d="M3 12a9 9 0 1 0 3-6.7"
-                ></path>
+                <path d="M3 12a9 9 0 1 0 3-6.7"></path>
 
-                <path
-                    d="M3 3v6h6"
-                ></path>
+                <path d="M3 3v6h6"></path>
 
-                <path
-                    d="M12 7v5l3 2"
-                ></path>
+                <path d="M12 7v5l3 2"></path>
 
             </svg>
 
@@ -45,7 +36,16 @@
     </div>
 
 
-    <div class="consulta-history-list">
+    <!-- =====================================================
+         LISTADO DINÁMICO
+    ====================================================== -->
+
+    <div class="consulta-history-list" id="consulta-history-list">
+
+        <!--
+            Contenido inicial correspondiente
+            al cliente mostrado al cargar la vista.
+        -->
 
         <article class="consulta-history-item">
 
@@ -139,11 +139,9 @@
     </div>
 
 
-    <button
-        type="button"
-        class="consulta-full-history"
-    >
+    <a href="<?= base_url('optica/consulta/historial') ?>" class="consulta-full-history" id="consulta-ver-historial">
         Ver historial completo
-    </button>
+    </a>
 
+    /*historial clinico */
 </section>

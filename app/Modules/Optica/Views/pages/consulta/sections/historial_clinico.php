@@ -2,19 +2,13 @@
      HISTORIAL CLÍNICO
 ========================================================= -->
 
-<section
-    class="consulta-card"
-    id="consulta-historial-clinico"
->
+<section class="consulta-card" id="consulta-historial-clinico">
 
     <div class="consulta-card-heading consulta-heading-with-action">
 
         <div class="consulta-heading-content">
 
-            <div
-                class="consulta-heading-icon"
-                aria-hidden="true"
-            >
+            <div class="consulta-heading-icon" aria-hidden="true">
 
                 <svg viewBox="0 0 24 24">
 
@@ -46,12 +40,9 @@
         </div>
 
 
-        <button
-            type="button"
-            class="consulta-text-button"
-        >
+        <a href="<?= base_url('optica/consulta/expediente') ?>" class="consulta-text-button">
             Editar historial
-        </button>
+        </a>
 
     </div>
 

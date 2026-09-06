@@ -1,0 +1,119 @@
+/* =========================================================
+   ACCIONES RÁPIDAS
+========================================================= */
+
+.consulta-actions-card {
+    overflow: hidden;
+}
+
+.consulta-actions-list {
+    display: grid;
+
+    gap: 10px;
+}
+
+.consulta-action-link {
+    width: 100%;
+
+    padding: 13px;
+
+    display: grid;
+
+    grid-template-columns:
+        40px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 11px;
+
+    color: inherit;
+    background: #fcfbfd;
+
+    border:
+        1px solid #ebe5ef;
+
+    border-radius: 14px;
+
+    font-family: inherit;
+
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.consulta-action-link:hover {
+    color: inherit;
+
+    background: #f8f4fb;
+
+    border-color: #cdbedb;
+
+    transform:
+        translateY(-1px);
+}
+
+.consulta-action-button {
+    appearance: none;
+}
+
+.consulta-action-icon {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #755a92;
+    background: #eee8f5;
+
+    border-radius: 12px;
+}
+
+.consulta-action-icon svg {
+    width: 19px;
+    height: 19px;
+
+    fill: none;
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.consulta-action-link strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #493b57;
+
+    font-size: 0.83rem;
+}
+
+.consulta-action-link small {
+    display: block;
+
+    color: #91879b;
+
+    font-size: 0.7rem;
+
+    line-height: 1.35;
+}
+
+.consulta-action-arrow {
+    color: #9b8ba8;
+
+    font-size: 1.35rem;
+
+    line-height: 1;
+}

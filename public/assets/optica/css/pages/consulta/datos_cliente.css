@@ -1,0 +1,57 @@
+/* =========================================================
+   DATOS DEL CLIENTE
+========================================================= */
+
+.consulta-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 12px;
+}
+
+.consulta-info-item {
+    min-width: 0;
+
+    padding: 15px 16px;
+
+    background: #faf8fc;
+
+    border-radius: 14px;
+}
+
+.consulta-info-full {
+    grid-column: 1 / -1;
+}
+
+.consulta-info-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #91869d;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.025em;
+
+    text-transform: uppercase;
+}
+
+.consulta-info-item strong {
+    display: block;
+
+    overflow-wrap: anywhere;
+
+    color: #40364e;
+
+    font-size: 0.87rem;
+    font-weight: 650;
+
+    line-height: 1.45;
+}

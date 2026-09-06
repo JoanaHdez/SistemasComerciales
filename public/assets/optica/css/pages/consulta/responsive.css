@@ -1,0 +1,136 @@
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1180px) {
+
+    .consulta-layout {
+        grid-template-columns:
+            minmax(0, 1fr)
+            290px;
+    }
+
+    .consulta-info-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+@media (max-width: 980px) {
+
+    .consulta-search-card {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .consulta-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .consulta-side-column {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+@media (max-width: 720px) {
+
+    .consulta-header {
+        flex-direction: column;
+    }
+
+    .consulta-primary-button {
+        width: 100%;
+    }
+
+    .consulta-card {
+        padding: 28px 22px;
+
+        border-radius: 18px;
+    }
+
+    .consulta-card::before {
+        left: 22px;
+    }
+
+    .consulta-search-form {
+        flex-direction: column;
+    }
+
+    .consulta-search-button {
+        width: 100%;
+    }
+
+    .consulta-client-summary {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .consulta-secondary-button {
+        width: 100%;
+    }
+
+    .consulta-heading-with-action {
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .consulta-info-grid,
+    .consulta-clinical-grid,
+    .consulta-side-column {
+        grid-template-columns: 1fr;
+    }
+
+    .consulta-info-full {
+        grid-column: auto;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .consulta-card-heading,
+    .consulta-heading-content {
+        align-items: flex-start;
+    }
+
+    .consulta-heading-with-action {
+        flex-direction: column;
+    }
+
+    .consulta-client-summary {
+        padding: 17px;
+    }
+
+    .consulta-avatar {
+        width: 48px;
+        height: 48px;
+
+        flex-basis: 48px;
+    }
+
+    .consulta-client-identity h2 {
+        font-size: 1rem;
+    }
+
+    .consulta-graduation-date {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}

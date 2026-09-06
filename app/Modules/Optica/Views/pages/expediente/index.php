@@ -15,6 +15,7 @@ Expediente clínico | Opticool
 
 <?= $this->section('content') ?>
 
+/*expediente clinico */
 <section class="clinical-record-page">
 
     <div class="clinical-record-layout">

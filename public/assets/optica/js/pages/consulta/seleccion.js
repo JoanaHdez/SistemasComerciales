@@ -13,6 +13,16 @@ import {
 } from "./render/historialClinico.js";
 
 
+import {
+    renderGraduacion,
+} from "./render/graduacion.js";
+
+
+import {
+    renderConsultas,
+} from "./render/consultas.js";
+
+
 /* ==========================================================
    SELECCIONAR CLIENTE
 ========================================================== */
@@ -51,7 +61,7 @@ export function seleccionarCliente(
 
 
     /* ======================================================
-       ACTUALIZAR SECCIONES
+       ACTUALIZAR FICHA DEL CLIENTE
     ====================================================== */
 
     renderResumenCliente(
@@ -65,6 +75,16 @@ export function seleccionarCliente(
 
 
     renderHistorialClinico(
+        cliente,
+    );
+
+
+    renderGraduacion(
+        cliente,
+    );
+
+
+    renderConsultas(
         cliente,
     );
 

@@ -1,0 +1,126 @@
+/* =========================================================
+   GRADUACIÓN
+========================================================= */
+
+.consulta-status {
+    padding: 6px 10px;
+
+    color: #527c65;
+    background: #e9f5ed;
+
+    border-radius: 999px;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.consulta-graduation-date {
+    margin-bottom: 15px;
+
+    padding: 12px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background: #f6f2f9;
+
+    border-radius: 13px;
+}
+
+.consulta-graduation-date span {
+    color: #8d8199;
+
+    font-size: 0.77rem;
+}
+
+.consulta-graduation-date strong {
+    color: #493b58;
+
+    font-size: 0.84rem;
+}
+
+.consulta-graduation-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.consulta-graduation-table {
+    width: 100%;
+    min-width: 660px;
+
+    border-collapse: collapse;
+}
+
+.consulta-graduation-table th {
+    padding: 12px 13px;
+
+    color: #8e829a;
+    background: #faf8fc;
+
+    border-bottom:
+        1px solid #e7e0eb;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.consulta-graduation-table td {
+    padding: 15px 13px;
+
+    color: #51465c;
+
+    border-bottom:
+        1px solid #eee9f2;
+
+    font-size: 0.84rem;
+}
+
+.consulta-eye-badge {
+    width: 32px;
+    height: 32px;
+
+    margin-right: 8px;
+
+    display: inline-grid;
+
+    place-items: center;
+
+    color: #6e568a;
+    background: #eee8f5;
+
+    border-radius: 9px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.consulta-observation {
+    margin-top: 18px;
+
+    padding: 15px 17px;
+
+    background: #faf7fc;
+
+    border-left:
+        3px solid #aa91c4;
+
+    border-radius:
+        0 12px 12px 0;
+}
+
+.consulta-observation p {
+    margin: 0;
+
+    color: #716779;
+
+    font-size: 0.83rem;
+
+    line-height: 1.6;
+}

@@ -126,6 +126,113 @@ export const clientes = [
 
         },
 
+
+        /* --------------------------------------------------
+           Graduación actual
+        -------------------------------------------------- */
+
+        graduacionActual: {
+
+            estado:
+                "Actualizada",
+
+            fecha:
+                "15 de julio de 2026",
+
+            ojoDerecho: {
+
+                esfera:
+                    "-2.25",
+
+                cilindro:
+                    "-0.75",
+
+                eje:
+                    "15°",
+
+                adicion:
+                    "+1.00",
+
+                distanciaPupilar:
+                    "31 mm",
+
+            },
+
+            ojoIzquierdo: {
+
+                esfera:
+                    "-2.00",
+
+                cilindro:
+                    "-0.50",
+
+                eje:
+                    "170°",
+
+                adicion:
+                    "+1.00",
+
+                distanciaPupilar:
+                    "31 mm",
+
+            },
+
+            observaciones:
+                "Se recomienda lente con tratamiento antirreflejante debido al tiempo prolongado de exposición a pantallas.",
+
+        },
+
+
+        /* --------------------------------------------------
+           Consultas anteriores
+        -------------------------------------------------- */
+
+        consultasAnteriores: [
+
+            {
+                dia:
+                    "15",
+
+                periodo:
+                    "Jul 2026",
+
+                tipo:
+                    "Examen visual",
+
+                descripcion:
+                    "Actualización de graduación.",
+            },
+
+            {
+                dia:
+                    "10",
+
+                periodo:
+                    "Ene 2025",
+
+                tipo:
+                    "Consulta general",
+
+                descripcion:
+                    "Adaptación de lentes monofocales.",
+            },
+
+            {
+                dia:
+                    "22",
+
+                periodo:
+                    "Nov 2023",
+
+                tipo:
+                    "Primera valoración",
+
+                descripcion:
+                    "Registro inicial del expediente.",
+            },
+
+        ],
+
     },
 
 
@@ -239,6 +346,113 @@ export const clientes = [
 
         },
 
+
+        /* --------------------------------------------------
+           Graduación actual
+        -------------------------------------------------- */
+
+        graduacionActual: {
+
+            estado:
+                "Actualizada",
+
+            fecha:
+                "8 de junio de 2026",
+
+            ojoDerecho: {
+
+                esfera:
+                    "+1.50",
+
+                cilindro:
+                    "-0.50",
+
+                eje:
+                    "90°",
+
+                adicion:
+                    "+1.75",
+
+                distanciaPupilar:
+                    "32 mm",
+
+            },
+
+            ojoIzquierdo: {
+
+                esfera:
+                    "+1.25",
+
+                cilindro:
+                    "-0.25",
+
+                eje:
+                    "85°",
+
+                adicion:
+                    "+1.75",
+
+                distanciaPupilar:
+                    "32 mm",
+
+            },
+
+            observaciones:
+                "Se recomienda mantener el uso de lentes bifocales y realizar revisión periódica.",
+
+        },
+
+
+        /* --------------------------------------------------
+           Consultas anteriores
+        -------------------------------------------------- */
+
+        consultasAnteriores: [
+
+            {
+                dia:
+                    "08",
+
+                periodo:
+                    "Jun 2026",
+
+                tipo:
+                    "Examen visual",
+
+                descripcion:
+                    "Revisión y actualización de graduación.",
+            },
+
+            {
+                dia:
+                    "14",
+
+                periodo:
+                    "Feb 2026",
+
+                tipo:
+                    "Consulta general",
+
+                descripcion:
+                    "Seguimiento de adaptación de lentes bifocales.",
+            },
+
+            {
+                dia:
+                    "03",
+
+                periodo:
+                    "Sep 2024",
+
+                tipo:
+                    "Valoración visual",
+
+                descripcion:
+                    "Control de hipermetropía.",
+            },
+
+        ],
+
     },
 
 
@@ -351,6 +565,99 @@ export const clientes = [
             },
 
         },
+
+
+        /* --------------------------------------------------
+           Graduación actual
+        -------------------------------------------------- */
+
+        graduacionActual: {
+
+            estado:
+                "Actualizada",
+
+            fecha:
+                "22 de agosto de 2026",
+
+            ojoDerecho: {
+
+                esfera:
+                    "0.00",
+
+                cilindro:
+                    "-0.50",
+
+                eje:
+                    "20°",
+
+                adicion:
+                    "0.00",
+
+                distanciaPupilar:
+                    "30 mm",
+
+            },
+
+            ojoIzquierdo: {
+
+                esfera:
+                    "0.00",
+
+                cilindro:
+                    "-0.75",
+
+                eje:
+                    "165°",
+
+                adicion:
+                    "0.00",
+
+                distanciaPupilar:
+                    "30 mm",
+
+            },
+
+            observaciones:
+                "Se detecta astigmatismo leve. Se recomienda valorar adaptación de corrección óptica según síntomas.",
+
+        },
+
+
+        /* --------------------------------------------------
+           Consultas anteriores
+        -------------------------------------------------- */
+
+        consultasAnteriores: [
+
+            {
+                dia:
+                    "22",
+
+                periodo:
+                    "Ago 2026",
+
+                tipo:
+                    "Examen visual",
+
+                descripcion:
+                    "Detección de astigmatismo leve.",
+            },
+
+            {
+                dia:
+                    "05",
+
+                periodo:
+                    "Abr 2026",
+
+                tipo:
+                    "Primera valoración",
+
+                descripcion:
+                    "Apertura de expediente clínico.",
+            },
+
+        ],
 
     },
 

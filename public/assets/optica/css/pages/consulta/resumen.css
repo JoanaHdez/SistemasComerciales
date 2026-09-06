@@ -1,0 +1,93 @@
+/* =========================================================
+   RESUMEN DEL CLIENTE
+========================================================= */
+
+.consulta-client-summary {
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    margin-bottom: 22px;
+
+    padding: 20px 23px;
+
+    border:
+        1px solid rgba(116, 89, 155, 0.12);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            115deg,
+            rgba(238, 232, 245, 0.95),
+            rgba(255, 255, 255, 0.92)
+        );
+}
+
+.consulta-avatar {
+    width: 56px;
+    height: 56px;
+
+    flex: 0 0 56px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #ffffff;
+    background: #8064a2;
+
+    border-radius: 50%;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+}
+
+.consulta-client-identity {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.consulta-client-identity > span {
+    color: #8d809c;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.consulta-client-identity h2 {
+    margin: 4px 0 8px;
+
+    color: #332743;
+
+    font-size: 1.17rem;
+    font-weight: 700;
+}
+
+.consulta-client-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.consulta-client-tags span {
+    padding: 5px 9px;
+
+    color: #69567e;
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    border-radius: 999px;
+
+    font-size: 0.73rem;
+    font-weight: 600;
+}

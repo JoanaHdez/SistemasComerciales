@@ -2,7 +2,10 @@
      GRADUACIÓN ACTUAL
 ========================================================= -->
 
-<section class="consulta-card">
+<section
+    class="consulta-card"
+    id="consulta-graduacion-actual"
+>
 
     <div class="consulta-card-heading consulta-heading-with-action">
 
@@ -59,12 +62,17 @@
         </div>
 
 
-        <span class="consulta-status">
+        <span
+            class="consulta-status"
+            id="consulta-graduacion-estado"
+        >
             Actualizada
         </span>
 
     </div>
 
+
+    <!-- Fecha -->
 
     <div class="consulta-graduation-date">
 
@@ -72,12 +80,14 @@
             Fecha de graduación
         </span>
 
-        <strong>
+        <strong id="consulta-graduacion-fecha">
             15 de julio de 2026
         </strong>
 
     </div>
 
+
+    <!-- Tabla -->
 
     <div class="consulta-graduation-table-wrapper">
 
@@ -99,6 +109,8 @@
 
             <tbody>
 
+                <!-- Ojo derecho -->
+
                 <tr>
 
                     <td>
@@ -111,14 +123,30 @@
 
                     </td>
 
-                    <td>-2.25</td>
-                    <td>-0.75</td>
-                    <td>15°</td>
-                    <td>+1.00</td>
-                    <td>31 mm</td>
+                    <td id="consulta-graduacion-od-esfera">
+                        -2.25
+                    </td>
+
+                    <td id="consulta-graduacion-od-cilindro">
+                        -0.75
+                    </td>
+
+                    <td id="consulta-graduacion-od-eje">
+                        15°
+                    </td>
+
+                    <td id="consulta-graduacion-od-adicion">
+                        +1.00
+                    </td>
+
+                    <td id="consulta-graduacion-od-dp">
+                        31 mm
+                    </td>
 
                 </tr>
 
+
+                <!-- Ojo izquierdo -->
 
                 <tr>
 
@@ -132,11 +160,25 @@
 
                     </td>
 
-                    <td>-2.00</td>
-                    <td>-0.50</td>
-                    <td>170°</td>
-                    <td>+1.00</td>
-                    <td>31 mm</td>
+                    <td id="consulta-graduacion-oi-esfera">
+                        -2.00
+                    </td>
+
+                    <td id="consulta-graduacion-oi-cilindro">
+                        -0.50
+                    </td>
+
+                    <td id="consulta-graduacion-oi-eje">
+                        170°
+                    </td>
+
+                    <td id="consulta-graduacion-oi-adicion">
+                        +1.00
+                    </td>
+
+                    <td id="consulta-graduacion-oi-dp">
+                        31 mm
+                    </td>
 
                 </tr>
 
@@ -147,13 +189,15 @@
     </div>
 
 
+    <!-- Observaciones -->
+
     <div class="consulta-observation">
 
         <span class="consulta-info-label">
             Observaciones
         </span>
 
-        <p>
+        <p id="consulta-graduacion-observaciones">
             Se recomienda lente con tratamiento antirreflejante
             debido al tiempo prolongado de exposición a pantallas.
         </p>

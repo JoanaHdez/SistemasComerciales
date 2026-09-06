@@ -1,0 +1,286 @@
+/* =========================================================
+   PÁGINA DE CONSULTA
+========================================================= */
+
+.consulta-page {
+    width: 100%;
+    max-width: 1400px;
+    min-width: 0;
+    margin: 0 auto;
+
+    color: #2d2440;
+}
+
+.consulta-page *,
+.consulta-page *::before,
+.consulta-page *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+========================================================= */
+
+.consulta-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.consulta-eyebrow {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #876ba5;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.consulta-header h1 {
+    margin: 0;
+
+    color: #2d203b;
+
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.consulta-header p {
+    max-width: 660px;
+
+    margin: 9px 0 0;
+
+    color: #776d87;
+
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BOTONES GENERALES
+========================================================= */
+
+.consulta-primary-button,
+.consulta-secondary-button {
+    min-height: 44px;
+
+    padding: 11px 18px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border: 0;
+    border-radius: 13px;
+
+    font-family: inherit;
+    font-size: 0.91rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.consulta-primary-button {
+    color: #ffffff;
+    background: #76539b;
+
+    box-shadow:
+        0 10px 24px rgba(78, 52, 104, 0.18);
+}
+
+.consulta-primary-button:hover {
+    color: #ffffff;
+    background: #624483;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 13px 28px rgba(78, 52, 104, 0.22);
+}
+
+.consulta-button-icon {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.consulta-secondary-button {
+    flex-shrink: 0;
+
+    color: #5c477a;
+    background: #ffffff;
+
+    border: 1px solid #e3dceb;
+}
+
+.consulta-secondary-button:hover {
+    color: #49345f;
+    background: #f9f7fc;
+}
+
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.consulta-card {
+    position: relative;
+
+    padding: 30px 34px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9e1ef;
+    border-radius: 22px;
+
+    box-shadow:
+        0 14px 34px rgba(67, 48, 83, 0.07);
+}
+
+.consulta-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 34px;
+
+    width: 68px;
+    height: 4px;
+
+    background: #76539b;
+
+    border-radius:
+        0 0 999px 999px;
+}
+
+.consulta-search-card::before {
+    display: none;
+}
+
+.consulta-card-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 22px;
+}
+
+.consulta-heading-with-action {
+    justify-content: space-between;
+}
+
+.consulta-heading-content {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.consulta-heading-icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: grid;
+    place-items: center;
+
+    color: #72558f;
+    background: #eee8f5;
+
+    border-radius: 13px;
+}
+
+.consulta-heading-icon svg {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.consulta-card-heading h2 {
+    margin: 0;
+
+    color: #332743;
+
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+
+.consulta-card-heading p {
+    margin: 4px 0 0;
+
+    color: #8b8298;
+
+    font-size: 0.83rem;
+    line-height: 1.4;
+}
+
+.consulta-text-button {
+    padding: 7px 0;
+
+    color: #74599b;
+    background: transparent;
+
+    border: 0;
+
+    font-family: inherit;
+    font-size: 0.83rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.consulta-text-button:hover {
+    color: #513a6c;
+}
+
+
+/* =========================================================
+   DISTRIBUCIÓN PRINCIPAL
+========================================================= */
+
+.consulta-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        330px;
+
+    align-items: start;
+
+    gap: 22px;
+}
+
+.consulta-main-column,
+.consulta-side-column {
+    display: grid;
+
+    gap: 22px;
+}
