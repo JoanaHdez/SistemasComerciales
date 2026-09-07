@@ -1,4 +1,9 @@
 import {
+    establecerClienteActual,
+} from "./clienteActual.js";
+
+
+import {
     renderizarPaciente,
 } from "./render/paciente.js";
 
@@ -23,6 +28,11 @@ import {
 } from "./render/graduacion.js";
 
 
+import {
+    renderizarConsultas,
+} from "./render/consultas.js";
+
+
 /* ==========================================================
    SELECCIONAR CLIENTE
 ========================================================== */
@@ -42,7 +52,16 @@ export function seleccionarCliente(
 
 
     /* ======================================================
-       GUARDAR CLIENTE SELECCIONADO
+       ESTABLECER CLIENTE ACTUAL
+    ====================================================== */
+
+    establecerClienteActual(
+        cliente,
+    );
+
+
+    /* ======================================================
+       ACTUALIZAR BUSCADOR
     ====================================================== */
 
     inputBusqueda.value =
@@ -85,6 +104,11 @@ export function seleccionarCliente(
 
 
     renderizarGraduacion(
+        cliente,
+    );
+
+
+    renderizarConsultas(
         cliente,
     );
 

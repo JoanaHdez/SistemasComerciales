@@ -238,3 +238,17 @@ select.clinical-record-edit-field:not(:disabled):focus {
 
     resize: vertical;
 }
+
+/* ==========================================================
+   SIN CONSULTAS
+========================================================== */
+
+.clinical-record-table__empty {
+    padding: 28px 18px !important;
+
+    color: #91879b !important;
+
+    text-align: center !important;
+
+    font-size: 0.82rem !important;
+}

@@ -3,134 +3,44 @@ import {
 } from "./modal.js";
 
 
-/* ==========================================================
-   CONSULTAS SIMULADAS
-
-   Más adelante estos datos vendrán del backend.
-========================================================== */
-
-const consultas = [
-
-    {
-        id: 1,
-
-        tipo:
-            "ACTUALIZACIÓN DE GRADUACIÓN",
-
-        titulo:
-            "Consulta general",
-
-        fecha:
-            "22 julio 2026",
-
-        diagnostico:
-            "Miopía y astigmatismo bilateral.",
-
-        evolucion:
-            "Se detectó aumento de graduación en ambos ojos.",
-
-        graduacion: {
-
-            od:
-                "-1.75",
-
-            oi:
-                "-2.00",
-
-        },
-
-        observaciones:
-            "Se recomienda cambio de lentes y revisión en seis meses.",
-
-        estado:
-            "Finalizada",
-    },
-
-
-    {
-        id: 2,
-
-        tipo:
-            "SEGUIMIENTO",
-
-        titulo:
-            "Consulta de seguimiento",
-
-        fecha:
-            "14 febrero 2025",
-
-        diagnostico:
-            "Fatiga visual por exposición prolongada.",
-
-        evolucion:
-            "La graduación se mantiene estable respecto a la consulta anterior.",
-
-        graduacion: {
-
-            od:
-                "-1.50",
-
-            oi:
-                "-1.75",
-
-        },
-
-        observaciones:
-            "Se recomienda realizar pausas visuales durante jornadas prolongadas.",
-
-        estado:
-            "Finalizada",
-    },
-
-
-    {
-        id: 3,
-
-        tipo:
-            "VALORACIÓN INICIAL",
-
-        titulo:
-            "Consulta general",
-
-        fecha:
-            "08 agosto 2024",
-
-        diagnostico:
-            "Revisión general.",
-
-        evolucion:
-            "Se realizó valoración visual inicial y registro de graduación.",
-
-        graduacion: {
-
-            od:
-                "-1.50",
-
-            oi:
-                "-1.75",
-
-        },
-
-        observaciones:
-            "Se recomienda seguimiento periódico para evaluar cambios visuales.",
-
-        estado:
-            "Finalizada",
-    },
-
-];
+import {
+    obtenerClienteActual,
+} from "../clienteActual.js";
 
 
 /* ==========================================================
-   OBTENER CONSULTA
+   OBTENER CONSULTA DEL CLIENTE ACTUAL
 ========================================================== */
 
-function obtenerConsultaPorId(idConsulta) {
+function obtenerConsultaPorId(
+    idConsulta,
+) {
 
-    return consultas.find(
-        (consulta) =>
-            consulta.id ===
-            Number(idConsulta),
+    const cliente =
+        obtenerClienteActual();
+
+
+    if (
+        !cliente ||
+        !Array.isArray(
+            cliente.consultas,
+        )
+    ) {
+
+        return null;
+
+    }
+
+
+    return cliente.consultas.find(
+        (consulta) => {
+
+            return (
+                consulta.id ===
+                Number(idConsulta)
+            );
+
+        },
     );
 
 }
@@ -140,47 +50,57 @@ function obtenerConsultaPorId(idConsulta) {
    RENDERIZAR CONSULTA
 ========================================================== */
 
-function renderizarConsulta(consulta) {
+function renderizarConsulta(
+    consulta,
+) {
 
     const tipo =
         document.getElementById(
             "modal-consulta-tipo",
         );
 
+
     const titulo =
         document.getElementById(
             "modal-consulta-titulo",
         );
+
 
     const fecha =
         document.getElementById(
             "modal-consulta-fecha",
         );
 
+
     const diagnostico =
         document.getElementById(
             "modal-consulta-diagnostico",
         );
+
 
     const evolucion =
         document.getElementById(
             "modal-consulta-evolucion",
         );
 
+
     const od =
         document.getElementById(
             "modal-consulta-od",
         );
+
 
     const oi =
         document.getElementById(
             "modal-consulta-oi",
         );
 
+
     const observaciones =
         document.getElementById(
             "modal-consulta-observaciones",
         );
+
 
     const estado =
         document.getElementById(
@@ -209,40 +129,53 @@ function renderizarConsulta(consulta) {
     }
 
 
+    /* ======================================================
+       ACTUALIZAR MODAL
+    ====================================================== */
+
     tipo.textContent =
-        consulta.tipo;
+        consulta.tipo ??
+        "CONSULTA";
 
 
     titulo.textContent =
-        consulta.titulo;
+        consulta.titulo ??
+        "Detalle de consulta";
 
 
     fecha.textContent =
-        consulta.fecha;
+        consulta.fecha ??
+        "";
 
 
     diagnostico.textContent =
-        consulta.diagnostico;
+        consulta.diagnostico ??
+        "Sin diagnóstico registrado.";
 
 
     evolucion.textContent =
-        consulta.evolucion;
+        consulta.evolucion ??
+        "Sin evolución registrada.";
 
 
     od.textContent =
-        consulta.graduacion.od;
+        consulta.graduacion?.od ??
+        "—";
 
 
     oi.textContent =
-        consulta.graduacion.oi;
+        consulta.graduacion?.oi ??
+        "—";
 
 
     observaciones.textContent =
-        consulta.observaciones;
+        consulta.observaciones ??
+        "Sin observaciones registradas.";
 
 
     estado.textContent =
-        consulta.estado;
+        consulta.estado ??
+        "—";
 
 
     return true;
@@ -251,10 +184,12 @@ function renderizarConsulta(consulta) {
 
 
 /* ==========================================================
-   ABRIR DETALLE
+   MOSTRAR CONSULTA
 ========================================================== */
 
-function mostrarConsulta(idConsulta) {
+function mostrarConsulta(
+    idConsulta,
+) {
 
     const consulta =
         obtenerConsultaPorId(
@@ -265,7 +200,7 @@ function mostrarConsulta(idConsulta) {
     if (!consulta) {
 
         console.error(
-            `No se encontró la consulta ${idConsulta}.`,
+            `No se encontró la consulta ${idConsulta} del paciente seleccionado.`,
         );
 
         return;
