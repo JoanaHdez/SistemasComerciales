@@ -143,5 +143,4 @@
         Ver historial completo
     </a>
 
-    /*historial clinico */
 </section>

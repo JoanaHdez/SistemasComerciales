@@ -1,0 +1,100 @@
+/* ==========================================================
+   FILTROS
+========================================================== */
+
+.history-filters {
+    padding: 22px 24px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9e1ef;
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 30px rgba(67, 48, 83, 0.06);
+}
+
+
+/* ==========================================================
+   BUSCADOR
+========================================================== */
+
+.history-search {
+    width: 100%;
+}
+
+.history-search__input {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 0 16px;
+
+    color: #3f3449;
+    background: #ffffff;
+
+    border: 1px solid #ded6e6;
+    border-radius: 13px;
+
+    outline: none;
+
+    font: inherit;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.history-search__input:focus {
+    border-color: #8468a8;
+
+    box-shadow:
+        0 0 0 4px rgba(132, 104, 168, 0.12);
+}
+
+
+/* ==========================================================
+   SELECTORES
+========================================================== */
+
+.history-filter-group {
+    display: flex;
+
+    gap: 12px;
+}
+
+.history-filter {
+    min-height: 48px;
+
+    padding: 0 38px 0 14px;
+
+    color: #54485e;
+    background: #ffffff;
+
+    border: 1px solid #ded6e6;
+    border-radius: 13px;
+
+    outline: none;
+
+    font: inherit;
+    font-size: 0.88rem;
+
+    cursor: pointer;
+}
+
+.history-filter:focus {
+    border-color: #8468a8;
+
+    box-shadow:
+        0 0 0 4px rgba(132, 104, 168, 0.12);
+}

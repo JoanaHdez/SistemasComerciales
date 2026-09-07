@@ -1,0 +1,121 @@
+/* ==========================================================
+   ENCABEZADO PRINCIPAL
+========================================================== */
+
+.history-page__header {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+.history-page__eyebrow {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #876ba5;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+.history-page__title {
+    margin: 0;
+
+    color: #2d203b;
+
+    font-size: 2.35rem;
+    font-weight: 800;
+
+    line-height: 1.1;
+}
+
+.history-page__description {
+    max-width: 680px;
+
+    margin: 12px 0 0;
+
+    color: #776b80;
+
+    font-size: 1rem;
+
+    line-height: 1.55;
+}
+
+
+/* ==========================================================
+   ACCIONES
+========================================================== */
+
+.history-page__actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.history-page__button {
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    font-size: 0.86rem;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.history-page__button--primary {
+    color: #ffffff;
+    background: #76539b;
+
+    border: 0;
+
+    box-shadow:
+        0 10px 24px rgba(78, 52, 104, 0.18);
+}
+
+.history-page__button--primary:hover {
+    color: #ffffff;
+    background: #624483;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 13px 28px rgba(78, 52, 104, 0.22);
+}
+
+.history-page__button--secondary {
+    color: #684d86;
+    background: #ffffff;
+
+    border: 1px solid #ded4e6;
+}
+
+.history-page__button--secondary:hover {
+    color: #684d86;
+    background: #f7f3fa;
+
+    transform: translateY(-1px);
+}

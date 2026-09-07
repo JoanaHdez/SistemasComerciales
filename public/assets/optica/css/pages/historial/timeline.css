@@ -1,0 +1,134 @@
+/* ==========================================================
+   LÍNEA DEL TIEMPO
+========================================================== */
+
+.history-timeline {
+    display: grid;
+
+    gap: 34px;
+}
+
+.history-year {
+    display: grid;
+
+    gap: 18px;
+}
+
+
+/* ==========================================================
+   ENCABEZADO DEL AÑO
+========================================================== */
+
+.history-year__header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.history-year__label {
+    min-width: 72px;
+    min-height: 38px;
+
+    padding: 0 14px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    background: #76539b;
+
+    border-radius: 12px;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 18px rgba(79, 57, 101, 0.16);
+}
+
+.history-year__count {
+    color: #8a7f91;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   CONTENEDOR DE CONSULTAS
+========================================================== */
+
+.history-year__entries {
+    position: relative;
+
+    display: grid;
+
+    gap: 22px;
+
+    padding-left: 42px;
+}
+
+.history-year__entries::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 14px;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #76539b 0%,
+            #ded3e7 100%
+        );
+}
+
+
+/* ==========================================================
+   MARCADOR
+========================================================== */
+
+.history-entry {
+    position: relative;
+}
+
+.history-entry__marker {
+    position: absolute;
+
+    top: 30px;
+    left: -35px;
+
+    width: 16px;
+    height: 16px;
+
+    background: #ffffff;
+
+    border: 4px solid #76539b;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 5px #f5f1f8;
+}
+
+.history-entry--follow-up
+.history-entry__marker {
+    border-color: #4f7fa8;
+}
+
+.history-entry--initial
+.history-entry__marker {
+    border-color: #3d8a65;
+}
+
+.history-entry--general
+.history-entry__marker {
+    border-color: #8b6ca5;
+}

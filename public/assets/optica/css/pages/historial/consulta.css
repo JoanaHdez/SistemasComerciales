@@ -1,0 +1,257 @@
+/* ==========================================================
+   TARJETA DE CONSULTA
+========================================================== */
+
+.history-entry__card {
+    position: relative;
+
+    padding: 26px 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9e1ef;
+    border-radius: 21px;
+
+    box-shadow:
+        0 14px 34px rgba(67, 48, 83, 0.07);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.history-entry__card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 18px 40px rgba(67, 48, 83, 0.1);
+}
+
+
+/* ==========================================================
+   BARRA LATERAL SEGÚN TIPO
+========================================================== */
+
+.history-entry__card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 5px;
+
+    background: #76539b;
+}
+
+.history-entry--follow-up
+.history-entry__card::before {
+    background: #4f7fa8;
+}
+
+.history-entry--initial
+.history-entry__card::before {
+    background: #3d8a65;
+}
+
+.history-entry--general
+.history-entry__card::before {
+    background: #8b6ca5;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.history-entry__header {
+    margin-bottom: 22px;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.history-entry__type {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #876ba5;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 0.07em;
+}
+
+.history-entry__title {
+    margin: 0;
+
+    color: #3e2f4b;
+
+    font-size: 1.18rem;
+    font-weight: 800;
+}
+
+.history-entry__date {
+    flex: 0 0 auto;
+
+    padding: 7px 11px;
+
+    color: #6f5b7f;
+    background: #f3edf7;
+
+    border-radius: 10px;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   CONTENIDO
+========================================================== */
+
+.history-entry__content {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px 22px;
+}
+
+.history-entry__detail {
+    min-width: 0;
+}
+
+.history-entry__detail--full {
+    grid-column: 1 / -1;
+}
+
+.history-entry__detail-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #8c8194;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.history-entry__detail p {
+    margin: 0;
+
+    color: #655b6d;
+
+    font-size: 0.88rem;
+
+    line-height: 1.55;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.history-entry__footer {
+    margin-top: 22px;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    border-top: 1px solid #eee8f1;
+}
+
+
+/* ==========================================================
+   ESTADO
+========================================================== */
+
+.history-entry__status {
+    padding: 6px 10px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #327a55;
+    background: #e4f5ec;
+
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.history-entry__status::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    background: currentColor;
+
+    border-radius: 50%;
+}
+
+
+/* ==========================================================
+   ACCIONES
+========================================================== */
+
+.history-entry__actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.history-entry__action {
+    min-height: 36px;
+
+    padding: 0 13px;
+
+    color: #684d86;
+    background: #f1ebf5;
+
+    border: 0;
+    border-radius: 9px;
+
+    font: inherit;
+    font-size: 0.74rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.history-entry__action:hover {
+    background: #e5daed;
+
+    transform: translateY(-1px);
+}

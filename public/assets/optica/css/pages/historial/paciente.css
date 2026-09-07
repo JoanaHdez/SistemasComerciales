@@ -1,0 +1,177 @@
+/* ==========================================================
+   RESUMEN DEL PACIENTE
+========================================================== */
+
+.history-patient {
+    position: relative;
+
+    padding: 28px 32px;
+
+    display: grid;
+
+    grid-template-columns:
+        auto
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 22px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6a4a8c 0%,
+            #4c365f 100%
+        );
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 40px rgba(60, 40, 78, 0.18);
+
+    overflow: hidden;
+}
+
+.history-patient::after {
+    content: "";
+
+    position: absolute;
+
+    top: -85px;
+    right: -75px;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+}
+
+
+/* ==========================================================
+   AVATAR
+========================================================== */
+
+.history-patient__avatar {
+    position: relative;
+
+    z-index: 1;
+
+    width: 72px;
+    height: 72px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #5c3f78;
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    font-size: 1.35rem;
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 24px rgba(28, 18, 40, 0.2);
+}
+
+
+/* ==========================================================
+   INFORMACIÓN PRINCIPAL
+========================================================== */
+
+.history-patient__content,
+.history-patient__summary {
+    position: relative;
+
+    z-index: 1;
+}
+
+.history-patient__eyebrow {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+.history-patient__name {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 1.75rem;
+    font-weight: 800;
+}
+
+.history-patient__meta {
+    margin-top: 13px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px 24px;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 0.84rem;
+}
+
+.history-patient__meta strong {
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   RESUMEN
+========================================================== */
+
+.history-patient__summary {
+    min-width: 150px;
+
+    padding: 16px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 6px;
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 15px;
+}
+
+.history-patient__summary-label {
+    color:
+        rgba(255, 255, 255, 0.68);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.history-patient__summary strong {
+    color: #ffffff;
+
+    font-size: 0.95rem;
+}

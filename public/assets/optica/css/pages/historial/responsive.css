@@ -1,0 +1,265 @@
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    /* ======================================================
+       BUSCADOR DE PACIENTE
+    ====================================================== */
+
+    .history-patient-search {
+        grid-template-columns:
+            minmax(200px, 0.65fr)
+            minmax(320px, 1.35fr);
+
+        gap: 22px;
+    }
+
+
+    /* ======================================================
+       FILTROS
+    ====================================================== */
+
+    .history-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .history-filter-group {
+        width: 100%;
+    }
+
+    .history-filter {
+        flex: 1;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    /* ======================================================
+       ENCABEZADO
+    ====================================================== */
+
+    .history-page__header {
+        flex-direction: column;
+    }
+
+    .history-page__actions {
+        width: 100%;
+
+        flex-direction: column-reverse;
+    }
+
+    .history-page__button {
+        width: 100%;
+    }
+
+    .history-page__title {
+        font-size: 1.9rem;
+    }
+
+
+    /* ======================================================
+       BUSCADOR DE PACIENTE
+    ====================================================== */
+
+    .history-patient-search {
+        grid-template-columns: 1fr;
+
+        padding: 24px 22px;
+
+        gap: 20px;
+    }
+
+    .history-patient-search__form {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .history-patient-search__wrapper {
+        width: 100%;
+        max-width: none;
+    }
+
+    .history-patient-search-results {
+        width: 100%;
+        max-width: none;
+    }
+
+    .history-patient-search__button {
+        width: 100%;
+    }
+
+
+    /* ======================================================
+       PACIENTE
+    ====================================================== */
+
+    .history-patient {
+        grid-template-columns:
+            auto minmax(0, 1fr);
+
+        padding: 24px 22px;
+    }
+
+    .history-patient__summary {
+        grid-column: 1 / -1;
+
+        align-items: flex-start;
+    }
+
+
+    /* ======================================================
+       FILTROS
+    ====================================================== */
+
+    .history-filter-group {
+        flex-direction: column;
+    }
+
+    .history-filter {
+        width: 100%;
+    }
+
+
+    /* ======================================================
+       TIMELINE
+    ====================================================== */
+
+    .history-year__entries {
+        padding-left: 34px;
+    }
+
+    .history-year__entries::before {
+        left: 10px;
+    }
+
+    .history-entry__marker {
+        left: -31px;
+    }
+
+
+    /* ======================================================
+       CONSULTA
+    ====================================================== */
+
+    .history-entry__header,
+    .history-entry__footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .history-entry__date {
+        align-self: flex-start;
+    }
+
+    .history-entry__content {
+        grid-template-columns: 1fr;
+    }
+
+    .history-entry__detail--full {
+        grid-column: auto;
+    }
+
+    .history-entry__actions {
+        width: 100%;
+    }
+
+    .history-entry__action {
+        flex: 1;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    /* ======================================================
+       BUSCADOR DE PACIENTE
+    ====================================================== */
+
+    .history-patient-search {
+        padding: 20px 18px;
+
+        border-radius: 18px;
+    }
+
+    .history-patient-search__heading {
+        align-items: flex-start;
+    }
+
+    .history-patient-search__control input {
+        height: 45px;
+
+        font-size: 0.84rem;
+    }
+
+    .history-patient-search__button {
+        height: 45px;
+    }
+
+    .history-patient-search-result {
+        grid-template-columns:
+            38px minmax(0, 1fr);
+
+        gap: 10px;
+
+        padding: 10px;
+    }
+
+    .history-patient-search-result__avatar {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 10px;
+
+        font-size: 0.68rem;
+    }
+
+
+    /* ======================================================
+       PACIENTE
+    ====================================================== */
+
+    .history-patient {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .history-patient__avatar {
+        margin: 0 auto;
+    }
+
+    .history-patient__meta {
+        justify-content: center;
+    }
+
+    .history-patient__summary {
+        align-items: center;
+    }
+
+
+    /* ======================================================
+       CONSULTA
+    ====================================================== */
+
+    .history-entry__card {
+        padding: 24px 20px;
+
+        border-radius: 17px;
+    }
+
+    .history-entry__actions {
+        flex-direction: column;
+    }
+
+    .history-entry__action {
+        width: 100%;
+    }
+
+}
