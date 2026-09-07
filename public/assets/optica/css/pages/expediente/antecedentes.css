@@ -1,0 +1,173 @@
+/* ==========================================================
+   INFORMACIÓN RELEVANTE
+========================================================== */
+
+.clinical-record-relevant__grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+/* ==========================================================
+   ITEM
+
+   Todas las tarjetas comparten el mismo estilo visual.
+========================================================== */
+
+.clinical-record-relevant__item {
+    min-width: 0;
+
+    padding: 18px 20px;
+
+    background: #f6f2f9;
+
+    border: 1px solid #dfd3e8;
+    border-radius: 15px;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* ==========================================================
+   ETIQUETA
+
+   Todas utilizan el tono morado que anteriormente
+   solamente tenía Diagnóstico actual.
+========================================================== */
+
+.clinical-record-relevant__label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #76539b;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 0.025em;
+
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   VALOR PRINCIPAL
+
+   Todas utilizan el mismo morado del valor destacado.
+========================================================== */
+
+.clinical-record-relevant__field {
+    min-height: 28px;
+
+    margin-bottom: 4px;
+
+    color: #5c4175;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   DETALLE
+========================================================== */
+
+.clinical-record-relevant__detail-field {
+    min-height: 28px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    color: #857c90;
+
+    font-size: 0.79rem;
+    font-weight: 400;
+    line-height: 1.5;
+
+    resize: none;
+}
+
+
+/* ==========================================================
+   DIAGNÓSTICO
+
+   Se conserva la clase porque ya existe en el HTML,
+   pero visualmente utiliza exactamente los mismos
+   colores que las demás tarjetas.
+========================================================== */
+
+.clinical-record-relevant__item--highlight {
+    background: #f6f2f9;
+
+    border-color: #dfd3e8;
+}
+
+
+.clinical-record-relevant__item--highlight
+.clinical-record-relevant__label {
+    color: #76539b;
+}
+
+
+.clinical-record-relevant__item--highlight
+.clinical-record-relevant__field {
+    color: #5c4175;
+}
+
+
+/* ==========================================================
+   MODO EDICIÓN
+========================================================== */
+
+.clinical-record-card--editing
+.clinical-record-relevant__item {
+    background: #ffffff;
+
+    border-color: #d8cce1;
+}
+
+
+/* ==========================================================
+   VALOR PRINCIPAL EDITABLE
+========================================================== */
+
+.clinical-record-relevant__field:not([readonly]) {
+    min-height: 42px;
+
+    margin-bottom: 8px;
+
+    padding: 0 12px;
+}
+
+
+/* ==========================================================
+   DETALLE EDITABLE
+========================================================== */
+
+.clinical-record-relevant__detail-field:not([readonly]) {
+    min-height: 72px;
+
+    padding: 10px 12px;
+
+    resize: vertical;
+}
+
+
+/* ==========================================================
+   DIAGNÓSTICO EN MODO EDICIÓN
+========================================================== */
+
+.clinical-record-card--editing
+.clinical-record-relevant__item--highlight {
+    background: #ffffff;
+
+    border-color: #d8cce1;
+}

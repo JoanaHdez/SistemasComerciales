@@ -1,0 +1,114 @@
+/* ==========================================================
+   HISTORIAL DE CONSULTAS
+========================================================== */
+
+.clinical-record-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border:
+        1px solid #e6deeb;
+
+    border-radius: 15px;
+}
+
+.clinical-record-table {
+    width: 100%;
+    min-width: 780px;
+
+    border-collapse: collapse;
+}
+
+.clinical-record-table th,
+.clinical-record-table td {
+    padding: 15px 16px;
+
+    text-align: left;
+    vertical-align: middle;
+
+    border-bottom:
+        1px solid #eee8f1;
+}
+
+.clinical-record-table th {
+    color: #554761;
+    background: #f7f3fa;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.clinical-record-table td {
+    color: #655b6c;
+    background: #ffffff;
+
+    font-size: 0.85rem;
+}
+
+.clinical-record-table
+tbody
+tr:last-child
+td {
+    border-bottom: 0;
+}
+
+.clinical-record-table
+tbody
+tr:hover
+td {
+    background: #fcfafd;
+}
+
+.clinical-record-table__status {
+    padding: 6px 10px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #327a55;
+    background: #e4f5ec;
+
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.clinical-record-table__status::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    background: currentColor;
+
+    border-radius: 50%;
+}
+
+.clinical-record-table__action {
+    min-height: 34px;
+
+    padding: 0 12px;
+
+    color: #684d86;
+    background: #f1ebf5;
+
+    border: 0;
+    border-radius: 9px;
+
+    font: inherit;
+    font-size: 0.74rem;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.clinical-record-table__action:hover {
+    background: #e5daed;
+}

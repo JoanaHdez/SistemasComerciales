@@ -1,0 +1,31 @@
+/* ==========================================================
+   ACCIONES DE EDICIÓN
+========================================================== */
+
+.clinical-record-edit-actions {
+    display: flex;
+
+    align-items: center;
+}
+
+.clinical-record-edit-actions__view,
+.clinical-record-edit-actions__editing {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* ==========================================================
+   HIDDEN
+
+   Es importante porque los contenedores anteriores tienen
+   display:flex y necesitamos respetar el atributo hidden.
+========================================================== */
+
+.clinical-record-edit-actions__view[hidden],
+.clinical-record-edit-actions__editing[hidden] {
+    display: none;
+}

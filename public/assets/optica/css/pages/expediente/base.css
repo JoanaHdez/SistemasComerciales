@@ -1,0 +1,35 @@
+/* ==========================================================
+   PÁGINA: EXPEDIENTE CLÍNICO
+========================================================== */
+
+.clinical-record-page {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================================
+   DISTRIBUCIÓN GENERAL
+========================================================== */
+
+.clinical-record-layout {
+    display: grid;
+
+    gap: 24px;
+}
+
+.clinical-record-grid {
+    display: grid;
+
+    gap: 24px;
+}
+
+.clinical-record-grid--top {
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+}

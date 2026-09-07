@@ -1,0 +1,240 @@
+/* ==========================================================
+   LISTAS DE INFORMACIÓN
+========================================================== */
+
+.clinical-record-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 14px;
+}
+
+.clinical-record-info__item {
+    min-width: 0;
+
+    padding: 16px 18px;
+
+    background: #faf8fc;
+
+    border: 1px solid #e7dfec;
+    border-radius: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.clinical-record-info__item--full {
+    grid-column: 1 / -1;
+}
+
+
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.clinical-record-info__item label,
+.clinical-record-info dt {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #91869d;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 0.025em;
+
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   TEXTO NORMAL
+========================================================== */
+
+.clinical-record-info dd {
+    margin: 0;
+
+    color: #41364e;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    line-height: 1.45;
+}
+
+
+/* ==========================================================
+   CAMPOS EDITABLES
+========================================================== */
+
+.clinical-record-edit-field {
+    width: 100%;
+    min-height: 28px;
+
+    padding: 0;
+
+    color: #41364e;
+    background: transparent;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    outline: none;
+
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    line-height: 1.45;
+
+    transition:
+        padding 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ==========================================================
+   MODO LECTURA
+========================================================== */
+
+.clinical-record-edit-field[readonly] {
+    cursor: default;
+}
+
+
+/* ==========================================================
+   MODO EDICIÓN
+========================================================== */
+
+.clinical-record-card--editing
+.clinical-record-info__item {
+    background: #ffffff;
+
+    border-color: #d8cce1;
+}
+
+.clinical-record-edit-field:not([readonly]) {
+    min-height: 42px;
+
+    padding: 0 12px;
+
+    background: #faf8fc;
+
+    border-color: #ded6e5;
+}
+
+.clinical-record-edit-field:not([readonly]):hover {
+    border-color: #cbbfd4;
+}
+
+.clinical-record-edit-field:not([readonly]):focus {
+    background: #ffffff;
+
+    border-color: #8468a8;
+
+    box-shadow:
+        0 0 0 4px rgba(132, 104, 168, 0.12);
+}
+
+/* ==========================================================
+   SELECT
+========================================================== */
+
+select.clinical-record-edit-field {
+    appearance: none;
+
+    cursor: default;
+}
+
+select.clinical-record-edit-field:disabled {
+    opacity: 1;
+
+    color: #41364e;
+
+    -webkit-text-fill-color: #41364e;
+}
+
+
+/* ==========================================================
+   TEXTAREA
+========================================================== */
+
+.clinical-record-edit-field--textarea {
+    min-height: 54px;
+
+    padding-top: 4px;
+
+    resize: none;
+}
+
+
+/* ==========================================================
+   SELECT EN MODO EDICIÓN
+========================================================== */
+
+select.clinical-record-edit-field:not(:disabled) {
+    min-height: 42px;
+
+    padding: 0 34px 0 12px;
+
+    background-color: #faf8fc;
+
+    border-color: #ded6e5;
+
+    cursor: pointer;
+
+    background-image:
+        linear-gradient(
+            45deg,
+            transparent 50%,
+            #76539b 50%
+        ),
+        linear-gradient(
+            135deg,
+            #76539b 50%,
+            transparent 50%
+        );
+
+    background-position:
+        calc(100% - 17px) 18px,
+        calc(100% - 12px) 18px;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat: no-repeat;
+}
+
+select.clinical-record-edit-field:not(:disabled):focus {
+    background-color: #ffffff;
+
+    border-color: #8468a8;
+
+    box-shadow:
+        0 0 0 4px rgba(132, 104, 168, 0.12);
+}
+
+
+/* ==========================================================
+   TEXTAREA EN MODO EDICIÓN
+========================================================== */
+
+.clinical-record-edit-field--textarea:not([readonly]) {
+    min-height: 90px;
+
+    padding: 12px;
+
+    resize: vertical;
+}

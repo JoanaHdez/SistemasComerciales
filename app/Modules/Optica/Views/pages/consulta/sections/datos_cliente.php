@@ -2,31 +2,19 @@
      DATOS PERSONALES
 ========================================================= -->
 
-<section
-    class="consulta-card"
-    id="consulta-datos-cliente"
->
+<section class="consulta-card" id="consulta-datos-cliente">
 
     <div class="consulta-card-heading consulta-heading-with-action">
 
         <div class="consulta-heading-content">
 
-            <div
-                class="consulta-heading-icon"
-                aria-hidden="true"
-            >
+            <div class="consulta-heading-icon" aria-hidden="true">
 
                 <svg viewBox="0 0 24 24">
 
-                    <circle
-                        cx="12"
-                        cy="8"
-                        r="4"
-                    ></circle>
+                    <circle cx="12" cy="8" r="4"></circle>
 
-                    <path
-                        d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"
-                    ></path>
+                    <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
 
                 </svg>
 
@@ -48,12 +36,9 @@
         </div>
 
 
-        <button
-            type="button"
-            class="consulta-text-button"
-        >
+        <a href="<?= base_url('optica/consulta/expediente') ?>" class="consulta-text-button">
             Editar información
-        </button>
+        </a>
 
     </div>
 

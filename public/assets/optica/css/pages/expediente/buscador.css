@@ -1,0 +1,341 @@
+/* ==========================================================
+   BUSCADOR DE CLIENTE
+========================================================== */
+
+.clinical-record-search {
+    margin-bottom: 24px;
+
+    padding: 26px 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(240px, 0.75fr)
+        minmax(360px, 1.25fr);
+
+    align-items: center;
+
+    gap: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9e1ef;
+    border-radius: 22px;
+
+    box-shadow:
+        0 14px 34px rgba(67, 48, 83, 0.07);
+}
+
+
+/* ==========================================================
+   ENCABEZADO
+========================================================== */
+
+.clinical-record-search__heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+.clinical-record-search__icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #72558f;
+    background: #eee8f5;
+
+    border-radius: 13px;
+}
+
+.clinical-record-search__icon svg {
+    width: 20px;
+    height: 20px;
+
+    fill: none;
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.clinical-record-search__heading h2 {
+    margin: 0;
+
+    color: #332743;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.clinical-record-search__heading p {
+    margin: 4px 0 0;
+
+    color: #8b8298;
+
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   FORMULARIO
+========================================================== */
+
+.clinical-record-search__form {
+    display: flex;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+.clinical-record-search__wrapper {
+    position: relative;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.clinical-record-search__control {
+    position: relative;
+}
+
+.clinical-record-search__control input {
+    width: 100%;
+    height: 47px;
+
+    padding:
+        0 16px
+        0 46px;
+
+    color: #3d324d;
+    background: #fbfafe;
+
+    border: 1px solid #ddd4e7;
+    border-radius: 13px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.clinical-record-search__control input::placeholder {
+    color: #a39aaa;
+}
+
+.clinical-record-search__control input:focus {
+    border-color: #9a80b8;
+
+    box-shadow:
+        0 0 0 4px rgba(137, 105, 171, 0.1);
+}
+
+.clinical-record-search__input-icon {
+    position: absolute;
+
+    z-index: 1;
+
+    top: 50%;
+    left: 16px;
+
+    width: 19px;
+    height: 19px;
+
+    fill: none;
+    stroke: #8c7b9f;
+
+    stroke-width: 1.8;
+    stroke-linecap: round;
+
+    transform:
+        translateY(-50%);
+
+    pointer-events: none;
+}
+
+.clinical-record-search__button {
+    min-width: 105px;
+    height: 47px;
+
+    padding: 0 18px;
+
+    color: #ffffff;
+    background: #74599b;
+
+    border: 0;
+    border-radius: 13px;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.clinical-record-search__button:hover {
+    background: #624885;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ==========================================================
+   RESULTADOS
+========================================================== */
+
+.clinical-record-search-results {
+    position: absolute;
+
+    z-index: 50;
+
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+
+    max-height: 330px;
+
+    overflow-y: auto;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3dbea;
+    border-radius: 15px;
+
+    box-shadow:
+        0 18px 42px rgba(53, 37, 68, 0.14);
+}
+
+.clinical-record-search-results[hidden] {
+    display: none;
+}
+
+/* ==========================================================
+   RESULTADOS DEL BUSCADOR
+========================================================== */
+
+.clinical-record-search-result {
+    width: 100%;
+
+    padding: 12px;
+
+    display: grid;
+
+    grid-template-columns:
+        42px
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: inherit;
+    background: transparent;
+
+    border: 0;
+    border-radius: 11px;
+
+    font: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.clinical-record-search-result:hover {
+    background: #f7f3fa;
+}
+
+.clinical-record-search-result__avatar {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #ffffff;
+    background: #8064a2;
+
+    border-radius: 12px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.clinical-record-search-result__content {
+    min-width: 0;
+}
+
+.clinical-record-search-result__content strong,
+.clinical-record-search-result__content small {
+    display: block;
+}
+
+.clinical-record-search-result__content strong {
+    margin-bottom: 4px;
+
+    color: #493b57;
+
+    font-size: 0.84rem;
+}
+
+.clinical-record-search-result__content small {
+    margin-top: 2px;
+
+    color: #91879b;
+
+    font-size: 0.7rem;
+    line-height: 1.4;
+}
+
+.clinical-record-search-empty {
+    padding: 18px;
+
+    text-align: center;
+}
+
+.clinical-record-search-empty strong,
+.clinical-record-search-empty span {
+    display: block;
+}
+
+.clinical-record-search-empty strong {
+    color: #493b57;
+
+    font-size: 0.84rem;
+}
+
+.clinical-record-search-empty span {
+    margin-top: 5px;
+
+    color: #91879b;
+
+    font-size: 0.73rem;
+    line-height: 1.5;
+}

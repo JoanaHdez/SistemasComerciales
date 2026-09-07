@@ -1,0 +1,183 @@
+/* ==========================================================
+   GRADUACIÓN ACTUAL
+========================================================== */
+
+.clinical-record-graduation {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        )
+        minmax(220px, 0.7fr);
+
+    gap: 18px;
+}
+
+.clinical-record-eye,
+.clinical-record-graduation__extras {
+    padding: 22px;
+
+    background: #faf8fc;
+
+    border:
+        1px solid #e7dfec;
+
+    border-radius: 17px;
+}
+
+.clinical-record-eye__header {
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+.clinical-record-eye__header > span {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #ffffff;
+    background: #76539b;
+
+    border-radius: 11px;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.clinical-record-eye__header h3 {
+    margin: 0;
+
+    color: #4d3a5e;
+
+    font-size: 1rem;
+}
+
+.clinical-record-eye__values {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 12px;
+}
+
+.clinical-record-eye__values div,
+.clinical-record-graduation__extras div {
+    padding: 14px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e8e0ed;
+
+    border-radius: 12px;
+}
+
+.clinical-record-eye__values span,
+.clinical-record-graduation__extras span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #94899c;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.clinical-record-eye__values strong,
+.clinical-record-graduation__extras strong {
+    color: #42324f;
+
+    font-size: 0.95rem;
+}
+
+.clinical-record-graduation__extras {
+    display: grid;
+
+    gap: 12px;
+}
+
+/* ==========================================================
+   CAMPOS DE GRADUACIÓN
+========================================================== */
+
+.clinical-record-eye__values label,
+.clinical-record-graduation__extras label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #958a9d;
+
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   CAMPO EN MODO LECTURA
+========================================================== */
+
+.clinical-record-graduation__field {
+    width: 100%;
+
+    min-height: 28px;
+
+    padding: 0;
+
+    color: #43364d;
+    background: transparent;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    outline: none;
+
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   CORRECCIÓN DE GRADUACIÓN
+========================================================== */
+
+.clinical-record-graduation__field:not([readonly]) {
+    min-height: 40px;
+
+    padding: 0 10px;
+
+    background: #ffffff;
+
+    border-color: #d8cce1;
+}
+
+
+.clinical-record-graduation__field:not([readonly]):hover {
+    border-color: #c5b6d0;
+}
+
+
+.clinical-record-graduation__field:not([readonly]):focus {
+    border-color: #8468a8;
+
+    box-shadow:
+        0 0 0 4px rgba(132, 104, 168, 0.12);
+}

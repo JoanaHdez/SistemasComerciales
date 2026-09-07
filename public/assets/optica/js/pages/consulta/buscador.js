@@ -20,10 +20,6 @@ import {
 
 export function inicializarBuscadorConsulta() {
 
-    /* ======================================================
-       ELEMENTOS
-    ====================================================== */
-
     const formulario =
         document.getElementById(
             "consulta-search-form",
@@ -66,14 +62,9 @@ export function inicializarBuscadorConsulta() {
         resultadosContenedor.hidden =
             true;
 
+
         resultadosContenedor.innerHTML =
             "";
-
-
-        inputBusqueda.setAttribute(
-            "aria-expanded",
-            "false",
-        );
 
     }
 
@@ -90,10 +81,6 @@ export function inicializarBuscadorConsulta() {
             "";
 
 
-        /* --------------------------------------------------
-           Sin resultados
-        -------------------------------------------------- */
-
         if (
             clientesEncontrados.length === 0
         ) {
@@ -107,7 +94,7 @@ export function inicializarBuscadorConsulta() {
 
                     <span>
                         Intenta buscar por nombre,
-                        teléfono, correo o número de cliente.
+                        teléfono, correo o folio.
                     </span>
 
                 </div>
@@ -118,20 +105,10 @@ export function inicializarBuscadorConsulta() {
                 false;
 
 
-            inputBusqueda.setAttribute(
-                "aria-expanded",
-                "true",
-            );
-
-
             return;
 
         }
 
-
-        /* --------------------------------------------------
-           Resultados encontrados
-        -------------------------------------------------- */
 
         clientesEncontrados.forEach(
             (cliente) => {
@@ -202,10 +179,9 @@ export function inicializarBuscadorConsulta() {
                 );
 
 
-                resultadosContenedor
-                    .appendChild(
-                        boton,
-                    );
+                resultadosContenedor.appendChild(
+                    boton,
+                );
 
             },
         );
@@ -214,17 +190,11 @@ export function inicializarBuscadorConsulta() {
         resultadosContenedor.hidden =
             false;
 
-
-        inputBusqueda.setAttribute(
-            "aria-expanded",
-            "true",
-        );
-
     }
 
 
     /* ======================================================
-       BUSCAR CLIENTES
+       BUSCAR
     ====================================================== */
 
     function buscarClientes() {
@@ -244,7 +214,7 @@ export function inicializarBuscadorConsulta() {
         }
 
 
-        const clientesEncontrados =
+        const encontrados =
             clientes.filter(
                 (cliente) => {
 
@@ -284,7 +254,7 @@ export function inicializarBuscadorConsulta() {
 
 
         mostrarResultados(
-            clientesEncontrados,
+            encontrados,
         );
 
     }
@@ -311,10 +281,6 @@ export function inicializarBuscadorConsulta() {
         },
     );
 
-
-    /* ------------------------------------------------------
-       Cerrar resultados al hacer clic fuera
-    ------------------------------------------------------ */
 
     document.addEventListener(
         "click",

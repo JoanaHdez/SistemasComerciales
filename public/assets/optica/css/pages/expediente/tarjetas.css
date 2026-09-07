@@ -1,0 +1,135 @@
+/* ==========================================================
+   TARJETAS
+========================================================== */
+
+.clinical-record-card {
+    position: relative;
+
+    padding: 30px 34px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e9e1ef;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 14px 34px rgba(67, 48, 83, 0.07);
+}
+
+.clinical-record-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 34px;
+
+    width: 68px;
+    height: 4px;
+
+    background: #76539b;
+
+    border-radius:
+        0 0 999px 999px;
+}
+
+.clinical-record-card__header {
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.clinical-record-card__header--with-action {
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+.clinical-record-card__heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.clinical-record-card__icon {
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #76539b;
+    background: #efe8f5;
+
+    border-radius: 13px;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.clinical-record-card__eyebrow {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #8d7d99;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 0.07em;
+}
+
+.clinical-record-card__title {
+    margin: 0;
+
+    color: #49365d;
+
+    font-size: 1.18rem;
+    font-weight: 800;
+}
+
+.clinical-record-card__action {
+    min-height: 42px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #684d86;
+    background: #f3edf7;
+
+    border-radius: 11px;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.clinical-record-card__action:hover {
+    color: #684d86;
+    background: #e7ddee;
+
+    transform:
+        translateY(-1px);
+}

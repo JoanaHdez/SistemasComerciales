@@ -70,8 +70,6 @@ export const clientes = [
 
         /* --------------------------------------------------
            Historial clínico
-
-           Resumen proveniente del historial completo.
         -------------------------------------------------- */
 
         historialClinico: {
@@ -190,43 +188,25 @@ export const clientes = [
         consultasAnteriores: [
 
             {
-                dia:
-                    "15",
-
-                periodo:
-                    "Jul 2026",
-
-                tipo:
-                    "Examen visual",
-
+                dia: "15",
+                periodo: "Jul 2026",
+                tipo: "Examen visual",
                 descripcion:
                     "Actualización de graduación.",
             },
 
             {
-                dia:
-                    "10",
-
-                periodo:
-                    "Ene 2025",
-
-                tipo:
-                    "Consulta general",
-
+                dia: "10",
+                periodo: "Ene 2025",
+                tipo: "Consulta general",
                 descripcion:
                     "Adaptación de lentes monofocales.",
             },
 
             {
-                dia:
-                    "22",
-
-                periodo:
-                    "Nov 2023",
-
-                tipo:
-                    "Primera valoración",
-
+                dia: "22",
+                periodo: "Nov 2023",
+                tipo: "Primera valoración",
                 descripcion:
                     "Registro inicial del expediente.",
             },
@@ -254,10 +234,6 @@ export const clientes = [
             "carlos@example.com",
 
 
-        /* --------------------------------------------------
-           Resumen
-        -------------------------------------------------- */
-
         resumen: {
 
             ultimaConsulta:
@@ -265,10 +241,6 @@ export const clientes = [
 
         },
 
-
-        /* --------------------------------------------------
-           Datos personales
-        -------------------------------------------------- */
 
         datosPersonales: {
 
@@ -289,10 +261,6 @@ export const clientes = [
 
         },
 
-
-        /* --------------------------------------------------
-           Historial clínico
-        -------------------------------------------------- */
 
         historialClinico: {
 
@@ -347,10 +315,6 @@ export const clientes = [
         },
 
 
-        /* --------------------------------------------------
-           Graduación actual
-        -------------------------------------------------- */
-
         graduacionActual: {
 
             estado:
@@ -403,50 +367,28 @@ export const clientes = [
         },
 
 
-        /* --------------------------------------------------
-           Consultas anteriores
-        -------------------------------------------------- */
-
         consultasAnteriores: [
 
             {
-                dia:
-                    "08",
-
-                periodo:
-                    "Jun 2026",
-
-                tipo:
-                    "Examen visual",
-
+                dia: "08",
+                periodo: "Jun 2026",
+                tipo: "Examen visual",
                 descripcion:
                     "Revisión y actualización de graduación.",
             },
 
             {
-                dia:
-                    "14",
-
-                periodo:
-                    "Feb 2026",
-
-                tipo:
-                    "Consulta general",
-
+                dia: "14",
+                periodo: "Feb 2026",
+                tipo: "Consulta general",
                 descripcion:
                     "Seguimiento de adaptación de lentes bifocales.",
             },
 
             {
-                dia:
-                    "03",
-
-                periodo:
-                    "Sep 2024",
-
-                tipo:
-                    "Valoración visual",
-
+                dia: "03",
+                periodo: "Sep 2024",
+                tipo: "Valoración visual",
                 descripcion:
                     "Control de hipermetropía.",
             },
@@ -474,10 +416,6 @@ export const clientes = [
             "ana@example.com",
 
 
-        /* --------------------------------------------------
-           Resumen
-        -------------------------------------------------- */
-
         resumen: {
 
             ultimaConsulta:
@@ -485,10 +423,6 @@ export const clientes = [
 
         },
 
-
-        /* --------------------------------------------------
-           Datos personales
-        -------------------------------------------------- */
 
         datosPersonales: {
 
@@ -509,10 +443,6 @@ export const clientes = [
 
         },
 
-
-        /* --------------------------------------------------
-           Historial clínico
-        -------------------------------------------------- */
 
         historialClinico: {
 
@@ -567,10 +497,6 @@ export const clientes = [
         },
 
 
-        /* --------------------------------------------------
-           Graduación actual
-        -------------------------------------------------- */
-
         graduacionActual: {
 
             estado:
@@ -623,36 +549,20 @@ export const clientes = [
         },
 
 
-        /* --------------------------------------------------
-           Consultas anteriores
-        -------------------------------------------------- */
-
         consultasAnteriores: [
 
             {
-                dia:
-                    "22",
-
-                periodo:
-                    "Ago 2026",
-
-                tipo:
-                    "Examen visual",
-
+                dia: "22",
+                periodo: "Ago 2026",
+                tipo: "Examen visual",
                 descripcion:
                     "Detección de astigmatismo leve.",
             },
 
             {
-                dia:
-                    "05",
-
-                periodo:
-                    "Abr 2026",
-
-                tipo:
-                    "Primera valoración",
-
+                dia: "05",
+                periodo: "Abr 2026",
+                tipo: "Primera valoración",
                 descripcion:
                     "Apertura de expediente clínico.",
             },

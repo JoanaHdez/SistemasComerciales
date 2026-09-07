@@ -1,0 +1,341 @@
+/* ==========================================================
+   MODAL - DETALLE DE CONSULTA
+========================================================== */
+
+.consultation-modal[hidden] {
+    display: none;
+}
+
+
+.consultation-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+}
+
+
+/* ==========================================================
+   BACKDROP
+========================================================== */
+
+.consultation-modal__backdrop {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(30, 22, 36, 0.55);
+
+    backdrop-filter: blur(3px);
+}
+
+
+/* ==========================================================
+   CONTENEDOR
+========================================================== */
+
+.consultation-modal__dialog {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(100%, 680px);
+    max-height: calc(100vh - 48px);
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #eadff0;
+    border-radius: 24px;
+
+    box-shadow:
+        0 24px 70px rgba(42, 28, 52, 0.22);
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.consultation-modal__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 26px 28px 22px;
+
+    border-bottom: 1px solid #eee5f2;
+}
+
+
+.consultation-modal__eyebrow {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #8468a8;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+
+.consultation-modal__title {
+    margin: 0;
+
+    color: #3f3348;
+
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+
+.consultation-modal__date {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #93889a;
+
+    font-size: 0.82rem;
+}
+
+
+.consultation-modal__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    flex: 0 0 auto;
+
+    padding: 0;
+
+    color: #6f6277;
+    background: #f7f3f9;
+
+    border: 1px solid #e8deed;
+    border-radius: 50%;
+
+    font-size: 1.4rem;
+
+    cursor: pointer;
+}
+
+
+.consultation-modal__close:hover {
+    background: #eee7f2;
+}
+
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+.consultation-modal__body {
+    display: grid;
+    gap: 14px;
+
+    padding: 24px 28px;
+}
+
+
+.consultation-modal__section {
+    padding: 16px 18px;
+
+    background: #faf8fb;
+
+    border: 1px solid #eee6f2;
+    border-radius: 15px;
+}
+
+
+.consultation-modal__label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #8a7d92;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+
+.consultation-modal__text {
+    margin: 0;
+
+    color: #493d51;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   GRADUACIÓN
+========================================================== */
+
+.consultation-modal__graduation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+.consultation-modal__graduation > div {
+    padding: 12px 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9dfee;
+    border-radius: 12px;
+}
+
+
+.consultation-modal__graduation span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #95899c;
+
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+
+.consultation-modal__graduation strong {
+    color: #44364d;
+
+    font-size: 0.95rem;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.consultation-modal__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    padding: 18px 28px 24px;
+
+    border-top: 1px solid #eee5f2;
+}
+
+
+.consultation-modal__status {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 30px;
+
+    padding: 5px 11px;
+
+    color: #52725f;
+    background: #edf7f0;
+
+    border-radius: 999px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+
+.consultation-modal__button {
+    min-height: 40px;
+
+    padding: 0 18px;
+
+    color: #ffffff;
+    background: #74548f;
+
+    border: 0;
+    border-radius: 11px;
+
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.consultation-modal__button:hover {
+    background: #65477f;
+}
+
+
+/* ==========================================================
+   BODY BLOQUEADO
+========================================================== */
+
+body.consultation-modal-open {
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 640px) {
+
+    .consultation-modal {
+        align-items: flex-end;
+
+        padding: 12px;
+    }
+
+
+    .consultation-modal__dialog {
+        max-height: calc(100vh - 24px);
+
+        border-radius: 20px;
+    }
+
+
+    .consultation-modal__header,
+    .consultation-modal__body,
+    .consultation-modal__footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .consultation-modal__graduation {
+        grid-template-columns: 1fr;
+    }
+
+
+    .consultation-modal__footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+
+    .consultation-modal__button {
+        width: 100%;
+    }
+
+}

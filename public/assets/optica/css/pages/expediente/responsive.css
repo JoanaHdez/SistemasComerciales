@@ -1,0 +1,149 @@
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .clinical-record-grid--top {
+        grid-template-columns: 1fr;
+    }
+
+    .clinical-record-graduation {
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+    }
+
+    .clinical-record-graduation__extras {
+        grid-column: 1 / -1;
+
+        grid-template-columns:
+            repeat(3,
+                minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .clinical-record-page__header {
+        flex-direction: column;
+    }
+
+    .clinical-record-page__actions {
+        width: 100%;
+
+        flex-direction: column-reverse;
+    }
+
+    .clinical-record-page__button {
+        width: 100%;
+    }
+
+    .clinical-record-page__title {
+        font-size: 1.9rem;
+    }
+
+    .clinical-record-patient {
+        grid-template-columns:
+            auto minmax(0, 1fr);
+
+        padding: 24px 22px;
+    }
+
+    .clinical-record-patient__status {
+        grid-column: 1 / -1;
+
+        align-items: flex-start;
+    }
+
+    .clinical-record-card {
+        padding: 28px 22px;
+    }
+
+    .clinical-record-card::before {
+        left: 22px;
+    }
+
+    .clinical-record-card__header--with-action {
+        flex-direction: column;
+    }
+
+    .clinical-record-card__action {
+        width: 100%;
+    }
+
+    .clinical-record-info,
+    .clinical-record-backgrounds,
+    .clinical-record-graduation {
+        grid-template-columns: 1fr;
+    }
+
+    .clinical-record-info__item--full,
+    .clinical-record-graduation__extras {
+        grid-column: auto;
+    }
+
+    .clinical-record-graduation__extras {
+        grid-template-columns: 1fr;
+    }
+
+    .clinical-record-eye__values {
+        grid-template-columns: 1fr;
+    }
+
+    .clinical-record-search {
+        grid-template-columns: 1fr;
+
+        padding: 24px 22px;
+
+        gap: 20px;
+    }
+
+    .clinical-record-search__form {
+        flex-direction: column;
+    }
+
+    .clinical-record-search__button {
+        width: 100%;
+    }
+
+    .clinical-record-relevant__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .clinical-record-relevant__item {
+        padding: 17px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .clinical-record-patient {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .clinical-record-patient__avatar {
+        margin: 0 auto;
+    }
+
+    .clinical-record-patient__meta {
+        justify-content: center;
+    }
+
+    .clinical-record-patient__status {
+        align-items: center;
+    }
+
+    .clinical-record-card {
+        padding: 24px 18px;
+
+        border-radius: 17px;
+    }
+
+}

@@ -41,10 +41,6 @@ export function seleccionarCliente(
     }
 
 
-    /* ======================================================
-       GUARDAR CLIENTE SELECCIONADO
-    ====================================================== */
-
     inputBusqueda.value =
         cliente.nombre;
 
@@ -53,15 +49,11 @@ export function seleccionarCliente(
         cliente.id;
 
 
-    /* ======================================================
-       CERRAR RESULTADOS
-    ====================================================== */
-
     ocultarResultados();
 
 
     /* ======================================================
-       ACTUALIZAR FICHA DEL CLIENTE
+       ACTUALIZAR FICHA
     ====================================================== */
 
     renderResumenCliente(
@@ -88,10 +80,6 @@ export function seleccionarCliente(
         cliente,
     );
 
-
-    /* ======================================================
-       COMPROBACIÓN TEMPORAL
-    ====================================================== */
 
     console.log(
         "Cliente seleccionado:",
