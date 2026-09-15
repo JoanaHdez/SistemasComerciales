@@ -6,10 +6,7 @@ Pedidos | Opticool
 
 <?= $this->section('styles') ?>
 
-<link
-    rel="stylesheet"
-    href="<?= base_url('assets/optica/css/pages/pedidos.css') ?>"
->
+<link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/pedidos.css') ?>">
 
 <?= $this->endSection() ?>
 
@@ -40,341 +37,337 @@ Pedidos | Opticool
 
     <div class="orders-layout">
 
-    <!-- ==========================================
+        <!-- ==========================================
          RESUMEN
     =========================================== -->
 
-    <section class="orders-summary">
+        <section class="orders-summary">
 
-        <article class="orders-summary__card">
+            <article class="orders-summary__card">
 
-            <span class="orders-summary__label">
-                Pedidos del día
-            </span>
+                <span class="orders-summary__label">
+                    Pedidos del día
+                </span>
 
-            <strong class="orders-summary__value">
-                12
-            </strong>
+                <strong class="orders-summary__value">
+                    12
+                </strong>
 
-            <small>
-                4 nuevos
-            </small>
+                <small>
+                    4 nuevos
+                </small>
 
-        </article>
+            </article>
 
-        <article class="orders-summary__card">
+            <article class="orders-summary__card">
 
-            <span class="orders-summary__label">
-                En laboratorio
-            </span>
+                <span class="orders-summary__label">
+                    En laboratorio
+                </span>
 
-            <strong class="orders-summary__value">
-                8
-            </strong>
+                <strong class="orders-summary__value">
+                    8
+                </strong>
 
-            <small>
-                En proceso
-            </small>
+                <small>
+                    En proceso
+                </small>
 
-        </article>
+            </article>
 
-        <article class="orders-summary__card">
+            <article class="orders-summary__card">
 
-            <span class="orders-summary__label">
-                Listos
-            </span>
+                <span class="orders-summary__label">
+                    Listos
+                </span>
 
-            <strong class="orders-summary__value">
-                3
-            </strong>
+                <strong class="orders-summary__value">
+                    3
+                </strong>
 
-            <small>
-                Esperando entrega
-            </small>
+                <small>
+                    Esperando entrega
+                </small>
 
-        </article>
+            </article>
 
-        <article class="orders-summary__card">
+            <article class="orders-summary__card">
 
-            <span class="orders-summary__label">
-                Entregados
-            </span>
+                <span class="orders-summary__label">
+                    Entregados
+                </span>
 
-            <strong class="orders-summary__value">
-                42
-            </strong>
+                <strong class="orders-summary__value">
+                    42
+                </strong>
 
-            <small>
-                Este mes
-            </small>
+                <small>
+                    Este mes
+                </small>
 
-        </article>
+            </article>
 
-    </section>
+        </section>
 
-    <!-- ==========================================
+        <!-- ==========================================
          FILTROS
     =========================================== -->
 
-    <section class="orders-filters">
+        <section class="orders-filters">
 
-        <input
-            type="search"
-            class="orders-filters__search"
-            placeholder="Buscar cliente, pedido o venta..."
-        >
+            <input type="search" class="orders-filters__search" placeholder="Buscar cliente, pedido o venta...">
 
-        <select class="orders-filters__select">
+            <select class="orders-filters__select">
 
-            <option>
-                Todos los estados
-            </option>
+                <option>
+                    Todos los estados
+                </option>
 
-            <option>
-                Pendiente
-            </option>
+                <option>
+                    Pendiente
+                </option>
 
-            <option>
-                En laboratorio
-            </option>
+                <option>
+                    En laboratorio
+                </option>
 
-            <option>
-                Listo
-            </option>
+                <option>
+                    Listo
+                </option>
 
-            <option>
-                Entregado
-            </option>
+                <option>
+                    Entregado
+                </option>
 
-        </select>
+            </select>
 
-        <select class="orders-filters__select">
+            <select class="orders-filters__select">
 
-            <option>
-                Todos los laboratorios
-            </option>
+                <option>
+                    Todos los laboratorios
+                </option>
 
-            <option>
-                Luxottica
-            </option>
+                <option>
+                    Luxottica
+                </option>
 
-            <option>
-                Essilor
-            </option>
+                <option>
+                    Essilor
+                </option>
 
-        </select>
+            </select>
 
-    </section>
+        </section>
 
-    <!-- ==========================================
+        <!-- ==========================================
          TABLERO
     =========================================== -->
 
-    <section class="orders-board">
+        <section class="orders-board">
 
-        <!-- Pendientes -->
+            <!-- Pendientes -->
 
-        <article class="orders-column">
+            <article class="orders-column">
 
-            <header class="orders-column__header">
+                <header class="orders-column__header">
 
-                <h2>
-                    Pendientes
-                </h2>
+                    <h2>
+                        Pendientes
+                    </h2>
 
-                <span>
-                    2
-                </span>
-
-            </header>
-
-            <div class="orders-column__body">
-
-                <article class="order-card">
-
-                    <span class="order-card__number">
-                        Venta #00035
+                    <span>
+                        2
                     </span>
 
-                    <h3>
-                        María López Hernández
-                    </h3>
+                </header>
 
-                    <p>
-                        Armazón + Micas Blue Protect
-                    </p>
+                <div class="orders-column__body">
 
-                    <div class="order-card__footer">
+                    <article class="order-card">
 
-                        <small>
-                            Laura Gómez
-                        </small>
+                        <span class="order-card__number">
+                            Venta #00035
+                        </span>
 
-                        <strong>
-                            05 Ago
-                        </strong>
+                        <h3>
+                            María López Hernández
+                        </h3>
 
-                    </div>
+                        <p>
+                            Armazón + Micas Blue Protect
+                        </p>
 
-                </article>
+                        <div class="order-card__footer">
 
-            </div>
+                            <small>
+                                Laura Gómez
+                            </small>
 
-        </article>
+                            <strong>
+                                05 Ago
+                            </strong>
 
-        <!-- Laboratorio -->
+                        </div>
 
-        <article class="orders-column">
+                    </article>
 
-            <header class="orders-column__header">
+                </div>
 
-                <h2>
-                    En laboratorio
-                </h2>
+            </article>
 
-                <span>
-                    3
-                </span>
+            <!-- Laboratorio -->
 
-            </header>
+            <article class="orders-column">
 
-            <div class="orders-column__body">
+                <header class="orders-column__header">
 
-                <article class="order-card order-card--progress">
+                    <h2>
+                        En laboratorio
+                    </h2>
 
-                    <span class="order-card__number">
-                        Venta #00034
+                    <span>
+                        3
                     </span>
 
-                    <h3>
-                        José Ramírez
-                    </h3>
+                </header>
 
-                    <p>
-                        Micas Antirreflejantes
-                    </p>
+                <div class="orders-column__body">
 
-                    <div class="order-card__footer">
+                    <article class="order-card order-card--progress">
 
-                        <small>
-                            Luxottica
-                        </small>
+                        <span class="order-card__number">
+                            Venta #00034
+                        </span>
 
-                        <strong>
-                            08 Ago
-                        </strong>
+                        <h3>
+                            José Ramírez
+                        </h3>
 
-                    </div>
+                        <p>
+                            Micas Antirreflejantes
+                        </p>
 
-                </article>
+                        <div class="order-card__footer">
 
-            </div>
+                            <small>
+                                Luxottica
+                            </small>
 
-        </article>
+                            <strong>
+                                08 Ago
+                            </strong>
 
-        <!-- Listos -->
+                        </div>
 
-        <article class="orders-column">
+                    </article>
 
-            <header class="orders-column__header">
+                </div>
 
-                <h2>
-                    Listos
-                </h2>
+            </article>
 
-                <span>
-                    1
-                </span>
+            <!-- Listos -->
 
-            </header>
+            <article class="orders-column">
 
-            <div class="orders-column__body">
+                <header class="orders-column__header">
 
-                <article class="order-card order-card--ready">
+                    <h2>
+                        Listos
+                    </h2>
 
-                    <span class="order-card__number">
-                        Venta #00033
+                    <span>
+                        1
                     </span>
 
-                    <h3>
-                        Ana García
-                    </h3>
+                </header>
 
-                    <p>
-                        Lentes completos
-                    </p>
+                <div class="orders-column__body">
 
-                    <div class="order-card__footer">
+                    <article class="order-card order-card--ready">
 
-                        <small>
-                            Avisar al cliente
-                        </small>
+                        <span class="order-card__number">
+                            Venta #00033
+                        </span>
 
-                        <strong>
-                            Hoy
-                        </strong>
+                        <h3>
+                            Ana García
+                        </h3>
 
-                    </div>
+                        <p>
+                            Lentes completos
+                        </p>
 
-                </article>
+                        <div class="order-card__footer">
 
-            </div>
+                            <small>
+                                Avisar al cliente
+                            </small>
 
-        </article>
+                            <strong>
+                                Hoy
+                            </strong>
 
-        <!-- Entregados -->
+                        </div>
 
-        <article class="orders-column">
+                    </article>
 
-            <header class="orders-column__header">
+                </div>
 
-                <h2>
-                    Entregados
-                </h2>
+            </article>
 
-                <span>
-                    4
-                </span>
+            <!-- Entregados -->
 
-            </header>
+            <article class="orders-column">
 
-            <div class="orders-column__body">
+                <header class="orders-column__header">
 
-                <article class="order-card order-card--done">
+                    <h2>
+                        Entregados
+                    </h2>
 
-                    <span class="order-card__number">
-                        Venta #00031
+                    <span>
+                        4
                     </span>
 
-                    <h3>
-                        Carlos Méndez
-                    </h3>
+                </header>
 
-                    <p>
-                        Entregado correctamente
-                    </p>
+                <div class="orders-column__body">
 
-                    <div class="order-card__footer">
+                    <article class="order-card order-card--done">
 
-                        <small>
-                            Finalizado
-                        </small>
+                        <span class="order-card__number">
+                            Venta #00031
+                        </span>
 
-                        <strong>
-                            29 Jul
-                        </strong>
+                        <h3>
+                            Carlos Méndez
+                        </h3>
 
-                    </div>
+                        <p>
+                            Entregado correctamente
+                        </p>
 
-                </article>
+                        <div class="order-card__footer">
 
-            </div>
+                            <small>
+                                Finalizado
+                            </small>
 
-        </article>
+                            <strong>
+                                29 Jul
+                            </strong>
 
-    </section>
+                        </div>
 
-</div>
+                    </article>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </div>
 
 </section>
 

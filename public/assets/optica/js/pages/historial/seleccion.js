@@ -3,6 +3,21 @@ import {
 } from "./clienteActual.js";
 
 
+import {
+    renderPaciente,
+} from "./render/paciente.js";
+
+
+import {
+    renderTimeline,
+} from "./render/timeline.js";
+
+
+import {
+    reiniciarFiltrosHistorial,
+} from "./filtros.js";
+
+
 /* ==========================================================
    SELECCIONAR PACIENTE
 ========================================================== */
@@ -17,7 +32,9 @@ export function seleccionarPaciente(
         !cliente ||
         !inputBusqueda
     ) {
+
         return;
+
     }
 
 
@@ -52,20 +69,37 @@ export function seleccionarPaciente(
        CERRAR RESULTADOS
     ====================================================== */
 
-    ocultarResultados();
+    if (
+        typeof ocultarResultados ===
+        "function"
+    ) {
+
+        ocultarResultados();
+
+    }
 
 
     /* ======================================================
-       COMPROBACIÓN TEMPORAL
-
-       Todavía NO actualizamos:
-       - resumen del paciente
-       - timeline
-       - filtros
+       REINICIAR FILTROS
     ====================================================== */
 
-    console.log(
-        "Paciente seleccionado en Historial:",
+    reiniciarFiltrosHistorial();
+
+
+    /* ======================================================
+       ACTUALIZAR PACIENTE
+    ====================================================== */
+
+    renderPaciente(
+        cliente,
+    );
+
+
+    /* ======================================================
+       ACTUALIZAR TIMELINE
+    ====================================================== */
+
+    renderTimeline(
         cliente,
     );
 

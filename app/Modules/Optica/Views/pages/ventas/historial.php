@@ -6,10 +6,7 @@ Historial de ventas | Opticool
 
 <?= $this->section('styles') ?>
 
-<link
-    rel="stylesheet"
-    href="<?= base_url('assets/optica/css/pages/historial_ventas.css') ?>"
->
+<link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/historial_ventas.css') ?>">
 
 <?= $this->endSection() ?>
 
@@ -36,10 +33,7 @@ Historial de ventas | Opticool
 
         </div>
 
-        <a
-            href="<?= base_url('optica/ventas/nueva') ?>"
-            class="sales-history-page__button"
-        >
+        <a href="<?= base_url('optica/ventas/nueva') ?>" class="sales-history-page__button">
             + Nueva venta
         </a>
 
@@ -47,327 +41,317 @@ Historial de ventas | Opticool
 
     <div class="sales-history-layout">
 
-    <!-- ==========================================
+        <!-- ==========================================
          RESUMEN
     =========================================== -->
 
-    <section class="sales-summary">
+        <section class="sales-summary">
 
-        <article class="sales-summary__card">
+            <article class="sales-summary__card">
 
-            <span class="sales-summary__label">
-                Ventas del día
-            </span>
+                <span class="sales-summary__label">
+                    Ventas del día
+                </span>
 
-            <strong class="sales-summary__value">
-                12
-            </strong>
+                <strong class="sales-summary__value">
+                    12
+                </strong>
 
-            <small>
-                +3 respecto a ayer
-            </small>
+                <small>
+                    +3 respecto a ayer
+                </small>
 
-        </article>
+            </article>
 
-        <article class="sales-summary__card">
+            <article class="sales-summary__card">
 
-            <span class="sales-summary__label">
-                Pendientes
-            </span>
+                <span class="sales-summary__label">
+                    Pendientes
+                </span>
 
-            <strong class="sales-summary__value">
-                8
-            </strong>
+                <strong class="sales-summary__value">
+                    8
+                </strong>
 
-            <small>
-                En laboratorio
-            </small>
+                <small>
+                    En laboratorio
+                </small>
 
-        </article>
+            </article>
 
-        <article class="sales-summary__card">
+            <article class="sales-summary__card">
 
-            <span class="sales-summary__label">
-                Entregadas
-            </span>
+                <span class="sales-summary__label">
+                    Entregadas
+                </span>
 
-            <strong class="sales-summary__value">
-                45
-            </strong>
+                <strong class="sales-summary__value">
+                    45
+                </strong>
 
-            <small>
-                Este mes
-            </small>
+                <small>
+                    Este mes
+                </small>
 
-        </article>
+            </article>
 
-        <article class="sales-summary__card">
+            <article class="sales-summary__card">
 
-            <span class="sales-summary__label">
-                Ingresos
-            </span>
+                <span class="sales-summary__label">
+                    Ingresos
+                </span>
 
-            <strong class="sales-summary__value">
-                $86,250
-            </strong>
+                <strong class="sales-summary__value">
+                    $86,250
+                </strong>
 
-            <small>
-                Mes actual
-            </small>
+                <small>
+                    Mes actual
+                </small>
 
-        </article>
+            </article>
 
-    </section>
+        </section>
 
-    <!-- ==========================================
+        <!-- ==========================================
          FILTROS
     =========================================== -->
 
-    <section class="sales-filters">
+        <section class="sales-filters">
 
-        <input
-            type="search"
-            class="sales-filters__search"
-            placeholder="Buscar cliente, folio o teléfono"
-        >
+            <input type="search" class="sales-filters__search" placeholder="Buscar cliente, folio o teléfono">
 
-        <select class="sales-filters__select">
+            <select class="sales-filters__select">
 
-            <option>
-                Todos los estados
-            </option>
+                <option>
+                    Todos los estados
+                </option>
 
-            <option>
-                Pendiente
-            </option>
+                <option>
+                    Pendiente
+                </option>
 
-            <option>
-                Laboratorio
-            </option>
+                <option>
+                    Laboratorio
+                </option>
 
-            <option>
-                Entregado
-            </option>
+                <option>
+                    Entregado
+                </option>
 
-            <option>
-                Cancelado
-            </option>
+                <option>
+                    Cancelado
+                </option>
 
-        </select>
+            </select>
 
-        <select class="sales-filters__select">
+            <select class="sales-filters__select">
 
-            <option>
-                Todos los responsables
-            </option>
+                <option>
+                    Todos los responsables
+                </option>
 
-            <option>
-                Laura Gómez
-            </option>
+                <option>
+                    Laura Gómez
+                </option>
 
-            <option>
-                Carlos Mendoza
-            </option>
+                <option>
+                    Carlos Mendoza
+                </option>
 
-        </select>
+            </select>
 
-    </section>
+        </section>
 
-    <!-- ==========================================
+        <!-- ==========================================
          TARJETAS
     =========================================== -->
 
-    <section class="sales-list">
+        <section class="sales-list">
 
-        <article class="sale-card sale-card--warning">
+            <article class="sale-card sale-card--warning">
 
-            <div class="sale-card__header">
+                <div class="sale-card__header">
 
-                <div>
+                    <div>
 
-                    <span class="sale-card__folio">
-                        Venta #00035
+                        <span class="sale-card__folio">
+                            Venta #00035
+                        </span>
+
+                        <h2 class="sale-card__client">
+                            María López Hernández
+                        </h2>
+
+                    </div>
+
+                    <span class="sale-card__status">
+                        Laboratorio
                     </span>
 
-                    <h2 class="sale-card__client">
-                        María López Hernández
-                    </h2>
+                </div>
+
+                <div class="sale-card__body">
+
+                    <div>
+
+                        <strong>Producto</strong>
+
+                        <p>
+                            Armazón Ray-Ban + Micas Antirreflejantes
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Entrega</strong>
+
+                        <p>
+                            05 Agosto 2026
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Saldo pendiente</strong>
+
+                        <p>
+                            $1,250
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Responsable</strong>
+
+                        <p>
+                            Laura Gómez
+                        </p>
+
+                    </div>
 
                 </div>
 
-                <span class="sale-card__status">
-                    Laboratorio
-                </span>
+                <div class="sale-card__footer">
 
-            </div>
+                    <div class="sale-card__links">
 
-            <div class="sale-card__body">
+                        <a href="#">
+                            Expediente
+                        </a>
 
-                <div>
+                        <a href="#">
+                            Graduación
+                        </a>
 
-                    <strong>Producto</strong>
+                        <a href="#">
+                            Pedido
+                        </a>
 
-                    <p>
-                        Armazón Ray-Ban + Micas Antirreflejantes
-                    </p>
+                    </div>
 
-                </div>
-
-                <div>
-
-                    <strong>Entrega</strong>
-
-                    <p>
-                        05 Agosto 2026
-                    </p>
+                    <button type="button" class="sale-card__button">
+                        Continuar venta
+                    </button>
 
                 </div>
 
-                <div>
+            </article>
 
-                    <strong>Saldo pendiente</strong>
+            <article class="sale-card sale-card--success">
 
-                    <p>
-                        $1,250
-                    </p>
+                <div class="sale-card__header">
 
-                </div>
+                    <div>
 
-                <div>
+                        <span class="sale-card__folio">
+                            Venta #00034
+                        </span>
 
-                    <strong>Responsable</strong>
+                        <h2 class="sale-card__client">
+                            José Ramírez
+                        </h2>
 
-                    <p>
-                        Laura Gómez
-                    </p>
+                    </div>
 
-                </div>
-
-            </div>
-
-            <div class="sale-card__footer">
-
-                <div class="sale-card__links">
-
-                    <a href="#">
-                        Expediente
-                    </a>
-
-                    <a href="#">
-                        Graduación
-                    </a>
-
-                    <a href="#">
-                        Pedido
-                    </a>
-
-                </div>
-
-                <button
-                    type="button"
-                    class="sale-card__button"
-                >
-                    Continuar venta
-                </button>
-
-            </div>
-
-        </article>
-
-        <article class="sale-card sale-card--success">
-
-            <div class="sale-card__header">
-
-                <div>
-
-                    <span class="sale-card__folio">
-                        Venta #00034
+                    <span class="sale-card__status">
+                        Entregado
                     </span>
 
-                    <h2 class="sale-card__client">
-                        José Ramírez
-                    </h2>
+                </div>
+
+                <div class="sale-card__body">
+
+                    <div>
+
+                        <strong>Total</strong>
+
+                        <p>
+                            $3,850
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Entrega</strong>
+
+                        <p>
+                            28 Julio 2026
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Garantía</strong>
+
+                        <p>
+                            Vigente
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Responsable</strong>
+
+                        <p>
+                            Carlos Mendoza
+                        </p>
+
+                    </div>
 
                 </div>
 
-                <span class="sale-card__status">
-                    Entregado
-                </span>
+                <div class="sale-card__footer">
 
-            </div>
+                    <div class="sale-card__links">
 
-            <div class="sale-card__body">
+                        <a href="#">
+                            Expediente
+                        </a>
 
-                <div>
+                        <a href="#">
+                            Venta
+                        </a>
 
-                    <strong>Total</strong>
+                    </div>
 
-                    <p>
-                        $3,850
-                    </p>
-
-                </div>
-
-                <div>
-
-                    <strong>Entrega</strong>
-
-                    <p>
-                        28 Julio 2026
-                    </p>
+                    <button type="button" class="sale-card__button">
+                        Ver detalle
+                    </button>
 
                 </div>
 
-                <div>
+            </article>
 
-                    <strong>Garantía</strong>
+        </section>
 
-                    <p>
-                        Vigente
-                    </p>
-
-                </div>
-
-                <div>
-
-                    <strong>Responsable</strong>
-
-                    <p>
-                        Carlos Mendoza
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="sale-card__footer">
-
-                <div class="sale-card__links">
-
-                    <a href="#">
-                        Expediente
-                    </a>
-
-                    <a href="#">
-                        Venta
-                    </a>
-
-                </div>
-
-                <button
-                    type="button"
-                    class="sale-card__button"
-                >
-                    Ver detalle
-                </button>
-
-            </div>
-
-        </article>
-
-    </section>
-
-</div>
+    </div>
 
 </section>
 

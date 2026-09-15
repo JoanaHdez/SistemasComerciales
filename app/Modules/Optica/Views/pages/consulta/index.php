@@ -10,10 +10,7 @@ Consulta | Sistema de Gestión para Óptica
 
 <?= $this->section('styles') ?>
 
-<link
-    rel="stylesheet"
-    href="<?= base_url('assets/optica/css/pages/consulta.css') ?>"
->
+<link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/consulta.css') ?>">
 
 <?= $this->endSection() ?>
 
@@ -101,16 +98,5 @@ Consulta | Sistema de Gestión para Óptica
     </div>
 
 </div>
-
-<?= $this->endSection() ?>
-
-<?= $this->section('scripts') ?>
-
-<script
-    type="module"
-    src="<?= base_url(
-        'assets/optica/js/pages/consulta/consulta.js'
-    ) ?>"
-></script>
 
 <?= $this->endSection() ?>

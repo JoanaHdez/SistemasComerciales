@@ -2,16 +2,9 @@
      RESUMEN DEL CLIENTE
 ========================================================= -->
 
-<section
-    class="consulta-client-summary"
-    id="consulta-client-summary"
->
+<section class="consulta-client-summary" id="consulta-client-summary">
 
-    <div
-        class="consulta-avatar"
-        id="consulta-resumen-avatar"
-        aria-hidden="true"
-    >
+    <div class="consulta-avatar" id="consulta-resumen-avatar" aria-hidden="true">
         ML
     </div>
 
@@ -44,10 +37,7 @@
     </div>
 
 
-    <a
-        href="<?= base_url('optica/clientes') ?>"
-        class="consulta-secondary-button"
-    >
+    <a href="<?= base_url('optica/clientes') ?>" class="consulta-secondary-button">
         Ver clientes
     </a>
 

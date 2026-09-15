@@ -1,26 +1,48 @@
 <!-- =========================================================
-     FILTROS
+     FILTROS DEL HISTORIAL
 ========================================================= -->
 
 <section class="history-filters">
 
+    <!-- =====================================================
+         BÚSQUEDA
+    ====================================================== -->
+
     <div class="history-search">
 
-        <label for="history-search" class="sr-only">
-            Buscar en historial
+        <label
+            for="history-search"
+            class="sr-only"
+        >
+            Buscar dentro del historial
         </label>
 
-        <input type="search" id="history-search" class="history-search__input"
-            placeholder="Buscar por diagnóstico, fecha u observación">
+        <input
+            type="search"
+            id="history-search"
+            class="history-search__input"
+            placeholder="Buscar por diagnóstico, fecha u observación..."
+            autocomplete="off"
+        >
 
     </div>
 
 
+    <!-- =====================================================
+         FILTROS
+    ====================================================== -->
+
     <div class="history-filter-group">
 
-        <select class="history-filter">
+        <!-- AÑO -->
 
-            <option value="">
+        <select
+            id="history-filter-year"
+            class="history-filter"
+            aria-label="Filtrar por año"
+        >
+
+            <option value="all">
                 Todos los años
             </option>
 
@@ -39,9 +61,15 @@
         </select>
 
 
-        <select class="history-filter">
+        <!-- TIPO -->
 
-            <option value="">
+        <select
+            id="history-filter-type"
+            class="history-filter"
+            aria-label="Filtrar por tipo de consulta"
+        >
+
+            <option value="all">
                 Todos los tipos
             </option>
 

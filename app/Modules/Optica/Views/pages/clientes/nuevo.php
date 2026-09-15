@@ -6,15 +6,9 @@ Nuevo Cliente | Opticool
 
 <?= $this->section('styles') ?>
 
-<link
-    rel="stylesheet"
-    href="<?= base_url('assets/optica/css/pages/clientes.css') ?>"
->
+<link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/clientes.css') ?>">
 
-<link
-    rel="stylesheet"
-    href="<?= base_url('assets/optica/css/pages/nuevo_cliente.css') ?>"
->
+<link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/nuevo_cliente.css') ?>">
 
 <?= $this->endSection() ?>
 
@@ -44,10 +38,7 @@ Nuevo Cliente | Opticool
 
         </div>
 
-        <a
-            href="<?= base_url('optica/clientes') ?>"
-            class="new-client-page__back"
-        >
+        <a href="<?= base_url('optica/clientes') ?>" class="new-client-page__back">
             Ver clientes
         </a>
 
@@ -58,11 +49,7 @@ Nuevo Cliente | Opticool
          FORMULARIO
     ====================================================== -->
 
-    <form
-        class="new-client-form"
-        id="new-client-form"
-        novalidate
-    >
+    <form class="new-client-form" id="new-client-form" novalidate>
 
         <!-- =================================================
              DATOS PERSONALES
@@ -82,12 +69,7 @@ Nuevo Cliente | Opticool
                         Apellido Paterno
                     </label>
 
-                    <input
-                        type="text"
-                        id="apellido_paterno"
-                        name="apellido_paterno"
-                        autocomplete="family-name"
-                    >
+                    <input type="text" id="apellido_paterno" name="apellido_paterno" autocomplete="family-name">
 
                 </div>
 
@@ -98,12 +80,7 @@ Nuevo Cliente | Opticool
                         Apellido Materno
                     </label>
 
-                    <input
-                        type="text"
-                        id="apellido_materno"
-                        name="apellido_materno"
-                        autocomplete="additional-name"
-                    >
+                    <input type="text" id="apellido_materno" name="apellido_materno" autocomplete="additional-name">
 
                 </div>
 
@@ -114,12 +91,7 @@ Nuevo Cliente | Opticool
                         Nombre
                     </label>
 
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        autocomplete="given-name"
-                    >
+                    <input type="text" id="nombre" name="nombre" autocomplete="given-name">
 
                 </div>
 
@@ -130,11 +102,7 @@ Nuevo Cliente | Opticool
                         Fecha de Nacimiento
                     </label>
 
-                    <input
-                        type="date"
-                        id="fecha_nacimiento"
-                        name="fecha_nacimiento"
-                    >
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
 
                 </div>
 
@@ -145,12 +113,7 @@ Nuevo Cliente | Opticool
                         Teléfono
                     </label>
 
-                    <input
-                        type="tel"
-                        id="telefono"
-                        name="telefono"
-                        autocomplete="tel"
-                    >
+                    <input type="tel" id="telefono" name="telefono" autocomplete="tel">
 
                 </div>
 
@@ -161,11 +124,7 @@ Nuevo Cliente | Opticool
                         Ocupación
                     </label>
 
-                    <input
-                        type="text"
-                        id="ocupacion"
-                        name="ocupacion"
-                    >
+                    <input type="text" id="ocupacion" name="ocupacion">
 
                 </div>
 
@@ -176,12 +135,7 @@ Nuevo Cliente | Opticool
                         Domicilio
                     </label>
 
-                    <input
-                        type="text"
-                        id="domicilio"
-                        name="domicilio"
-                        autocomplete="street-address"
-                    >
+                    <input type="text" id="domicilio" name="domicilio" autocomplete="street-address">
 
                 </div>
 
@@ -210,11 +164,7 @@ Nuevo Cliente | Opticool
                         Fecha
                     </label>
 
-                    <input
-                        type="date"
-                        id="fecha_historial"
-                        name="fecha_historial"
-                    >
+                    <input type="date" id="fecha_historial" name="fecha_historial">
 
                 </div>
 
@@ -231,11 +181,7 @@ Nuevo Cliente | Opticool
 
                         <label>
 
-                            <input
-                                type="radio"
-                                name="usa_lentes_actualmente"
-                                value="si"
-                            >
+                            <input type="radio" name="usa_lentes_actualmente" value="si">
 
                             Sí
 
@@ -243,11 +189,7 @@ Nuevo Cliente | Opticool
 
                         <label>
 
-                            <input
-                                type="radio"
-                                name="usa_lentes_actualmente"
-                                value="no"
-                            >
+                            <input type="radio" name="usa_lentes_actualmente" value="no">
 
                             No
 
@@ -260,21 +202,13 @@ Nuevo Cliente | Opticool
 
                 <!-- Tipo de lente - dinámico -->
 
-                <div
-                    class="form-group form-group--conditional"
-                    id="group-tipo-lente"
-                    hidden
-                >
+                <div class="form-group form-group--conditional" id="group-tipo-lente" hidden>
 
                     <label for="tipo_lente">
                         Tipo de lente
                     </label>
 
-                    <select
-                        id="tipo_lente"
-                        name="tipo_lente"
-                        disabled
-                    >
+                    <select id="tipo_lente" name="tipo_lente" disabled>
 
                         <option value="">
                             Selecciona una opción
@@ -317,11 +251,7 @@ Nuevo Cliente | Opticool
 
                         <label>
 
-                            <input
-                                type="radio"
-                                name="uso_lentes_anteriormente"
-                                value="si"
-                            >
+                            <input type="radio" name="uso_lentes_anteriormente" value="si">
 
                             Sí
 
@@ -329,11 +259,7 @@ Nuevo Cliente | Opticool
 
                         <label>
 
-                            <input
-                                type="radio"
-                                name="uso_lentes_anteriormente"
-                                value="no"
-                            >
+                            <input type="radio" name="uso_lentes_anteriormente" value="no">
 
                             No
 
@@ -346,23 +272,14 @@ Nuevo Cliente | Opticool
 
                 <!-- Tiempo de uso - dinámico -->
 
-                <div
-                    class="form-group form-group--conditional"
-                    id="group-tiempo-uso-lentes"
-                    hidden
-                >
+                <div class="form-group form-group--conditional" id="group-tiempo-uso-lentes" hidden>
 
                     <label for="tiempo_uso_lentes">
                         ¿Hace cuánto tiempo?
                     </label>
 
-                    <input
-                        type="text"
-                        id="tiempo_uso_lentes"
-                        name="tiempo_uso_lentes"
-                        placeholder="Ej. 3 años"
-                        disabled
-                    >
+                    <input type="text" id="tiempo_uso_lentes" name="tiempo_uso_lentes" placeholder="Ej. 3 años"
+                        disabled>
 
                 </div>
 
@@ -379,11 +296,7 @@ Nuevo Cliente | Opticool
 
                         <label>
 
-                            <input
-                                type="radio"
-                                name="exposicion_laboral"
-                                value="si"
-                            >
+                            <input type="radio" name="exposicion_laboral" value="si">
 
                             Sí
 
@@ -391,11 +304,7 @@ Nuevo Cliente | Opticool
 
                         <label>
 
-                            <input
-                                type="radio"
-                                name="exposicion_laboral"
-                                value="no"
-                            >
+                            <input type="radio" name="exposicion_laboral" value="no">
 
                             No
 
@@ -408,23 +317,14 @@ Nuevo Cliente | Opticool
 
                 <!-- Tipo de exposición - dinámico -->
 
-                <div
-                    class="form-group form-group--conditional"
-                    id="group-tipo-exposicion"
-                    hidden
-                >
+                <div class="form-group form-group--conditional" id="group-tipo-exposicion" hidden>
 
                     <label for="tipo_exposicion">
                         Tipo de exposición
                     </label>
 
-                    <input
-                        type="text"
-                        id="tipo_exposicion"
-                        name="tipo_exposicion"
-                        placeholder="Ej. pantallas, luz artificial, polvo"
-                        disabled
-                    >
+                    <input type="text" id="tipo_exposicion" name="tipo_exposicion"
+                        placeholder="Ej. pantallas, luz artificial, polvo" disabled>
 
                 </div>
 
@@ -437,11 +337,7 @@ Nuevo Cliente | Opticool
                         Antecedentes patológicos
                     </label>
 
-                    <input
-                        type="text"
-                        id="antecedentes_patologicos"
-                        name="antecedentes_patologicos"
-                    >
+                    <input type="text" id="antecedentes_patologicos" name="antecedentes_patologicos">
 
                 </div>
 
@@ -452,11 +348,7 @@ Nuevo Cliente | Opticool
                         Antecedentes familiares
                     </label>
 
-                    <input
-                        type="text"
-                        id="antecedentes_familiares"
-                        name="antecedentes_familiares"
-                    >
+                    <input type="text" id="antecedentes_familiares" name="antecedentes_familiares">
 
                 </div>
 
@@ -471,12 +363,8 @@ Nuevo Cliente | Opticool
 
         <div class="new-client-page__actions">
 
-            <button
-                type="button"
-                class="new-client-page__button"
-                id="new-client-next"
-                data-next-url="<?= base_url('optica/clientes/nuevo/graduacion') ?>"
-            >
+            <button type="button" class="new-client-page__button" id="new-client-next"
+                data-next-url="<?= base_url('optica/clientes/nuevo/graduacion') ?>">
                 Siguiente
             </button>
 
@@ -485,14 +373,5 @@ Nuevo Cliente | Opticool
     </form>
 
 </section>
-
-<?= $this->endSection() ?>
-
-
-<?= $this->section('scripts') ?>
-
-<script
-    src="<?= base_url('assets/optica/js/pages/nuevo_cliente.js') ?>"
-></script>
 
 <?= $this->endSection() ?>

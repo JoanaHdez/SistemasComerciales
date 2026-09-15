@@ -226,10 +226,3 @@ $clientes = [
 </section>
 
 <?= $this->endSection() ?>
-
-
-<?= $this->section('scripts') ?>
-
-<script src="<?= base_url('assets/optica/js/pages/clientes.js') ?>"></script>
-
-<?= $this->endSection() ?>

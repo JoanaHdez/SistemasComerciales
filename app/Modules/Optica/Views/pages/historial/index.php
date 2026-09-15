@@ -67,12 +67,3 @@ Historial Clínico | Opticool
 </section>
 
 <?= $this->endSection() ?>
-
-<?= $this->section('scripts') ?>
-
-<script
-    type="module"
-    src="<?= base_url('assets/optica/js/pages/historial/historial.js') ?>"
-></script>
-
-<?= $this->endSection() ?>

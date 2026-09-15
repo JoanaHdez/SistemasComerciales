@@ -21,10 +21,7 @@
 
     </div>
 
-    <a
-        href="<?= base_url('optica/clientes/nuevo') ?>"
-        class="consulta-primary-button"
-    >
+    <a href="<?= base_url('optica/clientes/nuevo') ?>" class="consulta-primary-button">
         <span class="consulta-button-icon">
             +
         </span>

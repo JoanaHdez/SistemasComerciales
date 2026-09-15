@@ -102,11 +102,3 @@ Expediente clínico | Opticool
 </section>
 
 <?= $this->endSection() ?>
-
-<?= $this->section('scripts') ?>
-
-<script type="module" src="<?= base_url(
-        'assets/optica/js/pages/expediente/expediente.js'
-    ) ?>"></script>
-
-<?= $this->endSection() ?>

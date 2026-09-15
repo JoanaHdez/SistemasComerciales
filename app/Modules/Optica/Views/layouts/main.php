@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
         <?= $this->renderSection('title') ?: 'Sistema de Gestión para Óptica' ?>
@@ -63,10 +61,7 @@
 
     </div>
 
-    <script src="<?= base_url('assets/optica/js/global.js') ?>"></script>
-    <script src="<?= base_url('assets/optica/js/layout.js') ?>"></script>
-
-    <?= $this->renderSection('scripts') ?>
+    <script type="module" src="<?= base_url('assets/optica/js/main.js') ?>"></script>
 
 </body>
 

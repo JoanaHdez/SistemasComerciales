@@ -440,10 +440,3 @@ Graduación | Opticool
 </section>
 
 <?= $this->endSection() ?>
-
-
-<?= $this->section('scripts') ?>
-
-<script src="<?= base_url('assets/optica/js/pages/graduacion.js') ?>"></script>
-
-<?= $this->endSection() ?>

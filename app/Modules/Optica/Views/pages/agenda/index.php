@@ -149,11 +149,3 @@ Agenda | Opticool
 ) ?>
 
 <?= $this->endSection() ?>
-
-<?= $this->section('scripts') ?>
-
-<script src="<?= base_url('assets/optica/js/components/modal.js') ?>"></script>
-<script src="<?= base_url('assets/optica/js/agenda.js') ?>"></script>
-
-
-<?= $this->endSection() ?>

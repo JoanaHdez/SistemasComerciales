@@ -6,10 +6,7 @@ Nueva venta | Opticool
 
 <?= $this->section('styles') ?>
 
-<link
-    rel="stylesheet"
-    href="<?= base_url('assets/optica/css/pages/venta.css') ?>"
->
+<link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/venta.css') ?>">
 
 <?= $this->endSection() ?>
 
@@ -33,10 +30,7 @@ Nueva venta | Opticool
             </p>
         </div>
 
-        <a
-            href="<?= base_url('optica/ventas/historial') ?>"
-            class="sale-page__back"
-        >
+        <a href="<?= base_url('optica/ventas/historial') ?>" class="sale-page__back">
             Historial de ventas
         </a>
 
@@ -75,19 +69,12 @@ Nueva venta | Opticool
 
                         <div class="sale-client-search">
 
-                            <label
-                                for="cliente_busqueda"
-                                class="sr-only"
-                            >
+                            <label for="cliente_busqueda" class="sr-only">
                                 Buscar cliente
                             </label>
 
-                            <input
-                                type="search"
-                                id="cliente_busqueda"
-                                name="cliente_busqueda"
-                                placeholder="Ej. María López o 55 1234 5678"
-                            >
+                            <input type="search" id="cliente_busqueda" name="cliente_busqueda"
+                                placeholder="Ej. María López o 55 1234 5678">
 
                             <span class="sale-client-name">
                                 Ningún cliente seleccionado
@@ -97,17 +84,12 @@ Nueva venta | Opticool
 
                         <div class="sale-client-actions">
 
-                            <button
-                                type="button"
-                                class="sale-button sale-button--primary"
-                            >
+                            <button type="button" class="sale-button sale-button--primary">
                                 Buscar
                             </button>
 
-                            <a
-                                href="<?= base_url('optica/clientes/nuevo') ?>"
-                                class="sale-button sale-button--secondary"
-                            >
+                            <a href="<?= base_url('optica/clientes/nuevo') ?>"
+                                class="sale-button sale-button--secondary">
                                 Nuevo cliente
                             </a>
 
@@ -123,13 +105,7 @@ Nueva venta | Opticool
 
                         <span class="sale-card__icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <rect
-                                    x="3"
-                                    y="5"
-                                    width="18"
-                                    height="16"
-                                    rx="2"
-                                ></rect>
+                                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
                                 <path d="M16 3v4"></path>
                                 <path d="M8 3v4"></path>
                                 <path d="M3 11h18"></path>
@@ -155,12 +131,7 @@ Nueva venta | Opticool
                                 Fecha de venta
                             </label>
 
-                            <input
-                                type="date"
-                                id="fecha_venta"
-                                name="fecha_venta"
-                                value="<?= date('Y-m-d') ?>"
-                            >
+                            <input type="date" id="fecha_venta" name="fecha_venta" value="<?= date('Y-m-d') ?>">
                         </div>
 
                         <div class="sale-form-group">
@@ -168,10 +139,7 @@ Nueva venta | Opticool
                                 Estado de pago
                             </label>
 
-                            <select
-                                id="estado_pago"
-                                name="estado_pago"
-                            >
+                            <select id="estado_pago" name="estado_pago">
                                 <option value="">
                                     Selecciona una opción
                                 </option>
@@ -220,10 +188,7 @@ Nueva venta | Opticool
 
                         </div>
 
-                        <button
-                            type="button"
-                            class="sale-add-product"
-                        >
+                        <button type="button" class="sale-add-product">
                             <span>+</span>
                             Agregar producto
                         </button>
@@ -292,22 +257,12 @@ Nueva venta | Opticool
 
                 <div class="sale-summary__item">
 
-                    <label
-                        for="descuento_venta"
-                        class="sale-summary__label"
-                    >
+                    <label for="descuento_venta" class="sale-summary__label">
                         Descuento
                     </label>
 
-                    <input
-                        type="number"
-                        id="descuento_venta"
-                        name="descuento_venta"
-                        class="sale-summary__input"
-                        min="0"
-                        step="0.01"
-                        value="0"
-                    >
+                    <input type="number" id="descuento_venta" name="descuento_venta" class="sale-summary__input" min="0"
+                        step="0.01" value="0">
 
                 </div>
 
@@ -327,17 +282,11 @@ Nueva venta | Opticool
 
                 <div class="sale-summary__actions">
 
-                    <button
-                        type="submit"
-                        class="sale-button sale-button--primary"
-                    >
+                    <button type="submit" class="sale-button sale-button--primary">
                         Guardar venta
                     </button>
 
-                    <button
-                        type="button"
-                        class="sale-button sale-button--secondary"
-                    >
+                    <button type="button" class="sale-button sale-button--secondary">
                         Cancelar
                     </button>
 

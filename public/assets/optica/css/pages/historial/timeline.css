@@ -132,3 +132,43 @@
 .history-entry__marker {
     border-color: #8b6ca5;
 }
+
+/* ==========================================================
+   TIMELINE VACÍO
+========================================================== */
+
+.history-timeline__empty {
+    padding: 34px 28px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e9e1ef;
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 30px rgba(67, 48, 83, 0.06);
+}
+
+
+.history-timeline__empty strong,
+.history-timeline__empty span {
+    display: block;
+}
+
+
+.history-timeline__empty strong {
+    color: #493b57;
+
+    font-size: 0.95rem;
+}
+
+
+.history-timeline__empty span {
+    margin-top: 6px;
+
+    color: #91879b;
+
+    font-size: 0.8rem;
+}

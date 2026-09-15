@@ -6,10 +6,7 @@ Inventario | Opticool
 
 <?= $this->section('styles') ?>
 
-<link
-    rel="stylesheet"
-    href="<?= base_url('assets/optica/css/pages/inventario.css') ?>"
->
+<link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/inventario.css') ?>">
 
 <?= $this->endSection() ?>
 
@@ -34,11 +31,7 @@ Inventario | Opticool
             </p>
         </div>
 
-        <button
-            type="button"
-            class="inventory-page__button"
-            id="new-product-button"
-        >
+        <button type="button" class="inventory-page__button" id="new-product-button">
             + Nuevo producto
         </button>
 
@@ -122,21 +115,14 @@ Inventario | Opticool
                     🔍
                 </span>
 
-                <input
-                    type="search"
-                    class="inventory-search__input"
-                    id="inventory-search"
-                    placeholder="Buscar por nombre, código o categoría"
-                >
+                <input type="search" class="inventory-search__input" id="inventory-search"
+                    placeholder="Buscar por nombre, código o categoría">
 
             </div>
 
             <div class="inventory-filters">
 
-                <select
-                    class="inventory-filter"
-                    id="inventory-category-filter"
-                >
+                <select class="inventory-filter" id="inventory-category-filter">
                     <option value="">
                         Todas las categorías
                     </option>
@@ -158,10 +144,7 @@ Inventario | Opticool
                     </option>
                 </select>
 
-                <select
-                    class="inventory-filter"
-                    id="inventory-status-filter"
-                >
+                <select class="inventory-filter" id="inventory-status-filter">
                     <option value="">
                         Todos los estados
                     </option>
@@ -236,21 +219,13 @@ Inventario | Opticool
                         <td>
                             <div class="inventory-actions">
 
-                                <button
-                                    type="button"
-                                    class="inventory-action"
-                                    aria-label="Ver producto"
-                                    title="Ver producto"
-                                >
+                                <button type="button" class="inventory-action" aria-label="Ver producto"
+                                    title="Ver producto">
                                     👁
                                 </button>
 
-                                <button
-                                    type="button"
-                                    class="inventory-action"
-                                    aria-label="Editar producto"
-                                    title="Editar producto"
-                                >
+                                <button type="button" class="inventory-action" aria-label="Editar producto"
+                                    title="Editar producto">
                                     ✏️
                                 </button>
 
@@ -293,21 +268,13 @@ Inventario | Opticool
                         <td>
                             <div class="inventory-actions">
 
-                                <button
-                                    type="button"
-                                    class="inventory-action"
-                                    aria-label="Ver producto"
-                                    title="Ver producto"
-                                >
+                                <button type="button" class="inventory-action" aria-label="Ver producto"
+                                    title="Ver producto">
                                     👁
                                 </button>
 
-                                <button
-                                    type="button"
-                                    class="inventory-action"
-                                    aria-label="Editar producto"
-                                    title="Editar producto"
-                                >
+                                <button type="button" class="inventory-action" aria-label="Editar producto"
+                                    title="Editar producto">
                                     ✏️
                                 </button>
 
@@ -350,21 +317,13 @@ Inventario | Opticool
                         <td>
                             <div class="inventory-actions">
 
-                                <button
-                                    type="button"
-                                    class="inventory-action"
-                                    aria-label="Ver producto"
-                                    title="Ver producto"
-                                >
+                                <button type="button" class="inventory-action" aria-label="Ver producto"
+                                    title="Ver producto">
                                     👁
                                 </button>
 
-                                <button
-                                    type="button"
-                                    class="inventory-action"
-                                    aria-label="Editar producto"
-                                    title="Editar producto"
-                                >
+                                <button type="button" class="inventory-action" aria-label="Editar producto"
+                                    title="Editar producto">
                                     ✏️
                                 </button>
 
@@ -386,39 +345,23 @@ Inventario | Opticool
 
             <div class="inventory-pagination__buttons">
 
-                <button
-                    type="button"
-                    class="inventory-pagination__button"
-                    disabled
-                >
+                <button type="button" class="inventory-pagination__button" disabled>
                     Anterior
                 </button>
 
-                <button
-                    type="button"
-                    class="inventory-pagination__button inventory-pagination__button--active"
-                >
+                <button type="button" class="inventory-pagination__button inventory-pagination__button--active">
                     1
                 </button>
 
-                <button
-                    type="button"
-                    class="inventory-pagination__button"
-                >
+                <button type="button" class="inventory-pagination__button">
                     2
                 </button>
 
-                <button
-                    type="button"
-                    class="inventory-pagination__button"
-                >
+                <button type="button" class="inventory-pagination__button">
                     3
                 </button>
 
-                <button
-                    type="button"
-                    class="inventory-pagination__button"
-                >
+                <button type="button" class="inventory-pagination__button">
                     Siguiente
                 </button>
 
