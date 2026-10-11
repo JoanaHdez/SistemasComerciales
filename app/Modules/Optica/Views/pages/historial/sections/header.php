@@ -32,10 +32,10 @@
         </a>
 
 
-        <a href="<?= base_url('optica/consulta/nueva') ?>" class="
-                history-page__button
-                history-page__button--primary
-            ">
+        <a href="<?= base_url('optica/consulta/nueva') ?>" id="history-new-consultation" class="
+        history-page__button
+        history-page__button--primary
+    ">
             Nueva consulta
         </a>
 

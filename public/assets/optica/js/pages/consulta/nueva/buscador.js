@@ -61,6 +61,58 @@ export function inicializarBuscadorNuevaConsulta() {
 
 
     /* ======================================================
+       SELECCIONAR PACIENTE
+    ====================================================== */
+
+    function seleccionarPaciente(paciente) {
+
+        if (!paciente) {
+            return;
+        }
+
+
+        /* --------------------------------------------------
+           ACTUALIZAR BUSCADOR
+        -------------------------------------------------- */
+
+        input.value =
+            paciente.nombre;
+
+
+        /* --------------------------------------------------
+           CONSERVAR IDENTIFICADOR
+        -------------------------------------------------- */
+
+        input.dataset.pacienteId =
+            String(paciente.id);
+
+
+        /* --------------------------------------------------
+           LIMPIAR VALIDACIÓN ANTERIOR
+        -------------------------------------------------- */
+
+        input.setCustomValidity("");
+
+
+        /* --------------------------------------------------
+           MOSTRAR FICHA DEL PACIENTE
+        -------------------------------------------------- */
+
+        mostrarPacienteNuevaConsulta(
+            paciente
+        );
+
+
+        /* --------------------------------------------------
+           CERRAR RESULTADOS
+        -------------------------------------------------- */
+
+        cerrarResultados();
+
+    }
+
+
+    /* ======================================================
        MOSTRAR RESULTADOS
     ====================================================== */
 
@@ -186,36 +238,9 @@ export function inicializarBuscadorNuevaConsulta() {
                     "click",
                     () => {
 
-                        /* ----------------------------------
-                           ACTUALIZAR BUSCADOR
-                        ---------------------------------- */
-
-                        input.value =
-                            paciente.nombre;
-
-
-                        /* ----------------------------------
-                           CONSERVAR IDENTIFICADOR
-                        ---------------------------------- */
-
-                        input.dataset.pacienteId =
-                            String(paciente.id);
-
-
-                        /* ----------------------------------
-                           MOSTRAR FICHA DEL PACIENTE
-                        ---------------------------------- */
-
-                        mostrarPacienteNuevaConsulta(
+                        seleccionarPaciente(
                             paciente
                         );
-
-
-                        /* ----------------------------------
-                           CERRAR RESULTADOS
-                        ---------------------------------- */
-
-                        cerrarResultados();
 
                     }
                 );
@@ -245,6 +270,68 @@ export function inicializarBuscadorNuevaConsulta() {
 
 
     /* ======================================================
+       PRESELECCIONAR PACIENTE DESDE LA URL
+    ====================================================== */
+
+    function seleccionarPacienteDesdeURL() {
+
+        const parametros = new URLSearchParams(
+            window.location.search
+        );
+
+        const idSolicitado = parametros.get(
+            "paciente"
+        );
+
+
+        /* --------------------------------------------------
+           SIN IDENTIFICADOR
+        -------------------------------------------------- */
+
+        if (!idSolicitado) {
+            return;
+        }
+
+
+        /* --------------------------------------------------
+           VALIDAR IDENTIFICADOR
+        -------------------------------------------------- */
+
+        if (!/^\d+$/.test(idSolicitado)) {
+            return;
+        }
+
+
+        /* --------------------------------------------------
+           BUSCAR PACIENTE
+        -------------------------------------------------- */
+
+        const paciente = pacientesNuevaConsulta.find(
+            item => String(item.id) === idSolicitado
+        );
+
+
+        /* --------------------------------------------------
+           PACIENTE NO ENCONTRADO
+        -------------------------------------------------- */
+
+        if (!paciente) {
+            return;
+        }
+
+
+        /* --------------------------------------------------
+           SELECCIONAR PACIENTE
+        -------------------------------------------------- */
+
+        seleccionarPaciente(
+            paciente
+        );
+
+    }
+
+
+    /* ======================================================
        MODIFICAR BÚSQUEDA
     ====================================================== */
 
@@ -257,6 +344,8 @@ export function inicializarBuscadorNuevaConsulta() {
             ---------------------------------------------- */
 
             delete input.dataset.pacienteId;
+
+            input.setCustomValidity("");
 
 
             /* ----------------------------------------------
@@ -313,5 +402,12 @@ export function inicializarBuscadorNuevaConsulta() {
 
         }
     );
+
+
+    /* ======================================================
+       INICIALIZAR PACIENTE DESDE HISTORIAL
+    ====================================================== */
+
+    seleccionarPacienteDesdeURL();
 
 }
