@@ -1,72 +1,48 @@
 import {
-    inicializarBuscadorPaciente,
+    inicializarBuscadorPaciente
 } from "./buscador.js";
 
-
 import {
-    obtenerClienteActual,
+    obtenerClienteActual
 } from "./clienteActual.js";
 
-
 import {
-    renderPaciente,
+    renderPaciente
 } from "./render/paciente.js";
 
-
 import {
-    renderTimeline,
+    renderTimeline
 } from "./render/timeline.js";
 
-
 import {
-    inicializarFiltrosHistorial,
+    inicializarFiltrosHistorial
 } from "./filtros.js";
 
+import {
+    inicializarModalConsulta
+} from "./modal/modal.js";
 
-/* ==========================================================
-   HISTORIAL CLÍNICO
-   Coordinador principal
-========================================================== */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
-
-        /* ==================================================
-           BUSCADOR DE PACIENTE
-        ================================================== */
-
-        inicializarBuscadorPaciente();
+import {
+    inicializarDetalleConsultas
+} from "./modal/consulta.js";
 
 
-        /* ==================================================
-           FILTROS DEL HISTORIAL
-        ================================================== */
+document.addEventListener("DOMContentLoaded", () => {
 
-        inicializarFiltrosHistorial();
+    inicializarBuscadorPaciente();
 
+    inicializarFiltrosHistorial();
 
-        /* ==================================================
-           CLIENTE INICIAL
-        ================================================== */
+    inicializarModalConsulta();
 
-        const cliente =
-            obtenerClienteActual();
+    inicializarDetalleConsultas();
 
+    const cliente = obtenerClienteActual();
 
-        if (!cliente) {
-            return;
-        }
+    if (!cliente) return;
 
+    renderPaciente(cliente);
 
-        renderPaciente(
-            cliente,
-        );
+    renderTimeline(cliente);
 
-
-        renderTimeline(
-            cliente,
-        );
-
-    },
-);
+});

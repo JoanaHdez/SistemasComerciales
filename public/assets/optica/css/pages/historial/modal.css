@@ -1,0 +1,205 @@
+/* ==========================================================
+   MODAL DE CONSULTA
+========================================================== */
+
+.history-modal[hidden] {
+    display: none !important;
+}
+
+.history-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+}
+
+.history-modal__overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(30, 19, 42, 0.65);
+}
+
+.history-modal__dialog {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 720px;
+    max-height: 90vh;
+    max-height: 90dvh;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border-radius: 22px;
+
+    box-shadow:
+        0 25px 70px rgba(30, 19, 42, 0.25);
+}
+
+.history-modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    flex-shrink: 0;
+
+    padding: 26px 30px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eee7f3;
+}
+
+.history-modal__eyebrow {
+    color: #8965a5;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.history-modal__header h2 {
+    margin: 7px 0 0;
+    color: #3e304c;
+    font-size: 1.35rem;
+}
+
+.history-modal__close {
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #f4eff7;
+    color: #654d79;
+
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.history-modal__body {
+    flex: 1 1 auto;
+    min-height: 0;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    padding: 28px 30px;
+}
+
+.history-modal__patient {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    padding: 18px 20px;
+    margin-bottom: 24px;
+
+    background: #f6f2f9;
+    border-radius: 14px;
+}
+
+.history-modal__patient strong {
+    color: #4d3863;
+}
+
+.history-modal__patient span {
+    color: #856f99;
+    font-size: 0.85rem;
+}
+
+.history-modal__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.history-modal__field {
+    min-width: 0;
+    padding: 16px;
+
+    background: #faf8fc;
+    border: 1px solid #eee7f3;
+    border-radius: 12px;
+}
+
+.history-modal__label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #806a92;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.history-modal__value {
+    margin: 0;
+
+    color: #45394f;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.history-modal__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    flex-shrink: 0;
+
+    padding: 18px 30px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eee7f3;
+}
+
+.history-modal__button {
+    padding: 11px 24px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #73538f;
+    color: #fff;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.history-modal__button:hover {
+    background: #5d4275;
+}
+
+@media (max-width: 600px) {
+
+    .history-modal {
+        padding: 12px;
+    }
+
+    .history-modal__header,
+    .history-modal__body {
+        padding: 22px 18px;
+    }
+
+    .history-modal__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .history-modal__footer {
+        padding: 16px 18px;
+    }
+
+}

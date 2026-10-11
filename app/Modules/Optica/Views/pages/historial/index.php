@@ -61,6 +61,8 @@ Historial Clínico | Opticool
             'App\Modules\Optica\Views\pages\historial\sections\timeline'
         ) ?>
 
+        <?= $this->include('App\Modules\Optica\Views\pages\historial\sections\modal_consulta') ?>
+
 
     </div>
 
