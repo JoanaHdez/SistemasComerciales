@@ -1,26 +1,13 @@
-import {
-    renderResumenCliente,
-} from "./render/resumen.js";
 
+import { renderResumenCliente } from "./render/resumen.js";
 
-import {
-    renderDatosCliente,
-} from "./render/datosCliente.js";
+import { renderDatosCliente } from "./render/datosCliente.js";
 
+import { renderHistorialClinico } from "./render/historialClinico.js";
 
-import {
-    renderHistorialClinico,
-} from "./render/historialClinico.js";
+import { renderGraduacion } from "./render/graduacion.js";
 
-
-import {
-    renderGraduacion,
-} from "./render/graduacion.js";
-
-
-import {
-    renderConsultas,
-} from "./render/consultas.js";
+import { renderConsultas } from "./render/consultas.js";
 
 
 /* ==========================================================
@@ -30,24 +17,17 @@ import {
 export function seleccionarCliente(
     cliente,
     inputBusqueda,
-    ocultarResultados,
+    ocultarResultados
 ) {
 
-    if (
-        !cliente ||
-        !inputBusqueda
-    ) {
+    if (!cliente || !inputBusqueda) {
         return;
     }
 
 
-    inputBusqueda.value =
-        cliente.nombre;
+    inputBusqueda.value = cliente.nombre;
 
-
-    inputBusqueda.dataset.clientId =
-        cliente.id;
-
+    inputBusqueda.dataset.clientId = cliente.id;
 
     ocultarResultados();
 
@@ -56,34 +36,98 @@ export function seleccionarCliente(
        ACTUALIZAR FICHA
     ====================================================== */
 
-    renderResumenCliente(
-        cliente,
-    );
+    renderResumenCliente(cliente);
+
+    renderDatosCliente(cliente);
+
+    renderHistorialClinico(cliente);
+
+    renderGraduacion(cliente);
+
+    renderConsultas(cliente);
 
 
-    renderDatosCliente(
-        cliente,
-    );
+    /* ======================================================
+       ACTUALIZAR ENLACE A EXPEDIENTE
+    ====================================================== */
+
+    const enlaceExpediente =
+        document.getElementById(
+            "consulta-editar-historial"
+        );
 
 
-    renderHistorialClinico(
-        cliente,
-    );
+    if (enlaceExpediente) {
+
+        const url = new URL(
+            enlaceExpediente.href
+        );
 
 
-    renderGraduacion(
-        cliente,
-    );
+        if (cliente.id != null) {
+
+            url.searchParams.set(
+                "paciente",
+                String(cliente.id)
+            );
+
+        } else {
+
+            url.searchParams.delete(
+                "paciente"
+            );
+
+        }
 
 
-    renderConsultas(
-        cliente,
-    );
+        enlaceExpediente.href =
+            url.toString();
+
+    }
+
+
+    /* ======================================================
+       ACTUALIZAR ENLACE A HISTORIAL COMPLETO
+    ====================================================== */
+
+    const enlaceHistorial =
+        document.getElementById(
+            "consulta-ver-historial"
+        );
+
+
+    if (enlaceHistorial) {
+
+        const url = new URL(
+            enlaceHistorial.href
+        );
+
+
+        if (cliente.id != null) {
+
+            url.searchParams.set(
+                "paciente",
+                String(cliente.id)
+            );
+
+        } else {
+
+            url.searchParams.delete(
+                "paciente"
+            );
+
+        }
+
+
+        enlaceHistorial.href =
+            url.toString();
+
+    }
 
 
     console.log(
         "Cliente seleccionado:",
-        cliente,
+        cliente
     );
 
 }

@@ -31,7 +31,8 @@
         </div>
 
 
-        <a href="<?= base_url('optica/consulta/historial') ?>" class="clinical-record-card__action">
+        <a href="<?= base_url('optica/consulta/historial') ?>" id="expediente-ver-historial"
+            class="clinical-record-card__action">
             Ver historial completo
         </a>
 

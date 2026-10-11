@@ -40,7 +40,8 @@
         </div>
 
 
-        <a href="<?= base_url('optica/consulta/expediente') ?>" class="consulta-text-button">
+        <a href="<?= base_url('optica/consulta/expediente') ?>" id="consulta-editar-historial"
+            class="consulta-text-button">
             Editar historial
         </a>
 

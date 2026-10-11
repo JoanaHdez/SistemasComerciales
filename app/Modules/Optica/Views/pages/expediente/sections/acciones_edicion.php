@@ -10,6 +10,14 @@
 
     <div class="clinical-record-edit-actions__view" id="expediente-actions-view">
 
+
+        <a href="<?= base_url('optica/consulta/nueva') ?>" id="expediente-nueva-consulta" class="
+            clinical-record-page__button
+            clinical-record-page__button--secondary
+        ">
+                Nueva consulta
+        </a>
+
         <button type="button" class="
                 clinical-record-page__button
                 clinical-record-page__button--primary
