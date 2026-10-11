@@ -1,3 +1,4 @@
+
 /* ==========================================================
    PACIENTES SIMULADOS - NUEVA CONSULTA
 ========================================================== */
@@ -9,7 +10,22 @@ export const pacientesNuevaConsulta = [
         nombre: "María López Hernández",
         edad: 34,
         telefono: "55 1234 5678",
-        graduacionVigente: "OD -1.75 / OI -2.00"
+        graduacionVigente: "OD -1.75 / OI -2.00",
+
+        graduacionDetalle: {
+            oi: {
+                esfera: "-2.00",
+                cilindro: "",
+                eje: ""
+            },
+            od: {
+                esfera: "-1.75",
+                cilindro: "",
+                eje: ""
+            },
+            adicion: "",
+            distanciaOcular: ""
+        }
     },
     {
         id: 25,
@@ -17,7 +33,22 @@ export const pacientesNuevaConsulta = [
         nombre: "Carlos Martínez Ruiz",
         edad: 41,
         telefono: "55 8765 4321",
-        graduacionVigente: "OD +1.25 / OI +1.50"
+        graduacionVigente: "OD +1.25 / OI +1.50",
+
+        graduacionDetalle: {
+            oi: {
+                esfera: "+1.50",
+                cilindro: "",
+                eje: ""
+            },
+            od: {
+                esfera: "+1.25",
+                cilindro: "",
+                eje: ""
+            },
+            adicion: "",
+            distanciaOcular: ""
+        }
     },
     {
         id: 26,
@@ -25,6 +56,21 @@ export const pacientesNuevaConsulta = [
         nombre: "Ana López García",
         edad: 28,
         telefono: "55 2468 1357",
-        graduacionVigente: "OD -0.75 / OI -1.00"
+        graduacionVigente: "OD -0.75 / OI -1.00",
+
+        graduacionDetalle: {
+            oi: {
+                esfera: "-1.00",
+                cilindro: "",
+                eje: ""
+            },
+            od: {
+                esfera: "-0.75",
+                cilindro: "",
+                eje: ""
+            },
+            adicion: "",
+            distanciaOcular: ""
+        }
     }
 ];

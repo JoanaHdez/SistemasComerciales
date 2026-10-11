@@ -1,0 +1,186 @@
+/* ==========================================================
+   SECCIÓN 02 - DATOS DE LA CONSULTA
+========================================================== */
+
+.new-consultation-data {
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #ebe5ef;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 22px rgba(48, 30, 63, 0.04);
+}
+
+
+/* ==========================================================
+   ENCABEZADO
+========================================================== */
+
+.new-consultation-data__header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 25px;
+}
+
+.new-consultation-data__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    background: #f0e8f6;
+    color: #72538c;
+
+    border-radius: 12px;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.new-consultation-data__header h2 {
+    margin: 0 0 5px;
+
+    color: #40304d;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.new-consultation-data__header p {
+    margin: 0;
+
+    color: #8a7f92;
+
+    font-size: 0.83rem;
+}
+
+
+/* ==========================================================
+   CONTENIDO
+========================================================== */
+
+.new-consultation-data__content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.new-consultation-data__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+/* ==========================================================
+   CAMPOS
+========================================================== */
+
+.new-consultation-data__field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    min-width: 0;
+}
+
+.new-consultation-data__field label {
+    color: #55445f;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.new-consultation-data__field .required {
+    color: #c45c79;
+}
+
+.new-consultation-data__field input,
+.new-consultation-data__field select,
+.new-consultation-data__field textarea {
+    width: 100%;
+    min-width: 0;
+
+    padding: 13px 15px;
+
+    background: #ffffff;
+    color: #40304d;
+
+    border: 1px solid #ded5e6;
+    border-radius: 12px;
+
+    font: inherit;
+    font-size: 0.88rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.new-consultation-data__field textarea {
+    resize: vertical;
+    min-height: 115px;
+    line-height: 1.6;
+}
+
+.new-consultation-data__field input:focus,
+.new-consultation-data__field select:focus,
+.new-consultation-data__field textarea:focus {
+    border-color: #8e6ba9;
+
+    box-shadow: 0 0 0 3px rgba(142, 107, 169, 0.12);
+}
+
+.new-consultation-data__field textarea::placeholder {
+    color: #a69aaa;
+}
+
+.new-consultation-data__help {
+    margin: 0;
+
+    color: #968b9d;
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .new-consultation-data {
+        padding: 18px;
+    }
+
+    .new-consultation-data__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .new-consultation-data__header {
+        align-items: flex-start;
+    }
+
+    .new-consultation-data__number {
+        width: 38px;
+        height: 38px;
+    }
+
+}

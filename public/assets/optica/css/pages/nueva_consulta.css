@@ -6,5 +6,9 @@
 @import url("./nueva_consulta/base.css");
 @import url("./nueva_consulta/header.css");
 @import url("./nueva_consulta/buscador.css");
-@import url("./nueva_consulta/responsive.css");
 @import url("./nueva_consulta/paciente.css");
+@import url("./nueva_consulta/datos_consulta.css");
+@import url("./nueva_consulta/evaluacion_clinica.css");
+@import url("./nueva_consulta/graduacion.css");
+@import url("./nueva_consulta/acciones.css");
+@import url("./nueva_consulta/responsive.css");

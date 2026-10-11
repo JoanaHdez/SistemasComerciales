@@ -1,0 +1,193 @@
+
+/* ==========================================================
+   SECCIÓN 03 - EVALUACIÓN CLÍNICA
+========================================================== */
+
+.new-consultation-evaluation {
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #ebe5ef;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 22px rgba(48, 30, 63, 0.04);
+}
+
+
+/* ==========================================================
+   ENCABEZADO
+========================================================== */
+
+.new-consultation-evaluation__header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+.new-consultation-evaluation__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    background: #f0e8f6;
+    color: #72538c;
+
+    border-radius: 12px;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+
+.new-consultation-evaluation__header h2 {
+    margin: 0 0 5px;
+
+    color: #40304d;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+
+.new-consultation-evaluation__header p {
+    margin: 0;
+
+    color: #8a7f92;
+
+    font-size: 0.83rem;
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   CONTENIDO
+========================================================== */
+
+.new-consultation-evaluation__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* ==========================================================
+   CAMPOS
+========================================================== */
+
+.new-consultation-evaluation__field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    min-width: 0;
+}
+
+
+.new-consultation-evaluation__field label {
+    color: #55445f;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+
+.new-consultation-evaluation__field .required {
+    color: #c45c79;
+}
+
+
+/* ==========================================================
+   TEXTAREA
+========================================================== */
+
+.new-consultation-evaluation__field textarea {
+    width: 100%;
+    min-width: 0;
+    min-height: 115px;
+
+    padding: 14px 16px;
+
+    background: #ffffff;
+    color: #40304d;
+
+    border: 1px solid #ded5e6;
+    border-radius: 12px;
+
+    font: inherit;
+    font-size: 0.88rem;
+    line-height: 1.6;
+
+    resize: vertical;
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.new-consultation-evaluation__field textarea:focus {
+    border-color: #8e6ba9;
+
+    box-shadow:
+        0 0 0 3px rgba(142, 107, 169, 0.12);
+}
+
+
+.new-consultation-evaluation__field textarea::placeholder {
+    color: #a69aaa;
+}
+
+
+/* ==========================================================
+   TEXTOS DE AYUDA
+========================================================== */
+
+.new-consultation-evaluation__help {
+    margin: 0;
+
+    color: #968b9d;
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .new-consultation-evaluation {
+        padding: 18px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .new-consultation-evaluation__header {
+        align-items: flex-start;
+    }
+
+    .new-consultation-evaluation__number {
+        width: 38px;
+        height: 38px;
+    }
+
+    .new-consultation-evaluation__field textarea {
+        min-height: 105px;
+    }
+
+}

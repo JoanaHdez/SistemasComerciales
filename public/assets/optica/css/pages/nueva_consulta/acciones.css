@@ -1,0 +1,260 @@
+
+/* ==========================================================
+   SECCIÓN 05 - ACCIONES
+========================================================== */
+
+.new-consultation-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    padding: 24px;
+
+    background: #ffffff;
+    border: 1px solid #ebe5ef;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 22px rgba(48, 30, 63, 0.04);
+}
+
+.new-consultation-actions__information h2 {
+    margin: 0 0 6px;
+    color: #40304d;
+    font-size: 1.1rem;
+}
+
+.new-consultation-actions__information p {
+    margin: 0;
+    color: #8a7f92;
+    font-size: 0.83rem;
+    line-height: 1.5;
+}
+
+.new-consultation-actions__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.new-consultation-actions__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 43px;
+    padding: 11px 17px;
+
+    border: 1px solid transparent;
+    border-radius: 11px;
+
+    font: inherit;
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.new-consultation-actions__button--secondary {
+    background: #ffffff;
+    border-color: #ded5e6;
+    color: #654d79;
+}
+
+.new-consultation-actions__button--secondary:hover {
+    background: #f5f0f9;
+}
+
+.new-consultation-actions__button--primary {
+    background: #80619a;
+    color: #ffffff;
+}
+
+.new-consultation-actions__button--primary:hover {
+    background: #6e5088;
+}
+
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+.new-consultation-modal[hidden] {
+    display: none !important;
+}
+
+.new-consultation-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.new-consultation-modal__overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(31, 22, 40, 0.58);
+}
+
+.new-consultation-modal__dialog {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 620px;
+    max-height: min(85vh, 760px);
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border-radius: 18px;
+
+    box-shadow: 0 20px 60px rgba(20, 10, 30, 0.25);
+}
+
+.new-consultation-modal__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+
+    flex-shrink: 0;
+    padding: 22px 25px;
+
+    border-bottom: 1px solid #eee8f2;
+}
+
+.new-consultation-modal__header span {
+    color: #80619a;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.new-consultation-modal__header h2 {
+    margin: 6px 0 0;
+    color: #40304d;
+    font-size: 1.25rem;
+}
+
+.new-consultation-modal__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    background: #f5f0f9;
+    color: #654d79;
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.new-consultation-modal__body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    padding: 24px 25px;
+}
+
+.new-consultation-modal__notice {
+    margin: 0 0 20px;
+    padding: 15px;
+
+    background: #f4edf9;
+    border-radius: 11px;
+
+    color: #654d79;
+    font-size: 0.86rem;
+    line-height: 1.6;
+}
+
+.new-consultation-modal__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.new-consultation-modal__summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 12px 14px;
+
+    background: #f8f6fa;
+    border-radius: 10px;
+}
+
+.new-consultation-modal__summary-item span {
+    color: #8a7f92;
+    font-size: 0.76rem;
+}
+
+.new-consultation-modal__summary-item strong {
+    color: #40304d;
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.new-consultation-modal__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    flex-shrink: 0;
+    padding: 18px 25px;
+
+    border-top: 1px solid #eee8f2;
+    background: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .new-consultation-actions {
+        padding: 18px;
+    }
+
+    .new-consultation-actions__buttons {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .new-consultation-actions__buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .new-consultation-modal {
+        padding: 12px;
+    }
+
+    .new-consultation-modal__header,
+    .new-consultation-modal__body,
+    .new-consultation-modal__footer {
+        padding: 17px;
+    }
+}

@@ -1,5 +1,17 @@
+
+import {
+    mostrarGraduacionVigenteNuevaConsulta,
+    ocultarGraduacionVigenteNuevaConsulta
+} from "./graduacion.js";
+
+
 /* ==========================================================
    FICHA DEL PACIENTE SELECCIONADO
+========================================================== */
+
+
+/* ==========================================================
+   OBTENER INICIALES DEL PACIENTE
 ========================================================== */
 
 function obtenerIniciales(nombre) {
@@ -9,13 +21,20 @@ function obtenerIniciales(nombre) {
         .split(/\s+/)
         .filter(Boolean);
 
+
     return palabras
         .slice(0, 2)
-        .map(palabra => palabra.charAt(0).toUpperCase())
+        .map(
+            palabra => palabra.charAt(0).toUpperCase()
+        )
         .join("");
 
 }
 
+
+/* ==========================================================
+   MOSTRAR PACIENTE SELECCIONADO
+========================================================== */
 
 export function mostrarPacienteNuevaConsulta(paciente) {
 
@@ -23,46 +42,122 @@ export function mostrarPacienteNuevaConsulta(paciente) {
         "#new-consultation-patient"
     );
 
-    if (!contenedor) {
+
+    if (!contenedor || !paciente) {
         return;
     }
 
+
+    /* ======================================================
+       ELEMENTOS DE LA FICHA
+    ====================================================== */
+
     const campos = {
-        avatar: "#new-consultation-patient-avatar",
-        nombre: "#new-consultation-patient-name",
-        folio: "#new-consultation-patient-folio",
-        edad: "#new-consultation-patient-age",
-        telefono: "#new-consultation-patient-phone",
-        codigo: "#new-consultation-patient-code",
-        graduacion: "#new-consultation-patient-graduation"
+
+        avatar:
+            "#new-consultation-patient-avatar",
+
+        nombre:
+            "#new-consultation-patient-name",
+
+        folio:
+            "#new-consultation-patient-folio",
+
+        edad:
+            "#new-consultation-patient-age",
+
+        telefono:
+            "#new-consultation-patient-phone",
+
+        codigo:
+            "#new-consultation-patient-code",
+
+        graduacion:
+            "#new-consultation-patient-graduation"
+
     };
+
+
+    /* ======================================================
+       INFORMACIÓN DEL PACIENTE
+    ====================================================== */
 
     const valores = {
-        avatar: obtenerIniciales(paciente.nombre),
-        nombre: paciente.nombre,
-        folio: paciente.folio,
-        edad: paciente.edad != null
-            ? `${paciente.edad} años`
-            : "Sin información",
-        telefono: paciente.telefono || "Sin información",
-        codigo: paciente.folio,
-        graduacion: paciente.graduacionVigente || "Sin graduación registrada"
+
+        avatar:
+            obtenerIniciales(
+                paciente.nombre
+            ),
+
+        nombre:
+            paciente.nombre || "Sin información",
+
+        folio:
+            paciente.folio || "Sin información",
+
+        edad:
+            paciente.edad != null
+                ? `${paciente.edad} años`
+                : "Sin información",
+
+        telefono:
+            paciente.telefono || "Sin información",
+
+        codigo:
+            paciente.folio || "Sin información",
+
+        graduacion:
+            paciente.graduacionVigente
+            || "Sin graduación registrada"
+
     };
 
-    Object.entries(campos).forEach(([clave, selector]) => {
 
-        const elemento = document.querySelector(selector);
+    /* ======================================================
+       ACTUALIZAR CAMPOS DE LA FICHA
+    ====================================================== */
 
-        if (elemento) {
-            elemento.textContent = valores[clave] ?? "";
+    Object.entries(campos).forEach(
+        ([clave, selector]) => {
+
+            const elemento = contenedor.querySelector(
+                selector
+            );
+
+
+            if (!elemento) {
+                return;
+            }
+
+
+            elemento.textContent =
+                valores[clave] ?? "";
+
         }
+    );
 
-    });
+
+    /* ======================================================
+       MOSTRAR FICHA DEL PACIENTE
+    ====================================================== */
 
     contenedor.hidden = false;
 
+
+    /* ======================================================
+       ACTUALIZAR GRADUACIÓN VIGENTE - SECCIÓN 04
+    ====================================================== */
+
+    mostrarGraduacionVigenteNuevaConsulta(
+        paciente
+    );
+
 }
 
+
+/* ==========================================================
+   OCULTAR PACIENTE SELECCIONADO
+========================================================== */
 
 export function ocultarPacienteNuevaConsulta() {
 
@@ -70,8 +165,22 @@ export function ocultarPacienteNuevaConsulta() {
         "#new-consultation-patient"
     );
 
+
+    /* ======================================================
+       OCULTAR FICHA DEL PACIENTE
+    ====================================================== */
+
     if (contenedor) {
+
         contenedor.hidden = true;
+
     }
+
+
+    /* ======================================================
+       OCULTAR GRADUACIÓN VIGENTE - SECCIÓN 04
+    ====================================================== */
+
+    ocultarGraduacionVigenteNuevaConsulta();
 
 }
