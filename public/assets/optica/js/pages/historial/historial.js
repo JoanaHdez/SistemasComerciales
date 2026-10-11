@@ -26,6 +26,10 @@ import {
     inicializarDetalleConsultas
 } from "./modal/consulta.js";
 
+import {
+    inicializarImpresionHistorial
+} from "./impresion.js";
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -36,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
     inicializarModalConsulta();
 
     inicializarDetalleConsultas();
+
+    inicializarImpresionHistorial();
 
     const cliente = obtenerClienteActual();
 

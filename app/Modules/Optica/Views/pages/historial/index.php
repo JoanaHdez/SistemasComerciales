@@ -63,6 +63,7 @@ Historial Clínico | Opticool
 
         <?= $this->include('App\Modules\Optica\Views\pages\historial\sections\modal_consulta') ?>
 
+        <?= $this->include('App\Modules\Optica\Views\pages\historial\sections\modal_impresion') ?>
 
     </div>
 

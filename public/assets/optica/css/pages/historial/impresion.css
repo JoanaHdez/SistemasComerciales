@@ -1,0 +1,753 @@
+
+/* ==========================================================
+   OPTICOOL
+   HISTORIAL CLÍNICO - IMPRESIÓN
+========================================================== */
+
+
+/* ==========================================================
+   MODAL DE VISTA PREVIA
+========================================================== */
+
+.history-print-modal[hidden] {
+    display: none !important;
+}
+
+.history-print-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.history-print-modal__overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(30, 19, 42, 0.7);
+}
+
+.history-print-modal__dialog {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 850px;
+
+    max-height: 92vh;
+    max-height: 92dvh;
+
+    overflow: hidden;
+
+    background: #f3f1f5;
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==========================================================
+   HEADER FIJO DEL MODAL
+========================================================== */
+
+.history-print-modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    flex-shrink: 0;
+
+    padding: 22px 28px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e9e2ef;
+}
+
+.history-print-modal__eyebrow {
+    color: #80619a;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.history-print-modal__header h2 {
+    margin: 6px 0 0;
+
+    color: #42334f;
+    font-size: 1.25rem;
+}
+
+.history-print-modal__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #f4eff7;
+    color: #654d79;
+
+    font-size: 1.6rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.history-print-modal__close:hover {
+    background: #e9dff0;
+    color: #493658;
+}
+
+
+/* ==========================================================
+   CONTENIDO DESPLAZABLE DEL MODAL
+========================================================== */
+
+.history-print-modal__body {
+    flex: 1 1 auto;
+    min-height: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
+
+    padding: 28px;
+}
+
+
+/* ==========================================================
+   DOCUMENTO CLÍNICO
+========================================================== */
+
+.history-print-document {
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 auto;
+    padding: 32px 36px;
+
+    background: #ffffff;
+    color: #382b44;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.45;
+    text-align: left;
+
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.history-print-document,
+.history-print-document * {
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   ENCABEZADO INSTITUCIONAL
+========================================================== */
+
+.history-print-document__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    margin: 0 0 20px;
+    padding: 0 0 16px;
+
+    border-bottom: 3px solid #765590;
+}
+
+.history-print-document__identity,
+.history-print-document__document-type {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.history-print-document__brand {
+    color: #654781;
+
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.history-print-document__subtitle {
+    color: #85778f;
+
+    font-size: 9px;
+    letter-spacing: 0.4px;
+}
+
+.history-print-document__document-type {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.history-print-document__document-type strong {
+    color: #493658;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.history-print-document__document-type span {
+    color: #85778f;
+    font-size: 10px;
+}
+
+
+/* ==========================================================
+   SECCIONES DEL DOCUMENTO
+========================================================== */
+
+.history-print-document__section {
+    margin: 0 0 20px;
+}
+
+.history-print-document__section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.history-print-document__section-heading h2 {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+
+    color: #634780;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.history-print-document__section-icon {
+    color: #765590;
+
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+/* ==========================================================
+   01 - DATOS DEL PACIENTE
+========================================================== */
+
+.history-print-document__section--patient {
+    padding: 18px 20px;
+
+    background: #f5f0f9;
+
+    border: 1px solid #e7dced;
+    border-radius: 12px;
+}
+
+.history-print-document__patient-name {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    margin-bottom: 15px;
+}
+
+.history-print-document__patient-name strong {
+    color: #382b44;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+}
+
+.history-print-document__patient-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+
+/* ==========================================================
+   CAMPOS GENERALES
+========================================================== */
+
+.history-print-document__field {
+    min-width: 0;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.history-print-document__label {
+    display: block;
+
+    margin: 0 0 3px;
+
+    color: #887a93;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-align: left;
+}
+
+.history-print-document__value {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    color: #382b44;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    text-align: left;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.history-print-document__patient-details
+.history-print-document__value {
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   02 - DATOS DE LA CONSULTA
+========================================================== */
+
+.history-print-document__consultation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+
+    margin-bottom: 10px;
+}
+
+.history-print-document__consultation-card {
+    padding: 12px 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e0ee;
+    border-radius: 9px;
+}
+
+.history-print-document__consultation-type {
+    padding: 12px 14px;
+
+    background: #f8f6fa;
+    border-radius: 9px;
+}
+
+.history-print-document__consultation-card
+.history-print-document__value {
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   03 - EVALUACIÓN CLÍNICA
+========================================================== */
+
+.history-print-document__clinical {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.history-print-document__clinical
+.history-print-document__label,
+.history-print-document__observations
+.history-print-document__label {
+    color: #765590;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   GRADUACIÓN REGISTRADA
+========================================================== */
+
+.history-print-document__graduation {
+    padding: 15px 18px;
+    margin-bottom: 15px;
+
+    background: #f5f0f9;
+
+    border: 1px solid #e7dced;
+    border-radius: 10px;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.history-print-document__graduation-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 12px;
+}
+
+.history-print-document__graduation-heading strong {
+    color: #634780;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.history-print-document__graduation-icon {
+    color: #765590;
+
+    font-size: 17px;
+    line-height: 1;
+}
+
+.history-print-document__graduation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.history-print-document__graduation-grid > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    min-width: 0;
+}
+
+.history-print-document__graduation-grid span {
+    color: #887a93;
+    font-size: 10px;
+}
+
+.history-print-document__graduation-grid strong {
+    color: #382b44;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+.history-print-document__graduation-text {
+    margin: 0;
+
+    color: #382b44;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================
+   OBSERVACIONES Y RECOMENDACIONES
+========================================================== */
+
+.history-print-document__observations {
+    margin-top: 8px;
+}
+
+
+/* ==========================================================
+   PIE DEL DOCUMENTO
+========================================================== */
+
+.history-print-document__footnote {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 20px;
+    padding-top: 12px;
+
+    border-top: 1px solid #e8e0ee;
+
+    color: #92859b;
+
+    font-size: 10px;
+    text-align: left;
+}
+
+
+/* ==========================================================
+   FOOTER FIJO DEL MODAL
+========================================================== */
+
+.history-print-modal__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+
+    flex-shrink: 0;
+
+    padding: 18px 28px;
+
+    background: #ffffff;
+    border-top: 1px solid #e9e2ef;
+}
+
+.history-print-modal__button {
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.history-print-modal__button--secondary {
+    background: #f2edf6;
+    color: #654d79;
+}
+
+.history-print-modal__button--secondary:hover {
+    background: #e8deef;
+}
+
+.history-print-modal__button--primary {
+    background: #72538c;
+    color: #ffffff;
+}
+
+.history-print-modal__button--primary:hover {
+    background: #5b4270;
+}
+
+
+/* ==========================================================
+   RESPONSIVE - TABLET
+========================================================== */
+
+@media (max-width: 760px) {
+
+    .history-print-modal {
+        padding: 14px;
+    }
+
+    .history-print-modal__header,
+    .history-print-modal__footer {
+        padding: 18px 20px;
+    }
+
+    .history-print-modal__body {
+        padding: 18px;
+    }
+
+    .history-print-document {
+        padding: 26px 24px;
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE - MÓVIL
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .history-print-modal {
+        padding: 10px;
+    }
+
+    .history-print-modal__dialog {
+        max-height: 96vh;
+        max-height: 96dvh;
+
+        border-radius: 16px;
+    }
+
+    .history-print-modal__header,
+    .history-print-modal__footer {
+        padding: 16px;
+    }
+
+    .history-print-modal__header h2 {
+        font-size: 1.05rem;
+    }
+
+    .history-print-modal__body {
+        padding: 12px;
+    }
+
+    .history-print-document {
+        padding: 24px 18px;
+    }
+
+    .history-print-document__heading {
+        gap: 10px;
+    }
+
+    .history-print-document__brand {
+        font-size: 16px;
+    }
+
+    .history-print-document__document-type strong {
+        font-size: 10px;
+    }
+
+    .history-print-document__section--patient {
+        padding: 15px;
+    }
+
+    .history-print-document__patient-name strong {
+        font-size: 16px;
+    }
+
+    .history-print-document__patient-details {
+        grid-template-columns: 1fr;
+    }
+
+    .history-print-document__consultation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .history-print-document__graduation-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .history-print-modal__footer {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE - MÓVIL PEQUEÑO
+========================================================== */
+
+@media (max-width: 400px) {
+
+    .history-print-document {
+        padding: 20px 14px;
+    }
+
+    .history-print-document__heading {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .history-print-document__document-type {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .history-print-document__graduation {
+        padding: 12px;
+    }
+
+    .history-print-modal__button {
+        flex: 1;
+        padding: 11px 12px;
+    }
+
+}
+
+
+/* ==========================================================
+   IMPRESIÓN - HOJA CARTA
+========================================================== */
+
+@page {
+    size: letter portrait;
+    margin: 0;
+}
+
+@media print {
+
+    html,
+    body {
+        width: 216mm !important;
+        height: 279mm !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow: hidden !important;
+
+        background: #ffffff !important;
+    }
+
+    .history-print-document {
+        width: 216mm !important;
+        max-width: none !important;
+
+        min-height: 279mm !important;
+
+        margin: 0 !important;
+        padding: 15mm !important;
+
+        background: #ffffff !important;
+
+        box-shadow: none !important;
+    }
+
+    .history-print-document__section {
+        margin-bottom: 16px;
+    }
+
+    .history-print-document__heading,
+    .history-print-document__section--patient,
+    .history-print-document__consultation-card,
+    .history-print-document__consultation-type,
+    .history-print-document__graduation {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+}
