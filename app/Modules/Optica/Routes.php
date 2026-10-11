@@ -18,6 +18,7 @@ $routes->group(
         $routes->get('clientes/nuevo/graduacion', 'Clientes_Controller::graduacion');
 
         $routes->get('consulta', 'Consulta_Controller::index');
+        $routes->get('consulta/nueva', 'Consulta_Controller::nueva');
 
         $routes->get('ventas/nueva', 'Ventas_Controller::nueva');
 

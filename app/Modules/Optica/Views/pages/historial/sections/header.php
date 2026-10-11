@@ -32,12 +32,12 @@
         </a>
 
 
-        <button type="button" class="
+        <a href="<?= base_url('optica/consulta/nueva') ?>" class="
                 history-page__button
                 history-page__button--primary
             ">
             Nueva consulta
-        </button>
+        </a>
 
     </div>
 

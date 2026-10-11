@@ -34,7 +34,7 @@ import "./pages/graduacion.js";
 ========================================================== */
 
 import "./pages/consulta/consulta.js";
-
+import "./pages/consulta/nueva/nueva.js";
 
 /* ==========================================================
    EXPEDIENTE CLÍNICO

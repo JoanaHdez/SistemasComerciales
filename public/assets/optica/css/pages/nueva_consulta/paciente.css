@@ -1,0 +1,173 @@
+/* ==========================================================
+   FICHA DEL PACIENTE
+========================================================== */
+
+.new-consultation-patient[hidden] {
+    display: none !important;
+}
+
+.new-consultation-patient {
+    padding: 25px;
+
+    background: #ffffff;
+    border: 1px solid #e8dfef;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 22px rgba(48, 30, 63, 0.04);
+}
+
+.new-consultation-patient__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.new-consultation-patient__eyebrow {
+    color: #80619a;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.new-consultation-patient__header h2 {
+    margin: 5px 0 0;
+
+    color: #40304d;
+    font-size: 1.1rem;
+}
+
+.new-consultation-patient__status {
+    padding: 7px 12px;
+
+    background: #edf7ef;
+    color: #34744a;
+
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.new-consultation-patient__identity {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.new-consultation-patient__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    flex-shrink: 0;
+
+    background: #f0e8f6;
+    color: #72538c;
+
+    border-radius: 50%;
+
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.new-consultation-patient__identity h3 {
+    margin: 0 0 5px;
+
+    color: #40304d;
+    font-size: 1.1rem;
+}
+
+.new-consultation-patient__identity span {
+    color: #8a7e92;
+    font-size: 0.82rem;
+}
+
+.new-consultation-patient__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+
+    margin-bottom: 18px;
+}
+
+.new-consultation-patient__field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    padding: 15px;
+
+    background: #f8f6fa;
+    border-radius: 11px;
+}
+
+.new-consultation-patient__field span {
+    color: #8a7e92;
+    font-size: 0.76rem;
+}
+
+.new-consultation-patient__field strong {
+    color: #40304d;
+
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.new-consultation-patient__graduation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 17px 19px;
+
+    background: #f4edf9;
+    border: 1px solid #e5d9ed;
+    border-radius: 12px;
+}
+
+.new-consultation-patient__graduation > span {
+    color: #72538c;
+
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.new-consultation-patient__graduation strong {
+    color: #40304d;
+    font-size: 1.1rem;
+}
+
+.new-consultation-patient__graduation small {
+    color: #8a7e92;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .new-consultation-patient {
+        padding: 18px;
+    }
+
+    .new-consultation-patient__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .new-consultation-patient__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .new-consultation-patient__identity h3 {
+        font-size: 0.95rem;
+    }
+}

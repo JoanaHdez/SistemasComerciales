@@ -1,0 +1,205 @@
+/* ==========================================================
+   BUSCADOR DE PACIENTES
+========================================================== */
+
+.new-consultation-search {
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #ebe5ef;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 22px rgba(48, 30, 63, 0.04);
+}
+
+.new-consultation-search__header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 24px;
+}
+
+.new-consultation-search__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    background: #f0e8f6;
+    color: #72538c;
+
+    border-radius: 12px;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.new-consultation-search__header h2 {
+    margin: 0 0 5px;
+
+    color: #40304d;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.new-consultation-search__header p {
+    margin: 0;
+
+    color: #8a7f92;
+
+    font-size: 0.83rem;
+}
+
+.new-consultation-search__content {
+    max-width: 720px;
+}
+
+.new-consultation-search__label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #55445f;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.new-consultation-search__input-wrapper {
+    position: relative;
+}
+
+.new-consultation-search__icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+
+    transform: translateY(-50%);
+
+    color: #967eaa;
+
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.new-consultation-search__input {
+    width: 100%;
+
+    padding: 14px 16px 14px 47px;
+
+    background: #ffffff;
+    color: #40304d;
+
+    border: 1px solid #ded5e6;
+    border-radius: 12px;
+
+    font: inherit;
+    font-size: 0.9rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.new-consultation-search__input:focus {
+    border-color: #8e6ba9;
+
+    box-shadow: 0 0 0 3px rgba(142, 107, 169, 0.12);
+}
+
+.new-consultation-search__input::placeholder {
+    color: #a69aaa;
+}
+
+.new-consultation-search__help {
+    margin: 10px 0 0;
+
+    color: #968b9d;
+
+    font-size: 0.78rem;
+}
+
+
+/* ==========================================================
+   RESULTADOS
+========================================================== */
+
+.new-consultation-search__results[hidden] {
+    display: none !important;
+}
+
+.new-consultation-search__results {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: 0;
+    right: 0;
+
+    z-index: 20;
+
+    max-height: 300px;
+    overflow-y: auto;
+
+    padding: 7px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5dcec;
+    border-radius: 12px;
+
+    box-shadow: 0 12px 30px rgba(45, 27, 59, 0.12);
+}
+
+.new-consultation-search__result {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 9px;
+
+    text-align: left;
+    cursor: pointer;
+}
+
+.new-consultation-search__result:hover,
+.new-consultation-search__result:focus-visible {
+    background: #f5eff9;
+    outline: none;
+}
+
+.new-consultation-search__result-name {
+    color: #463551;
+
+    font-size: 0.87rem;
+    font-weight: 700;
+}
+
+.new-consultation-search__result-detail {
+    color: #8a7e92;
+
+    font-size: 0.76rem;
+}
+
+.new-consultation-search__empty {
+    padding: 15px;
+
+    color: #8a7e92;
+
+    font-size: 0.84rem;
+    text-align: center;
+}

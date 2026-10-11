@@ -1,0 +1,66 @@
+/* ==========================================================
+   ENCABEZADO
+========================================================== */
+
+.new-consultation-page__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.new-consultation-page__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.new-consultation-page__eyebrow {
+    color: #80619a;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.new-consultation-page__title {
+    margin: 0;
+
+    color: #34263f;
+
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.new-consultation-page__description {
+    margin: 0;
+
+    color: #81758a;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.new-consultation-page__back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 18px;
+
+    border: 1px solid #ded5e6;
+    border-radius: 11px;
+
+    background: #ffffff;
+    color: #654d79;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: background 0.2s ease;
+}
+
+.new-consultation-page__back:hover {
+    background: #f5f0f9;
+}
