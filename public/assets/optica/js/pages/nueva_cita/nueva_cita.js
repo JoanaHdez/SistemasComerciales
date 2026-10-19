@@ -13,6 +13,10 @@ import {
     inicializarHorariosNuevaCita
 } from "./horarios.js";
 
+import {
+    inicializarResumenNuevaCita
+} from "./resumen.js";
+
 
 function inicializarNuevaCita() {
 
@@ -25,7 +29,11 @@ function inicializarNuevaCita() {
     }
 
     inicializarPacientesNuevaCita();
+
     inicializarHorariosNuevaCita();
+
+    inicializarResumenNuevaCita();
+
     console.log(
         "Opticool: módulo Nueva cita inicializado correctamente."
     );
