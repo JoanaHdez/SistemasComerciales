@@ -24,7 +24,8 @@
 
     <div class="new-consultation-page__actions">
 
-        <a href="<?= base_url('optica/consulta/historial') ?>" class="new-consultation-page__back">
+        <a href="<?= base_url('optica/consulta/historial') ?>" id="nueva-consulta-volver-historial"
+            class="new-consultation-page__back">
             Volver al historial
         </a>
 

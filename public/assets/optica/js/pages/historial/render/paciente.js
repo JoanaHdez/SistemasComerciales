@@ -23,76 +23,155 @@ function obtenerIniciales(nombre) {
    RENDERIZAR PACIENTE
 ========================================================== */
 
-export function renderPaciente(cliente) {
-  if (!cliente) {
-    return;
-  }
+/* ==========================================================
+   RENDERIZAR PACIENTE
+========================================================== */
 
-  /* ======================================================
+export function renderPaciente(cliente) {
+
+    if (!cliente) {
+        return;
+    }
+
+
+    /* ======================================================
        ELEMENTOS
     ====================================================== */
 
-  const avatar = document.getElementById("history-patient-avatar");
+    const avatar = document.getElementById(
+        "history-patient-avatar"
+    );
 
-  const nombre = document.getElementById("history-patient-name");
+    const nombre = document.getElementById(
+        "history-patient-name"
+    );
 
-  const folio = document.getElementById("history-patient-folio");
+    const folio = document.getElementById(
+        "history-patient-folio"
+    );
 
-  const edad = document.getElementById("history-patient-age");
+    const edad = document.getElementById(
+        "history-patient-age"
+    );
 
-  const total = document.getElementById("history-patient-total");
+    const total = document.getElementById(
+        "history-patient-total"
+    );
 
-  const ultimaConsulta = document.getElementById("history-patient-last");
+    const ultimaConsulta = document.getElementById(
+        "history-patient-last"
+    );
 
-  /* ======================================================
+
+    /* ======================================================
        ACTUALIZAR INFORMACIÓN
     ====================================================== */
 
-  if (avatar) {
-    avatar.textContent = obtenerIniciales(cliente.nombre);
-  }
-
-  if (nombre) {
-    nombre.textContent = cliente.nombre ?? "—";
-  }
-
-  if (folio) {
-    folio.textContent = cliente.folio ?? "—";
-  }
-
-  if (edad) {
-    const edadCliente = cliente.resumen?.edad;
-
-    edad.textContent = edadCliente ? `Edad: ${edadCliente} años` : "Edad: —";
-  }
-
-  if (total) {
-    total.textContent = Array.isArray(cliente.consultas)
-      ? cliente.consultas.length
-      : 0;
-  }
-
-  if (ultimaConsulta) {
-    ultimaConsulta.textContent = cliente.resumen?.ultimaConsulta ?? "—";
-  }
-
-  /* ======================================================
-   ENLACE A NUEVA CONSULTA
-====================================================== */
-
-  const enlaceNuevaConsulta = document.getElementById(
-    "history-new-consultation",
-  );
-
-  if (enlaceNuevaConsulta) {
-    const url = new URL(enlaceNuevaConsulta.href);
-
-    if (cliente.id != null) {
-      url.searchParams.set("paciente", String(cliente.id));
-    } else {
-      url.searchParams.delete("paciente");
+    if (avatar) {
+        avatar.textContent = obtenerIniciales(cliente.nombre);
     }
 
-    enlaceNuevaConsulta.href = url.toString();
-  }
+    if (nombre) {
+        nombre.textContent = cliente.nombre ?? "—";
+    }
+
+    if (folio) {
+        folio.textContent = cliente.folio ?? "—";
+    }
+
+    if (edad) {
+
+        const edadCliente = cliente.resumen?.edad;
+
+        edad.textContent = edadCliente
+            ? `Edad: ${edadCliente} años`
+            : "Edad: —";
+
+    }
+
+    if (total) {
+
+        total.textContent = Array.isArray(cliente.consultas)
+            ? cliente.consultas.length
+            : 0;
+
+    }
+
+    if (ultimaConsulta) {
+
+        ultimaConsulta.textContent =
+            cliente.resumen?.ultimaConsulta ?? "—";
+
+    }
+
+
+    /* ======================================================
+       ENLACE A NUEVA CONSULTA
+    ====================================================== */
+
+    const enlaceNuevaConsulta = document.getElementById(
+        "history-new-consultation"
+    );
+
+    if (enlaceNuevaConsulta) {
+
+        const url = new URL(
+            enlaceNuevaConsulta.href
+        );
+
+        if (cliente.id != null) {
+
+            url.searchParams.set(
+                "paciente",
+                String(cliente.id)
+            );
+
+        } else {
+
+            url.searchParams.delete(
+                "paciente"
+            );
+
+        }
+
+        enlaceNuevaConsulta.href =
+            url.toString();
+
+    }
+
+
+    /* ======================================================
+       ENLACE VOLVER AL EXPEDIENTE
+    ====================================================== */
+
+    const enlaceExpediente = document.getElementById(
+        "history-back-to-record"
+    );
+
+    if (enlaceExpediente) {
+
+        const url = new URL(
+            enlaceExpediente.href
+        );
+
+        if (cliente.id != null) {
+
+            url.searchParams.set(
+                "paciente",
+                String(cliente.id)
+            );
+
+        } else {
+
+            url.searchParams.delete(
+                "paciente"
+            );
+
+        }
+
+        enlaceExpediente.href =
+            url.toString();
+
+    }
+
 }

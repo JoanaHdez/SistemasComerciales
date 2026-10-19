@@ -61,8 +61,8 @@ export function inicializarBuscadorNuevaConsulta() {
 
 
     /* ======================================================
-       SELECCIONAR PACIENTE
-    ====================================================== */
+   SELECCIONAR PACIENTE
+====================================================== */
 
     function seleccionarPaciente(paciente) {
 
@@ -108,6 +108,45 @@ export function inicializarBuscadorNuevaConsulta() {
         -------------------------------------------------- */
 
         cerrarResultados();
+
+
+        /* ==================================================
+           ACTUALIZAR ENLACE VOLVER AL HISTORIAL
+        ================================================== */
+
+        const enlaceHistorial =
+            document.getElementById(
+                "nueva-consulta-volver-historial"
+            );
+
+
+        if (enlaceHistorial) {
+
+            const url = new URL(
+                enlaceHistorial.href
+            );
+
+
+            if (paciente.id != null) {
+
+                url.searchParams.set(
+                    "paciente",
+                    String(paciente.id)
+                );
+
+            } else {
+
+                url.searchParams.delete(
+                    "paciente"
+                );
+
+            }
+
+
+            enlaceHistorial.href =
+                url.toString();
+
+        }
 
     }
 
@@ -332,7 +371,7 @@ export function inicializarBuscadorNuevaConsulta() {
 
 
     /* ======================================================
-       MODIFICAR BÚSQUEDA
+    MODIFICAR BÚSQUEDA
     ====================================================== */
 
     input.addEventListener(
@@ -346,6 +385,32 @@ export function inicializarBuscadorNuevaConsulta() {
             delete input.dataset.pacienteId;
 
             input.setCustomValidity("");
+
+
+            /* ==============================================
+               LIMPIAR PACIENTE DEL ENLACE AL HISTORIAL
+            ============================================== */
+
+            const enlaceHistorial =
+                document.getElementById(
+                    "nueva-consulta-volver-historial"
+                );
+
+
+            if (enlaceHistorial) {
+
+                const url = new URL(
+                    enlaceHistorial.href
+                );
+
+                url.searchParams.delete(
+                    "paciente"
+                );
+
+                enlaceHistorial.href =
+                    url.toString();
+
+            }
 
 
             /* ----------------------------------------------

@@ -24,10 +24,10 @@
 
     <div class="history-page__actions">
 
-        <a href="<?= base_url('optica/consulta/expediente') ?>" class="
-                history-page__button
-                history-page__button--secondary
-            ">
+        <a href="<?= base_url('optica/consulta/expediente') ?>" id="history-back-to-record" class="
+        history-page__button
+        history-page__button--secondary
+    ">
             Volver al expediente
         </a>
 

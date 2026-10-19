@@ -1,3 +1,4 @@
+
 /* ==========================================================
    DATOS SIMULADOS DE CLIENTES
 
@@ -16,207 +17,110 @@ export const clientes = [
 
     {
         id: 24,
-
-        folio:
-            "CLI-0001",
-
-        nombre:
-            "María López Hernández",
-
-        telefono:
-            "55 1234 5678",
-
-        correo:
-            "maria@example.com",
-
-
-        /* --------------------------------------------------
-           RESUMEN DEL PACIENTE
-        -------------------------------------------------- */
+        folio: "CLI-0001",
+        nombre: "María López Hernández",
+        telefono: "55 1234 5678",
+        correo: "maria@example.com",
 
         resumen: {
-
-            edad:
-                34,
-
-            fechaRegistro:
-                "15/06/2026",
-
-            ultimaConsulta:
-                "22/07/2026",
-
-            estado:
-                "Expediente activo",
-
+            edad: 34,
+            fechaRegistro: "08/08/2024",
+            ultimaConsulta: "22/07/2026",
+            estado: "Expediente activo",
         },
-
-
-        /* --------------------------------------------------
-           DATOS PERSONALES
-        -------------------------------------------------- */
 
         datosPersonales: {
-
-            fechaNacimiento:
-                "1992-03-18",
-
-            ocupacion:
-                "Diseñadora gráfica",
-
+            fechaNacimiento: "1992-03-18",
+            ocupacion: "Diseñadora gráfica",
             direccion:
                 "Av. Central 245, Nezahualcóyotl, Estado de México",
-
         },
-
-
-        /* --------------------------------------------------
-           ESTADO VISUAL ACTUAL
-        -------------------------------------------------- */
 
         estadoVisual: {
-
-            usaLentes:
-                "Sí",
-
-            tipoLente:
-                "Monofocal",
-
-            tiempoUso:
-                "4 años",
-
-            exposicionLaboral:
-                "Pantallas",
-
+            usaLentes: "Sí",
+            tipoLente: "Monofocal",
+            tiempoUso: "4 años",
+            exposicionLaboral: "Pantallas",
             diagnosticoActual:
                 "Miopía y astigmatismo bilateral",
-
         },
-
-
-        /* --------------------------------------------------
-           INFORMACIÓN RELEVANTE
-        -------------------------------------------------- */
 
         informacionRelevante: {
 
             usoActual: {
-                valor:
-                    "Sí",
-
+                valor: "Sí",
                 detalle:
                     "Lentes monofocales de uso diario.",
             },
 
             usoAnterior: {
-                valor:
-                    "Sí",
-
+                valor: "Sí",
                 detalle:
                     "Ha utilizado lentes desde hace aproximadamente cuatro años.",
             },
 
             exposicionLaboral: {
-                valor:
-                    "Sí",
-
+                valor: "Sí",
                 detalle:
                     "Exposición prolongada a computadora y dispositivos digitales.",
             },
 
             antecedentesPatologicos: {
-                valor:
-                    "Ninguno",
-
+                valor: "Ninguno",
                 detalle:
                     "No refiere enfermedades relevantes.",
             },
 
             antecedentesVisuales: {
-                valor:
-                    "Miopía y astigmatismo",
-
+                valor: "Miopía y astigmatismo",
                 detalle:
                     "Antecedentes de corrección óptica previa.",
             },
 
             diagnosticoActual: {
-                valor:
-                    "Miopía y astigmatismo bilateral",
-
+                valor: "Miopía y astigmatismo bilateral",
                 detalle:
                     "Se detectó aumento de graduación en ambos ojos.",
             },
 
         },
 
-
-        /* --------------------------------------------------
-           GRADUACIÓN ACTUAL
-        -------------------------------------------------- */
-
         graduacionActual: {
 
             ojoDerecho: {
-
-                esfera:
-                    "-1.75",
-
-                cilindro:
-                    "-0.50",
-
-                eje:
-                    "90",
-
+                esfera: "-1.75",
+                cilindro: "-0.50",
+                eje: "90",
             },
 
             ojoIzquierdo: {
-
-                esfera:
-                    "-2.00",
-
-                cilindro:
-                    "-0.75",
-
-                eje:
-                    "85",
-
+                esfera: "-2.00",
+                cilindro: "-0.75",
+                eje: "85",
             },
 
-            adicion:
-                "1.00",
-
-            distanciaPupilar:
-                "62",
-
-            fecha:
-                "22/07/2026",
-
+            adicion: "1.00",
+            distanciaPupilar: "62",
+            fecha: "22/07/2026",
         },
 
+        /* ==================================================
+           CONSULTAS DE MARÍA
 
-        /* --------------------------------------------------
-           CONSULTAS
+           Se conservan las cinco consultas del Historial,
+           ordenadas de la más reciente a la más antigua.
 
-           Se encuentran ordenadas de la más reciente
-           a la más antigua.
-        -------------------------------------------------- */
+           IDs 9 y 10: nuevas consultas incorporadas.
+        ================================================== */
 
         consultas: [
 
             {
                 id: 1,
-
-                fechaTabla:
-                    "22/07/2026",
-
-                tipo:
-                    "ACTUALIZACIÓN DE GRADUACIÓN",
-
-                titulo:
-                    "Consulta general",
-
-                fecha:
-                    "22 julio 2026",
+                fechaTabla: "22/07/2026",
+                tipo: "ACTUALIZACIÓN DE GRADUACIÓN",
+                titulo: "Consulta general",
+                fecha: "22 julio 2026",
 
                 diagnostico:
                     "Miopía y astigmatismo bilateral.",
@@ -224,108 +128,131 @@ export const clientes = [
                 evolucion:
                     "Se detectó aumento de graduación en ambos ojos.",
 
-                estadoGraduacion:
-                    "Actualizada",
+                estadoGraduacion: "Actualizada",
 
                 graduacion: {
-
-                    od:
-                        "-1.75",
-
-                    oi:
-                        "-2.00",
-
+                    od: "-1.75",
+                    oi: "-2.00",
                 },
 
                 observaciones:
                     "Se recomienda cambio de lentes y revisión en seis meses.",
 
-                estado:
-                    "Finalizada",
+                estado: "Finalizada",
             },
 
+            /* ----------------------------------------------
+               NUEVA CONSULTA INCORPORADA
+               15 DE MARZO DE 2026
+            ---------------------------------------------- */
+
+            {
+                id: 9,
+                fechaTabla: "15/03/2026",
+                tipo: "SEGUIMIENTO",
+                titulo: "Revisión por fatiga visual",
+                fecha: "15 marzo 2026",
+
+                diagnostico:
+                    "Fatiga visual asociada a exposición prolongada a pantallas.",
+
+                evolucion:
+                    "Se mantiene la graduación sin cambios clínicamente relevantes.",
+
+                estadoGraduacion: "Sin cambios",
+
+                graduacion: {
+                    od: "-1.50",
+                    oi: "-1.75",
+                },
+
+                observaciones:
+                    "Se recomienda realizar pausas visuales y utilizar filtro de luz azul.",
+
+                estado: "Finalizada",
+            },
+
+            /* ----------------------------------------------
+               NUEVA CONSULTA INCORPORADA
+               10 DE ENERO DE 2026
+            ---------------------------------------------- */
+
+            {
+                id: 10,
+                fechaTabla: "10/01/2026",
+                tipo: "CONSULTA GENERAL",
+                titulo: "Revisión periódica",
+                fecha: "10 enero 2026",
+
+                diagnostico:
+                    "Condición visual estable.",
+
+                evolucion:
+                    "Sin cambios clínicos relevantes.",
+
+                estadoGraduacion: "Sin cambios",
+
+                graduacion: {
+                    od: "-1.50",
+                    oi: "-1.75",
+                },
+
+                observaciones:
+                    "Continuar con lentes actuales y revisión anual.",
+
+                estado: "Finalizada",
+            },
 
             {
                 id: 2,
-
-                fechaTabla:
-                    "14/02/2025",
-
-                tipo:
-                    "SEGUIMIENTO",
-
-                titulo:
-                    "Consulta de seguimiento",
-
-                fecha:
-                    "14 febrero 2025",
+                fechaTabla: "14/02/2025",
+                tipo: "SEGUIMIENTO",
+                titulo: "Revisión de graduación",
+                fecha: "14 febrero 2025",
 
                 diagnostico:
-                    "Fatiga visual por exposición prolongada.",
+                    "Fatiga visual leve.",
 
                 evolucion:
-                    "La graduación se mantiene estable respecto a la consulta anterior.",
+                    "Sin cambios importantes respecto a la consulta anterior.",
 
-                estadoGraduacion:
-                    "Sin cambios",
+                estadoGraduacion: "Sin cambios",
 
                 graduacion: {
-
-                    od:
-                        "-1.50",
-
-                    oi:
-                        "-1.75",
-
+                    od: "-1.50",
+                    oi: "-1.75",
                 },
 
                 observaciones:
-                    "Se recomienda realizar pausas visuales durante jornadas prolongadas.",
+                    "Se mantiene seguimiento periódico.",
 
-                estado:
-                    "Finalizada",
+                estado: "Finalizada",
             },
-
 
             {
                 id: 3,
-
-                fechaTabla:
-                    "08/08/2024",
-
-                tipo:
-                    "VALORACIÓN INICIAL",
-
-                titulo:
-                    "Consulta general",
-
-                fecha:
-                    "08 agosto 2024",
+                fechaTabla: "08/08/2024",
+                tipo: "VALORACIÓN INICIAL",
+                titulo: "Evaluación inicial",
+                fecha: "08 agosto 2024",
 
                 diagnostico:
-                    "Revisión general.",
+                    "Miopía bilateral.",
 
                 evolucion:
-                    "Se realizó valoración visual inicial y registro de graduación.",
+                    "Se realiza primera valoración visual.",
 
-                estadoGraduacion:
-                    "Inicial",
+                estadoGraduacion: "Inicial",
 
                 graduacion: {
-
-                    od:
-                        "-1.50",
-
-                    oi:
-                        "-1.75",
-
+                    od: "-1.25",
+                    oi: "-1.50",
                 },
 
                 observaciones:
-                    "Se recomienda seguimiento periódico para evaluar cambios visuales.",
+                    "Se indican lentes de uso diario.",
 
-                estado:
-                    "Finalizada",
+                estado: "Finalizada",
             },
 
         ],
@@ -339,113 +266,68 @@ export const clientes = [
 
     {
         id: 25,
-
-        folio:
-            "CLI-0002",
-
-        nombre:
-            "Carlos Martínez Ruiz",
-
-        telefono:
-            "55 8765 4321",
-
-        correo:
-            "carlos@example.com",
+        folio: "CLI-0002",
+        nombre: "Carlos Martínez Ruiz",
+        telefono: "55 8765 4321",
+        correo: "carlos@example.com",
 
         resumen: {
-
-            edad:
-                41,
-
-            fechaRegistro:
-                "10/03/2025",
-
-            ultimaConsulta:
-                "18/08/2026",
-
-            estado:
-                "Expediente activo",
-
+            edad: 41,
+            fechaRegistro: "10/03/2025",
+            ultimaConsulta: "18/08/2026",
+            estado: "Expediente activo",
         },
 
         datosPersonales: {
-
-            fechaNacimiento:
-                "1985-05-12",
-
-            ocupacion:
-                "Contador",
-
+            fechaNacimiento: "1985-05-12",
+            ocupacion: "Contador",
             direccion:
                 "Col. Metropolitana, Nezahualcóyotl, Estado de México",
-
         },
 
         estadoVisual: {
-
-            usaLentes:
-                "Sí",
-
-            tipoLente:
-                "Progresivo",
-
-            tiempoUso:
-                "7 años",
-
-            exposicionLaboral:
-                "Pantallas y lectura",
-
+            usaLentes: "Sí",
+            tipoLente: "Progresivo",
+            tiempoUso: "7 años",
+            exposicionLaboral: "Pantallas y lectura",
             diagnosticoActual:
                 "Hipermetropía con presbicia",
-
         },
 
         informacionRelevante: {
 
             usoActual: {
-                valor:
-                    "Sí",
-
+                valor: "Sí",
                 detalle:
                     "Utiliza lentes progresivos durante la mayor parte del día.",
             },
 
             usoAnterior: {
-                valor:
-                    "Sí",
-
+                valor: "Sí",
                 detalle:
                     "Anteriormente utilizaba lentes monofocales.",
             },
 
             exposicionLaboral: {
-                valor:
-                    "Sí",
-
+                valor: "Sí",
                 detalle:
                     "Trabajo administrativo con uso constante de computadora.",
             },
 
             antecedentesPatologicos: {
-                valor:
-                    "Hipertensión controlada",
-
+                valor: "Hipertensión controlada",
                 detalle:
                     "Refiere seguimiento médico periódico.",
             },
 
             antecedentesVisuales: {
-                valor:
-                    "Hipermetropía",
-
+                valor: "Hipermetropía",
                 detalle:
                     "Uso previo de corrección óptica.",
             },
 
             diagnosticoActual: {
-                valor:
-                    "Hipermetropía con presbicia",
-
+                valor: "Hipermetropía con presbicia",
                 detalle:
                     "Requiere corrección para visión cercana y lejana.",
             },
@@ -455,58 +337,30 @@ export const clientes = [
         graduacionActual: {
 
             ojoDerecho: {
-
-                esfera:
-                    "+1.25",
-
-                cilindro:
-                    "-0.25",
-
-                eje:
-                    "80",
-
+                esfera: "+1.25",
+                cilindro: "-0.25",
+                eje: "80",
             },
 
             ojoIzquierdo: {
-
-                esfera:
-                    "+1.50",
-
-                cilindro:
-                    "-0.50",
-
-                eje:
-                    "95",
-
+                esfera: "+1.50",
+                cilindro: "-0.50",
+                eje: "95",
             },
 
-            adicion:
-                "1.75",
-
-            distanciaPupilar:
-                "64",
-
-            fecha:
-                "18/08/2026",
-
+            adicion: "1.75",
+            distanciaPupilar: "64",
+            fecha: "18/08/2026",
         },
 
         consultas: [
 
             {
                 id: 4,
-
-                fechaTabla:
-                    "18/08/2026",
-
-                tipo:
-                    "ACTUALIZACIÓN DE GRADUACIÓN",
-
-                titulo:
-                    "Consulta general",
-
-                fecha:
-                    "18 agosto 2026",
+                fechaTabla: "18/08/2026",
+                tipo: "ACTUALIZACIÓN DE GRADUACIÓN",
+                titulo: "Consulta general",
+                fecha: "18 agosto 2026",
 
                 diagnostico:
                     "Hipermetropía con presbicia.",
@@ -514,41 +368,25 @@ export const clientes = [
                 evolucion:
                     "Se realizó ajuste de graduación para mejorar visión cercana.",
 
-                estadoGraduacion:
-                    "Actualizada",
+                estadoGraduacion: "Actualizada",
 
                 graduacion: {
-
-                    od:
-                        "+1.25",
-
-                    oi:
-                        "+1.50",
-
+                    od: "+1.25",
+                    oi: "+1.50",
                 },
 
                 observaciones:
                     "Se recomienda adaptación progresiva a la nueva graduación.",
 
-                estado:
-                    "Finalizada",
+                estado: "Finalizada",
             },
-
 
             {
                 id: 5,
-
-                fechaTabla:
-                    "20/01/2026",
-
-                tipo:
-                    "SEGUIMIENTO",
-
-                titulo:
-                    "Consulta de seguimiento",
-
-                fecha:
-                    "20 enero 2026",
+                fechaTabla: "20/01/2026",
+                tipo: "SEGUIMIENTO",
+                titulo: "Consulta de seguimiento",
+                fecha: "20 enero 2026",
 
                 diagnostico:
                     "Hipermetropía.",
@@ -556,41 +394,25 @@ export const clientes = [
                 evolucion:
                     "Sin cambios significativos en la graduación.",
 
-                estadoGraduacion:
-                    "Sin cambios",
+                estadoGraduacion: "Sin cambios",
 
                 graduacion: {
-
-                    od:
-                        "+1.00",
-
-                    oi:
-                        "+1.25",
-
+                    od: "+1.00",
+                    oi: "+1.25",
                 },
 
                 observaciones:
                     "Continuar con corrección óptica habitual.",
 
-                estado:
-                    "Finalizada",
+                estado: "Finalizada",
             },
-
 
             {
                 id: 6,
-
-                fechaTabla:
-                    "10/03/2025",
-
-                tipo:
-                    "VALORACIÓN INICIAL",
-
-                titulo:
-                    "Consulta general",
-
-                fecha:
-                    "10 marzo 2025",
+                fechaTabla: "10/03/2025",
+                tipo: "VALORACIÓN INICIAL",
+                titulo: "Consulta general",
+                fecha: "10 marzo 2025",
 
                 diagnostico:
                     "Hipermetropía.",
@@ -598,24 +420,17 @@ export const clientes = [
                 evolucion:
                     "Se realizó valoración visual inicial.",
 
-                estadoGraduacion:
-                    "Inicial",
+                estadoGraduacion: "Inicial",
 
                 graduacion: {
-
-                    od:
-                        "+1.00",
-
-                    oi:
-                        "+1.25",
-
+                    od: "+1.00",
+                    oi: "+1.25",
                 },
 
                 observaciones:
                     "Se recomienda revisión anual.",
 
-                estado:
-                    "Finalizada",
+                estado: "Finalizada",
             },
 
         ],
@@ -629,113 +444,68 @@ export const clientes = [
 
     {
         id: 26,
-
-        folio:
-            "CLI-0003",
-
-        nombre:
-            "Ana López García",
-
-        telefono:
-            "55 3344 7788",
-
-        correo:
-            "ana@example.com",
+        folio: "CLI-0003",
+        nombre: "Ana López García",
+        telefono: "55 3344 7788",
+        correo: "ana@example.com",
 
         resumen: {
-
-            edad:
-                28,
-
-            fechaRegistro:
-                "04/11/2025",
-
-            ultimaConsulta:
-                "05/08/2026",
-
-            estado:
-                "Expediente activo",
-
+            edad: 28,
+            fechaRegistro: "04/11/2025",
+            ultimaConsulta: "05/08/2026",
+            estado: "Expediente activo",
         },
 
         datosPersonales: {
-
-            fechaNacimiento:
-                "1998-02-07",
-
-            ocupacion:
-                "Arquitecta",
-
+            fechaNacimiento: "1998-02-07",
+            ocupacion: "Arquitecta",
             direccion:
                 "Col. Las Águilas, Nezahualcóyotl, Estado de México",
-
         },
 
         estadoVisual: {
-
-            usaLentes:
-                "Sí",
-
-            tipoLente:
-                "Monofocal",
-
-            tiempoUso:
-                "2 años",
-
-            exposicionLaboral:
-                "Pantallas y planos",
-
+            usaLentes: "Sí",
+            tipoLente: "Monofocal",
+            tiempoUso: "2 años",
+            exposicionLaboral: "Pantallas y planos",
             diagnosticoActual:
                 "Astigmatismo bilateral",
-
         },
 
         informacionRelevante: {
 
             usoActual: {
-                valor:
-                    "Sí",
-
+                valor: "Sí",
                 detalle:
                     "Utiliza lentes principalmente durante trabajo y conducción.",
             },
 
             usoAnterior: {
-                valor:
-                    "No",
-
+                valor: "No",
                 detalle:
                     "No utilizaba corrección óptica antes del expediente actual.",
             },
 
             exposicionLaboral: {
-                valor:
-                    "Sí",
-
+                valor: "Sí",
                 detalle:
                     "Uso frecuente de computadora y revisión de planos.",
             },
 
             antecedentesPatologicos: {
-                valor:
-                    "Ninguno",
-
+                valor: "Ninguno",
                 detalle:
                     "No refiere padecimientos relevantes.",
             },
 
             antecedentesVisuales: {
-                valor:
-                    "Astigmatismo",
-
+                valor: "Astigmatismo",
                 detalle:
                     "Detectado durante su primera valoración.",
             },
 
             diagnosticoActual: {
-                valor:
-                    "Astigmatismo bilateral",
-
+                valor: "Astigmatismo bilateral",
                 detalle:
                     "Graduación estable en la consulta más reciente.",
             },
@@ -745,58 +515,30 @@ export const clientes = [
         graduacionActual: {
 
             ojoDerecho: {
-
-                esfera:
-                    "0.00",
-
-                cilindro:
-                    "-1.00",
-
-                eje:
-                    "100",
-
+                esfera: "0.00",
+                cilindro: "-1.00",
+                eje: "100",
             },
 
             ojoIzquierdo: {
-
-                esfera:
-                    "0.00",
-
-                cilindro:
-                    "-1.25",
-
-                eje:
-                    "80",
-
+                esfera: "0.00",
+                cilindro: "-1.25",
+                eje: "80",
             },
 
-            adicion:
-                "0.00",
-
-            distanciaPupilar:
-                "61",
-
-            fecha:
-                "05/08/2026",
-
+            adicion: "0.00",
+            distanciaPupilar: "61",
+            fecha: "05/08/2026",
         },
 
         consultas: [
 
             {
                 id: 7,
-
-                fechaTabla:
-                    "05/08/2026",
-
-                tipo:
-                    "SEGUIMIENTO",
-
-                titulo:
-                    "Consulta de seguimiento",
-
-                fecha:
-                    "05 agosto 2026",
+                fechaTabla: "05/08/2026",
+                tipo: "SEGUIMIENTO",
+                titulo: "Consulta de seguimiento",
+                fecha: "05 agosto 2026",
 
                 diagnostico:
                     "Astigmatismo bilateral.",
@@ -804,41 +546,25 @@ export const clientes = [
                 evolucion:
                     "La graduación permanece estable.",
 
-                estadoGraduacion:
-                    "Sin cambios",
+                estadoGraduacion: "Sin cambios",
 
                 graduacion: {
-
-                    od:
-                        "0.00 / -1.00",
-
-                    oi:
-                        "0.00 / -1.25",
-
+                    od: "0.00 / -1.00",
+                    oi: "0.00 / -1.25",
                 },
 
                 observaciones:
                     "Continuar con lentes actuales y revisión periódica.",
 
-                estado:
-                    "Finalizada",
+                estado: "Finalizada",
             },
-
 
             {
                 id: 8,
-
-                fechaTabla:
-                    "04/11/2025",
-
-                tipo:
-                    "VALORACIÓN INICIAL",
-
-                titulo:
-                    "Consulta general",
-
-                fecha:
-                    "04 noviembre 2025",
+                fechaTabla: "04/11/2025",
+                tipo: "VALORACIÓN INICIAL",
+                titulo: "Consulta general",
+                fecha: "04 noviembre 2025",
 
                 diagnostico:
                     "Astigmatismo bilateral.",
@@ -846,24 +572,17 @@ export const clientes = [
                 evolucion:
                     "Se detectó astigmatismo y se indicó corrección óptica.",
 
-                estadoGraduacion:
-                    "Inicial",
+                estadoGraduacion: "Inicial",
 
                 graduacion: {
-
-                    od:
-                        "0.00 / -1.00",
-
-                    oi:
-                        "0.00 / -1.25",
-
+                    od: "0.00 / -1.00",
+                    oi: "0.00 / -1.25",
                 },
 
                 observaciones:
                     "Se recomienda adaptación a lentes y revisión posterior.",
 
-                estado:
-                    "Finalizada",
+                estado: "Finalizada",
             },
 
         ],
