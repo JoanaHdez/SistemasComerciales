@@ -1,350 +1,346 @@
-
 /* ==========================================================
    OPTICOOL
    Nueva cita - Fecha, responsable y horarios
 ========================================================== */
 
-import {
-    responsables,
-    obtenerDisponibilidadSimulada
-} from "./datos.js";
+import { responsables, obtenerDisponibilidadSimulada } from "./datos.js";
 
+import { obtenerCitasGuardadas } from "./almacenamiento.js";
 
 /* ==========================================================
    INICIALIZAR HORARIOS
 ========================================================== */
 
 export function inicializarHorariosNuevaCita() {
-
-    const pagina = document.querySelector(
-        ".new-appointment-page"
-    );
+    const pagina = document.querySelector(".new-appointment-page");
 
     if (!pagina) {
         return;
     }
 
-    const inputFecha = pagina.querySelector(
-        "#appointment-date"
-    );
+    const inputFecha = pagina.querySelector("#appointment-date");
 
-    const selectResponsable = pagina.querySelector(
-        "#appointment-professional"
-    );
+    const selectResponsable = pagina.querySelector("#appointment-professional");
 
-    const contenedorHorarios = pagina.querySelector(
-        ".new-appointment-times"
-    );
+    const contenedorHorarios = pagina.querySelector(".new-appointment-times");
 
-    if (
-        !inputFecha ||
-        !selectResponsable ||
-        !contenedorHorarios
-    ) {
+    if (!inputFecha || !selectResponsable || !contenedorHorarios) {
         return;
     }
 
-
     /* ======================================================
-       FECHA LOCAL EN FORMATO YYYY-MM-DD
-    ====================================================== */
+           FECHA LOCAL EN FORMATO YYYY-MM-DD
+        ====================================================== */
 
     function formatearFechaLocal(fecha) {
-
         const anio = fecha.getFullYear();
 
-        const mes = String(
-            fecha.getMonth() + 1
-        ).padStart(2, "0");
+        const mes = String(fecha.getMonth() + 1).padStart(2, "0");
 
-        const dia = String(
-            fecha.getDate()
-        ).padStart(2, "0");
+        const dia = String(fecha.getDate()).padStart(2, "0");
 
         return `${anio}-${mes}-${dia}`;
-
     }
 
-
     /* ======================================================
-       OBTENER FECHA ACTUAL
-    ====================================================== */
+           OBTENER FECHA ACTUAL
+        ====================================================== */
 
     function obtenerFechaActual() {
-
-        return formatearFechaLocal(
-            new Date()
-        );
-
+        return formatearFechaLocal(new Date());
     }
 
+    /* ======================================================
+       OBTENER FECHA INICIAL DESDE LA URL
+    
+       Si la fecha no existe, es inválida o ya pasó,
+       utilizamos la fecha actual.
+    ====================================================== */
+
+    function obtenerFechaInicial() {
+        const hoy = obtenerFechaActual();
+
+        const parametros = new URLSearchParams(window.location.search);
+
+        const fechaURL = parametros.get("fecha");
+
+        if (!fechaURL) {
+            return hoy;
+        }
+
+        // Validar el formato YYYY-MM-DD
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(fechaURL)) {
+            return hoy;
+        }
+
+        const [anio, mes, dia] = fechaURL.split("-").map(Number);
+
+        const fechaValidacion = new Date(anio, mes - 1, dia);
+
+        // Comprobar que la fecha realmente existe
+        if (
+            fechaValidacion.getFullYear() !== anio ||
+            fechaValidacion.getMonth() !== mes - 1 ||
+            fechaValidacion.getDate() !== dia
+        ) {
+            return hoy;
+        }
+
+        // No permitir fechas anteriores a hoy
+        if (fechaURL < hoy) {
+            return hoy;
+        }
+
+        return fechaURL;
+    }
 
     /* ======================================================
-       OBTENER HORA ACTUAL EN MINUTOS
-    ====================================================== */
+           OBTENER HORA ACTUAL EN MINUTOS
+        ====================================================== */
 
     function obtenerMinutosActuales() {
-
         const ahora = new Date();
 
-        return (
-            ahora.getHours() * 60 +
-            ahora.getMinutes()
-        );
-
+        return ahora.getHours() * 60 + ahora.getMinutes();
     }
 
-
     /* ======================================================
-       CONVERTIR HORA A MINUTOS
-    ====================================================== */
+           CONVERTIR HORA A MINUTOS
+        ====================================================== */
 
     function convertirHoraAMinutos(hora) {
-
-        const [horas, minutos] = hora
-            .split(":")
-            .map(Number);
+        const [horas, minutos] = hora.split(":").map(Number);
 
         return horas * 60 + minutos;
-
     }
 
-
     /* ======================================================
-       CARGAR RESPONSABLES
-    ====================================================== */
+           CARGAR RESPONSABLES
+        ====================================================== */
 
     function cargarResponsables() {
-
-        const responsableAnterior =
-            selectResponsable.value;
+        const responsableAnterior = selectResponsable.value;
 
         selectResponsable.replaceChildren();
 
-        const opcionInicial = document.createElement(
-            "option"
-        );
+        const opcionInicial = document.createElement("option");
 
         opcionInicial.value = "";
 
-        opcionInicial.textContent =
-            "Selecciona una opción";
+        opcionInicial.textContent = "Selecciona una opción";
 
-        selectResponsable.appendChild(
-            opcionInicial
-        );
+        selectResponsable.appendChild(opcionInicial);
 
         responsables.forEach((responsable) => {
+            const opcion = document.createElement("option");
 
-            const opcion = document.createElement(
-                "option"
-            );
+            opcion.value = String(responsable.id);
 
-            opcion.value = String(
-                responsable.id
-            );
+            opcion.textContent = responsable.nombre;
 
-            opcion.textContent =
-                responsable.nombre;
-
-            selectResponsable.appendChild(
-                opcion
-            );
-
+            selectResponsable.appendChild(opcion);
         });
 
-        const existeResponsable = responsables.some(
-            (responsable) => {
+        const existeResponsable = responsables.some((responsable) => {
+            return String(responsable.id) === responsableAnterior;
+        });
 
-                return String(responsable.id) ===
-                    responsableAnterior;
-
-            }
-        );
-
-        selectResponsable.value =
-            existeResponsable
-                ? responsableAnterior
-                : "";
-
+        selectResponsable.value = existeResponsable ? responsableAnterior : "";
     }
 
-
     /* ======================================================
-       MOSTRAR MENSAJE
-    ====================================================== */
+           MOSTRAR MENSAJE
+        ====================================================== */
 
     function mostrarMensaje(mensaje) {
-
         contenedorHorarios.replaceChildren();
 
-        const elemento = document.createElement(
-            "p"
-        );
+        const elemento = document.createElement("p");
 
-        elemento.className =
-            "new-appointment-times__message";
+        elemento.className = "new-appointment-times__message";
 
         elemento.textContent = mensaje;
 
-        contenedorHorarios.appendChild(
-            elemento
-        );
-
+        contenedorHorarios.appendChild(elemento);
     }
 
-
     /* ======================================================
-       ACTUALIZAR HORARIOS
-    ====================================================== */
+           ACTUALIZAR HORARIOS
+        ====================================================== */
 
     function actualizarHorarios() {
-
         const fecha = inputFecha.value;
 
-        const responsableId =
-            selectResponsable.value;
+        const responsableId = selectResponsable.value;
 
         const hoy = obtenerFechaActual();
 
         if (!fecha) {
-
-            mostrarMensaje(
-                "Selecciona una fecha para consultar los horarios."
-            );
+            mostrarMensaje("Selecciona una fecha para consultar los horarios.");
 
             return;
-
         }
 
         if (fecha < hoy) {
-
-            mostrarMensaje(
-                "No puedes seleccionar una fecha anterior a hoy."
-            );
+            mostrarMensaje("No puedes seleccionar una fecha anterior a hoy.");
 
             return;
-
         }
 
         if (!responsableId) {
-
-            mostrarMensaje(
-                "Selecciona un responsable para consultar los horarios."
-            );
+            mostrarMensaje("Selecciona un responsable para consultar los horarios.");
 
             return;
-
         }
 
-        const disponibilidad =
-            obtenerDisponibilidadSimulada(
-                fecha,
-                responsableId
+        const disponibilidad = obtenerDisponibilidadSimulada(fecha, responsableId);
+
+        /* ======================================================
+        CITAS REGISTRADAS TEMPORALMENTE
+        ====================================================== */
+
+        const citasGuardadas = obtenerCitasGuardadas();
+
+        /* ======================================================
+        RECUPERAR CAMBIOS DE CITAS ORIGINALES DE AGENDA
+        ====================================================== */
+
+        let citasOriginalesAgenda = [];
+
+        try {
+            const datosAgenda = sessionStorage.getItem(
+                "opticool_agenda_cambios_simulados"
             );
+
+            if (datosAgenda) {
+                const registros = JSON.parse(datosAgenda);
+
+                if (Array.isArray(registros)) {
+                    citasOriginalesAgenda = registros
+                        .filter((registro) => {
+                            return (
+                                Array.isArray(registro) &&
+                                registro.length === 2 &&
+                                registro[1] &&
+                                typeof registro[1] === "object"
+                            );
+                        })
+                        .map(([id, cambios]) => {
+                            return {
+                                id,
+                                ...cambios
+                            };
+                        });
+                }
+            }
+        } catch (error) {
+            console.error(
+                "No fue posible recuperar las citas originales de Agenda:",
+                error
+            );
+        }
 
         contenedorHorarios.replaceChildren();
 
+
         const esHoy = fecha === hoy;
 
-        const minutosActuales =
-            obtenerMinutosActuales();
+        const minutosActuales = obtenerMinutosActuales();
 
         let horariosDisponibles = 0;
 
         disponibilidad.forEach((horario) => {
-
             const horarioPasado =
-                esHoy &&
-                convertirHoraAMinutos(horario.hora) <=
-                    minutosActuales;
+                esHoy && convertirHoraAMinutos(horario.hora) <= minutosActuales;
+
+            /* ======================================================
+            VERIFICAR HORARIOS OCUPADOS EN SESSIONSTORAGE
+            ====================================================== */
+
+            const ocupadoPorCitaGuardada = citasGuardadas.some(
+                (cita) => {
+
+                    return (
+                        cita.fecha === fecha &&
+                        String(cita.responsableId) ===
+                        String(responsableId) &&
+                        cita.hora === horario.hora &&
+                        cita.estado !== "Cancelada"
+                    );
+
+                }
+            );
+
+            /* ======================================================
+            VERIFICAR CITAS ORIGINALES DE AGENDA
+            ====================================================== */
+
+            const ocupadoPorCitaOriginal = citasOriginalesAgenda.some(
+                (cita) => {
+                    return (
+                        cita.fecha === fecha &&
+                        cita.hora === horario.hora &&
+                        String(cita.responsableId) === String(responsableId) &&
+                        cita.estado !== "Cancelada"
+                    );
+                }
+            );
 
             const disponible =
                 horario.disponible &&
-                !horarioPasado;
+                !horarioPasado &&
+                !ocupadoPorCitaGuardada &&
+                !ocupadoPorCitaOriginal;
 
-            const etiqueta = document.createElement(
-                "label"
-            );
+            const etiqueta = document.createElement("label");
 
-            etiqueta.className =
-                "new-appointment-time";
+            etiqueta.className = "new-appointment-time";
 
-            const radio = document.createElement(
-                "input"
-            );
+            const radio = document.createElement("input");
 
             radio.type = "radio";
             radio.name = "hora";
             radio.value = horario.hora;
             radio.disabled = !disponible;
 
-            const texto = document.createElement(
-                "span"
-            );
+            const texto = document.createElement("span");
 
             texto.textContent = horario.hora;
 
-            etiqueta.append(
-                radio,
-                texto
-            );
+            etiqueta.append(radio, texto);
 
-            contenedorHorarios.appendChild(
-                etiqueta
-            );
+            contenedorHorarios.appendChild(etiqueta);
 
             if (disponible) {
                 horariosDisponibles++;
             }
-
         });
 
         if (disponibilidad.length === 0) {
-
-            mostrarMensaje(
-                "No hay horarios configurados para esta fecha."
-            );
+            mostrarMensaje("No hay horarios configurados para esta fecha.");
 
             return;
-
         }
 
         if (horariosDisponibles === 0) {
+            const aviso = document.createElement("p");
 
-            const aviso = document.createElement(
-                "p"
-            );
-
-            aviso.className =
-                "new-appointment-times__message";
+            aviso.className = "new-appointment-times__message";
 
             aviso.textContent =
                 "No hay horarios disponibles para esta fecha y responsable.";
 
-            contenedorHorarios.appendChild(
-                aviso
-            );
-
+            contenedorHorarios.appendChild(aviso);
         }
-
     }
 
-
     /* ======================================================
-       EVENTOS
-    ====================================================== */
+           EVENTOS
+        ====================================================== */
 
-    inputFecha.addEventListener(
-        "change",
-        actualizarHorarios
-    );
+    inputFecha.addEventListener("change", actualizarHorarios);
 
-    selectResponsable.addEventListener(
-        "change",
-        actualizarHorarios
-    );
-
+    selectResponsable.addEventListener("change", actualizarHorarios);
 
     /* ======================================================
        ESTADO INICIAL
@@ -354,10 +350,11 @@ export function inicializarHorariosNuevaCita() {
 
     inputFecha.min = hoy;
 
-    inputFecha.value = hoy;
+    // Utilizar la fecha enviada desde Agenda,
+    // o la fecha actual cuando no exista.
+    inputFecha.value = obtenerFechaInicial();
 
     cargarResponsables();
 
     actualizarHorarios();
-
 }

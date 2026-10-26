@@ -310,3 +310,64 @@ export function obtenerDisponibilidadSimulada(
     });
 
 }
+
+
+/* ==========================================================
+   OPTICOOL
+   NUEVA CITA - DURACIÓN DE SERVICIOS
+
+   Configuración simulada para el frontend.
+
+   Las duraciones reales serán proporcionadas
+   posteriormente por el backend.
+========================================================== */
+
+
+/* ==========================================================
+   CONFIGURACIÓN DE DURACIÓN POR SERVICIO
+========================================================== */
+
+export const duracionServicios = {
+
+    "consulta-general": 30,
+
+    "seguimiento": 30,
+
+    "entrega": 30,
+
+    "ajuste": 30,
+
+    "garantia": 30
+
+};
+
+
+/* ==========================================================
+   OBTENER DURACIÓN DE UN SERVICIO
+========================================================== */
+
+export function obtenerDuracionServicio(tipoCita) {
+
+    if (
+        !Object.prototype.hasOwnProperty.call(
+            duracionServicios,
+            tipoCita
+        )
+    ) {
+        return null;
+    }
+
+    const duracion = Number(
+        duracionServicios[tipoCita]
+    );
+
+    if (
+        !Number.isFinite(duracion) ||
+        duracion <= 0
+    ) {
+        return null;
+    }
+
+    return duracion;
+
+}

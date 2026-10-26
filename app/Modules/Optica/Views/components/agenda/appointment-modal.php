@@ -1,19 +1,7 @@
-<div
-    class="modal"
-    id="appointment-modal"
-    aria-hidden="true"
->
-    <div
-        class="modal__overlay"
-        data-modal-close
-    ></div>
+<div class="modal" id="appointment-modal" aria-hidden="true">
+    <div class="modal__overlay" data-modal-close></div>
 
-    <div
-        class="modal__content"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="appointment-modal-title"
-    >
+    <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="appointment-modal-title">
 
         <div class="modal__header">
 
@@ -23,20 +11,13 @@
                     Agenda
                 </span>
 
-                <h2
-                    class="modal__title"
-                    id="appointment-modal-title"
-                >
+                <h2 class="modal__title" id="appointment-modal-title">
                     Editar cita
                 </h2>
 
             </div>
 
-            <button
-                type="button"
-                class="modal__close"
-                aria-label="Cerrar modal"
-            >
+            <button type="button" class="modal__close" aria-label="Cerrar modal">
                 ✕
             </button>
 
@@ -45,11 +26,7 @@
         <form id="appointment-form">
 
             <!-- ID de la cita -->
-            <input
-                type="hidden"
-                id="appointment-id"
-                name="id_cita"
-            >
+            <input type="hidden" id="appointment-id" name="id_cita">
 
             <!--
                 Modos disponibles:
@@ -57,11 +34,7 @@
                 edit
                 reschedule
             -->
-            <input
-                type="hidden"
-                id="appointment-mode"
-                value="edit"
-            >
+            <input type="hidden" id="appointment-mode" value="edit">
 
             <div class="modal__grid">
 
@@ -73,17 +46,36 @@
                         Cliente
                     </label>
 
-                    <input
-                        type="text"
-                        id="appointment-client"
-                        name="cliente"
-                        placeholder="Nombre del cliente"
-                        autocomplete="off"
-                        required
-                    >
+                    <input type="text" id="appointment-client" name="cliente" placeholder="Nombre del cliente"
+                        autocomplete="off" required>
 
                 </div>
 
+
+                <!-- Profesional responsable -->
+
+                <div class="form-group">
+
+                    <label for="appointment-professional">
+                        Profesional responsable
+                    </label>
+
+                    <select id="appointment-professional" name="responsable_id" required>
+                        <option value="">
+                            Selecciona un profesional
+                        </option>
+
+                        <option value="1">
+                            Dra. Laura Gómez
+                        </option>
+
+                        <option value="2">
+                            Dr. Carlos Mendoza
+                        </option>
+
+                    </select>
+
+                </div>
 
                 <!-- Fecha -->
 
@@ -93,12 +85,7 @@
                         Fecha
                     </label>
 
-                    <input
-                        type="date"
-                        id="appointment-date"
-                        name="fecha"
-                        required
-                    >
+                    <input type="date" id="appointment-date" name="fecha" required>
 
                 </div>
 
@@ -111,12 +98,7 @@
                         Hora
                     </label>
 
-                    <input
-                        type="time"
-                        id="appointment-time"
-                        name="hora"
-                        required
-                    >
+                    <input type="time" id="appointment-time" name="hora" required>
 
                 </div>
 
@@ -129,11 +111,7 @@
                         Estado
                     </label>
 
-                    <select
-                        id="appointment-status"
-                        name="estado"
-                        required
-                    >
+                    <select id="appointment-status" name="estado" required>
                         <option value="Confirmada">
                             Confirmada
                         </option>
@@ -171,13 +149,8 @@
                         Motivo
                     </label>
 
-                    <textarea
-                        id="appointment-reason"
-                        name="motivo"
-                        rows="4"
-                        placeholder="Escribe el motivo de la cita"
-                        required
-                    ></textarea>
+                    <textarea id="appointment-reason" name="motivo" rows="4" placeholder="Escribe el motivo de la cita"
+                        required></textarea>
 
                 </div>
 
@@ -188,20 +161,11 @@
 
             <div class="modal__footer">
 
-                <button
-                    type="button"
-                    class="btn btn-secondary"
-                    id="appointment-cancel"
-                    data-modal-close
-                >
+                <button type="button" class="btn btn-secondary" id="appointment-cancel" data-modal-close>
                     Cerrar
                 </button>
 
-                <button
-                    type="submit"
-                    class="btn btn-primary"
-                    id="appointment-save"
-                >
+                <button type="submit" class="btn btn-primary" id="appointment-save">
                     Guardar cambios
                 </button>
 

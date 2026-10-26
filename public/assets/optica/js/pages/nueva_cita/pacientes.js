@@ -9,6 +9,22 @@ import {
     obtenerPacientePorId
 } from "./datos.js";
 
+/* ==========================================================
+   PACIENTE SELECCIONADO
+========================================================== */
+
+let pacienteSeleccionado = null;
+
+
+/* ==========================================================
+   OBTENER PACIENTE SELECCIONADO
+========================================================== */
+
+export function obtenerPacienteSeleccionadoNuevaCita() {
+
+    return pacienteSeleccionado;
+
+}
 
 /* ==========================================================
    INICIALIZAR PACIENTES
@@ -58,8 +74,6 @@ export function inicializarPacientesNuevaCita() {
     ) {
         return;
     }
-
-    let pacienteSeleccionado = null;
 
     /* ======================================================
        CONTENEDOR DE RESULTADOS
