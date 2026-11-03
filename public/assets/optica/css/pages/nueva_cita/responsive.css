@@ -1,0 +1,88 @@
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 1100px) {
+    .new-appointment-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .new-appointment-summary {
+        position: static;
+    }
+}
+
+@media (max-width: 760px) {
+    .new-appointment-page__header {
+        flex-direction: column;
+    }
+
+    .new-appointment-page__back {
+        width: 100%;
+    }
+
+    .new-appointment-page__title {
+        font-size: 1.9rem;
+    }
+
+    .new-appointment-progress {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .new-appointment-progress__line {
+        width: 2px;
+        height: 18px;
+        flex: none;
+        margin: 0 0 0 18px;
+    }
+
+    .new-appointment-card {
+        padding: 28px 22px;
+    }
+
+    .new-appointment-card::before {
+        left: 22px;
+    }
+
+    .new-appointment-search,
+    .new-appointment-date-grid,
+    .new-appointment-services {
+        grid-template-columns: 1fr;
+    }
+
+    .new-appointment-patient {
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .new-appointment-patient__change {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .new-appointment-times {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .new-appointment-card,
+    .new-appointment-summary {
+        padding: 24px 18px;
+        border-radius: 17px;
+    }
+
+    .new-appointment-patient {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .new-appointment-patient__avatar {
+        margin: 0 auto;
+    }
+
+    .new-appointment-patient__meta {
+        justify-content: center;
+    }
+}

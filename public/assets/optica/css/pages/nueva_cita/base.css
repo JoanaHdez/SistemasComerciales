@@ -1,0 +1,80 @@
+/* ==========================================================
+   Página: Nueva cita
+========================================================== */
+
+.new-appointment-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   Encabezado
+========================================================== */
+
+.new-appointment-page__header {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.new-appointment-page__eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #876ba5;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.new-appointment-page__title {
+    margin: 0;
+
+    color: #2d203b;
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.new-appointment-page__description {
+    max-width: 680px;
+    margin: 12px 0 0;
+
+    color: #776b80;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.new-appointment-page__back {
+    min-height: 48px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #684d86;
+    background: #ffffff;
+
+    border: 1px solid #ded4e6;
+    border-radius: 13px;
+
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.new-appointment-page__back:hover {
+    background: #f7f3fa;
+    transform: translateY(-1px);
+}
+

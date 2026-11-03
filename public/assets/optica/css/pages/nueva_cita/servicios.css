@@ -1,0 +1,79 @@
+/* ==========================================================
+   Servicios
+========================================================== */
+
+.new-appointment-services {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.new-appointment-service {
+    position: relative;
+
+    cursor: pointer;
+}
+
+.new-appointment-service input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.new-appointment-service__content {
+    min-height: 92px;
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #faf8fc;
+    border: 1px solid #e7dfec;
+    border-radius: 16px;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.new-appointment-service__content strong,
+.new-appointment-service__content small {
+    display: block;
+}
+
+.new-appointment-service__content strong {
+    color: #4c3b58;
+    font-size: 0.88rem;
+}
+
+.new-appointment-service__content small {
+    margin-top: 6px;
+
+    color: #958a9d;
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.new-appointment-service:hover
+.new-appointment-service__content {
+    transform: translateY(-1px);
+
+    border-color: #cbb9db;
+}
+
+.new-appointment-service input:checked
++ .new-appointment-service__content {
+    background: #f0e9f6;
+    border-color: #76539b;
+
+    box-shadow: 0 0 0 3px rgba(118, 83, 155, 0.1);
+}
+
+.new-appointment-service input:checked
++ .new-appointment-service__content strong {
+    color: #654784;
+}
+

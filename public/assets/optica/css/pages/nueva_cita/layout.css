@@ -1,0 +1,19 @@
+/* ==========================================================
+   Distribución principal
+========================================================== */
+
+.new-appointment-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(300px, 360px);
+
+    gap: 24px;
+    align-items: start;
+}
+
+.new-appointment-main {
+    display: grid;
+    gap: 24px;
+}
+

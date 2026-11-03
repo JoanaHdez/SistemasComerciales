@@ -1,0 +1,153 @@
+/* ==========================================================
+   Buscador y paciente seleccionado
+========================================================== */
+
+.new-appointment-search {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 110px;
+    gap: 12px;
+}
+
+.new-appointment-search__input,
+.new-appointment-field input,
+.new-appointment-field select,
+.new-appointment-field textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 15px;
+
+    color: #3f3449;
+    background: #ffffff;
+
+    border: 1px solid #ded6e6;
+    border-radius: 13px;
+    outline: none;
+
+    font: inherit;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.new-appointment-field textarea {
+    min-height: 120px;
+    padding-top: 13px;
+
+    resize: vertical;
+}
+
+.new-appointment-search__input:focus,
+.new-appointment-field input:focus,
+.new-appointment-field select:focus,
+.new-appointment-field textarea:focus {
+    border-color: #8468a8;
+    box-shadow: 0 0 0 4px rgba(132, 104, 168, 0.12);
+}
+
+.new-appointment-search__button {
+    min-height: 48px;
+
+    color: #ffffff;
+    background: #684d86;
+
+    border: 0;
+    border-radius: 13px;
+
+    font: inherit;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.new-appointment-search__button:hover {
+    background: #563d73;
+}
+
+.new-appointment-patient {
+    margin-top: 18px;
+    padding: 19px;
+
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 15px;
+
+    background: #faf8fc;
+    border: 1px solid #e7dfec;
+    border-radius: 17px;
+}
+
+.new-appointment-patient__avatar {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    color: #ffffff;
+    background: #76539b;
+
+    border-radius: 14px;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.new-appointment-patient__eyebrow {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #917f9e;
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.new-appointment-patient__name {
+    margin: 0;
+
+    color: #42324f;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.new-appointment-patient__meta {
+    margin-top: 8px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+
+    color: #8c8194;
+    font-size: 0.76rem;
+}
+
+.new-appointment-patient__change {
+    min-height: 38px;
+    padding: 0 13px;
+
+    color: #684d86;
+    background: #eee7f3;
+
+    border: 0;
+    border-radius: 10px;
+
+    font: inherit;
+    font-size: 0.74rem;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.new-appointment-new-client {
+    display: inline-flex;
+    margin-top: 15px;
+
+    color: #76539b;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+

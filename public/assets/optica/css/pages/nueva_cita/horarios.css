@@ -1,0 +1,89 @@
+/* ==========================================================
+   Fecha, responsable y horarios
+========================================================== */
+
+.new-appointment-date-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.new-appointment-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.new-appointment-field label,
+.new-appointment-schedule__label {
+    color: #65586e;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.new-appointment-schedule {
+    margin-top: 24px;
+}
+
+.new-appointment-times {
+    margin-top: 12px;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.new-appointment-time {
+    position: relative;
+
+    cursor: pointer;
+}
+
+.new-appointment-time input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.new-appointment-time span {
+    min-height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    color: #675b70;
+    background: #faf8fc;
+
+    border: 1px solid #e2d9e8;
+    border-radius: 11px;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.new-appointment-time input:checked + span {
+    color: #ffffff;
+    background: #76539b;
+    border-color: #76539b;
+}
+
+.new-appointment-time input:disabled + span {
+    color: #b9b0be;
+    background: #f4f1f5;
+
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.new-appointment-schedule__hint {
+    margin: 12px 0 0;
+
+    color: #98909e;
+    font-size: 0.74rem;
+}
+

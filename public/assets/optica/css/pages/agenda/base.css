@@ -1,0 +1,76 @@
+/* ==========================================================
+   Página Agenda
+========================================================== */
+
+.agenda-page{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+}
+
+.agenda-page__header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+    margin-bottom:32px;
+}
+
+.agenda-page__eyebrow{
+    display:block;
+    margin-bottom:6px;
+
+    color:#876ba5;
+    font-size:.76rem;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.agenda-page__title{
+    margin:0;
+
+    color:#2d203b;
+    font-size:2.35rem;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.agenda-page__description{
+    margin:12px 0 0;
+
+    max-width:620px;
+
+    color:#776b80;
+    line-height:1.6;
+}
+
+.agenda-page__button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:48px;
+    padding:0 22px;
+
+    border:0;
+    border-radius:12px;
+
+    background:#76539b;
+    color:#fff;
+
+    text-decoration:none;
+
+    font:inherit;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.agenda-page__button:hover{
+    background:#624483;
+    transform:translateY(-1px);
+}
+

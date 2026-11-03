@@ -1,0 +1,45 @@
+.agenda-day{
+    position:relative;
+}
+
+.agenda-day__number{
+    position:relative;
+    z-index:2;
+}
+
+.agenda-day__indicators{
+    position:absolute;
+    left:10px;
+    right:10px;
+    bottom:10px;
+
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.agenda-day__dot{
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#76539b;
+}
+
+.agenda-day__more{
+    margin-left:2px;
+
+    color:#76539b;
+    font-size:.65rem;
+    font-weight:800;
+}
+
+.agenda-day--today .agenda-day__dot{
+    background:#fff;
+}
+
+.agenda-day--today .agenda-day__more{
+    color:#fff;
+}
+

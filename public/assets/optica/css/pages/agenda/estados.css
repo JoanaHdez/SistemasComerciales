@@ -1,0 +1,64 @@
+/* ==========================================================
+   Estados de las citas
+========================================================== */
+
+.agenda-appointment__status{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+
+    margin-top:10px;
+    padding:6px 10px;
+
+    border-radius:999px;
+
+    font-size:.7rem;
+    font-weight:800;
+}
+
+.agenda-appointment__status::before{
+    content:"";
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:currentColor;
+}
+
+.agenda-appointment__status--confirmed{
+    background:#eee7f5;
+    color:#674687;
+}
+
+.agenda-appointment__status--pending{
+    background:#fff3d9;
+    color:#9a6710;
+}
+
+.agenda-appointment__status--waiting{
+    background:#e8f1ff;
+    color:#356da8;
+}
+
+.agenda-appointment__status--cancelled{
+    background:#fde8ea;
+    color:#b43f4b;
+}
+
+.agenda-appointment__status--completed{
+    background:#e4f5ec;
+    color:#327a55;
+}
+
+.agenda-appointment__status--rescheduled{
+    background:#f5e9fb;
+    color:#8751a2;
+}
+
+.agenda-appointment__status--default{
+    background:#eeeeee;
+    color:#666666;
+}
+

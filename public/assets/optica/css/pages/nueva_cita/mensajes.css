@@ -1,0 +1,48 @@
+/* ==========================================================
+   NUEVA CITA - MENSAJES DE HORARIOS
+========================================================== */
+
+.new-appointment-times__message {
+    grid-column: 1 / -1;
+
+    margin: 0;
+    padding: 14px;
+
+    color: #8a7f91;
+    background: #faf8fc;
+
+    border: 1px dashed #ded6e6;
+    border-radius: 12px;
+
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   NUEVA CITA - MENSAJES DEL FORMULARIO
+========================================================== */
+
+.new-appointment-form__message {
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.new-appointment-form__message[hidden] {
+    display: none;
+}
+
+.new-appointment-form__message[data-tipo="error"] {
+    background: #fff2f2;
+    border: 1px solid #f1c5c5;
+    color: #a33333;
+}
+
+.new-appointment-form__message[data-tipo="exito"] {
+    background: #f1faf4;
+    border: 1px solid #b9e1c5;
+    color: #267444;
+}
+

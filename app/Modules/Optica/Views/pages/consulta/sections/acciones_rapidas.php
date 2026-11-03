@@ -81,7 +81,7 @@
 
         <!-- Nueva venta -->
 
-        <a href="<?= base_url('optica/ventas/nueva') ?>" class="consulta-action-link">
+        <a href="<?= base_url('optica/ventas/nueva') ?>" id="consulta-nueva-venta" class="consulta-action-link">
 
             <span class="consulta-action-icon">
 

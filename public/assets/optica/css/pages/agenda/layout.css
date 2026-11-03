@@ -1,0 +1,27 @@
+/* ==========================================================
+   Layout principal
+========================================================== */
+
+.agenda-layout{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 340px;
+    gap:24px;
+    align-items:start;
+}
+
+.agenda-calendar,
+.agenda-sidebar{
+
+    background:#fff;
+
+    border:1px solid #e9e1ef;
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 14px 34px rgba(67,48,83,.07);
+
+    min-height:650px;
+
+}
+

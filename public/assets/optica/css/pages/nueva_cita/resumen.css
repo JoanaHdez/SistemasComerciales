@@ -1,0 +1,181 @@
+/* ==========================================================
+   Resumen lateral
+========================================================== */
+
+.new-appointment-summary {
+    position: sticky;
+    top: 24px;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #5f477d 0%,
+            #443254 100%
+        );
+
+    color: #ffffff;
+
+    border-radius: 22px;
+
+    box-shadow: 0 18px 42px rgba(58, 39, 73, 0.2);
+}
+
+.new-appointment-summary__eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.new-appointment-summary__title {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.new-appointment-summary__patient {
+    margin-top: 22px;
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+}
+
+.new-appointment-summary__avatar {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+
+    display: grid;
+    place-items: center;
+
+    color: #5d4376;
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.new-appointment-summary__patient strong,
+.new-appointment-summary__patient span {
+    display: block;
+}
+
+.new-appointment-summary__patient strong {
+    color: #ffffff;
+    font-size: 0.88rem;
+}
+
+.new-appointment-summary__patient span {
+    margin-top: 4px;
+
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.72rem;
+}
+
+.new-appointment-summary__details {
+    margin: 24px 0 0;
+
+    display: grid;
+    gap: 16px;
+}
+
+.new-appointment-summary__details div {
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.new-appointment-summary__details dt {
+    margin-bottom: 5px;
+
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.new-appointment-summary__details dd {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 0.86rem;
+    font-weight: 800;
+}
+
+.new-appointment-summary__notice {
+    margin-top: 22px;
+    padding: 16px;
+
+    color: #225b40;
+    background: #ddf5e7;
+
+    border-radius: 14px;
+}
+
+.new-appointment-summary__notice strong {
+    display: block;
+
+    font-size: 0.82rem;
+}
+
+.new-appointment-summary__notice p {
+    margin: 6px 0 0;
+
+    font-size: 0.74rem;
+    line-height: 1.45;
+}
+
+.new-appointment-summary__actions {
+    margin-top: 24px;
+
+    display: grid;
+    gap: 10px;
+}
+
+.new-appointment-summary__button {
+    width: 100%;
+    min-height: 46px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.new-appointment-summary__button--secondary {
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.09);
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.new-appointment-summary__button--primary {
+    color: #5a3f72;
+    background: #ffffff;
+
+    border: 0;
+}
+
+

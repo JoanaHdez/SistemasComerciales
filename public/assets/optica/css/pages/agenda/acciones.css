@@ -1,0 +1,88 @@
+/* ==========================================================
+   Acciones de las citas
+========================================================== */
+
+.agenda-appointment{
+    overflow:hidden;
+}
+
+.agenda-appointment__content{
+    position:relative;
+    z-index:1;
+}
+
+.agenda-appointment__actions{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:8px;
+
+    max-height:0;
+    margin-top:0;
+    padding-top:0;
+
+    border-top:1px solid transparent;
+
+    opacity:0;
+    overflow:hidden;
+
+    transform:translateY(-6px);
+
+    transition:
+        max-height .25s ease,
+        margin-top .25s ease,
+        padding-top .25s ease,
+        border-color .25s ease,
+        opacity .2s ease,
+        transform .25s ease;
+}
+
+.agenda-appointment:hover .agenda-appointment__actions,
+.agenda-appointment:focus-within .agenda-appointment__actions{
+    max-height:60px;
+    margin-top:14px;
+    padding-top:14px;
+
+    border-top-color:#eee7f3;
+
+    opacity:1;
+    transform:translateY(0);
+}
+
+.agenda-appointment__action{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:0;
+    height:38px;
+
+    border:1px solid #e6ddec;
+    border-radius:10px;
+
+    background:#faf8fc;
+    color:#674687;
+
+    font:inherit;
+    cursor:pointer;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+.agenda-appointment__action:hover{
+    border-color:#cbb8dc;
+    background:#f0e8f7;
+    transform:translateY(-1px);
+}
+
+.agenda-appointment__action--danger{
+    color:#b43f4b;
+}
+
+.agenda-appointment__action--danger:hover{
+    border-color:#efc1c6;
+    background:#fdebed;
+}
+

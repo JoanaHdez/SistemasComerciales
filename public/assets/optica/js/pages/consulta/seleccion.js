@@ -46,6 +46,24 @@ export function seleccionarCliente(
 
     renderConsultas(cliente);
 
+    /* ======================================================
+       ACTUALIZAR ENLACE A NUEVA VENTA
+    ====================================================== */
+
+    const enlaceVenta = document.getElementById("consulta-nueva-venta");
+
+    if (enlaceVenta) {
+        const url = new URL(enlaceVenta.href);
+
+        if (cliente.id != null) {
+            url.searchParams.set("paciente", String(cliente.id));
+        } else {
+            url.searchParams.delete("paciente");
+        }
+
+        enlaceVenta.href = url.toString();
+    }
+
 
     /* ======================================================
        ACTUALIZAR ENLACE A EXPEDIENTE

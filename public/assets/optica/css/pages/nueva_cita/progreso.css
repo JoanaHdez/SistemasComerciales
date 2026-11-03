@@ -1,0 +1,88 @@
+/* ==========================================================
+   Formulario y progreso
+========================================================== */
+
+.new-appointment-form {
+    display: grid;
+    gap: 24px;
+}
+
+.new-appointment-progress {
+    padding: 22px 26px;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+    border: 1px solid #e9e1ef;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, 0.06);
+}
+
+.new-appointment-progress__step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #988d9f;
+}
+
+.new-appointment-progress__step strong,
+.new-appointment-progress__step small {
+    display: block;
+}
+
+.new-appointment-progress__step strong {
+    color: #5f5268;
+    font-size: 0.85rem;
+}
+
+.new-appointment-progress__step small {
+    margin-top: 3px;
+
+    color: #a49baa;
+    font-size: 0.72rem;
+}
+
+.new-appointment-progress__number {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+
+    display: grid;
+    place-items: center;
+
+    color: #7c688d;
+    background: #f1ebf5;
+
+    border-radius: 11px;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.new-appointment-progress__step--active {
+    color: #76539b;
+}
+
+.new-appointment-progress__step--active
+.new-appointment-progress__number {
+    color: #ffffff;
+    background: #76539b;
+
+    box-shadow: 0 8px 18px rgba(79, 57, 101, 0.17);
+}
+
+.new-appointment-progress__step--active strong {
+    color: #4c365f;
+}
+
+.new-appointment-progress__line {
+    flex: 1;
+    height: 2px;
+    margin: 0 20px;
+
+    background: #e8e0ed;
+}
+

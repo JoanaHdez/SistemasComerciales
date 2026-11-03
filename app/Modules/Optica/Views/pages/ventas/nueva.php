@@ -12,7 +12,7 @@ Nueva venta | Opticool
 
 <?= $this->section('content') ?>
 
-<section class="sale-page">
+<section class="sale-page" data-sales-page="new">
 
     <div class="sale-page__header">
 
@@ -36,7 +36,18 @@ Nueva venta | Opticool
 
     </div>
 
-    <form class="sale-form">
+    <div class="sales-test-toolbar" role="note">
+        <span>Simulación frontend — rol activo:</span>
+        <select id="sales-role" aria-label="Rol simulado">
+            <option value="ventas">Personal de ventas</option>
+            <option value="administrador">Administrador</option>
+        </select>
+        <small>No representa autenticación ni autorización real.</small>
+    </div>
+
+    <form class="sale-form" id="sale-form" novalidate>
+
+        <div class="sale-form__message" id="sale-message" hidden role="status" aria-live="polite"></div>
 
         <div class="sale-layout">
 
@@ -84,8 +95,12 @@ Nueva venta | Opticool
 
                         <div class="sale-client-actions">
 
-                            <button type="button" class="sale-button sale-button--primary">
+                            <button type="button" class="sale-button sale-button--primary" id="sale-client-search-button">
                                 Buscar
+                            </button>
+
+                            <button type="button" class="sale-button sale-button--secondary" id="sale-general-public">
+                                Público general
                             </button>
 
                             <a href="<?= base_url('optica/clientes/nuevo') ?>"
@@ -95,6 +110,15 @@ Nueva venta | Opticool
 
                         </div>
 
+                    </div>
+
+                    <div class="sale-search-results" id="sale-client-results" hidden></div>
+
+                    <div class="sale-form-group sale-consultation" id="sale-consultation-group" hidden>
+                        <label for="sale-consultation">Consulta asociada (opcional)</label>
+                        <select id="sale-consultation" name="consulta_id">
+                            <option value="">Sin consulta asociada</option>
+                        </select>
                     </div>
 
                 </section>
@@ -139,22 +163,18 @@ Nueva venta | Opticool
                                 Estado de pago
                             </label>
 
-                            <select id="estado_pago" name="estado_pago">
-                                <option value="">
-                                    Selecciona una opción
-                                </option>
+                            <select id="estado_pago" name="estado_pago" disabled>
+                                <option value="pendiente">Pendiente</option>
+                                <option value="parcial">Parcialmente pagada</option>
+                                <option value="pagado">Liquidada</option>
+                            </select>
+                        </div>
 
-                                <option value="pendiente">
-                                    Pendiente
-                                </option>
-
-                                <option value="parcial">
-                                    Pago parcial
-                                </option>
-
-                                <option value="pagado">
-                                    Pagado
-                                </option>
+                        <div class="sale-form-group">
+                            <label for="sale-responsible">Responsable</label>
+                            <select id="sale-responsible" name="responsable">
+                                <option value="Laura Gómez">Laura Gómez</option>
+                                <option value="Carlos Mendoza">Carlos Mendoza</option>
                             </select>
                         </div>
 
@@ -195,6 +215,22 @@ Nueva venta | Opticool
 
                     </div>
 
+                    <div class="sale-product-tools">
+                        <div class="sale-form-group sale-product-search">
+                            <label for="sale-product-search">Buscar en catálogo</label>
+                            <input type="search" id="sale-product-search" placeholder="Nombre, código o categoría">
+                            <div class="sale-search-results" id="sale-product-results" hidden></div>
+                        </div>
+
+                        <fieldset class="sale-manual-product">
+                            <legend>Concepto manual</legend>
+                            <input type="text" id="sale-manual-description" placeholder="Descripción">
+                            <input type="number" id="sale-manual-quantity" min="1" step="1" value="1" aria-label="Cantidad">
+                            <input type="number" id="sale-manual-price" min="0" step="0.01" placeholder="Precio" aria-label="Precio">
+                            <button type="button" class="sale-button sale-button--secondary" id="sale-add-manual">Agregar concepto</button>
+                        </fieldset>
+                    </div>
+
                     <div class="sale-table-wrapper">
 
                         <table class="sale-table">
@@ -210,7 +246,7 @@ Nueva venta | Opticool
                                 </tr>
                             </thead>
 
-                            <tbody>
+                            <tbody id="sale-products-body">
 
                                 <tr class="sale-table__empty">
                                     <td colspan="6">
@@ -224,6 +260,36 @@ Nueva venta | Opticool
 
                     </div>
 
+                </section>
+
+                <section class="sale-card sale-payment-card">
+                    <div class="sale-card__header">
+                        <span class="sale-card__icon">$</span>
+                        <div>
+                            <h2 class="sale-card__title">Pago inicial</h2>
+                            <p class="sale-card__description">Puedes guardar sin pago, liquidar o registrar un anticipo con métodos mixtos.</p>
+                        </div>
+                    </div>
+
+                    <div class="sale-payment-grid">
+                        <div class="sale-form-group">
+                            <label for="sale-received">Importe recibido</label>
+                            <input type="number" id="sale-received" min="0" step="0.01" value="0">
+                        </div>
+                        <div class="sale-form-group">
+                            <label for="sale-cash">Efectivo</label>
+                            <input type="number" id="sale-cash" min="0" step="0.01" value="0">
+                        </div>
+                        <div class="sale-form-group">
+                            <label for="sale-card-payment">Tarjeta</label>
+                            <input type="number" id="sale-card-payment" min="0" step="0.01" value="0">
+                        </div>
+                        <div class="sale-form-group">
+                            <label for="sale-transfer">Transferencia</label>
+                            <input type="number" id="sale-transfer" min="0" step="0.01" value="0">
+                        </div>
+                    </div>
+                    <p class="sale-help">El desglose de métodos debe coincidir exactamente con el importe recibido.</p>
                 </section>
 
             </div>
@@ -249,7 +315,7 @@ Nueva venta | Opticool
                         Subtotal
                     </span>
 
-                    <strong class="sale-summary__value">
+                    <strong class="sale-summary__value" id="sale-subtotal">
                         $0.00
                     </strong>
 
@@ -260,6 +326,11 @@ Nueva venta | Opticool
                     <label for="descuento_venta" class="sale-summary__label">
                         Descuento
                     </label>
+
+                    <select id="sale-discount-type" class="sale-summary__input" aria-label="Tipo de descuento general">
+                        <option value="importe">Importe fijo</option>
+                        <option value="porcentaje">Porcentaje</option>
+                    </select>
 
                     <input type="number" id="descuento_venta" name="descuento_venta" class="sale-summary__input" min="0"
                         step="0.01" value="0">
@@ -274,19 +345,24 @@ Nueva venta | Opticool
                         Total
                     </span>
 
-                    <strong class="sale-summary__total">
+                    <strong class="sale-summary__total" id="sale-total">
                         $0.00
                     </strong>
 
                 </div>
 
+                <div class="sale-summary__item">
+                    <span class="sale-summary__label">Saldo después del pago</span>
+                    <strong class="sale-summary__value" id="sale-balance">$0.00</strong>
+                </div>
+
                 <div class="sale-summary__actions">
 
-                    <button type="submit" class="sale-button sale-button--primary">
+                    <button type="submit" class="sale-button sale-button--primary" id="sale-save">
                         Guardar venta
                     </button>
 
-                    <button type="button" class="sale-button sale-button--secondary">
+                    <button type="button" class="sale-button sale-button--secondary" id="sale-cancel">
                         Cancelar
                     </button>
 
