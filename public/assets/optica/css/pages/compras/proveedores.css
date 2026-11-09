@@ -1,0 +1,33 @@
+
+/* ==========================================================
+   Compras - Formulario de proveedores
+========================================================== */
+
+.supplier-new {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+/* ==========================================================
+   Compras - Campo de proveedor
+========================================================== */
+
+.supplier-new input {
+    flex: 1;
+}
+
+/* ==========================================================
+   Compras - Listado de proveedores
+========================================================== */
+
+.supplier-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px;
+
+    border-bottom: 1px solid #eee;
+}

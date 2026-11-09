@@ -81,7 +81,7 @@ $clientes = [
          BUSCADOR
     ====================================================== -->
 
-    <section class="clients-search-card">
+    <section class="clients-search-card admin-toolbar" aria-labelledby="clients-search-title">
 
         <div class="clients-search-card__intro">
 
@@ -97,7 +97,7 @@ $clientes = [
 
             <div>
 
-                <h2>
+                <h2 id="clients-search-title">
                     Buscar cliente
                 </h2>
 
@@ -132,7 +132,17 @@ $clientes = [
          TABLA
     ====================================================== -->
 
-    <div class="clients-table-wrapper">
+    <section class="admin-results clients-results" aria-labelledby="clients-results-title">
+
+        <header class="admin-results__header">
+            <div>
+                <span class="admin-results__eyebrow">DIRECTORIO</span>
+                <h2 id="clients-results-title">Clientes registrados</h2>
+            </div>
+            <span class="admin-results__count" id="clients-results-count"><?= count($clientes) ?> resultados</span>
+        </header>
+
+        <div class="clients-table-wrapper">
 
         <table class="clients-table">
 
@@ -221,7 +231,13 @@ $clientes = [
 
         </table>
 
-    </div>
+        </div>
+
+        <footer class="admin-results__footer">
+            <span id="clients-results-summary">Mostrando <?= count($clientes) ?> de <?= count($clientes) ?> clientes</span>
+        </footer>
+
+    </section>
 
 </section>
 

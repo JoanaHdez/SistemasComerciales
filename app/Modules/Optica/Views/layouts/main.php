@@ -20,8 +20,17 @@
     <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/navbar.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/breadcrumb.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/alerts.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/buttons.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/forms.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/tables.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/modal.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/custom-select.css') ?>">
 
     <?= $this->renderSection('styles') ?>
+
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/design-system.css') ?>">
+
+    <?= $this->renderSection('stylesAfter') ?>
 
 </head>
 

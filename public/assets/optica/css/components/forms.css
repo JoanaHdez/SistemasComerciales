@@ -6,3 +6,47 @@
    Inputs, labels, selects, textarea, checkbox,
    radios y demás controles reutilizables.
 ========================================================== */
+
+:where(input:not([type="checkbox"]):not([type="radio"]), select, textarea) {
+    min-height: var(--control-height);
+    color: #403448;
+    background: #ffffff;
+    border: 1px solid #dcd4e3;
+    border-radius: var(--control-radius);
+    font-size: var(--text-sm);
+    transition: border-color .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+
+:where(input:not([type="checkbox"]):not([type="radio"]), select, textarea):hover {
+    border-color: #cbbdd6;
+}
+
+:where(input:not([type="checkbox"]):not([type="radio"]), select, textarea):focus {
+    outline: 0;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(118, 83, 155, .12);
+}
+
+:where(input, select, textarea):disabled {
+    color: #8e8494;
+    background: #f5f2f7;
+    cursor: not-allowed;
+}
+
+textarea {
+    min-height: 92px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+:where(.form-group, .sale-form-group) > label,
+:where(.settings-form-grid, .profile-form-grid) label {
+    color: #51445a;
+    font-size: var(--text-sm);
+    font-weight: 700;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--color-primary);
+}

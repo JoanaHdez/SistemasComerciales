@@ -1,0 +1,25 @@
+
+/* ==========================================================
+   Dashboard - Gráfica
+========================================================== */
+
+.dashboard-chart {
+    height: 220px;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 14px;
+}
+
+/* ==========================================================
+   Dashboard - Barras de la gráfica
+========================================================== */
+
+.dashboard-chart span {
+    flex: 1;
+
+    border-radius: 12px 12px 0 0;
+
+    background: #76539b;
+}

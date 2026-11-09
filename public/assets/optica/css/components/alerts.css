@@ -6,3 +6,23 @@
    Este archivo contendrá todos los estilos de alertas,
    mensajes y notificaciones reutilizables.
 ========================================================== */
+
+:where([class$="-message"], [class*="-message "]) {
+    font-size: var(--text-sm);
+    line-height: 1.45;
+}
+
+:where([class$="-message"], [class*="-message "])[data-tipo="exito"] {
+    color: #237557;
+    background: #edf8f3;
+}
+
+:where([class$="-message"], [class*="-message "])[data-tipo="error"] {
+    color: #a13c46;
+    background: #fff0f1;
+}
+
+:where([class$="-message"], [class*="-message "])[data-tipo="advertencia"] {
+    color: #8a611a;
+    background: #fff7e8;
+}

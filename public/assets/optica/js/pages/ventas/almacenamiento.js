@@ -4,6 +4,11 @@ import {
     totalPagadoCentavos,
     totalReembolsadoCentavos,
 } from "./dinero.js";
+import {
+    aplicarSalidaVenta,
+    reintegrarDevolucion,
+    sincronizarSalidaVenta,
+} from "../inventario/almacenamiento.js";
 
 const CLAVE_VENTAS = "opticool_ventas_simuladas";
 const CLAVE_ROL = "opticool_ventas_rol";
@@ -88,6 +93,9 @@ export function guardarVenta(datos, token) {
             devoluciones: [],
         };
         venta.pagos = (datos.pagos ?? []).map((pago) => ({ ...pago, id: uuid(), fecha: ahora }));
+        const inventario = aplicarSalidaVenta(venta);
+        if (!inventario.exito) return { exito: false, venta: null, mensaje: inventario.mensaje };
+        venta.inventarioAplicado = true;
         ventas.push(venta);
         escribirVentas(ventas);
         return { exito: true, venta, duplicada: false };
@@ -103,7 +111,12 @@ export function actualizarVenta(id, cambios, validar = () => true) {
     if (indice < 0 || !validar(ventas[indice])) return { exito: false, venta: null };
     const resultado = typeof cambios === "function" ? cambios(ventas[indice]) : cambios;
     if (!resultado) return { exito: false, venta: null };
-    ventas[indice] = { ...ventas[indice], ...resultado, id: ventas[indice].id, folio: ventas[indice].folio, fechaActualizacion: new Date().toISOString() };
+    const actualizada = { ...ventas[indice], ...resultado, id: ventas[indice].id, folio: ventas[indice].folio, fechaActualizacion: new Date().toISOString() };
+    if (ventas[indice].inventarioAplicado && JSON.stringify(ventas[indice].partidas) !== JSON.stringify(actualizada.partidas)) {
+        const inventario = sincronizarSalidaVenta(ventas[indice], actualizada);
+        if (!inventario.exito) return { exito: false, venta: null, mensaje: inventario.mensaje };
+    }
+    ventas[indice] = actualizada;
     escribirVentas(ventas);
     return { exito: true, venta: ventas[indice] };
 }
@@ -161,9 +174,12 @@ export function registrarDevolucion(id, datos) {
         .reduce((total, d) => total + d.cantidad, 0);
     const partida = venta.partidas.find((item) => item.id === datos.partidaId);
     if (!partida || devuelta + datos.cantidad > partida.cantidad) return null;
-    return actualizarVenta(id, {
-        devoluciones: [...(venta.devoluciones ?? []), { ...datos, id: uuid(), fecha: new Date().toISOString() }],
+    const devolucion = { ...datos, id: uuid(), fecha: new Date().toISOString() };
+    const actualizada = actualizarVenta(id, {
+        devoluciones: [...(venta.devoluciones ?? []), devolucion],
     }).venta;
+    if (actualizada) reintegrarDevolucion(actualizada, devolucion);
+    return actualizada;
 }
 
 export function obtenerRol() {

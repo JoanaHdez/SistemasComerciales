@@ -64,6 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
       ========================================================== */
 
     function mostrarEstadoResultados(resultados, termino) {
+        const contador = document.getElementById("clients-results-count");
+        const resumen = document.getElementById("clients-results-summary");
+
+        if (contador) contador.textContent = `${resultados} ${resultados === 1 ? "resultado" : "resultados"}`;
+        if (resumen) resumen.textContent = `Mostrando ${resultados} de ${filasClientes.length} clientes`;
+
         const estadoAnterior = cuerpoTabla.querySelector(".clients-table__empty");
 
         estadoAnterior?.remove();

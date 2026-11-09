@@ -11,7 +11,7 @@
        Tipografía
     ====================================================== */
 
-    --font-family-base: Arial, Helvetica, sans-serif;
+    --font-family-base: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --font-family-accent: Georgia, "Times New Roman", serif;
 
     /* ======================================================
@@ -25,6 +25,12 @@
     --color-text-muted: #6b7280;
 
     --color-border: #e5e7eb;
+
+    --color-primary: #76539b;
+    --color-primary-hover: #654486;
+    --color-primary-soft: #f1ecf6;
+    --color-heading: #352742;
+    --color-help: #8b8092;
 
     /* ======================================================
        Colores de la óptica
@@ -57,6 +63,20 @@
     --spacing-xl: 2rem;
     --spacing-2xl: 3rem;
 
+    --space-control: 0.75rem;
+    --space-section: clamp(1.25rem, 2vw, 1.75rem);
+
+    /* Escala tipográfica compartida */
+    --text-xs: 0.75rem;
+    --text-sm: 0.8125rem;
+    --text-base: 0.9375rem;
+    --text-md: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.375rem;
+    --text-2xl: clamp(1.75rem, 3vw, 2.125rem);
+    --text-metric: clamp(1.6rem, 3vw, 1.9rem);
+    --line-body: 1.55;
+
     /* ======================================================
        Bordes
     ====================================================== */
@@ -73,6 +93,12 @@
 
     --shadow-sm: 0 8px 18px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 12px 26px rgba(0, 0, 0, 0.12);
+    --shadow-card: 0 10px 28px rgba(67, 48, 83, 0.065);
+    --shadow-overlay: 0 24px 64px rgba(33, 22, 44, 0.22);
+
+    --control-height: 44px;
+    --control-radius: 11px;
+    --card-radius: 18px;
 
     /* ======================================================
        Medidas de layouts

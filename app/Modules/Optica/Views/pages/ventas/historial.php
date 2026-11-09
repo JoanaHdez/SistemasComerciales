@@ -458,6 +458,57 @@ Historial de ventas | Opticool
             </footer>
         </form>
     </div>
+
+    <div class="modal sales-order-modal" id="sales-order-modal" aria-hidden="true">
+        <div class="modal__overlay"></div>
+
+        <form class="modal__content sales-order-modal__content" id="sales-order-form"
+            role="dialog" aria-modal="true" aria-labelledby="sales-order-title" novalidate>
+            <header class="modal__header">
+                <div>
+                    <span class="modal__subtitle">PEDIDO DE LABORATORIO</span>
+                    <h2 class="modal__title" id="sales-order-title">Generar pedido</h2>
+                </div>
+                <button type="button" class="modal__close" aria-label="Cerrar modal">×</button>
+            </header>
+
+            <div class="sales-order-modal__sale">
+                <strong id="sales-order-folio">—</strong>
+                <span id="sales-order-client">—</span>
+            </div>
+
+            <fieldset class="sales-order-products">
+                <legend>Selecciona los productos o conceptos que requieren pedido *</legend>
+                <div id="sales-order-products"></div>
+            </fieldset>
+
+            <div class="modal__grid">
+                <div class="form-group">
+                    <label for="sales-order-date">Entrega estimada *</label>
+                    <input type="date" id="sales-order-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="sales-order-lab">Laboratorio</label>
+                    <select id="sales-order-lab"></select>
+                </div>
+                <div class="form-group form-group--full">
+                    <label for="sales-order-responsible">Responsable (si no se asigna laboratorio)</label>
+                    <input type="text" id="sales-order-responsible" maxlength="120">
+                </div>
+                <div class="form-group form-group--full">
+                    <label for="sales-order-notes">Observaciones</label>
+                    <textarea id="sales-order-notes" rows="3" maxlength="1000"></textarea>
+                </div>
+            </div>
+
+            <p class="sales-order-modal__message" id="sales-order-message" role="status" hidden></p>
+
+            <footer class="modal__footer">
+                <button type="button" class="btn btn-secondary" data-order-back>Volver</button>
+                <button type="submit" class="btn btn-primary">Generar pedido</button>
+            </footer>
+        </form>
+    </div>
 </section>
 
 <?= $this->endSection() ?>

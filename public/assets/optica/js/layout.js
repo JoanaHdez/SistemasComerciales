@@ -11,6 +11,34 @@ document.addEventListener('DOMContentLoaded', () => {
         '[data-sidebar-module]'
     );
 
+    const header = document.querySelector('.app-header');
+    const headerNav = document.querySelector('.app-header__nav');
+    const adminNav = document.querySelector('[data-sidebar-admin-nav]');
+    const adminWrapper = document.querySelector('[data-sidebar-admin-wrapper]');
+    const primaryLinks = headerNav ? [...headerNav.children] : [];
+    headerNav?.classList.add('app-header__nav--measuring');
+    const primaryWidth = primaryLinks.reduce(
+        (total, link) => total + link.getBoundingClientRect().width,
+        0
+    ) + Math.max(0, primaryLinks.length - 1) * 8;
+    headerNav?.classList.remove('app-header__nav--measuring');
+
+    const updatePrimaryNavigation = () => {
+        if (!header || !headerNav || !adminNav || !adminWrapper) return;
+        const left = header.querySelector('.app-header__left');
+        const actions = header.querySelector('.app-header__actions');
+        const required = (left?.getBoundingClientRect().width ?? 0)
+            + (actions?.getBoundingClientRect().width ?? 0)
+            + primaryWidth
+            + 72;
+        const compact = window.innerWidth <= 920
+            || required > header.getBoundingClientRect().width;
+        const destination = compact ? adminNav : headerNav;
+        primaryLinks.forEach((link) => destination.append(link));
+        adminWrapper.hidden = !compact;
+        header.classList.toggle('app-header--compact', compact);
+    };
+
     const closeAllModules = (exceptModule = null) => {
         modules.forEach((module) => {
             if (module === exceptModule) {
@@ -132,10 +160,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 920) {
             closeSidebar();
         }
+        updatePrimaryNavigation();
     });
 
+    if (globalThis.ResizeObserver) {
+        new ResizeObserver(updatePrimaryNavigation).observe(header ?? document.body);
+    }
+    updatePrimaryNavigation();
+
     document
-        .querySelectorAll('.app-sidebar__submenu-item')
+        .querySelectorAll('.app-sidebar__submenu-item, .app-sidebar__admin-links a')
         .forEach((link) => {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 920) {

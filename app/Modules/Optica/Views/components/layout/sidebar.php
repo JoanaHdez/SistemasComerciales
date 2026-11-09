@@ -69,6 +69,11 @@ $isHistorialVentas = str_starts_with(
             aria-label="Navegación operativa"
         >
 
+            <div class="app-sidebar__admin" data-sidebar-admin-wrapper hidden>
+                <span class="app-sidebar__section-label">Administración</span>
+                <div class="app-sidebar__admin-links" data-sidebar-admin-nav role="navigation" aria-label="Navegación administrativa compacta"></div>
+            </div>
+
             <div
                 class="
                     app-sidebar__module

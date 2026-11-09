@@ -1,0 +1,73 @@
+
+/* ==========================================================
+   Clientes - Encabezado
+========================================================== */
+
+.clients-page__header {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.clients-page__eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #876ba5;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.clients-page__title {
+    margin: 0;
+
+    color: #2d203b;
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.clients-page__description {
+    margin: 12px 0 0;
+
+    color: #776b80;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.clients-page__primary-action {
+    min-height: 52px;
+    padding: 0 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    color: #ffffff;
+    background: #76539b;
+
+    border-radius: 14px;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    box-shadow: 0 10px 24px rgba(78, 52, 104, 0.18);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.clients-page__primary-action:hover {
+    background: #624483;
+    transform: translateY(-1px);
+    box-shadow: 0 13px 28px rgba(78, 52, 104, 0.22);
+}

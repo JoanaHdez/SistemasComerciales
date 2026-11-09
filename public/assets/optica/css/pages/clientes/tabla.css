@@ -1,0 +1,57 @@
+
+/* ==========================================================
+   Clientes - Tabla
+========================================================== */
+
+.clients-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e4dde9;
+    border-radius: 20px;
+
+    box-shadow: 0 14px 34px rgba(67, 48, 83, 0.07);
+}
+
+.clients-table {
+    width: 100%;
+    min-width: 980px;
+
+    border-collapse: collapse;
+}
+
+.clients-table th,
+.clients-table td {
+    padding: 17px 18px;
+
+    text-align: left;
+    vertical-align: middle;
+
+    border-bottom: 1px solid #eee8f1;
+}
+
+.clients-table th {
+    color: #554761;
+    background: #f7f3fa;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.clients-table td {
+    color: #544a5c;
+    background: #ffffff;
+
+    font-size: 0.88rem;
+}
+
+.clients-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.clients-table tbody tr:hover td {
+    background: #fcfafd;
+}

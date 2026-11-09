@@ -1,0 +1,68 @@
+
+/* ==========================================================
+   Configuración - Contenedor de opciones
+========================================================== */
+
+.settings-options {
+    display: grid;
+}
+
+/* ==========================================================
+   Configuración - Opción individual
+========================================================== */
+
+.settings-option {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eee8f1;
+}
+
+/* ==========================================================
+   Configuración - Primera opción
+========================================================== */
+
+.settings-option:first-child {
+    padding-top: 0;
+}
+
+/* ==========================================================
+   Configuración - Última opción
+========================================================== */
+
+.settings-option:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+/* ==========================================================
+   Configuración - Títulos de opciones
+========================================================== */
+
+.settings-option strong {
+    color: #44364e;
+
+    font-size: 0.94rem;
+}
+
+/* ==========================================================
+   Configuración - Descripciones de opciones
+========================================================== */
+
+.settings-option p {
+    max-width: 720px;
+
+    margin: 6px 0 0;
+
+    color: #8b8092;
+
+    font-size: 0.84rem;
+    line-height: 1.55;
+}

@@ -5,3 +5,41 @@
 
    Estilos reutilizables para tablas.
 ========================================================== */
+
+:where(.clients-table-wrapper, .inventory-table-wrapper, .sale-table-wrapper, .sales-detail__table, .reports-table-wrap) {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #cbbdd6 transparent;
+}
+
+:where(.clients-table, .inventory-table, .sale-table, .reports-table) {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+:where(.clients-table, .inventory-table, .sale-table, .reports-table) th {
+    padding: 12px 14px;
+    color: #756a7d;
+    background: #faf8fc;
+    border-bottom: 1px solid #e8e1ed;
+    font-size: var(--text-xs);
+    font-weight: 800;
+    letter-spacing: .035em;
+    text-align: left;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+:where(.clients-table, .inventory-table, .sale-table, .reports-table) td {
+    padding: 13px 14px;
+    color: #514658;
+    border-bottom: 1px solid #eee8f2;
+    font-size: var(--text-sm);
+    vertical-align: middle;
+}
+
+:where(.clients-table, .inventory-table, .sale-table, .reports-table) tbody tr:hover td {
+    background: #fcfafd;
+}

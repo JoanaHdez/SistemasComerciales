@@ -1,0 +1,106 @@
+
+/* ==========================================================
+   Configuración - Usuarios y acceso
+========================================================== */
+
+.settings-access {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+/* ==========================================================
+   Configuración - Información de acceso
+========================================================== */
+
+.settings-access strong {
+    color: #44364e;
+}
+
+.settings-access p {
+    max-width: 700px;
+
+    margin: 7px 0 0;
+
+    color: #887d90;
+
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   Configuración - Botón de acceso
+========================================================== */
+
+.settings-access__button {
+    min-height: 46px;
+    padding: 0 20px;
+
+    flex-shrink: 0;
+
+    border: 0;
+    border-radius: 12px;
+
+    background: #76539b;
+    color: #fff;
+
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.settings-access__button:hover {
+    background: #624483;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Configuración - Listado de usuarios
+========================================================== */
+
+.settings-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px;
+
+    border-bottom: 1px solid #eee;
+}
+
+/* ==========================================================
+   Configuración - Información del usuario
+========================================================== */
+
+.settings-user div {
+    display: grid;
+    gap: 4px;
+}
+
+.settings-user span {
+    color: #8d7d99;
+    font-size: 0.82rem;
+}
+
+/* ==========================================================
+   Configuración - Botones de usuario
+========================================================== */
+
+.settings-user button {
+    border: 0;
+    border-radius: 10px;
+
+    padding: 9px 13px;
+
+    background: #eee8f5;
+    color: #5d4579;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}

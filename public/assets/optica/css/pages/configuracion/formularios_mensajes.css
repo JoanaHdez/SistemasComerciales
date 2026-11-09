@@ -1,0 +1,61 @@
+
+/* ==========================================================
+   Configuración - Mensajes
+========================================================== */
+
+.settings-message {
+    padding: 12px 16px;
+
+    border-radius: 12px;
+
+    background: #edf8f3;
+    color: #237557;
+
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Configuración - Mensajes de error
+========================================================== */
+
+.settings-message[data-tipo="error"] {
+    background: #fff0f1;
+    color: #a13c46;
+}
+
+/* ==========================================================
+   Configuración - Formularios
+========================================================== */
+
+.settings-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+/* ==========================================================
+   Configuración - Etiquetas de formulario
+========================================================== */
+
+.settings-form-grid label {
+    display: grid;
+    gap: 7px;
+
+    color: #4d4263;
+
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Configuración - Campos de formulario
+========================================================== */
+
+.settings-form-grid input {
+    padding: 13px;
+
+    border: 1px solid #ded5ea;
+    border-radius: 12px;
+
+    font: inherit;
+}

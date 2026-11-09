@@ -5,3 +5,46 @@
 
    Aquí vivirán todos los botones reutilizables.
 ========================================================== */
+
+:where(.btn, .clients-page__primary-action, .inventory-page__button, .purchases-page__button, .orders-button, .reports-button, .settings-card__action, .profile-card__action, .sale-button) {
+    min-height: var(--control-height);
+    padding: 0 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 0;
+    border-radius: var(--control-radius);
+    font-size: var(--text-sm);
+    font-weight: 750;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .16s ease, box-shadow .16s ease, background-color .16s ease, opacity .16s ease;
+}
+
+:where(.btn, .clients-page__primary-action, .inventory-page__button, .purchases-page__button, .orders-button, .reports-button, .settings-card__action, .profile-card__action, .sale-button):not(:disabled):hover {
+    transform: translateY(-1px);
+}
+
+:where(.btn, .inventory-page__button, .purchases-page__button, .orders-button, .reports-button, .settings-card__action, .profile-card__action, .sale-button):disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background: var(--color-primary);
+    box-shadow: 0 7px 16px rgba(118, 83, 155, .18);
+}
+
+.btn-primary:hover { background: var(--color-primary-hover); }
+.btn-secondary { color: #5c4770; background: var(--color-primary-soft); }
+.btn-secondary:hover { background: #e8def1; }
+
+.btn-danger,
+.danger {
+    color: #a53a44 !important;
+    background: #fff0f1 !important;
+}

@@ -1,0 +1,110 @@
+
+/* ==========================================================
+   Configuración - Tarjetas
+========================================================== */
+
+.settings-card {
+    padding: 28px;
+
+    background: #fff;
+
+    border: 1px solid #e9e1ef;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, 0.06);
+}
+
+/* ==========================================================
+   Configuración - Encabezado de tarjeta
+========================================================== */
+
+.settings-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 26px;
+}
+
+/* ==========================================================
+   Configuración - Texto superior
+========================================================== */
+
+.settings-card__eyebrow {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #876ba5;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   Configuración - Título
+========================================================== */
+
+.settings-card__title {
+    margin: 0;
+
+    color: #3a2c4c;
+
+    font-size: 1.25rem;
+}
+
+/* ==========================================================
+   Configuración - Descripción
+========================================================== */
+
+.settings-card__description {
+    max-width: 650px;
+
+    margin: 8px 0 0;
+
+    color: #887d90;
+
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   Configuración - Botón editar
+========================================================== */
+
+.settings-card__action {
+    min-height: 42px;
+    padding: 0 18px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #d9cde2;
+    border-radius: 11px;
+
+    background: #fff;
+    color: #76539b;
+
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.settings-card__action:hover {
+    background: #f5f1f8;
+    border-color: #76539b;
+}
+
+/* ==========================================================
+   Configuración - Tarjeta de ancho completo
+========================================================== */
+
+.settings-card--full {
+    grid-column: 1 / -1;
+}

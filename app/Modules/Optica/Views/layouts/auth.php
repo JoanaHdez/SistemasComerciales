@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="<?= base_url('assets/optica/css/base/utilities.css') ?>">
 
     <link rel="stylesheet" href="<?= base_url('assets/optica/css/layouts/auth.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/buttons.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/forms.css') ?>">
 
     <?= $this->renderSection('styles') ?>
+
+    <link rel="stylesheet" href="<?= base_url('assets/optica/css/components/design-system.css') ?>">
 
 </head>
 

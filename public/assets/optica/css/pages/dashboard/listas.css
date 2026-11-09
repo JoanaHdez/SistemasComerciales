@@ -1,0 +1,58 @@
+
+/* ==========================================================
+   Dashboard - Listados
+========================================================== */
+
+.dashboard-list {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+/* ==========================================================
+   Dashboard - Elementos del listado
+========================================================== */
+
+.dashboard-list li {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+/* ==========================================================
+   Dashboard - Último elemento
+========================================================== */
+
+.dashboard-list li:last-child {
+    border-bottom: none;
+}
+
+/* ==========================================================
+   Dashboard - Textos principales
+========================================================== */
+
+.dashboard-list strong {
+    color: #40314f;
+}
+
+/* ==========================================================
+   Dashboard - Textos secundarios
+========================================================== */
+
+.dashboard-list span {
+    color: #8b8096;
+}
+
+/* ==========================================================
+   Dashboard - Indicadores de alerta
+========================================================== */
+
+.dashboard-list--danger strong {
+    color: #b14a3e;
+}

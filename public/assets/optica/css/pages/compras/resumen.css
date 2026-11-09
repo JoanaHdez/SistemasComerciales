@@ -1,0 +1,47 @@
+
+/* ==========================================================
+   Compras - Resumen
+========================================================== */
+
+.purchases-summary {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.purchases-summary__card {
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9e1ef;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, 0.06);
+}
+
+.purchases-summary__label {
+    display: block;
+
+    color: #8d7d99;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.purchases-summary__value {
+    display: block;
+
+    margin: 14px 0 8px;
+
+    color: #47345c;
+
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.purchases-summary__card small {
+    color: #988d9f;
+}

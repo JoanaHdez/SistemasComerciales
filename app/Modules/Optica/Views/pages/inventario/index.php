@@ -1,376 +1,42 @@
 <?= $this->extend('App\Modules\Optica\Views\layouts\main') ?>
-
-<?= $this->section('title') ?>
-Inventario | Opticool
-<?= $this->endSection() ?>
-
+<?= $this->section('title') ?>Inventario | Opticool<?= $this->endSection() ?>
 <?= $this->section('styles') ?>
-
+<link rel="stylesheet" href="<?= base_url('assets/optica/css/components/modal.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/inventario.css') ?>">
-
 <?= $this->endSection() ?>
-
+<?= $this->section('stylesAfter') ?>
+<link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/inventario-reference.css') ?>">
+<?= $this->endSection() ?>
 <?= $this->section('content') ?>
-
-<section class="inventory-page">
-
-    <header class="inventory-page__header">
-
-        <div>
-            <span class="inventory-page__eyebrow">
-                CONTROL DE EXISTENCIAS
-            </span>
-
-            <h1 class="inventory-page__title">
-                Inventario
-            </h1>
-
-            <p class="inventory-page__description">
-                Consulta las existencias de productos, identifica artículos
-                con poco stock y administra el inventario de la óptica.
-            </p>
-        </div>
-
-        <button type="button" class="inventory-page__button" id="new-product-button">
-            + Nuevo producto
-        </button>
-
+<section class="inventory-page" data-inventory-page>
+    <header class="inventory-page__header inventory-hero">
+        <div class="inventory-hero__content"><span class="inventory-page__eyebrow">CONTROL DE EXISTENCIAS</span><h1 class="inventory-page__title">Inventario de productos</h1><p class="inventory-page__description">Consulta existencias, precios y movimientos desde un catálogo central organizado para la operación diaria.</p></div>
+        <div class="inventory-header-actions"><button type="button" class="inventory-page__button inventory-page__button--secondary" id="inventory-history-open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5M12 7v5l3 2"></path></svg><span>Ver movimientos</span></button><button type="button" class="inventory-page__button" id="new-product-button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg><span>Nuevo producto</span></button></div>
     </header>
-
+    <p class="inventory-message" id="inventory-message" hidden></p>
     <div class="inventory-summary">
-
-        <article class="inventory-summary__card">
-
-            <span class="inventory-summary__label">
-                Total de productos
-            </span>
-
-            <strong class="inventory-summary__value">
-                128
-            </strong>
-
-            <span class="inventory-summary__detail">
-                Productos registrados
-            </span>
-
-        </article>
-
-        <article class="inventory-summary__card">
-
-            <span class="inventory-summary__label">
-                Stock disponible
-            </span>
-
-            <strong class="inventory-summary__value">
-                1,246
-            </strong>
-
-            <span class="inventory-summary__detail">
-                Unidades disponibles
-            </span>
-
-        </article>
-
-        <article class="inventory-summary__card">
-
-            <span class="inventory-summary__label">
-                Stock bajo
-            </span>
-
-            <strong class="inventory-summary__value">
-                12
-            </strong>
-
-            <span class="inventory-summary__detail">
-                Requieren reposición
-            </span>
-
-        </article>
-
-        <article class="inventory-summary__card">
-
-            <span class="inventory-summary__label">
-                Sin existencias
-            </span>
-
-            <strong class="inventory-summary__value">
-                4
-            </strong>
-
-            <span class="inventory-summary__detail">
-                Productos agotados
-            </span>
-
-        </article>
-
+        <article class="inventory-summary__card inventory-summary__card--purple"><span class="inventory-summary__icon">P</span><div><span class="inventory-summary__label">Productos activos</span><strong class="inventory-summary__value" id="inventory-total">0</strong><span class="inventory-summary__detail">Referencias en catálogo</span></div></article>
+        <article class="inventory-summary__card inventory-summary__card--blue"><span class="inventory-summary__icon">U</span><div><span class="inventory-summary__label">Unidades disponibles</span><strong class="inventory-summary__value" id="inventory-units">0</strong><span class="inventory-summary__detail">Existencia acumulada</span></div></article>
+        <article class="inventory-summary__card inventory-summary__card--warning"><span class="inventory-summary__icon">!</span><div><span class="inventory-summary__label">Stock bajo</span><strong class="inventory-summary__value" id="inventory-low">0</strong><span class="inventory-summary__detail">Requieren reposición</span></div></article>
+        <article class="inventory-summary__card inventory-summary__card--danger"><span class="inventory-summary__icon">0</span><div><span class="inventory-summary__label">Sin existencias</span><strong class="inventory-summary__value" id="inventory-empty">0</strong><span class="inventory-summary__detail">Productos agotados</span></div></article>
     </div>
-
     <section class="inventory-panel">
-
+        <header class="admin-results__header inventory-panel__header">
+            <div><span class="admin-results__eyebrow">CATÁLOGO CENTRAL</span><h2>Productos registrados</h2><p>Administra la información comercial y las existencias de cada producto.</p></div>
+            <span class="admin-results__count" id="inventory-results-count">Inventario central</span>
+        </header>
         <div class="inventory-toolbar">
-
-            <div class="inventory-search">
-
-                <span class="inventory-search__icon">
-                    🔍
-                </span>
-
-                <input type="search" class="inventory-search__input" id="inventory-search"
-                    placeholder="Buscar por nombre, código o categoría">
-
-            </div>
-
-            <div class="inventory-filters">
-
-                <select class="inventory-filter" id="inventory-category-filter">
-                    <option value="">
-                        Todas las categorías
-                    </option>
-
-                    <option value="armazones">
-                        Armazones
-                    </option>
-
-                    <option value="lentes">
-                        Lentes
-                    </option>
-
-                    <option value="accesorios">
-                        Accesorios
-                    </option>
-
-                    <option value="soluciones">
-                        Soluciones
-                    </option>
-                </select>
-
-                <select class="inventory-filter" id="inventory-status-filter">
-                    <option value="">
-                        Todos los estados
-                    </option>
-
-                    <option value="disponible">
-                        Disponible
-                    </option>
-
-                    <option value="bajo">
-                        Stock bajo
-                    </option>
-
-                    <option value="agotado">
-                        Agotado
-                    </option>
-                </select>
-
-            </div>
-
+            <label class="inventory-search"><span class="inventory-search__label">Buscar en inventario</span><span class="inventory-search__control"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input type="search" class="inventory-search__input" id="inventory-search" placeholder="Nombre, código o categoría"></span></label>
+            <div class="inventory-filters"><label class="inventory-filter-field"><span>Categoría</span><select class="inventory-filter" id="inventory-category-filter"><option value="">Todas las categorías</option></select></label><label class="inventory-filter-field"><span>Disponibilidad</span><select class="inventory-filter" id="inventory-status-filter"><option value="">Todos los estados</option><option value="disponible">Disponible</option><option value="bajo">Stock bajo</option><option value="agotado">Agotado</option><option value="inactivo">Inactivo</option></select></label><button type="button" class="inventory-clear-filters" id="inventory-clear-filters">Limpiar</button></div>
         </div>
-
-        <div class="inventory-table-wrapper">
-
-            <table class="inventory-table">
-
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Código</th>
-                        <th>Categoría</th>
-                        <th>Precio</th>
-                        <th>Existencias</th>
-                        <th>Estado</th>
-                        <th aria-label="Acciones"></th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>
-                            <div class="inventory-product">
-
-                                <div class="inventory-product__image">
-                                    👓
-                                </div>
-
-                                <div>
-                                    <strong class="inventory-product__name">
-                                        Armazón Classic Black
-                                    </strong>
-
-                                    <span class="inventory-product__brand">
-                                        Opticool Collection
-                                    </span>
-                                </div>
-
-                            </div>
-                        </td>
-
-                        <td>ARM-001</td>
-                        <td>Armazones</td>
-                        <td>$1,250.00</td>
-                        <td>18</td>
-
-                        <td>
-                            <span class="inventory-status inventory-status--available">
-                                Disponible
-                            </span>
-                        </td>
-
-                        <td>
-                            <div class="inventory-actions">
-
-                                <button type="button" class="inventory-action" aria-label="Ver producto"
-                                    title="Ver producto">
-                                    👁
-                                </button>
-
-                                <button type="button" class="inventory-action" aria-label="Editar producto"
-                                    title="Editar producto">
-                                    ✏️
-                                </button>
-
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="inventory-product">
-
-                                <div class="inventory-product__image">
-                                    🕶️
-                                </div>
-
-                                <div>
-                                    <strong class="inventory-product__name">
-                                        Armazón Solar Urban
-                                    </strong>
-
-                                    <span class="inventory-product__brand">
-                                        Urban Vision
-                                    </span>
-                                </div>
-
-                            </div>
-                        </td>
-
-                        <td>ARM-014</td>
-                        <td>Armazones</td>
-                        <td>$980.00</td>
-                        <td>4</td>
-
-                        <td>
-                            <span class="inventory-status inventory-status--low">
-                                Stock bajo
-                            </span>
-                        </td>
-
-                        <td>
-                            <div class="inventory-actions">
-
-                                <button type="button" class="inventory-action" aria-label="Ver producto"
-                                    title="Ver producto">
-                                    👁
-                                </button>
-
-                                <button type="button" class="inventory-action" aria-label="Editar producto"
-                                    title="Editar producto">
-                                    ✏️
-                                </button>
-
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="inventory-product">
-
-                                <div class="inventory-product__image">
-                                    💧
-                                </div>
-
-                                <div>
-                                    <strong class="inventory-product__name">
-                                        Solución multipropósito
-                                    </strong>
-
-                                    <span class="inventory-product__brand">
-                                        Clear Care
-                                    </span>
-                                </div>
-
-                            </div>
-                        </td>
-
-                        <td>SOL-006</td>
-                        <td>Soluciones</td>
-                        <td>$210.00</td>
-                        <td>0</td>
-
-                        <td>
-                            <span class="inventory-status inventory-status--empty">
-                                Agotado
-                            </span>
-                        </td>
-
-                        <td>
-                            <div class="inventory-actions">
-
-                                <button type="button" class="inventory-action" aria-label="Ver producto"
-                                    title="Ver producto">
-                                    👁
-                                </button>
-
-                                <button type="button" class="inventory-action" aria-label="Editar producto"
-                                    title="Editar producto">
-                                    ✏️
-                                </button>
-
-                            </div>
-                        </td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-        <footer class="inventory-pagination">
-
-            <span class="inventory-pagination__summary">
-                Mostrando 1 a 3 de 128 productos
-            </span>
-
-            <div class="inventory-pagination__buttons">
-
-                <button type="button" class="inventory-pagination__button" disabled>
-                    Anterior
-                </button>
-
-                <button type="button" class="inventory-pagination__button inventory-pagination__button--active">
-                    1
-                </button>
-
-                <button type="button" class="inventory-pagination__button">
-                    2
-                </button>
-
-                <button type="button" class="inventory-pagination__button">
-                    3
-                </button>
-
-                <button type="button" class="inventory-pagination__button">
-                    Siguiente
-                </button>
-
-            </div>
-
-        </footer>
-
+        <div class="inventory-table-wrapper"><table class="inventory-table"><thead><tr><th>Producto</th><th>Código</th><th>Categoría</th><th>Venta</th><th>Costo</th><th>Existencias</th><th>Estado</th><th>Acciones</th></tr></thead><tbody id="inventory-body"></tbody></table></div>
+        <footer class="inventory-pagination"><span class="inventory-pagination__summary" id="inventory-pagination-summary"></span><div class="inventory-pagination__buttons" id="inventory-pagination"></div></footer>
     </section>
 
-</section>
+    <div class="modal inventory-product-modal" id="inventory-product-modal" aria-hidden="true"><div class="modal__overlay"></div><form class="modal__content inventory-product-modal__dialog" id="inventory-product-form" role="dialog" aria-modal="true" aria-labelledby="inventory-product-title" novalidate><header class="inventory-product-modal__header"><div class="inventory-product-modal__heading"><span class="inventory-product-modal__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 8 8-4 8 4-8 4-8-4Z"></path><path d="m4 8 8 4 8-4M4 12l8 4 8-4M4 16l8 4 8-4"></path></svg></span><div><span class="modal__subtitle">CATÁLOGO DE PRODUCTOS</span><h2 class="modal__title" id="inventory-product-title">Nuevo producto</h2><p class="modal__description">Registra la información necesaria para vender y controlar este producto.</p></div></div><button type="button" class="modal__close" aria-label="Cerrar">×</button></header><div class="inventory-product-modal__body"><aside class="inventory-product-modal__aside"><span class="inventory-product-modal__step">01</span><h3>Datos del producto</h3><p>Los campos marcados con asterisco son obligatorios.</p><ul><li>Identificación comercial</li><li>Control de existencias</li><li>Precios de compra y venta</li></ul></aside><div class="inventory-product-modal__form"><section class="inventory-form-section"><div class="inventory-form-section__header"><span>01</span><div><h3>Identificación</h3><p>Información visible en el catálogo.</p></div></div><div class="modal__grid"><div class="form-group"><label for="inventory-product-code">Código *</label><input id="inventory-product-code" maxlength="40" required placeholder="Ej. AR-001"><small>Utiliza un código único.</small></div><div class="form-group"><label for="inventory-product-name">Nombre del producto *</label><input id="inventory-product-name" maxlength="160" required placeholder="Ej. Armazón acetato negro"></div><div class="form-group form-group--full"><label for="inventory-product-category">Categoría *</label><input id="inventory-product-category" maxlength="80" required placeholder="Ej. Armazones"></div></div></section><section class="inventory-form-section"><div class="inventory-form-section__header"><span>02</span><div><h3>Existencias y precios</h3><p>Define el punto de reposición y los importes.</p></div></div><div class="modal__grid modal__grid--three"><div class="form-group"><label for="inventory-product-min">Stock mínimo *</label><input type="number" id="inventory-product-min" min="0" step="1" required><small>Alerta de reposición.</small></div><div class="form-group"><label for="inventory-product-cost">Costo *</label><div class="inventory-money-field"><span>$</span><input type="number" id="inventory-product-cost" min="0" step="0.01" required></div></div><div class="form-group"><label for="inventory-product-price">Precio de venta *</label><div class="inventory-money-field"><span>$</span><input type="number" id="inventory-product-price" min="0" step="0.01" required></div></div></div></section><p class="inventory-modal-message" id="inventory-product-message" hidden></p></div></div><footer class="inventory-product-modal__footer"><p>Revisa los datos antes de guardar el producto.</p><div><button type="button" class="btn btn-secondary" data-modal-close>Cancelar</button><button type="submit" class="btn btn-primary">Guardar producto</button></div></footer></form></div>
 
+    <div class="modal" id="inventory-movement-modal" aria-hidden="true"><div class="modal__overlay"></div><form class="modal__content modal__content--compact" id="inventory-movement-form" role="dialog" aria-modal="true" novalidate><header class="modal__header"><div><span class="modal__subtitle">CONTROL DE EXISTENCIAS</span><h2 class="modal__title" id="inventory-movement-title">Registrar movimiento</h2><p class="modal__description">Documenta la entrada, salida o ajuste de unidades.</p></div><button type="button" class="modal__close" aria-label="Cerrar">×</button></header><div class="modal__body"><div class="modal__grid"><div class="form-group"><label>Tipo *</label><select id="inventory-movement-type"><option value="entrada">Entrada</option><option value="salida">Salida</option><option value="ajuste-entrada">Ajuste de entrada</option><option value="ajuste-salida">Ajuste de salida</option></select></div><div class="form-group"><label>Cantidad *</label><input type="number" id="inventory-movement-quantity" min="1" step="1" required></div><div class="form-group form-group--full"><label>Motivo *</label><textarea id="inventory-movement-reason" maxlength="300" required></textarea></div></div><p class="inventory-modal-message" id="inventory-movement-message" hidden></p></div><footer class="modal__footer"><button type="button" class="btn btn-secondary" data-modal-close>Cancelar</button><button type="submit" class="btn btn-primary">Registrar movimiento</button></footer></form></div>
+
+    <div class="modal" id="inventory-history-modal" aria-hidden="true"><div class="modal__overlay"></div><div class="modal__content inventory-history" role="dialog" aria-modal="true"><header class="modal__header"><div><span class="modal__subtitle">TRAZABILIDAD</span><h2 class="modal__title">Movimientos de inventario</h2></div><button type="button" class="modal__close">×</button></header><div id="inventory-history-list"></div></div></div>
+</section>
 <?= $this->endSection() ?>

@@ -1,0 +1,87 @@
+
+/* ==========================================================
+   Compras - Responsive
+========================================================== */
+
+/* ==========================================================
+   Tablets y pantallas medianas
+========================================================== */
+
+@media (max-width: 1000px) {
+
+    .purchases-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .purchases-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .purchase-card__body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ==========================================================
+   Celulares y pantallas pequeñas
+========================================================== */
+
+@media (max-width: 640px) {
+
+    .purchases-page__header {
+        flex-direction: column;
+    }
+
+    .purchases-page__button {
+        width: 100%;
+    }
+
+    .purchases-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .purchase-card__header {
+        flex-direction: column;
+    }
+
+    .purchase-card__body {
+        grid-template-columns: 1fr;
+    }
+
+    .purchase-card__footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .purchase-card__button {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================================
+   Compras - Ajustes de formularios y acciones
+========================================================== */
+
+@media (max-width: 800px) {
+
+    .purchases-filters {
+        grid-template-columns: 1fr !important;
+    }
+
+    .purchase-item {
+        grid-template-columns: 1fr 70px;
+    }
+
+    .purchase-item input[data-cost] {
+        grid-column: 1;
+    }
+
+    .purchases-actions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+}

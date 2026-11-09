@@ -1,0 +1,46 @@
+
+/* ==========================================================
+   Configuración - Datos del negocio
+========================================================== */
+
+.settings-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 0 36px;
+}
+
+/* ==========================================================
+   Configuración - Elementos de información
+========================================================== */
+
+.settings-info__item {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eee8f1;
+}
+
+/* ==========================================================
+   Configuración - Etiquetas
+========================================================== */
+
+.settings-info__item span {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #95899d;
+
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Configuración - Valores
+========================================================== */
+
+.settings-info__item strong {
+    color: #44364e;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+}

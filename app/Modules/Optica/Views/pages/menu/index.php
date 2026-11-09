@@ -1,80 +1,16 @@
 <?= $this->extend('App\Modules\Optica\Views\layouts\auth') ?>
-
-<?= $this->section('title') ?>
-Menú principal | Opticool
-<?= $this->endSection() ?>
-
-<?= $this->section('styles') ?>
-
-<link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/menu.css') ?>">
-
-<?= $this->endSection() ?>
-
+<?= $this->section('title') ?>Menú principal | Opticool<?= $this->endSection() ?>
+<?= $this->section('styles') ?><link rel="stylesheet" href="<?= base_url('assets/optica/css/pages/menu.css') ?>"><?= $this->endSection() ?>
 <?= $this->section('content') ?>
-
-<section class="main-menu">
-
-    <div class="main-menu__decorations" aria-hidden="true">
-        <span class="main-menu__decoration main-menu__decoration--top-left"></span>
-        <span class="main-menu__decoration main-menu__decoration--top-center"></span>
-        <span class="main-menu__decoration main-menu__decoration--top-right"></span>
-        <span class="main-menu__decoration main-menu__decoration--middle-right"></span>
-        <span class="main-menu__decoration main-menu__decoration--bottom-left"></span>
-        <span class="main-menu__decoration main-menu__decoration--bottom-right"></span>
-    </div>
-
-    <div class="main-menu__container">
-
-        <div class="main-menu__brand">
-
-            <div class="main-menu__logo-placeholder">
-                Opticool
-            </div>
-
-            <p class="main-menu__subtitle">
-                Óptica
-            </p>
-
-        </div>
-
-        <div class="main-menu__actions">
-
-            <a href="<?= base_url('optica/clientes') ?>" class="main-menu__button">
-                Cliente
-            </a>
-
-            <a href="<?= base_url('optica/consulta') ?>" class="main-menu__button">
-                Consulta
-            </a>
-
-            <a href="<?= base_url('optica/agenda') ?>" class="main-menu__button">
-                Agenda
-            </a>
-
-            <a href="#" class="main-menu__button">
-                Nueva Venta
-            </a>
-
-        </div>
-
-        <div class="main-menu__footer-actions" aria-label="Acciones secundarias">
-
-            <a href="#" class="main-menu__footer-icon" aria-label="Configuración">
-                <span>CF</span>
-            </a>
-
-            <a href="#" class="main-menu__footer-icon" aria-label="Perfil">
-                <span>PF</span>
-            </a>
-
-            <a href="#" class="main-menu__footer-icon" aria-label="Salir">
-                <span>SA</span>
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
+<section class="main-menu"><div class="main-menu__decorations" aria-hidden="true"><span></span><span></span><span></span></div><div class="main-menu__container">
+<header class="main-menu__brand"><span class="main-menu__eyebrow">SISTEMA DE GESTIÓN</span><h1>Opticool</h1><p>Óptica y salud visual</p></header>
+<div class="main-menu__actions">
+<?php foreach ([
+['optica/dashboard','Dashboard','Resumen de la operación','⌂'],['optica/clientes','Clientes','Buscar y registrar clientes','◎'],['optica/consulta','Consulta','Atención y expediente clínico','◉'],['optica/agenda','Agenda','Citas y calendario','□'],['optica/ventas/nueva','Nueva venta','Registrar productos y pagos','$'],['optica/pedidos','Pedidos','Seguimiento de laboratorio','◇'],['optica/inventario','Inventario','Productos y existencias','▦'],['optica/compras','Compras','Órdenes y proveedores','↓']
+] as [$ruta,$titulo,$texto,$icono]): ?>
+<a href="<?= base_url($ruta) ?>" class="main-menu__button"><span class="main-menu__icon"><?= esc($icono) ?></span><span><strong><?= esc($titulo) ?></strong><small><?= esc($texto) ?></small></span></a>
+<?php endforeach ?>
+</div>
+<nav class="main-menu__footer-actions" aria-label="Acciones secundarias"><a href="<?= base_url('optica/reportes') ?>">Reportes</a><a href="<?= base_url('optica/perfil') ?>">Mi perfil</a><a href="<?= base_url('optica/configuracion') ?>">Configuración</a><a href="<?= base_url('optica/login') ?>">Salir</a></nav>
+</div></section>
 <?= $this->endSection() ?>

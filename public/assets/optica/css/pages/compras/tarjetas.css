@@ -1,0 +1,162 @@
+
+/* ==========================================================
+   Compras - Listado
+========================================================== */
+
+.purchases-list {
+    display: grid;
+    gap: 22px;
+}
+
+/* ==========================================================
+   Compras - Tarjeta
+========================================================== */
+
+.purchase-card {
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9e1ef;
+    border-left: 6px solid #46b36c;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, 0.06);
+}
+
+.purchase-card--warning {
+    border-left-color: #f2a93b;
+}
+
+/* ==========================================================
+   Compras - Encabezado de tarjeta
+========================================================== */
+
+.purchase-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.purchase-card__folio {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #8d7d99;
+
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.purchase-card__provider {
+    margin: 0;
+
+    color: #433252;
+
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.purchase-card__status {
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background: #efe8f5;
+    color: #684d86;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Compras - Información
+========================================================== */
+
+.purchase-card__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.purchase-card__body strong {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #695c73;
+
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.purchase-card__body p {
+    margin: 0;
+
+    color: #3e3247;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* ==========================================================
+   Compras - Pie de tarjeta
+========================================================== */
+
+.purchase-card__footer {
+    margin-top: 28px;
+    padding-top: 22px;
+
+    border-top: 1px solid #ece5f1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.purchase-card__links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.purchase-card__links a {
+    color: #76539b;
+
+    text-decoration: none;
+
+    font-weight: 700;
+    font-size: 0.82rem;
+}
+
+/* ==========================================================
+   Compras - Botón de tarjeta
+========================================================== */
+
+.purchase-card__button {
+    min-height: 46px;
+    padding: 0 22px;
+
+    border: 0;
+    border-radius: 12px;
+
+    background: #76539b;
+    color: #ffffff;
+
+    font: inherit;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.purchase-card__button:hover {
+    background: #624483;
+    transform: translateY(-1px);
+}

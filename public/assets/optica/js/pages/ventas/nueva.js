@@ -347,7 +347,7 @@ export function inicializarNuevaVenta() {
             : guardarVenta(datos, tokenGuardado);
         if (!resultado.exito) {
             guardando = false; botonGuardar.disabled = false;
-            mostrarMensaje("No fue posible guardar la venta simulada.");
+            mostrarMensaje(resultado.mensaje ?? "No fue posible guardar la venta simulada.");
             return;
         }
         mostrarMensaje(`${ventaEditada ? "Venta actualizada" : "Venta guardada"}: ${resultado.venta.folio}.`, "exito");

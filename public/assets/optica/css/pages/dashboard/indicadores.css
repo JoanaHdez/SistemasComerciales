@@ -1,0 +1,57 @@
+
+/* ==========================================================
+   Dashboard - Contenedor de indicadores
+========================================================== */
+
+.dashboard-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+/* ==========================================================
+   Dashboard - Tarjetas de indicadores
+========================================================== */
+
+.dashboard-stat {
+    padding: 28px;
+
+    background: #fff;
+
+    border: 1px solid #ebe3f2;
+    border-radius: 22px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, 0.06);
+}
+
+/* ==========================================================
+   Dashboard - Iconos
+========================================================== */
+
+.dashboard-stat__icon {
+    font-size: 2rem;
+}
+
+/* ==========================================================
+   Dashboard - Valores
+========================================================== */
+
+.dashboard-stat strong {
+    display: block;
+
+    margin: 18px 0 10px;
+
+    color: #3b2c4d;
+
+    font-size: 2.2rem;
+}
+
+/* ==========================================================
+   Dashboard - Etiquetas
+========================================================== */
+
+.dashboard-stat small {
+    color: #887d91;
+}

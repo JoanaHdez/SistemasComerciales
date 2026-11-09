@@ -23,6 +23,7 @@ import { ModalCancelacionVenta } from "./modal_cancelacion.js";
 import { ModalDevolucionVenta } from "./modal_devolucion.js";
 import { ModalFormatoImpresion } from "./modal_impresion.js";
 import { ModalReembolsoVenta } from "./modal_reembolso.js";
+import { ModalPedidoVenta } from "./modal_pedido.js";
 
 function escapar(valor) {
     const nodo = document.createElement("div");
@@ -57,6 +58,7 @@ export function inicializarHistorialVentas() {
     const modalDevolucion = new ModalDevolucionVenta();
     const modalImpresion = new ModalFormatoImpresion();
     const modalReembolso = new ModalReembolsoVenta();
+    const modalPedido = new ModalPedidoVenta();
     let ventaDetalleId = null;
 
     function ventasFiltradas() {
@@ -137,6 +139,7 @@ export function inicializarHistorialVentas() {
             <div class="sales-detail__actions">
                 ${!venta.cancelacion && financiero.saldoCentavos > 0 ? '<button type="button" data-action="payment">Registrar abono</button>' : ""}
                 ${editable ? '<button type="button" data-action="edit">Editar venta</button>' : ""}
+                ${!venta.cancelacion && venta.partidas.length ? '<button type="button" data-action="order">Generar pedido</button>' : ""}
                 <button type="button" data-action="print">Imprimir comprobante</button>
                 ${administrador && !venta.cancelacion && productosDevolvibles(venta).length ? '<button type="button" data-action="return">Devolución</button>' : ""}
                 ${administrador && !venta.cancelacion ? '<button type="button" data-action="cancel" class="danger">Cancelar venta</button>' : ""}
@@ -217,6 +220,23 @@ export function inicializarHistorialVentas() {
                 },
             alCancelar: () => abrirDetalle(venta.id),
             alCompletar: () => abrirDetalle(venta.id),
+        });
+    }
+
+    function generarPedidoDesdeDetalle(venta) {
+        if (venta.cancelacion || !venta.partidas.length) return;
+        if (detalle.open) detalle.close();
+
+        modalPedido.abrir({
+            venta,
+            alCancelar: () => abrirDetalle(venta.id),
+            alCompletar: (pedido) => {
+                abrirDetalle(venta.id);
+                const aviso = document.createElement("div");
+                aviso.className = "sales-warning sales-warning--success";
+                aviso.innerHTML = `<strong>Pedido ${escapar(pedido.folio)} generado</strong><span>Ya está disponible en el tablero de Pedidos.</span>`;
+                detalleContenido.prepend(aviso);
+            },
         });
     }
 
@@ -374,6 +394,7 @@ export function inicializarHistorialVentas() {
             const url = new URL(pagina.querySelector(".sales-history-page__button").href);
             url.searchParams.set("editar", venta.id); location.href = url;
         });
+        detalleContenido.querySelector('[data-action="order"]')?.addEventListener("click", () => generarPedidoDesdeDetalle(venta));
         detalleContenido.querySelector('[data-action="print"]')?.addEventListener("click", () => {
             seleccionarFormatoImpresion(venta, (formato) => imprimirVenta(venta, formato));
         });

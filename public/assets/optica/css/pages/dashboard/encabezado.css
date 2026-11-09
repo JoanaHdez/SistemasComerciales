@@ -1,0 +1,53 @@
+
+/* ==========================================================
+   Dashboard - Encabezado
+========================================================== */
+
+.dashboard-page__header {
+    margin-bottom: 30px;
+}
+
+/* ==========================================================
+   Dashboard - Texto superior
+========================================================== */
+
+.dashboard-page__eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #876ba5;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   Dashboard - Título principal
+========================================================== */
+
+.dashboard-page__title {
+    margin: 0;
+
+    color: #2d203b;
+
+    font-size: 2.35rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Dashboard - Descripción
+========================================================== */
+
+.dashboard-page__description {
+    max-width: 760px;
+
+    margin-top: 14px;
+
+    color: #776b80;
+
+    line-height: 1.7;
+}

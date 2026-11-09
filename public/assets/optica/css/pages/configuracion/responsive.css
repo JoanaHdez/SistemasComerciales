@@ -1,0 +1,53 @@
+
+/* ==========================================================
+   Configuración - Responsive
+========================================================== */
+
+/* ==========================================================
+   Tablets y pantallas medianas
+========================================================== */
+
+@media (max-width: 750px) {
+
+    .settings-info {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-access {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .settings-access__button {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================================
+   Formularios en pantallas pequeñas
+========================================================== */
+
+@media (max-width: 700px) {
+
+    .settings-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==========================================================
+   Celulares
+========================================================== */
+
+@media (max-width: 560px) {
+
+    .settings-card__header {
+        flex-direction: column;
+    }
+
+    .settings-option {
+        align-items: flex-start;
+    }
+
+}

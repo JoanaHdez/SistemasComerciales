@@ -1,0 +1,84 @@
+
+/* ==========================================================
+   Dashboard - Tarjeta de bienvenida
+========================================================== */
+
+.dashboard-hero {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 34px;
+
+    background: #fff;
+
+    border: 1px solid #ebe3f2;
+    border-radius: 24px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, 0.06);
+}
+
+/* ==========================================================
+   Dashboard - Texto superior
+========================================================== */
+
+.dashboard-hero__eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #876ba5;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+/* ==========================================================
+   Dashboard - Título de bienvenida
+========================================================== */
+
+.dashboard-hero__title {
+    margin: 0;
+
+    color: #332545;
+
+    font-size: 2rem;
+}
+
+/* ==========================================================
+   Dashboard - Descripción
+========================================================== */
+
+.dashboard-hero__text {
+    margin-top: 14px;
+    max-width: 650px;
+
+    color: #7a6d83;
+
+    line-height: 1.7;
+}
+
+/* ==========================================================
+   Dashboard - Fecha
+========================================================== */
+
+.dashboard-hero__date {
+    text-align: right;
+}
+
+.dashboard-hero__date strong {
+    display: block;
+
+    color: #5d4678;
+
+    font-size: 1.25rem;
+}
+
+.dashboard-hero__date small {
+    color: #8d8098;
+}

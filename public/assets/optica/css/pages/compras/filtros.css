@@ -1,0 +1,59 @@
+
+/* ==========================================================
+   Compras - Filtros
+========================================================== */
+
+.purchases-filters {
+    display: grid;
+
+    grid-template-columns: 1fr 220px 220px;
+
+    gap: 16px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9e1ef;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, 0.06);
+}
+
+/* ==========================================================
+   Compras - Campos de búsqueda y selección
+========================================================== */
+
+.purchases-filters__search,
+.purchases-filters__select {
+    width: 100%;
+    min-height: 48px;
+
+    padding: 0 16px;
+
+    border: 1px solid #ddd4e5;
+    border-radius: 12px;
+
+    outline: none;
+
+    font: inherit;
+}
+
+/* ==========================================================
+   Compras - Estados de enfoque
+========================================================== */
+
+.purchases-filters__search:focus,
+.purchases-filters__select:focus {
+    border-color: #76539b;
+
+    box-shadow: 0 0 0 4px rgba(118, 83, 155, 0.10);
+}
+
+/* ==========================================================
+   Compras - Distribución extendida
+========================================================== */
+
+.purchases-filters {
+    grid-template-columns: 1fr 220px 220px auto !important;
+}

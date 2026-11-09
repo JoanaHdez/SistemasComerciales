@@ -1,0 +1,90 @@
+
+/* ==========================================================
+   Compras - Modal principal
+========================================================== */
+
+.purchases-modal {
+    width: min(900px, 100%);
+}
+
+/* ==========================================================
+   Compras - Listado de productos
+========================================================== */
+
+.purchase-items {
+    display: grid;
+    gap: 10px;
+}
+
+/* ==========================================================
+   Compras - Producto individual
+========================================================== */
+
+.purchase-item {
+    display: grid;
+    grid-template-columns: 1fr 90px 130px 42px;
+    gap: 8px;
+}
+
+/* ==========================================================
+   Compras - Campos de productos
+========================================================== */
+
+.purchase-item select,
+.purchase-item input,
+.supplier-new input {
+    padding: 11px;
+
+    border: 1px solid #ded5ea;
+    border-radius: 10px;
+
+    font: inherit;
+}
+
+/* ==========================================================
+   Compras - Botón para eliminar producto
+========================================================== */
+
+.purchase-item button {
+    border: 0;
+    border-radius: 10px;
+
+    background: #fff0f1;
+    color: #a13c46;
+}
+
+/* ==========================================================
+   Compras - Resumen del detalle
+========================================================== */
+
+.purchase-detail-summary {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+}
+
+.purchase-detail-summary > * {
+    padding: 10px;
+
+    background: #f8f6fb;
+
+    border-radius: 10px;
+}
+
+/* ==========================================================
+   Compras - Tabla del modal
+========================================================== */
+
+.purchases-modal table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.purchases-modal th,
+.purchases-modal td {
+    padding: 10px;
+
+    border-bottom: 1px solid #eee;
+}

@@ -1,0 +1,50 @@
+
+/* ==========================================================
+   Configuración - Encabezado
+========================================================== */
+
+.settings-page__header {
+    margin-bottom: 30px;
+}
+
+/* ==========================================================
+   Configuración - Texto superior
+========================================================== */
+
+.settings-page__eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #876ba5;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   Configuración - Título
+========================================================== */
+
+.settings-page__title {
+    margin: 0;
+
+    color: #2d203b;
+
+    font-size: 2.35rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Configuración - Descripción
+========================================================== */
+
+.settings-page__description {
+    max-width: 720px;
+    margin: 12px 0 0;
+
+    color: #776b80;
+
+    line-height: 1.6;
+}

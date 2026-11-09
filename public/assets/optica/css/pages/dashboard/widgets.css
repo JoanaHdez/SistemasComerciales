@@ -1,0 +1,62 @@
+
+/* ==========================================================
+   Dashboard - Contenedor de widgets
+========================================================== */
+
+.dashboard-widgets {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 24px;
+}
+
+/* ==========================================================
+   Dashboard - Tarjetas de widgets
+========================================================== */
+
+.dashboard-card {
+    padding: 26px;
+
+    background: #fff;
+
+    border: 1px solid #ebe3f2;
+    border-radius: 22px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, 0.06);
+}
+
+/* ==========================================================
+   Dashboard - Encabezado de tarjeta
+========================================================== */
+
+.dashboard-card__header {
+    margin-bottom: 22px;
+}
+
+/* ==========================================================
+   Dashboard - Texto superior
+========================================================== */
+
+.dashboard-card__eyebrow {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #876ba5;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+}
+
+/* ==========================================================
+   Dashboard - Título de tarjeta
+========================================================== */
+
+.dashboard-card h2 {
+    margin: 0;
+
+    color: #3a2c4c;
+}

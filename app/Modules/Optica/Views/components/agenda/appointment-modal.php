@@ -60,7 +60,9 @@
                         Profesional responsable
                     </label>
 
-                    <select id="appointment-professional" name="responsable_id" required>
+                    <select id="appointment-professional" name="responsable_id" required
+                        data-custom-select data-custom-select-search="true"
+                        data-custom-select-placeholder="Selecciona un profesional">
                         <option value="">
                             Selecciona un profesional
                         </option>

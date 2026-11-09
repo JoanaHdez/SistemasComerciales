@@ -1,0 +1,77 @@
+
+/* ==========================================================
+   Compras - Acciones principales
+========================================================== */
+
+.purchases-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.purchases-page__button {
+    border: 0;
+    cursor: pointer;
+}
+
+.purchases-page__button--secondary {
+    background: #eee8f5 !important;
+    color: #5d4579 !important;
+}
+
+/* ==========================================================
+   Compras - Botones de acciones
+========================================================== */
+
+.purchases-filters button,
+.purchase-inline,
+.supplier-row button {
+    border: 0;
+    border-radius: 12px;
+
+    padding: 10px 14px;
+
+    background: #eee8f5;
+    color: #5d4579;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+/* ==========================================================
+   Compras - Mensajes
+========================================================== */
+
+.purchases-message,
+.purchases-modal-message {
+    padding: 12px 16px;
+
+    border-radius: 12px;
+
+    background: #edf8f3;
+    color: #237557;
+
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Compras - Mensajes de error
+========================================================== */
+
+.purchases-message[data-tipo="error"],
+.purchases-modal-message[data-tipo="error"] {
+    background: #fff0f1;
+    color: #a13c46;
+}
+
+/* ==========================================================
+   Compras - Estado vacío
+========================================================== */
+
+.purchases-empty {
+    padding: 40px;
+
+    text-align: center;
+
+    color: #8d7d99;
+}

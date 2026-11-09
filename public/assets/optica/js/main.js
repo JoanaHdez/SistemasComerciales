@@ -17,6 +17,7 @@ import "./layout.js";
 ========================================================== */
 
 import "./components/modal.js";
+import "./components/custom-select.js";
 import "./agenda.js";
 
 
@@ -60,3 +61,21 @@ import "./pages/historial/historial.js";
 ========================================================== */
 
 import "./pages/ventas/ventas.js";
+
+
+/* ==========================================================
+   PEDIDOS
+========================================================== */
+
+import "./pages/pedidos/pedidos.js";
+
+
+/* ==========================================================
+   INVENTARIO, COMPRAS, CONFIGURACIÓN, PERFIL Y REPORTES
+========================================================== */
+
+import "./pages/inventario/inventario.js";
+import "./pages/compras/compras.js";
+import "./pages/configuracion/configuracion.js";
+import "./pages/perfil/perfil.js";
+import "./pages/reportes/reportes.js";

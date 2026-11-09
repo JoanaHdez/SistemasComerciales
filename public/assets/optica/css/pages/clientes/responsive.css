@@ -1,0 +1,39 @@
+
+/* ==========================================================
+   Clientes - Responsive
+========================================================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 900px) {
+    .clients-page__header {
+        flex-direction: column;
+    }
+
+    .clients-page__primary-action {
+        width: 100%;
+    }
+
+    .clients-search-card {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+}
+
+/* Celulares y pantallas pequeñas */
+@media (max-width: 700px) {
+    .clients-page__title {
+        font-size: 1.9rem;
+    }
+
+    .clients-search-card {
+        padding: 22px 18px;
+    }
+
+    .clients-search {
+        grid-template-columns: 1fr;
+    }
+
+    .clients-search__button {
+        width: 100%;
+    }
+}

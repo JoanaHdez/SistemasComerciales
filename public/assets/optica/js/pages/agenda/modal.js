@@ -134,6 +134,10 @@ export function crearModalCitas(contexto) {
             }
         }
 
+        contexto.appointmentProfessional.dispatchEvent(
+            new Event("custom-select:sync")
+        );
+
         contexto.appointmentModal.open();
     }
 
