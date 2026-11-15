@@ -1,0 +1,176 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVA VENTA
+   Panel de resumen de venta
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal del resumen
+========================================================== */
+
+.sale-summary {
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+
+    padding: 28px;
+
+    display: grid;
+    gap: 22px;
+
+    background: #ffffff;
+    border: 1px solid #e9e1ef;
+    border-radius: 22px;
+
+    box-shadow: 0 14px 34px rgba(67, 48, 83, 0.08);
+}
+
+/* ==========================================================
+   Encabezado del resumen
+========================================================== */
+
+.sale-summary__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ==========================================================
+   Icono del resumen
+========================================================== */
+
+.sale-summary__icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    color: #ffffff;
+    background: #76539b;
+    border-radius: 13px;
+
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Título del resumen
+========================================================== */
+
+.sale-summary__header h2 {
+    margin: 0;
+
+    color: #49365d;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================
+   Descripción del resumen
+========================================================== */
+
+.sale-summary__header p {
+    margin: 4px 0 0;
+
+    color: #918697;
+    font-size: 0.8rem;
+}
+
+/* ==========================================================
+   Elementos individuales del resumen
+========================================================== */
+
+.sale-summary__item {
+    display: grid;
+    gap: 8px;
+}
+
+/* ==========================================================
+   Etiquetas de los importes
+========================================================== */
+
+.sale-summary__label {
+    color: #6a5b75;
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Valores del resumen
+========================================================== */
+
+.sale-summary__value {
+    color: #3d3147;
+    font-size: 1rem;
+}
+
+/* ==========================================================
+   Campos de entrada del resumen
+========================================================== */
+
+.sale-summary__input {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 12px;
+
+    color: #332b39;
+    background: #faf8fc;
+
+    border: 1px solid #ded6e5;
+    border-radius: 10px;
+    outline: none;
+
+    font: inherit;
+}
+
+/* ==========================================================
+   Efecto focus de los campos
+========================================================== */
+
+.sale-summary__input:focus {
+    border-color: #8468a8;
+    box-shadow: 0 0 0 4px rgba(132, 104, 168, 0.12);
+}
+
+/* ==========================================================
+   Separador visual
+========================================================== */
+
+.sale-summary__separator {
+    height: 1px;
+    background: #e8e0ed;
+}
+
+/* ==========================================================
+   Contenedor del total
+========================================================== */
+
+.sale-summary__item--total {
+    gap: 10px;
+}
+
+/* ==========================================================
+   Importe total de la venta
+========================================================== */
+
+.sale-summary__total {
+    color: #5d4178;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Contenedor de acciones del resumen
+========================================================== */
+
+.sale-summary__actions {
+    display: grid;
+    gap: 10px;
+}
+
+/* ==========================================================
+   Separación entre campos consecutivos del resumen
+========================================================== */
+
+.sale-summary__item .sale-summary__input + .sale-summary__input {
+    margin-top: 8px;
+}

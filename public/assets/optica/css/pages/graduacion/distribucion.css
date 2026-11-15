@@ -1,0 +1,38 @@
+
+/* ==========================================================
+   Graduación - Distribución principal
+========================================================== */
+
+.graduacion-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.75fr)
+        minmax(280px, 0.75fr);
+
+    gap: 32px;
+    align-items: start;
+}
+
+/* ==========================================================
+   Graduación - Columna izquierda
+========================================================== */
+
+.graduacion-left {
+    display: grid;
+    gap: 18px;
+}
+
+/* ==========================================================
+   Graduación - Columna derecha
+========================================================== */
+
+.graduacion-right {
+    padding: 22px;
+
+    display: grid;
+    gap: 18px;
+
+    background: #faf8fc;
+    border: 1px solid #e7dfec;
+    border-radius: 17px;
+}

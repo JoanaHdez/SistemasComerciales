@@ -1,0 +1,93 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Encabezado principal
+========================================================== */
+
+/* ==========================================================
+   Contenedor del encabezado
+========================================================== */
+
+.inventory-page__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* ==========================================================
+   Texto superior del encabezado
+========================================================== */
+
+.inventory-page__eyebrow {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #7b5ca7;
+}
+
+/* ==========================================================
+   Título principal
+========================================================== */
+
+.inventory-page__title {
+    margin: 0;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    color: #2e2146;
+}
+
+/* ==========================================================
+   Descripción del encabezado
+========================================================== */
+
+.inventory-page__description {
+    max-width: 680px;
+    margin: 14px 0 0;
+
+    line-height: 1.7;
+    color: #746a82;
+}
+
+/* ==========================================================
+   Botón principal
+========================================================== */
+
+.inventory-page__button {
+    flex-shrink: 0;
+
+    min-height: 48px;
+    padding: 0 22px;
+
+    border: 0;
+    border-radius: 14px;
+
+    background: #7350a0;
+    color: #ffffff;
+
+    font: inherit;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 30px rgba(115, 80, 160, 0.2);
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* ==========================================================
+   Efecto hover del botón principal
+========================================================== */
+
+.inventory-page__button:hover {
+    background: #66458f;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(115, 80, 160, 0.26);
+}

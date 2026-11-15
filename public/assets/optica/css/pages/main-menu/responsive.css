@@ -1,0 +1,58 @@
+
+/* ==========================================================
+   OPTICOOL - MENÚ PRINCIPAL
+   Diseño responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 1000px
+   Adaptaciones para tablets
+========================================================== */
+
+@media (max-width: 1000px) {
+
+    /* Distribución de las tarjetas */
+
+    .main-menu__actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 580px
+   Adaptaciones para celulares
+========================================================== */
+
+@media (max-width: 580px) {
+
+    /* Contenedor principal */
+
+    .main-menu {
+        padding: 24px 16px;
+    }
+
+    /* Distribución de las tarjetas */
+
+    .main-menu__actions {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tarjetas de navegación */
+
+    .main-menu__button {
+        min-height: 105px;
+    }
+
+    /* Contenedor de enlaces inferiores */
+
+    .main-menu__footer-actions {
+        align-items: stretch;
+    }
+
+    /* Enlaces inferiores */
+
+    .main-menu__footer-actions a {
+        flex: 1 1 42%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,111 @@
+
+/* ==========================================================
+   OPTICOOL - MI PERFIL
+   Resumen del usuario
+========================================================== */
+
+/* ==========================================================
+   Tarjeta de resumen
+========================================================== */
+
+.profile-card--summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 32px;
+}
+
+/* ==========================================================
+   Contenedor de información del usuario
+========================================================== */
+
+.profile-summary {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+/* ==========================================================
+   Avatar del usuario
+========================================================== */
+
+.profile-summary__avatar {
+    width: 78px;
+    height: 78px;
+
+    flex: 0 0 78px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #76539b;
+    color: #fff;
+
+    font-size: 1.35rem;
+    font-weight: 800;
+
+    box-shadow: 0 10px 24px rgba(118, 83, 155, .20);
+}
+
+/* ==========================================================
+   Texto superior del resumen
+========================================================== */
+
+.profile-summary__eyebrow {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #876ba5;
+
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+}
+
+/* ==========================================================
+   Nombre del usuario
+========================================================== */
+
+.profile-summary__name {
+    margin: 0;
+
+    color: #332545;
+
+    font-size: 1.65rem;
+}
+
+/* ==========================================================
+   Rol del usuario
+========================================================== */
+
+.profile-summary__role {
+    margin: 6px 0 0;
+
+    color: #807486;
+}
+
+/* ==========================================================
+   Estado del usuario
+========================================================== */
+
+.profile-status {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 34px;
+    padding: 0 14px;
+
+    border-radius: 999px;
+
+    background: #eaf7ef;
+    color: #32815a;
+
+    font-size: .76rem;
+    font-weight: 800;
+}

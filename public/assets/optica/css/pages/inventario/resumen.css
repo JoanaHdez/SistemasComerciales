@@ -1,0 +1,99 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Tarjetas de resumen
+========================================================== */
+
+/* ==========================================================
+   Contenedor de tarjetas
+========================================================== */
+
+.inventory-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* ==========================================================
+   Tarjeta individual
+========================================================== */
+
+.inventory-summary__card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    padding: 22px;
+
+    border: 1px solid #eee8f4;
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow: 0 12px 30px rgba(43, 29, 64, 0.06);
+
+    overflow: hidden;
+}
+
+/* ==========================================================
+   Elemento decorativo de la tarjeta
+========================================================== */
+
+.inventory-summary__card::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 72px;
+    height: 72px;
+
+    border-radius: 0 0 0 72px;
+
+    background: rgba(123, 92, 167, 0.08);
+}
+
+/* ==========================================================
+   Etiqueta del indicador
+========================================================== */
+
+.inventory-summary__label {
+    position: relative;
+    z-index: 1;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #786e86;
+}
+
+/* ==========================================================
+   Valor del indicador
+========================================================== */
+
+.inventory-summary__value {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 14px;
+
+    font-size: 2rem;
+    line-height: 1;
+    color: #2e2146;
+}
+
+/* ==========================================================
+   Descripción complementaria del indicador
+========================================================== */
+
+.inventory-summary__detail {
+    position: relative;
+    z-index: 1;
+
+    margin-top: auto;
+    padding-top: 16px;
+
+    font-size: 0.82rem;
+    color: #958b9f;
+}

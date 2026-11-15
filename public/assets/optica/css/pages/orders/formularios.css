@@ -1,0 +1,82 @@
+
+/* ==========================================================
+   OPTICOOL - PEDIDOS
+   Formularios y artículos de pedidos
+========================================================== */
+
+/* ==========================================================
+   Contenedor del modal de formulario
+========================================================== */
+
+.orders-modal__content {
+    width: min(900px, 100%);
+}
+
+/* ==========================================================
+   Lista de artículos
+========================================================== */
+
+.orders-items {
+    display: grid;
+    gap: 10px;
+}
+
+/* ==========================================================
+   Fila individual de artículo
+========================================================== */
+
+.orders-item {
+    display: grid;
+    grid-template-columns: 1fr 100px 42px;
+    gap: 10px;
+}
+
+/* ==========================================================
+   Campos de los artículos
+========================================================== */
+
+.orders-item input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ded5ea;
+    border-radius: 12px;
+    font: inherit;
+}
+
+/* ==========================================================
+   Botón para eliminar un artículo
+========================================================== */
+
+.orders-item button {
+    border: 0;
+    border-radius: 12px;
+    background: #fff0f1;
+    color: #a13c46;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* ==========================================================
+   Mensaje cuando no existen artículos
+========================================================== */
+
+.orders-items__empty {
+    margin: 0;
+    padding: 15px;
+    border: 1px dashed #d9cde4;
+    border-radius: 12px;
+    color: #8d7d99;
+    text-align: center;
+}
+
+/* ==========================================================
+   Botón para agregar artículos
+========================================================== */
+
+.orders-inline-button {
+    width: max-content;
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: #eee8f5;
+    color: #5d4579;
+}

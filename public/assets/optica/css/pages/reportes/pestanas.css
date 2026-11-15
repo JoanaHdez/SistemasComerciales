@@ -1,0 +1,72 @@
+
+/* ==========================================================
+   OPTICOOL - REPORTES
+   Pestañas de navegación
+========================================================== */
+
+/* ==========================================================
+   Contenedor de pestañas
+========================================================== */
+
+.reports-tabs {
+    display: flex;
+    gap: 8px;
+
+    padding: 8px;
+
+    overflow-x: auto;
+
+    background: #ffffff;
+    border: 1px solid #e9e1ef;
+    border-radius: 16px;
+
+    box-shadow: 0 10px 26px rgba(67, 48, 83, 0.05);
+}
+
+/* ==========================================================
+   Pestañas individuales
+========================================================== */
+
+.reports-tab {
+    min-height: 42px;
+    padding: 0 18px;
+
+    color: #76697f;
+    background: transparent;
+
+    border: 0;
+    border-radius: 10px;
+
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* ==========================================================
+   Efecto hover de las pestañas
+========================================================== */
+
+.reports-tab:hover {
+    background: #f5f1f8;
+}
+
+/* ==========================================================
+   Pestaña activa
+========================================================== */
+
+.reports-tab--active {
+    color: #ffffff;
+    background: #76539b;
+}
+
+/* ==========================================================
+   Ajuste adicional del contenedor
+   Conservado del CSS original
+========================================================== */
+
+.reports-tabs {
+    flex-wrap: wrap;
+}

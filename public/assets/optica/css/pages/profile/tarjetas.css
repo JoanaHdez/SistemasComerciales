@@ -1,0 +1,62 @@
+
+/* ==========================================================
+   OPTICOOL - MI PERFIL
+   Tarjetas de información
+========================================================== */
+
+/* ==========================================================
+   Tarjeta principal
+========================================================== */
+
+.profile-card {
+    padding: 28px;
+
+    background: #fff;
+
+    border: 1px solid #e9e1ef;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, .06);
+}
+
+/* ==========================================================
+   Encabezado de las tarjetas
+========================================================== */
+
+.profile-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 26px;
+}
+
+/* ==========================================================
+   Texto superior de las tarjetas
+========================================================== */
+
+.profile-card__eyebrow {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #876ba5;
+
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   Título de las tarjetas
+========================================================== */
+
+.profile-card__title {
+    margin: 0;
+
+    color: #3a2c4c;
+
+    font-size: 1.25rem;
+}

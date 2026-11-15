@@ -1,0 +1,105 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVA VENTA
+   Tarjetas y sus elementos visuales
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal de las tarjetas
+========================================================== */
+
+.sale-card {
+    position: relative;
+
+    padding: 30px 34px;
+
+    background: #ffffff;
+    border: 1px solid #e9e1ef;
+    border-radius: 22px;
+
+    box-shadow: 0 14px 34px rgba(67, 48, 83, 0.07);
+}
+
+/* ==========================================================
+   Elemento decorativo superior
+========================================================== */
+
+.sale-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 34px;
+
+    width: 68px;
+    height: 4px;
+
+    background: #76539b;
+    border-radius: 0 0 999px 999px;
+}
+
+/* ==========================================================
+   Encabezado de las tarjetas
+========================================================== */
+
+.sale-card__header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* ==========================================================
+   Contenedor del icono
+========================================================== */
+
+.sale-card__icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+
+    display: grid;
+    place-items: center;
+
+    color: #76539b;
+    background: #efe8f5;
+    border-radius: 13px;
+}
+
+/* ==========================================================
+   Iconos SVG de las tarjetas
+========================================================== */
+
+.sale-card__icon svg {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ==========================================================
+   Título de las tarjetas
+========================================================== */
+
+.sale-card__title {
+    margin: 0;
+
+    color: #49365d;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Descripción de las tarjetas
+========================================================== */
+
+.sale-card__description {
+    margin: 5px 0 0;
+
+    color: #8a7f91;
+    font-size: 0.87rem;
+    line-height: 1.4;
+}

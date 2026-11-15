@@ -1,0 +1,52 @@
+
+/* ==========================================================
+   Historial de Ventas - Lista de ventas
+========================================================== */
+
+.sales-list {
+    display: grid;
+
+    gap: 22px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Tarjetas de venta
+========================================================== */
+
+.sale-card {
+    padding: 28px;
+
+    background: #fff;
+
+    border: 1px solid #e9e1ef;
+    border-left: 6px solid #76539b;
+
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, .06);
+}
+
+/* ==========================================================
+   Historial de Ventas - Estado de advertencia
+========================================================== */
+
+.sale-card--warning {
+    border-left-color: #f2a93b;
+}
+
+/* ==========================================================
+   Historial de Ventas - Estado exitoso
+========================================================== */
+
+.sale-card--success {
+    border-left-color: #46b36c;
+}
+
+/* ==========================================================
+   Historial de Ventas - Estado cancelado
+========================================================== */
+
+.sale-card--cancelled {
+    border-left-color: #b43f4b;
+    opacity: 0.88;
+}

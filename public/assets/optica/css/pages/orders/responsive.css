@@ -1,0 +1,89 @@
+
+/* ==========================================================
+   OPTICOOL - PEDIDOS
+   Diseño responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 1300px
+   Adaptaciones del tablero
+========================================================== */
+
+@media (max-width: 1300px) {
+
+    /* Tablero de pedidos */
+
+    .orders-board {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 900px
+   Adaptaciones para tablets
+========================================================== */
+
+@media (max-width: 900px) {
+
+    /* Encabezado */
+
+    .orders-page__header {
+        flex-direction: column;
+    }
+
+    /* Tarjetas de resumen */
+
+    .orders-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Panel de filtros */
+
+    .orders-filters {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 640px
+   Adaptaciones para celulares
+========================================================== */
+
+@media (max-width: 640px) {
+
+    /* Tarjetas de resumen */
+
+    .orders-summary {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tablero de pedidos */
+
+    .orders-board {
+        grid-template-columns: 1fr;
+    }
+
+    /* Acciones del encabezado */
+
+    .orders-page__actions {
+        width: 100%;
+    }
+
+    .orders-page__actions > * {
+        flex: 1 1 100%;
+    }
+
+    /* Campos de artículos */
+
+    .orders-item {
+        grid-template-columns: 1fr 80px 42px;
+    }
+
+    /* Pie del detalle y formulario de laboratorios */
+
+    .orders-detail__footer,
+    .orders-labs__new {
+        grid-template-columns: 1fr;
+        flex-direction: column-reverse;
+    }
+}

@@ -1,0 +1,19 @@
+
+/* ==========================================================
+   Historial de Ventas - Página principal
+========================================================== */
+
+.sales-history-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   Historial de Ventas - Layout principal
+========================================================== */
+
+.sales-history-layout {
+    display: grid;
+    gap: 24px;
+}

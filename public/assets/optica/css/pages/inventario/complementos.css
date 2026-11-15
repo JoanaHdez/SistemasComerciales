@@ -1,0 +1,147 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Estilos complementarios
+========================================================== */
+
+/* ==========================================================
+   Botones adicionales del encabezado
+========================================================== */
+
+.inventory-header-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================
+   Botón secundario
+========================================================== */
+
+.inventory-page__button--secondary {
+    background: #eee8f5 !important;
+    color: #5d4579 !important;
+}
+
+/* ==========================================================
+   Mensajes de éxito
+========================================================== */
+
+.inventory-message,
+.inventory-modal-message {
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: #edf8f3;
+    color: #237557;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Mensajes de error
+========================================================== */
+
+.inventory-message[data-tipo="error"],
+.inventory-modal-message[data-tipo="error"] {
+    background: #fff0f1;
+    color: #a13c46;
+}
+
+/* ==========================================================
+   Mensajes de advertencia
+========================================================== */
+
+.inventory-message[data-tipo="advertencia"] {
+    background: #fff7e8;
+    color: #936415;
+}
+
+/* ==========================================================
+   Distribución complementaria de acciones
+========================================================== */
+
+.inventory-actions {
+    display: flex !important;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================
+   Botones adicionales de acciones
+========================================================== */
+
+.inventory-actions button {
+    padding: 7px 9px;
+    border: 0;
+    border-radius: 8px;
+    background: #eee8f5;
+    color: #5d4579;
+    cursor: pointer;
+    font-size: .72rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Botones de acciones deshabilitados
+========================================================== */
+
+.inventory-actions button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+/* ==========================================================
+   Estado de producto inactivo
+========================================================== */
+
+.inventory-status--inactivo {
+    background: #f0edf2;
+    color: #756a80;
+}
+
+/* ==========================================================
+   Mensaje cuando no existen productos
+========================================================== */
+
+.inventory-empty-row {
+    padding: 40px !important;
+    text-align: center;
+    color: #8d7d99;
+}
+
+/* ==========================================================
+   Contenedor del historial
+========================================================== */
+
+.inventory-history {
+    width: min(780px, 100%);
+}
+
+/* ==========================================================
+   Lista de movimientos del historial
+========================================================== */
+
+#inventory-history-list {
+    display: grid;
+    gap: 10px;
+}
+
+/* ==========================================================
+   Elemento individual del historial
+========================================================== */
+
+.inventory-history-item {
+    display: grid;
+    gap: 4px;
+    padding: 14px;
+    border: 1px solid #e9e1ef;
+    border-radius: 12px;
+}
+
+/* ==========================================================
+   Textos complementarios del historial
+========================================================== */
+
+.inventory-history-item span,
+.inventory-history-item small {
+    color: #776b80;
+}

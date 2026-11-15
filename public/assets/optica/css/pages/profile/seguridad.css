@@ -1,0 +1,39 @@
+
+/* ==========================================================
+   OPTICOOL - MI PERFIL
+   Seguridad de la cuenta
+========================================================== */
+
+/* ==========================================================
+   Contenedor de seguridad
+========================================================== */
+
+.profile-security {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+/* ==========================================================
+   Título o texto destacado de seguridad
+========================================================== */
+
+.profile-security strong {
+    color: #44364e;
+}
+
+/* ==========================================================
+   Descripción de seguridad
+========================================================== */
+
+.profile-security p {
+    max-width: 650px;
+
+    margin: 7px 0 0;
+
+    color: #887d90;
+
+    line-height: 1.6;
+}

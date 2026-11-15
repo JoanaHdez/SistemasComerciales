@@ -1,0 +1,108 @@
+
+/* ==========================================================
+   OPTICOOL - LOGIN
+   Formulario de inicio de sesión
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal del formulario
+========================================================== */
+
+.login-form {
+    width: min(100%, 360px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ==========================================================
+   Distribución de los campos
+========================================================== */
+
+.login-form__field {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    align-items: end;
+    gap: 0.85rem;
+}
+
+/* ==========================================================
+   Iconos de los campos
+========================================================== */
+
+.login-form__icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #242424;
+    font-size: 0.85rem;
+
+    border: 1.5px solid rgba(0, 0, 0, 0.65);
+    border-radius: 50%;
+}
+
+/* ==========================================================
+   Contenedor de cada campo
+========================================================== */
+
+.login-form__control {
+    min-width: 0;
+}
+
+/* ==========================================================
+   Etiquetas accesibles de los campos
+========================================================== */
+
+.login-form__label {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+/* ==========================================================
+   Campos de captura
+========================================================== */
+
+.login-form__input {
+    width: 100%;
+    padding: 0.4rem 0.5rem 0.55rem;
+
+    color: #1f1f1f;
+    font-size: 1rem;
+
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* ==========================================================
+   Texto de ejemplo de los campos
+========================================================== */
+
+.login-form__input::placeholder {
+    color: rgba(0, 0, 0, 0.62);
+}
+
+/* ==========================================================
+   Efecto al seleccionar un campo
+========================================================== */
+
+.login-form__input:focus {
+    border-bottom-color: #000000;
+    box-shadow: 0 1px 0 #000000;
+}

@@ -1,0 +1,94 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Tabla del catálogo de productos
+========================================================== */
+
+/* ==========================================================
+   Contenedor de la tabla
+========================================================== */
+
+.inventory-page .inventory-table {
+    min-width: 1050px;
+}
+
+/* ==========================================================
+   Encabezados de la tabla
+========================================================== */
+
+.inventory-page .inventory-table th {
+    padding: 12px 16px;
+    background: #f4f0f7;
+    color: #6f6277;
+    font-size: .68rem;
+    letter-spacing: .07em;
+}
+
+/* ==========================================================
+   Celdas de la tabla
+========================================================== */
+
+.inventory-page .inventory-table td {
+    padding: 14px 16px;
+    font-size: .82rem;
+}
+
+/* ==========================================================
+   Filas alternadas
+========================================================== */
+
+.inventory-page .inventory-table tbody tr:nth-child(even) td {
+    background: #fdfcfd;
+}
+
+/* ==========================================================
+   Imagen del producto
+========================================================== */
+
+.inventory-page .inventory-product__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    color: #74518f;
+    font-size: .9rem;
+}
+
+/* ==========================================================
+   Información del producto
+========================================================== */
+
+.inventory-product strong,
+.inventory-product span {
+    display: block;
+}
+
+.inventory-product span {
+    margin-top: 3px;
+    color: #93899a;
+    font-size: .7rem;
+}
+
+/* ==========================================================
+   Indicadores de estado
+========================================================== */
+
+.inventory-page .inventory-status {
+    position: relative;
+    min-height: 26px;
+    padding: 0 10px 0 24px;
+    font-size: .69rem;
+}
+
+/* ==========================================================
+   Punto decorativo del estado
+========================================================== */
+
+.inventory-page .inventory-status::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}

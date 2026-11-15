@@ -1,0 +1,104 @@
+
+/* ==========================================================
+   OPTICOOL - REPORTES
+   Barra superior y filtros de periodo
+========================================================== */
+
+/* ==========================================================
+   Contenedor de la barra superior
+========================================================== */
+
+.reports-toolbar {
+    padding: 22px 24px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+
+    background: #ffffff;
+    border: 1px solid #e9e1ef;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, 0.06);
+}
+
+/* ==========================================================
+   Contenedor del selector de periodo
+========================================================== */
+
+.reports-toolbar__period {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ==========================================================
+   Etiqueta del periodo
+========================================================== */
+
+.reports-toolbar__period label {
+    color: #685a72;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Selector de periodo
+========================================================== */
+
+.reports-toolbar__period select {
+    min-width: 220px;
+    min-height: 46px;
+    padding: 0 38px 0 14px;
+
+    color: #4f4358;
+    background: #ffffff;
+
+    border: 1px solid #ddd4e5;
+    border-radius: 12px;
+    outline: none;
+
+    font: inherit;
+}
+
+/* ==========================================================
+   Efecto focus del selector
+========================================================== */
+
+.reports-toolbar__period select:focus {
+    border-color: #76539b;
+    box-shadow: 0 0 0 4px rgba(118, 83, 155, 0.1);
+}
+
+/* ==========================================================
+   Contenedor de acciones
+========================================================== */
+
+.reports-toolbar__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ==========================================================
+   Ajustes adicionales del selector de periodo
+   Conservados del CSS original
+========================================================== */
+
+.reports-toolbar__period {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================
+   Campos de fecha
+========================================================== */
+
+.reports-toolbar__period input {
+    padding: 10px;
+    border: 1px solid #ded5ea;
+    border-radius: 10px;
+}

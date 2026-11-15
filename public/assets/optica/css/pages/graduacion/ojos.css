@@ -1,0 +1,36 @@
+
+/* ==========================================================
+   Graduación - Tarjetas por ojo
+========================================================== */
+
+.eye-card {
+    padding: 22px;
+
+    background: #faf8fc;
+    border: 1px solid #e7dfec;
+    border-radius: 17px;
+}
+
+/* ==========================================================
+   Graduación - Título de cada ojo
+========================================================== */
+
+.eye-card h3 {
+    margin: 0 0 18px;
+
+    color: #5f4b72;
+    font-size: 0.92rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ==========================================================
+   Graduación - Distribución de campos por ojo
+========================================================== */
+
+.eye-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}

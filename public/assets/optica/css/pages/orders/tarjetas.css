@@ -1,0 +1,176 @@
+
+/* ==========================================================
+   OPTICOOL - PEDIDOS
+   Tarjetas individuales de pedidos
+========================================================== */
+
+/* ==========================================================
+   Tarjeta principal
+========================================================== */
+
+.order-card {
+    width: 100%;
+
+    padding: 18px;
+
+    background: #fff;
+
+    border-left: 5px solid #76539b;
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 22px rgba(67, 48, 83, .08);
+
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* ==========================================================
+   Efecto al pasar el cursor
+========================================================== */
+
+.order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(67, 48, 83, .13);
+}
+
+/* ==========================================================
+   Colores según el estado del pedido
+========================================================== */
+
+/* Pendiente */
+
+.order-card--pending {
+    border-left-color: #76539b;
+}
+
+/* En proceso */
+
+.order-card--progress {
+    border-left-color: #f2a93b;
+}
+
+/* Listo */
+
+.order-card--ready {
+    border-left-color: #2d9d78;
+}
+
+/* Entregado */
+
+.order-card--done {
+    border-left-color: #4a90e2;
+}
+
+/* ==========================================================
+   Número de pedido
+========================================================== */
+
+.order-card__number {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #937fa3;
+
+    font-size: .72rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   Origen del pedido
+========================================================== */
+
+.order-card__origin {
+    display: block;
+    margin-bottom: 10px;
+    color: #76539b;
+    font-size: .72rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Asignación del pedido
+========================================================== */
+
+.order-card__assignment {
+    display: block;
+    margin-bottom: 14px;
+    color: #655671;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Título de la tarjeta
+========================================================== */
+
+.order-card h3 {
+    margin: 0;
+
+    color: #433252;
+
+    font-size: 1rem;
+}
+
+/* ==========================================================
+   Descripción del pedido
+========================================================== */
+
+.order-card p {
+    margin: 12px 0 18px;
+
+    color: #80748a;
+
+    line-height: 1.5;
+
+    font-size: .86rem;
+}
+
+/* ==========================================================
+   Pie de la tarjeta
+========================================================== */
+
+.order-card__footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+/* ==========================================================
+   Texto complementario del pie
+========================================================== */
+
+.order-card__footer small {
+    color: #978ca1;
+}
+
+/* ==========================================================
+   Texto destacado del pie
+========================================================== */
+
+.order-card__footer strong {
+    color: #5d4579;
+}
+
+/* ==========================================================
+   Mensaje cuando no existen pedidos
+========================================================== */
+
+.orders-empty {
+    padding: 30px 15px;
+    color: #978ca1;
+    text-align: center;
+    font-size: .86rem;
+}

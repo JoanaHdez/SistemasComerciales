@@ -1,0 +1,93 @@
+
+/* ==========================================================
+   OPTICOOL - PEDIDOS
+   Laboratorios y confirmaciones
+========================================================== */
+
+/* ==========================================================
+   Contenedor del modal de laboratorios
+========================================================== */
+
+.orders-labs {
+    width: min(680px, 100%);
+}
+
+/* ==========================================================
+   Formulario para agregar laboratorios
+========================================================== */
+
+.orders-labs__new {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+/* ==========================================================
+   Campo para registrar un laboratorio
+========================================================== */
+
+.orders-labs__new input {
+    padding: 12px 14px;
+    border: 1px solid #ded5ea;
+    border-radius: 12px;
+    font: inherit;
+}
+
+/* ==========================================================
+   Lista de laboratorios
+========================================================== */
+
+.orders-labs__list {
+    display: grid;
+    gap: 10px;
+}
+
+/* ==========================================================
+   Laboratorio individual
+========================================================== */
+
+.orders-lab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 14px;
+    border: 1px solid #e9e1ef;
+    border-radius: 14px;
+}
+
+/* ==========================================================
+   Información del laboratorio
+========================================================== */
+
+.orders-lab div {
+    display: grid;
+    gap: 3px;
+}
+
+/* ==========================================================
+   Texto complementario del laboratorio
+========================================================== */
+
+.orders-lab span {
+    color: #978ca1;
+    font-size: .78rem;
+}
+
+/* ==========================================================
+   Contenedor del modal de confirmación
+========================================================== */
+
+.orders-confirm {
+    width: min(560px, 100%);
+}
+
+/* ==========================================================
+   Mensaje de confirmación
+========================================================== */
+
+.orders-confirm > p {
+    color: #655671;
+    line-height: 1.6;
+}

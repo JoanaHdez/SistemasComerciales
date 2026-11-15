@@ -1,0 +1,54 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Botones de acciones de productos
+========================================================== */
+
+/* ==========================================================
+   Contenedor de acciones
+========================================================== */
+
+.inventory-page .inventory-actions {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    min-width: 0;
+}
+
+/* ==========================================================
+   Botones de acciones
+========================================================== */
+
+.inventory-page .inventory-actions button {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid #e2d9e8;
+    border-radius: 9px;
+    background: #fff;
+    color: #694d7f;
+}
+
+/* ==========================================================
+   Efecto al pasar el cursor
+========================================================== */
+
+.inventory-actions button:hover {
+    border-color: #bda9cd;
+    background: #f1eaf6;
+}
+
+/* ==========================================================
+   Iconos de los botones
+========================================================== */
+
+.inventory-actions button svg {
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

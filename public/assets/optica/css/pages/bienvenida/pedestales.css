@@ -1,0 +1,72 @@
+
+/* ==========================================================
+   OPTICOOL - BIENVENIDA
+   Pedestales decorativos
+========================================================== */
+
+/* ==========================================================
+   Contenedor general de los pedestales
+========================================================== */
+
+.welcome__pedestals {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 470px;
+}
+
+/* ==========================================================
+   Estilos compartidos de los pedestales
+========================================================== */
+
+.welcome__pedestal {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(0, 0, 0, 0.35);
+    font-size: 0.875rem;
+
+    background-color: rgba(255, 255, 255, 0.72);
+    border: 2px dashed rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================================
+   Pedestal posterior
+========================================================== */
+
+.welcome__pedestal--back {
+    top: 0;
+    right: 2rem;
+
+    width: 310px;
+    height: 360px;
+}
+
+/* ==========================================================
+   Pedestal frontal
+========================================================== */
+
+.welcome__pedestal--front {
+    left: 1rem;
+    bottom: 0;
+
+    width: 300px;
+    height: 310px;
+}
+
+/* ==========================================================
+   Pedestal pequeño
+========================================================== */
+
+.welcome__pedestal--small {
+    right: 0;
+    bottom: 0;
+
+    width: 210px;
+    height: 190px;
+}

@@ -1,0 +1,56 @@
+
+/* ==========================================================
+   OPTICOOL - REPORTES
+   Tarjetas y contenedores de información
+========================================================== */
+
+/* ==========================================================
+   Distribución de las tarjetas
+========================================================== */
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* ==========================================================
+   Tarjetas principales
+========================================================== */
+
+.reports-card {
+    padding: 26px;
+
+    background: #ffffff;
+    border: 1px solid #e9e1ef;
+    border-radius: 22px;
+
+    box-shadow: 0 14px 34px rgba(67, 48, 83, 0.07);
+}
+
+/* ==========================================================
+   Tarjetas de ancho completo
+========================================================== */
+
+.reports-card--large {
+    grid-column: 1 / -1;
+}
+
+/* ==========================================================
+   Encabezado de las tarjetas
+========================================================== */
+
+.reports-card header {
+    margin-bottom: 22px;
+}
+
+/* ==========================================================
+   Títulos de las tarjetas
+========================================================== */
+
+.reports-card h2 {
+    margin: 0;
+
+    color: #3a2c4c;
+    font-size: 1.15rem;
+}

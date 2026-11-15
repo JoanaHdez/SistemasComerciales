@@ -1,0 +1,49 @@
+
+/* ==========================================================
+   OPTICOOL - MENÚ PRINCIPAL
+   Elementos decorativos del fondo
+========================================================== */
+
+/* ==========================================================
+   Estilo general de los círculos decorativos
+========================================================== */
+
+.main-menu__decorations span {
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background: rgba(155, 118, 195, .12);
+
+    filter: blur(2px);
+}
+
+/* ==========================================================
+   Primer círculo - Superior izquierdo
+========================================================== */
+
+.main-menu__decorations span:nth-child(1) {
+    top: -90px;
+    left: -70px;
+}
+
+/* ==========================================================
+   Segundo círculo - Lateral derecho
+========================================================== */
+
+.main-menu__decorations span:nth-child(2) {
+    right: -80px;
+    top: 20%;
+}
+
+/* ==========================================================
+   Tercer círculo - Inferior izquierdo
+========================================================== */
+
+.main-menu__decorations span:nth-child(3) {
+    left: 18%;
+    bottom: -150px;
+}

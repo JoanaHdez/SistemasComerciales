@@ -1,0 +1,57 @@
+
+/* ==========================================================
+   OPTICOOL - REPORTES
+   Tablas y visualización de datos
+========================================================== */
+
+/* ==========================================================
+   Tarjetas que contienen tablas
+========================================================== */
+
+.reports-card--table {
+    grid-column: 1 / -1;
+}
+
+/* ==========================================================
+   Contenedor de tablas
+========================================================== */
+
+.reports-table-wrap {
+    overflow: auto;
+}
+
+/* ==========================================================
+   Tabla principal
+========================================================== */
+
+.reports-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* ==========================================================
+   Encabezados y celdas de las tablas
+========================================================== */
+
+.reports-table th,
+.reports-table td {
+    padding: 11px;
+
+    border-bottom: 1px solid #eee;
+
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* ==========================================================
+   Mensajes cuando no existen resultados
+========================================================== */
+
+.reports-empty {
+    width: 100%;
+    padding: 35px;
+
+    text-align: center;
+
+    color: #8d7d99;
+}

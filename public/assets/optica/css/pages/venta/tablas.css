@@ -1,0 +1,128 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVA VENTA
+   Tablas de productos y controles
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal de la tabla
+========================================================== */
+
+.sale-table-wrapper {
+    width: 100%;
+    margin-top: 24px;
+    overflow-x: auto;
+
+    border: 1px solid #e6deeb;
+    border-radius: 15px;
+}
+
+/* ==========================================================
+   Tabla de productos
+========================================================== */
+
+.sale-table {
+    width: 100%;
+    min-width: 750px;
+
+    border-collapse: collapse;
+}
+
+/* ==========================================================
+   Encabezados y celdas
+========================================================== */
+
+.sale-table th,
+.sale-table td {
+    padding: 15px 16px;
+
+    text-align: left;
+    vertical-align: middle;
+
+    border-bottom: 1px solid #eee8f1;
+}
+
+/* ==========================================================
+   Encabezados de las columnas
+========================================================== */
+
+.sale-table th {
+    color: #554761;
+    background: #f7f3fa;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* ==========================================================
+   Celdas de los productos
+========================================================== */
+
+.sale-table td {
+    color: #716a74;
+    background: #ffffff;
+    font-size: 0.87rem;
+}
+
+/* ==========================================================
+   Mensaje cuando no existen productos
+========================================================== */
+
+.sale-table__empty td {
+    padding: 34px 20px;
+
+    color: #918697;
+    text-align: center;
+}
+
+/* ==========================================================
+   Información secundaria dentro de las celdas
+========================================================== */
+
+.sale-table td small {
+    display: block;
+    margin-top: 4px;
+
+    color: #8a7f91;
+    font-size: 0.7rem;
+}
+
+/* ==========================================================
+   Campos de entrada dentro de la tabla
+========================================================== */
+
+.sale-table input {
+    width: 90px;
+}
+
+/* ==========================================================
+   Contenedor de descuentos por producto
+========================================================== */
+
+.sale-line-discount {
+    display: flex;
+    gap: 5px;
+}
+
+/* ==========================================================
+   Selector del tipo de descuento
+========================================================== */
+
+.sale-line-discount select {
+    width: 52px;
+}
+
+/* ==========================================================
+   Botón para eliminar un producto
+========================================================== */
+
+.sale-remove-line {
+    border: 0;
+    background: transparent;
+
+    color: #b43f4b;
+    font-weight: 700;
+
+    cursor: pointer;
+}

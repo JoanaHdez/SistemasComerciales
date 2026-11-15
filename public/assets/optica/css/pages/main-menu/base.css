@@ -1,0 +1,38 @@
+
+/* ==========================================================
+   OPTICOOL - MENÚ PRINCIPAL
+   Estructura general
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal
+========================================================== */
+
+.main-menu {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+    padding: clamp(24px, 5vw, 70px);
+
+    background: linear-gradient(
+        145deg,
+        #f6f1fb 0%,
+        #e9def5 55%,
+        #ddd0ed 100%
+    );
+
+    color: #332743;
+}
+
+/* ==========================================================
+   Contenedor del contenido
+========================================================== */
+
+.main-menu__container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, 100%);
+    margin: auto;
+}

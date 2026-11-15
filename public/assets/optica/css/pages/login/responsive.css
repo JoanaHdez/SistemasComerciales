@@ -1,0 +1,103 @@
+
+/* ==========================================================
+   OPTICOOL - LOGIN
+   Diseño responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 992px
+   Adaptaciones para tablets y pantallas medianas
+========================================================== */
+
+@media (max-width: 992px) {
+
+    /* Contenedor principal */
+
+    .login-page {
+        padding: 1.5rem;
+    }
+
+    /* Distribución del contenido */
+
+    .login-page__container {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+
+        padding: 3rem 0;
+    }
+
+    /* Contenido izquierdo */
+
+    .login-page__content {
+        padding-left: 0;
+    }
+
+    /* Sección visual */
+
+    .login-page__visual {
+        min-height: 480px;
+    }
+
+    /* Imagen */
+
+    .login-page__image-placeholder {
+        position: relative;
+        width: min(100%, 580px);
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 600px
+   Adaptaciones para celulares
+========================================================== */
+
+@media (max-width: 600px) {
+
+    /* Contenedor principal */
+
+    .login-page {
+        padding: 1rem;
+    }
+
+    /* Distribución del contenido */
+
+    .login-page__container {
+        padding: 2rem 0;
+    }
+
+    /* Logotipo */
+
+    .login-page__logo-placeholder {
+        min-width: 0;
+        width: 100%;
+        min-height: 90px;
+
+        font-size: clamp(3rem, 16vw, 4.5rem);
+    }
+
+    /* Formulario */
+
+    .login-form {
+        width: 100%;
+    }
+
+    /* Botón de inicio de sesión */
+
+    .login-form__button {
+        width: 100%;
+    }
+
+    /* Sección visual */
+
+    .login-page__visual {
+        min-height: 360px;
+    }
+
+    /* Imagen */
+
+    .login-page__image-placeholder {
+        min-height: 360px;
+    }
+}

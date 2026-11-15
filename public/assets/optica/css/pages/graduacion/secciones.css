@@ -1,0 +1,98 @@
+
+/* ==========================================================
+   Graduación - Tarjetas principales
+========================================================== */
+
+.graduacion-section {
+    position: relative;
+
+    padding: 34px 40px;
+
+    background: #ffffff;
+    border: 1px solid #e9e1ef;
+    border-radius: 22px;
+
+    box-shadow: 0 14px 34px rgba(67, 48, 83, 0.07);
+}
+
+/* ==========================================================
+   Graduación - Detalle decorativo superior
+========================================================== */
+
+.graduacion-section::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 40px;
+
+    width: 70px;
+    height: 4px;
+
+    background: #76539b;
+    border-radius: 0 0 999px 999px;
+}
+
+/* ==========================================================
+   Graduación - Encabezado de sección
+========================================================== */
+
+.graduacion-section__header {
+    margin-bottom: 28px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* ==========================================================
+   Graduación - Icono de sección
+========================================================== */
+
+.graduacion-section__icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+
+    display: grid;
+    place-items: center;
+
+    color: #76539b;
+    background: #efe8f5;
+    border-radius: 13px;
+}
+
+.graduacion-section__icon svg {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ==========================================================
+   Graduación - Título de sección
+========================================================== */
+
+.graduacion-section__title {
+    margin: 0;
+
+    color: #49365d;
+    font-size: 1.22rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Graduación - Descripción de sección
+========================================================== */
+
+.graduacion-section__description {
+    margin: 5px 0 0;
+
+    color: #8a7f91;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}

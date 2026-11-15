@@ -1,0 +1,26 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Paginación del catálogo de productos
+========================================================== */
+
+/* ==========================================================
+   Contenedor de paginación
+========================================================== */
+
+.inventory-page .inventory-pagination {
+    min-height: 60px;
+    margin: 0;
+    padding: 12px 20px;
+}
+
+/* ==========================================================
+   Botones de paginación
+========================================================== */
+
+.inventory-page .inventory-pagination__button {
+    min-width: 34px;
+    min-height: 34px;
+    border-radius: 9px;
+    font-size: .75rem;
+}

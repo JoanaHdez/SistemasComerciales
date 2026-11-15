@@ -1,0 +1,20 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Panel principal
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal del panel
+========================================================== */
+
+.inventory-panel {
+    padding: 24px;
+
+    border: 1px solid #eee8f4;
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    box-shadow: 0 14px 36px rgba(43, 29, 64, 0.06);
+}

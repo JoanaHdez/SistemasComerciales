@@ -1,0 +1,121 @@
+
+/* ==========================================================
+   OPTICOOL - BIENVENIDA
+   Diseño responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 992px
+========================================================== */
+
+@media (max-width: 992px) {
+
+    /* Contenedor principal de bienvenida */
+    .welcome {
+        padding: 1.5rem;
+    }
+
+    /* Distribución del contenido */
+    .welcome__container {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+
+        padding: 3rem 0;
+    }
+
+    /* Columna de contenido */
+    .welcome__content {
+        padding-left: 0;
+    }
+
+    /* Área visual */
+    .welcome__visual {
+        min-height: 520px;
+    }
+
+    /* Contenedor de lentes */
+    .welcome__glasses-placeholder {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    /* Contenedor de pedestales */
+    .welcome__pedestals {
+        left: 50%;
+        right: auto;
+        width: min(100%, 580px);
+        transform: translateX(-50%);
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 600px
+========================================================== */
+
+@media (max-width: 600px) {
+
+    /* Contenedor principal */
+    .welcome {
+        padding: 1rem;
+    }
+
+    /* Distribución del contenido */
+    .welcome__container {
+        padding: 2rem 0;
+    }
+
+    /* Espacio reservado para el logotipo */
+    .welcome__logo-placeholder {
+        min-width: 0;
+        width: 100%;
+        min-height: 90px;
+
+        font-size: clamp(3rem, 16vw, 4.5rem);
+    }
+
+    /* Botón principal de acceso */
+    .welcome__button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Área visual */
+    .welcome__visual {
+        min-height: 400px;
+    }
+
+    /* Contenedor de lentes */
+    .welcome__glasses-placeholder {
+        width: 250px;
+        height: 130px;
+    }
+
+    /* Contenedor de pedestales */
+    .welcome__pedestals {
+        height: 310px;
+    }
+
+    /* Pedestal posterior */
+    .welcome__pedestal--back {
+        right: 0;
+
+        width: 190px;
+        height: 240px;
+    }
+
+    /* Pedestal frontal */
+    .welcome__pedestal--front {
+        left: 0;
+
+        width: 190px;
+        height: 205px;
+    }
+
+    /* Pedestal pequeño */
+    .welcome__pedestal--small {
+        width: 135px;
+        height: 120px;
+    }
+}

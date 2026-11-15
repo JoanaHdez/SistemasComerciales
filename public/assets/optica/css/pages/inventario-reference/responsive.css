@@ -1,0 +1,133 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Diseño responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 1100px
+   Barra de herramientas
+========================================================== */
+
+@media (max-width: 1100px) {
+    .inventory-page .inventory-toolbar {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 760px
+   Encabezado, indicadores, filtros y modal
+========================================================== */
+
+@media (max-width: 760px) {
+
+    /* Encabezado principal */
+
+    .inventory-hero {
+        padding: 24px;
+        align-items: stretch;
+    }
+
+    /* Botones del encabezado */
+
+    .inventory-header-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* Tarjetas de indicadores */
+
+    .inventory-page .inventory-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Filtros */
+
+    .inventory-page .inventory-filters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Botón para limpiar filtros */
+
+    .inventory-clear-filters {
+        grid-column: 1 / -1;
+    }
+
+    /* Cuerpo del modal */
+
+    .inventory-product-modal__body {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ocultar panel lateral del modal */
+
+    .inventory-product-modal__aside {
+        display: none;
+    }
+
+    /* Formulario del modal */
+
+    .inventory-product-modal .modal__grid--three {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 520px
+   Adaptaciones para celulares
+========================================================== */
+
+@media (max-width: 520px) {
+
+    /* Encabezado principal */
+
+    .inventory-hero {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    /* Indicadores, filtros y campos del formulario */
+
+    .inventory-page .inventory-summary,
+    .inventory-page .inventory-filters,
+    .inventory-product-modal .modal__grid,
+    .inventory-product-modal .modal__grid--three {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tarjetas de indicadores */
+
+    .inventory-page .inventory-summary__card {
+        min-height: 96px;
+    }
+
+    /* Espaciado del modal */
+
+    .inventory-product-modal__header,
+    .inventory-product-modal__form,
+    .inventory-product-modal__footer {
+        padding-inline: 16px;
+    }
+
+    /* Ocultar icono del encabezado del modal */
+
+    .inventory-product-modal__icon {
+        display: none;
+    }
+
+    /* Pie del modal */
+
+    .inventory-product-modal__footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    /* Botones del modal */
+
+    .inventory-product-modal__footer > div {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

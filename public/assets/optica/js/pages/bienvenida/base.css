@@ -1,0 +1,31 @@
+
+/* ==========================================================
+   OPTICOOL - BIENVENIDA
+   Estilos base de la página
+========================================================== */
+
+/* ==========================================================
+   Layout general de autenticación
+========================================================== */
+
+.auth-layout {
+    min-height: 100vh;
+}
+
+/* ==========================================================
+   Contenedor principal de bienvenida
+========================================================== */
+
+.welcome {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+
+    background-color: #d8c2ff;
+}

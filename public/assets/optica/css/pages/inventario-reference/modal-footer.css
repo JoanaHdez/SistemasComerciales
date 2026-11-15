@@ -1,0 +1,38 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Pie del modal de productos
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal del pie
+========================================================== */
+
+.inventory-product-modal__footer {
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border-top: 1px solid #ebe5ee;
+    background: #faf8fb;
+}
+
+/* ==========================================================
+   Texto informativo del pie
+========================================================== */
+
+.inventory-product-modal__footer p {
+    margin: 0;
+    color: #8b818f;
+    font-size: .72rem;
+}
+
+/* ==========================================================
+   Contenedor de botones
+========================================================== */
+
+.inventory-product-modal__footer > div {
+    display: flex;
+    gap: 9px;
+}

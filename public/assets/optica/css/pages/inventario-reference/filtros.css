@@ -1,0 +1,142 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Barra de herramientas, búsqueda y filtros
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal de herramientas
+========================================================== */
+
+.inventory-page .inventory-toolbar {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) auto;
+    align-items: end;
+    gap: 18px;
+    margin: 0;
+    padding: 16px 22px;
+    border-block: 1px solid #eee9f1;
+    background: #faf8fb;
+}
+
+/* ==========================================================
+   Contenedor del buscador
+========================================================== */
+
+.inventory-page .inventory-search {
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+    border: 0;
+    background: transparent;
+}
+
+/* ==========================================================
+   Etiquetas del buscador y los filtros
+========================================================== */
+
+.inventory-search__label,
+.inventory-filter-field > span {
+    color: #62576a;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .035em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   Campo visual de búsqueda
+========================================================== */
+
+.inventory-search__control {
+    min-height: 44px;
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid #ddd4e3;
+    border-radius: 11px;
+    background: #fff;
+    transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+/* ==========================================================
+   Buscador enfocado
+========================================================== */
+
+.inventory-search__control:focus-within {
+    border-color: #76539b;
+    box-shadow: 0 0 0 3px rgba(118, 83, 155, .12);
+}
+
+/* ==========================================================
+   Icono del buscador
+========================================================== */
+
+.inventory-search__control svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    fill: none;
+    stroke: #806793;
+    stroke-width: 1.8;
+}
+
+/* ==========================================================
+   Campo de texto de búsqueda
+========================================================== */
+
+.inventory-page .inventory-search__input {
+    min-height: 40px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* ==========================================================
+   Contenedor de filtros
+========================================================== */
+
+.inventory-page .inventory-filters {
+    align-items: end;
+    gap: 10px;
+}
+
+/* ==========================================================
+   Campo individual de filtro
+========================================================== */
+
+.inventory-filter-field {
+    display: grid;
+    min-width: 170px;
+    gap: 6px;
+}
+
+/* ==========================================================
+   Selectores de filtros
+========================================================== */
+
+.inventory-page .inventory-filter {
+    min-height: 44px;
+    border-radius: 11px;
+    font-size: .8125rem;
+}
+
+/* ==========================================================
+   Botón para limpiar filtros
+========================================================== */
+
+.inventory-clear-filters {
+    min-height: 44px;
+    padding: 0 14px;
+    border: 1px solid #ddd4e3;
+    border-radius: 11px;
+    background: #fff;
+    color: #684e7d;
+    font-size: .78rem;
+    font-weight: 800;
+    cursor: pointer;
+}

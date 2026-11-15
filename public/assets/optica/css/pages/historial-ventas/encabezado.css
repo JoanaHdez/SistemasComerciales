@@ -1,0 +1,91 @@
+
+/* ==========================================================
+   Historial de Ventas - Encabezado
+========================================================== */
+
+.sales-history-page__header {
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Texto superior
+========================================================== */
+
+.sales-history-page__eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #876ba5;
+
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   Historial de Ventas - Título
+========================================================== */
+
+.sales-history-page__title {
+    margin: 0;
+
+    color: #2d203b;
+
+    font-size: 2.35rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Historial de Ventas - Descripción
+========================================================== */
+
+.sales-history-page__description {
+    max-width: 650px;
+
+    margin-top: 12px;
+
+    color: #776b80;
+
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   Historial de Ventas - Botón principal
+========================================================== */
+
+.sales-history-page__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border-radius: 12px;
+
+    background: #76539b;
+    color: #fff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+/* ==========================================================
+   Historial de Ventas - Hover del botón
+========================================================== */
+
+.sales-history-page__button:hover {
+    background: #624483;
+
+    transform: translateY(-1px);
+}

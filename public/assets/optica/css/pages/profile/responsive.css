@@ -1,0 +1,65 @@
+
+/* ==========================================================
+   OPTICOOL - MI PERFIL
+   Diseño responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 750px
+========================================================== */
+
+@media (max-width: 750px) {
+
+    /* Tarjeta de resumen */
+    .profile-card--summary {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* Información personal */
+    .profile-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sección de seguridad */
+    .profile-security {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    /* Botón de seguridad */
+    .profile-security__button {
+        width: 100%;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 520px
+========================================================== */
+
+@media (max-width: 520px) {
+
+    /* Resumen del usuario */
+    .profile-summary {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* Encabezados de las tarjetas */
+    .profile-card__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 700px
+========================================================== */
+
+@media (max-width: 700px) {
+
+    /* Formularios */
+    .profile-form-grid {
+        grid-template-columns: 1fr;
+    }
+}

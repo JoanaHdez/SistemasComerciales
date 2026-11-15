@@ -1,0 +1,155 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Modal de registro y edición de productos
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal del modal
+========================================================== */
+
+.inventory-product-modal__dialog {
+    width: min(980px, 100%);
+    max-height: min(92vh, 820px);
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border: 1px solid rgba(118, 83, 155, .16);
+    border-radius: 22px;
+    background: #fff;
+}
+
+/* ==========================================================
+   Encabezado del modal
+========================================================== */
+
+.inventory-product-modal__header {
+    padding: 20px 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    border-bottom: 1px solid #ebe4ef;
+    background: linear-gradient(135deg, #f8f3fb, #fff 70%);
+}
+
+/* ==========================================================
+   Contenedor del título e icono
+========================================================== */
+
+.inventory-product-modal__heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+/* ==========================================================
+   Icono principal del modal
+========================================================== */
+
+.inventory-product-modal__icon {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    place-items: center;
+    border-radius: 13px;
+    background: #76539b;
+    color: #fff;
+    box-shadow: 0 9px 20px rgba(118, 83, 155, .22);
+}
+
+/* ==========================================================
+   SVG del icono principal
+========================================================== */
+
+.inventory-product-modal__icon svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ==========================================================
+   Cuerpo del modal
+========================================================== */
+
+.inventory-product-modal__body {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    overflow-y: auto;
+}
+
+/* ==========================================================
+   Panel lateral informativo
+========================================================== */
+
+.inventory-product-modal__aside {
+    padding: 24px 22px;
+    border-right: 1px solid #ebe5ee;
+    background: #4c385d;
+    color: #fff;
+}
+
+/* ==========================================================
+   Indicador de paso
+========================================================== */
+
+.inventory-product-modal__step {
+    display: inline-grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .12);
+    font-size: .75rem;
+    font-weight: 850;
+}
+
+/* ==========================================================
+   Título del panel lateral
+========================================================== */
+
+.inventory-product-modal__aside h3 {
+    margin: 18px 0 8px;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================
+   Descripciones y elementos de lista
+========================================================== */
+
+.inventory-product-modal__aside p,
+.inventory-product-modal__aside li {
+    color: rgba(255, 255, 255, .7);
+    font-size: .76rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   Lista informativa del panel lateral
+========================================================== */
+
+.inventory-product-modal__aside ul {
+    margin: 24px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+    list-style: none;
+}
+
+/* ==========================================================
+   Indicadores de la lista
+========================================================== */
+
+.inventory-product-modal__aside li::before {
+    content: "✓";
+    margin-right: 8px;
+    color: #d6bfea;
+}

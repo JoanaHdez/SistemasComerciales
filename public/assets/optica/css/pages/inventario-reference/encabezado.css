@@ -1,0 +1,115 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Encabezado principal
+========================================================== */
+
+/* ==========================================================
+   Contenedor del encabezado
+========================================================== */
+
+.inventory-hero {
+    position: relative;
+    min-height: 190px;
+    padding: 30px 32px;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #e4d9ec;
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at 88% 15%, rgba(255, 255, 255, .55) 0 70px, transparent 72px),
+        linear-gradient(135deg, #f1e9f8 0%, #f9f6fb 54%, #eee4f6 100%);
+    box-shadow: 0 18px 45px rgba(67, 43, 86, .08);
+}
+
+/* ==========================================================
+   Elemento decorativo del encabezado
+========================================================== */
+
+.inventory-hero::after {
+    content: "";
+    position: absolute;
+    right: -55px;
+    bottom: -95px;
+    width: 270px;
+    height: 270px;
+    border: 38px solid rgba(118, 83, 155, .07);
+    border-radius: 50%;
+}
+
+/* ==========================================================
+   Contenido del encabezado
+========================================================== */
+
+.inventory-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================================
+   Título principal
+========================================================== */
+
+.inventory-page .inventory-page__title {
+    max-width: 620px;
+    font-size: clamp(1.8rem, 3vw, 2.45rem);
+}
+
+/* ==========================================================
+   Descripción
+========================================================== */
+
+.inventory-page .inventory-page__description {
+    max-width: 650px;
+    margin-top: 10px;
+    font-size: .9375rem;
+    line-height: 1.55;
+}
+
+/* ==========================================================
+   Contenedor de botones de acción
+========================================================== */
+
+.inventory-header-actions {
+    position: relative;
+    z-index: 1;
+    align-items: center;
+}
+
+/* ==========================================================
+   Botones del encabezado
+========================================================== */
+
+.inventory-page .inventory-page__button {
+    min-height: 46px;
+    padding: 0 17px;
+    gap: 9px;
+    border-radius: 12px;
+    font-size: .8125rem;
+    box-shadow: 0 10px 22px rgba(94, 60, 123, .16);
+}
+
+/* ==========================================================
+   Iconos de los botones
+========================================================== */
+
+.inventory-page__button svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ==========================================================
+   Botón secundario
+========================================================== */
+
+.inventory-page .inventory-page__button--secondary {
+    border: 1px solid rgba(118, 83, 155, .18);
+    background: rgba(255, 255, 255, .78) !important;
+    color: #604477 !important;
+    box-shadow: none;
+}

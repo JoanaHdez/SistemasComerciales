@@ -1,0 +1,105 @@
+
+/* ==========================================================
+   Historial de Ventas - Generación de pedidos
+========================================================== */
+
+.sales-order-modal__content {
+    width: min(860px, 100%);
+}
+
+/* ==========================================================
+   Historial de Ventas - Información de la venta
+========================================================== */
+
+.sales-order-modal__sale {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 22px;
+    padding: 16px;
+    border-radius: 14px;
+    background: #f8f6fb;
+    color: #5d4579;
+}
+
+/* ==========================================================
+   Historial de Ventas - Productos del pedido
+========================================================== */
+
+.sales-order-products {
+    margin: 0 0 24px;
+    padding: 0;
+    border: 0;
+}
+
+.sales-order-products legend {
+    margin-bottom: 12px;
+    color: #4d4263;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Historial de Ventas - Lista de productos
+========================================================== */
+
+#sales-order-products {
+    display: grid;
+    gap: 10px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Tarjeta de producto
+========================================================== */
+
+.sales-order-product {
+    display: grid;
+    grid-template-columns: auto 1fr 100px;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid #e5deec;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.sales-order-product span {
+    display: grid;
+    gap: 3px;
+}
+
+.sales-order-product small {
+    color: #8d7d99;
+}
+
+/* ==========================================================
+   Historial de Ventas - Cantidad del producto
+========================================================== */
+
+.sales-order-product input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ded5ea;
+    border-radius: 10px;
+    font: inherit;
+}
+
+/* ==========================================================
+   Historial de Ventas - Mensajes de validación
+========================================================== */
+
+.sales-order-modal__message {
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: #fff0f1;
+    color: #a13c46;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Historial de Ventas - Mensaje de éxito
+========================================================== */
+
+.sales-warning--success {
+    background: #edf8f3;
+    color: #237557;
+}

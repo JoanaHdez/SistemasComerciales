@@ -1,0 +1,167 @@
+
+/* ==========================================================
+   Historial de Ventas - Encabezado de tarjeta
+========================================================== */
+
+.sale-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Folio
+========================================================== */
+
+.sale-card__folio {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #8d7d99;
+
+    font-size: .74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+/* ==========================================================
+   Historial de Ventas - Cliente
+========================================================== */
+
+.sale-card__client {
+    margin: 0;
+
+    color: #433252;
+
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Historial de Ventas - Estado
+========================================================== */
+
+.sale-card__status {
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background: #efe8f5;
+    color: #684d86;
+
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Historial de Ventas - Información de la venta
+========================================================== */
+
+.sale-card__body {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.sale-card__body strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #695c73;
+
+    font-size: .74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sale-card__body p {
+    margin: 0;
+
+    color: #3e3247;
+
+    font-size: .95rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   Historial de Ventas - Pie de tarjeta
+========================================================== */
+
+.sale-card__footer {
+    margin-top: 28px;
+    padding-top: 22px;
+
+    border-top: 1px solid #ece5f1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Enlaces
+========================================================== */
+
+.sale-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.sale-card__links a {
+    color: #76539b;
+
+    text-decoration: none;
+
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.sale-card__links a:hover {
+    text-decoration: underline;
+}
+
+.sale-card__links span {
+    color: #7f7188;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Historial de Ventas - Botón de acciones
+========================================================== */
+
+.sale-card__button {
+    min-height: 46px;
+
+    padding: 0 22px;
+
+    border: 0;
+    border-radius: 12px;
+
+    background: #76539b;
+    color: #fff;
+
+    font: inherit;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.sale-card__button:hover {
+    background: #624483;
+
+    transform: translateY(-1px);
+}

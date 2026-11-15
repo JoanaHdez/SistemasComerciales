@@ -1,0 +1,126 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Tabla de productos
+========================================================== */
+
+/* ==========================================================
+   Contenedor de la tabla
+========================================================== */
+
+.inventory-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* ==========================================================
+   Estructura principal de la tabla
+========================================================== */
+
+.inventory-table {
+    width: 100%;
+    min-width: 980px;
+
+    border-collapse: collapse;
+}
+
+/* ==========================================================
+   Celdas y encabezados
+========================================================== */
+
+.inventory-table th,
+.inventory-table td {
+    padding: 18px 16px;
+
+    border-bottom: 1px solid #f0ebf4;
+
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* ==========================================================
+   Encabezados de columnas
+========================================================== */
+
+.inventory-table th {
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #8d8397;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   Contenido de las celdas
+========================================================== */
+
+.inventory-table td {
+    font-size: 0.92rem;
+    color: #51475d;
+}
+
+/* ==========================================================
+   Transición de las filas
+========================================================== */
+
+.inventory-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+/* ==========================================================
+   Efecto hover de las filas
+========================================================== */
+
+.inventory-table tbody tr:hover {
+    background: #faf8fc;
+}
+
+/* ==========================================================
+   Información del producto
+========================================================== */
+
+.inventory-product {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* ==========================================================
+   Imagen o icono del producto
+========================================================== */
+
+.inventory-product__image {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+
+    background: #f3eef8;
+
+    font-size: 1.35rem;
+}
+
+/* ==========================================================
+   Nombre del producto
+========================================================== */
+
+.inventory-product__name {
+    display: block;
+    color: #342842;
+}
+
+/* ==========================================================
+   Marca del producto
+========================================================== */
+
+.inventory-product__brand {
+    display: block;
+    margin-top: 4px;
+
+    font-size: 0.78rem;
+    color: #978e9f;
+}

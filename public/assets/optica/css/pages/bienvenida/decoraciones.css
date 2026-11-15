@@ -1,0 +1,92 @@
+
+/* ==========================================================
+   OPTICOOL - BIENVENIDA
+   Figuras y elementos decorativos
+========================================================== */
+
+/* ==========================================================
+   Contenedor general de decoraciones
+========================================================== */
+
+.welcome__decorations {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   Estilos compartidos de las figuras decorativas
+========================================================== */
+
+.welcome__decoration {
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    border: 3px dashed rgba(255, 0, 170, 0.55);
+    border-radius: 45% 55% 60% 40%;
+}
+
+/* ==========================================================
+   Decoración superior izquierda
+========================================================== */
+
+.welcome__decoration--top-left {
+    top: -35px;
+    left: -25px;
+}
+
+/* ==========================================================
+   Decoración superior central
+========================================================== */
+
+.welcome__decoration--top-center {
+    top: -55px;
+    left: 48%;
+}
+
+/* ==========================================================
+   Decoración superior derecha
+========================================================== */
+
+.welcome__decoration--top-right {
+    top: -30px;
+    right: -20px;
+}
+
+/* ==========================================================
+   Decoración central
+========================================================== */
+
+.welcome__decoration--middle {
+    top: 42%;
+    left: 52%;
+}
+
+/* ==========================================================
+   Decoración inferior izquierda
+========================================================== */
+
+.welcome__decoration--bottom-left {
+    bottom: -35px;
+    left: 8%;
+}
+
+/* ==========================================================
+   Decoración inferior central
+========================================================== */
+
+.welcome__decoration--bottom-center {
+    bottom: -45px;
+    left: 47%;
+}
+
+/* ==========================================================
+   Decoración lateral derecha
+========================================================== */
+
+.welcome__decoration--right {
+    top: 48%;
+    right: -35px;
+}

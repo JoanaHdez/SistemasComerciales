@@ -1,356 +1,41 @@
-/* ==========================================================
-   Página: Reportes
-========================================================== */
-
-.reports-page {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
 
 /* ==========================================================
-   Encabezado
+   OPTICOOL - REPORTES
+   Archivo principal de estilos
 ========================================================== */
 
-.reports-page__header {
-    margin-bottom: 30px;
-}
+/* 01. Estilos base */
+@import url("./reportes/base.css");
 
-.reports-page__eyebrow {
-    display: block;
-    margin-bottom: 6px;
+/* 02. Encabezado de la página */
+@import url("./reportes/encabezado.css");
 
-    color: #876ba5;
-    font-size: 0.76rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
+/* 03. Distribución general */
+@import url("./reportes/layout.css");
 
-.reports-page__title {
-    margin: 0;
+/* 04. Barra superior y filtros */
+@import url("./reportes/toolbar.css");
 
-    color: #2d203b;
-    font-size: 2.35rem;
-    font-weight: 800;
-}
+/* 05. Botones y acciones */
+@import url("./reportes/botones.css");
 
-.reports-page__description {
-    max-width: 760px;
-    margin: 12px 0 0;
+/* 06. Pestañas de navegación */
+@import url("./reportes/pestanas.css");
 
-    color: #776b80;
-    line-height: 1.6;
-}
+/* 07. Resumen estadístico */
+@import url("./reportes/resumen.css");
 
-/* ==========================================================
-   Layout
-========================================================== */
+/* 08. Tarjetas de información */
+@import url("./reportes/tarjetas.css");
 
-.reports-layout {
-    display: grid;
-    gap: 24px;
-}
+/* 09. Gráficas y barras */
+@import url("./reportes/graficas.css");
 
-/* ==========================================================
-   Barra superior
-========================================================== */
+/* 10. Listas de información */
+@import url("./reportes/listas.css");
 
-.reports-toolbar {
-    padding: 22px 24px;
+/* 11. Tablas y resultados */
+@import url("./reportes/tablas.css");
 
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 20px;
-
-    background: #ffffff;
-    border: 1px solid #e9e1ef;
-    border-radius: 20px;
-
-    box-shadow: 0 12px 30px rgba(67, 48, 83, 0.06);
-}
-
-.reports-toolbar__period {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.reports-toolbar__period label {
-    color: #685a72;
-    font-size: 0.8rem;
-    font-weight: 800;
-}
-
-.reports-toolbar__period select {
-    min-width: 220px;
-    min-height: 46px;
-    padding: 0 38px 0 14px;
-
-    color: #4f4358;
-    background: #ffffff;
-
-    border: 1px solid #ddd4e5;
-    border-radius: 12px;
-    outline: none;
-
-    font: inherit;
-}
-
-.reports-toolbar__period select:focus {
-    border-color: #76539b;
-    box-shadow: 0 0 0 4px rgba(118, 83, 155, 0.1);
-}
-
-.reports-toolbar__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.reports-button {
-    min-height: 42px;
-    padding: 0 16px;
-
-    color: #684d86;
-    background: #f1ebf5;
-
-    border: 0;
-    border-radius: 10px;
-
-    font: inherit;
-    font-size: 0.8rem;
-    font-weight: 800;
-
-    cursor: pointer;
-
-    transition:
-        background-color 0.2s ease,
-        transform 0.2s ease;
-}
-
-.reports-button:hover {
-    background: #e5daed;
-    transform: translateY(-1px);
-}
-
-/* ==========================================================
-   Pestañas
-========================================================== */
-
-.reports-tabs {
-    display: flex;
-    gap: 8px;
-
-    padding: 8px;
-
-    overflow-x: auto;
-
-    background: #ffffff;
-    border: 1px solid #e9e1ef;
-    border-radius: 16px;
-
-    box-shadow: 0 10px 26px rgba(67, 48, 83, 0.05);
-}
-
-.reports-tab {
-    min-height: 42px;
-    padding: 0 18px;
-
-    color: #76697f;
-    background: transparent;
-
-    border: 0;
-    border-radius: 10px;
-
-    font: inherit;
-    font-size: 0.82rem;
-    font-weight: 800;
-
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.reports-tab:hover {
-    background: #f5f1f8;
-}
-
-.reports-tab--active {
-    color: #ffffff;
-    background: #76539b;
-}
-
-/* ==========================================================
-   Resumen
-========================================================== */
-
-.reports-summary {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.reports-summary__card {
-    padding: 24px;
-
-    background: #ffffff;
-    border: 1px solid #e9e1ef;
-    border-radius: 20px;
-
-    box-shadow: 0 12px 30px rgba(67, 48, 83, 0.06);
-}
-
-.reports-summary__card span {
-    display: block;
-
-    color: #8d7d99;
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-.reports-summary__card strong {
-    display: block;
-    margin-top: 14px;
-
-    color: #47345c;
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-/* ==========================================================
-   Tarjetas y gráfica
-========================================================== */
-
-.reports-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-}
-
-.reports-card {
-    padding: 26px;
-
-    background: #ffffff;
-    border: 1px solid #e9e1ef;
-    border-radius: 22px;
-
-    box-shadow: 0 14px 34px rgba(67, 48, 83, 0.07);
-}
-
-.reports-card--large {
-    grid-column: 1 / -1;
-}
-
-.reports-card header {
-    margin-bottom: 22px;
-}
-
-.reports-card h2 {
-    margin: 0;
-
-    color: #3a2c4c;
-    font-size: 1.15rem;
-}
-
-.reports-chart {
-    height: 260px;
-
-    display: flex;
-    align-items: flex-end;
-    gap: 16px;
-
-    padding-top: 20px;
-}
-
-.reports-chart span {
-    flex: 1;
-
-    min-width: 34px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #8b68b1 0%,
-            #654487 100%
-        );
-
-    border-radius: 12px 12px 4px 4px;
-}
-
-/* ==========================================================
-   Listas
-========================================================== */
-
-.reports-list {
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-}
-
-.reports-list li {
-    padding: 14px 0;
-
-    color: #5d5165;
-
-    border-bottom: 1px solid #eee8f1;
-
-    font-size: 0.88rem;
-    font-weight: 650;
-}
-
-.reports-list li:last-child {
-    border-bottom: 0;
-}
-
-/* ==========================================================
-   Responsive
-========================================================== */
-
-@media (max-width: 1000px) {
-    .reports-summary {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .reports-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .reports-card--large {
-        grid-column: auto;
-    }
-}
-
-@media (max-width: 700px) {
-    .reports-toolbar {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .reports-toolbar__period select {
-        width: 100%;
-        min-width: 0;
-    }
-
-    .reports-toolbar__actions {
-        width: 100%;
-    }
-
-    .reports-button {
-        flex: 1;
-    }
-
-    .reports-summary {
-        grid-template-columns: 1fr;
-    }
-
-    .reports-chart {
-        gap: 8px;
-    }
-
-    .reports-chart span {
-        min-width: 20px;
-    }
-}
-.reports-toolbar__period{display:flex!important;align-items:center;gap:10px;flex-wrap:wrap}.reports-toolbar__period input{padding:10px;border:1px solid #ded5ea;border-radius:10px}.reports-tabs{flex-wrap:wrap}.reports-card--table{grid-column:1/-1}.reports-table-wrap{overflow:auto}.reports-table{width:100%;border-collapse:collapse}.reports-table th,.reports-table td{padding:11px;border-bottom:1px solid #eee;text-align:left;white-space:nowrap}.reports-empty{width:100%;padding:35px;text-align:center;color:#8d7d99}.reports-chart{display:flex!important;align-items:flex-end!important;gap:10px!important;min-height:240px}.report-bar{height:210px;flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;min-width:28px}.report-bar span{width:70%;background:linear-gradient(#9c7bc0,#76539b);border-radius:8px 8px 2px 2px}.report-bar small{width:100%;margin-top:7px;overflow:hidden;text-overflow:ellipsis;text-align:center;font-size:.62rem;color:#8d7d99}@media(max-width:700px){.reports-toolbar__period{align-items:stretch}.reports-toolbar__period>*{width:100%}}
+/* 12. Diseño responsive */
+@import url("./reportes/responsive.css");

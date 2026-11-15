@@ -1,0 +1,34 @@
+
+/* ==========================================================
+   OPTICOOL - MENÚ PRINCIPAL
+   Acciones y enlaces inferiores
+========================================================== */
+
+/* ==========================================================
+   Contenedor de las acciones inferiores
+========================================================== */
+
+.main-menu__footer-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+/* ==========================================================
+   Enlaces de las acciones inferiores
+========================================================== */
+
+.main-menu__footer-actions a {
+    padding: 10px 15px;
+
+    color: #5d4579;
+    background: rgba(255, 255, 255, .55);
+
+    border-radius: 999px;
+    text-decoration: none;
+
+    font-size: .82rem;
+    font-weight: 700;
+}

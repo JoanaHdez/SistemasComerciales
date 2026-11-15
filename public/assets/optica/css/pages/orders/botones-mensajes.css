@@ -1,0 +1,100 @@
+
+/* ==========================================================
+   OPTICOOL - PEDIDOS
+   Botones, roles y mensajes
+========================================================== */
+
+/* ==========================================================
+   Selector de roles
+========================================================== */
+
+.orders-role {
+    display: grid;
+    gap: 6px;
+    color: #776b80;
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.orders-role select {
+    min-height: 44px;
+    padding: 0 12px;
+    border: 1px solid #ddd4e5;
+    border-radius: 12px;
+    background: #fff;
+    font: inherit;
+}
+
+/* ==========================================================
+   Estilos compartidos de botones
+========================================================== */
+
+.orders-button,
+.orders-filters__clear,
+.orders-inline-button {
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Botón general
+========================================================== */
+
+.orders-button {
+    min-height: 46px;
+    padding: 0 18px;
+}
+
+/* ==========================================================
+   Botón principal
+========================================================== */
+
+.orders-button--primary {
+    background: #76539b;
+    color: #fff;
+}
+
+/* ==========================================================
+   Botón secundario
+========================================================== */
+
+.orders-button--secondary {
+    background: #eee8f5;
+    color: #5d4579;
+}
+
+/* ==========================================================
+   Mensajes generales y de modales
+========================================================== */
+
+.orders-message,
+.orders-modal__message {
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: #edf8f3;
+    color: #237557;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Mensajes de error
+========================================================== */
+
+.orders-message[data-tipo="error"],
+.orders-modal__message[data-tipo="error"] {
+    background: #fff0f1;
+    color: #a13c46;
+}
+
+/* ==========================================================
+   Mensajes de advertencia
+========================================================== */
+
+.orders-message[data-tipo="advertencia"],
+.orders-modal__message[data-tipo="advertencia"] {
+    background: #fff7e8;
+    color: #936415;
+}

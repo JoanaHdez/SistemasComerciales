@@ -1,0 +1,106 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVO CLIENTE
+   Diseño responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 1050px
+   Adaptaciones para tablets
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    /* Distribución de datos personales e historial clínico */
+
+    .personal-data,
+    .clinical-history {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 700px
+   Adaptaciones para pantallas pequeñas
+========================================================== */
+
+@media (max-width: 700px) {
+
+    /* Encabezado */
+
+    .new-client-page__header {
+        flex-direction: column;
+    }
+
+    /* Botón para regresar */
+
+    .new-client-page__back {
+        width: 100%;
+    }
+
+    /* Título principal */
+
+    .new-client-page__heading {
+        font-size: 1.9rem;
+    }
+
+    /* Tarjetas de sección */
+
+    .new-client-section {
+        padding: 28px 22px;
+    }
+
+    /* Línea decorativa superior */
+
+    .new-client-section::before {
+        left: 22px;
+    }
+
+    /* Distribución de los campos */
+
+    .personal-data,
+    .clinical-history {
+        grid-template-columns: 1fr;
+    }
+
+    /* Campos de ancho completo */
+
+    .form-group--full {
+        grid-column: auto;
+    }
+
+    /* Contenedor de acciones */
+
+    .new-client-page__actions {
+        justify-content: stretch;
+    }
+
+    /* Botón para guardar */
+
+    .new-client-page__button {
+        width: 100%;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 480px
+   Adaptaciones para celulares
+========================================================== */
+
+@media (max-width: 480px) {
+
+    /* Tarjetas de sección */
+
+    .new-client-section {
+        padding: 24px 18px;
+        border-radius: 17px;
+    }
+
+    /* Opciones de selección tipo radio */
+
+    .radio-group {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding-block: 11px;
+    }
+}

@@ -1,0 +1,92 @@
+
+/* ==========================================================
+   OPTICOOL - LOGIN
+   Elementos decorativos
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal de las decoraciones
+========================================================== */
+
+.login-page__decorations {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   Estilo general de las figuras decorativas
+========================================================== */
+
+.login-page__decoration {
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    border: 3px dashed rgba(255, 0, 170, 0.55);
+    border-radius: 45% 55% 60% 40%;
+}
+
+/* ==========================================================
+   Decoración superior izquierda
+========================================================== */
+
+.login-page__decoration--top-left {
+    top: -35px;
+    left: -25px;
+}
+
+/* ==========================================================
+   Decoración superior central
+========================================================== */
+
+.login-page__decoration--top-center {
+    top: -55px;
+    left: 48%;
+}
+
+/* ==========================================================
+   Decoración superior derecha
+========================================================== */
+
+.login-page__decoration--top-right {
+    top: -30px;
+    right: -20px;
+}
+
+/* ==========================================================
+   Decoración central
+========================================================== */
+
+.login-page__decoration--middle {
+    top: 42%;
+    left: 52%;
+}
+
+/* ==========================================================
+   Decoración inferior izquierda
+========================================================== */
+
+.login-page__decoration--bottom-left {
+    bottom: -35px;
+    left: 8%;
+}
+
+/* ==========================================================
+   Decoración inferior central
+========================================================== */
+
+.login-page__decoration--bottom-center {
+    bottom: -45px;
+    left: 47%;
+}
+
+/* ==========================================================
+   Decoración lateral derecha
+========================================================== */
+
+.login-page__decoration--right {
+    top: 48%;
+    right: -35px;
+}

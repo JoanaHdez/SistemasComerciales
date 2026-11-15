@@ -1,0 +1,50 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Estados de disponibilidad de productos
+========================================================== */
+
+/* ==========================================================
+   Estilo general de las etiquetas de estado
+========================================================== */
+
+.inventory-status {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 28px;
+    padding: 0 11px;
+
+    border-radius: 999px;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* ==========================================================
+   Producto disponible
+========================================================== */
+
+.inventory-status--available {
+    background: #e9f8ef;
+    color: #2f8050;
+}
+
+/* ==========================================================
+   Producto con existencias bajas
+========================================================== */
+
+.inventory-status--low {
+    background: #fff4dc;
+    color: #a96d13;
+}
+
+/* ==========================================================
+   Producto agotado
+========================================================== */
+
+.inventory-status--empty {
+    background: #fdeaea;
+    color: #bd4343;
+}

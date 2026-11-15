@@ -1,0 +1,131 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Diseño responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 1100px
+   Tarjetas, herramientas, buscador y filtros
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    /* Tarjetas de resumen */
+
+    .inventory-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Barra de herramientas */
+
+    .inventory-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    /* Buscador */
+
+    .inventory-search {
+        width: 100%;
+    }
+
+    /* Contenedor de filtros */
+
+    .inventory-filters {
+        width: 100%;
+    }
+
+    /* Selectores de filtros */
+
+    .inventory-filter {
+        flex: 1;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 768px
+   Adaptaciones para tablets y celulares
+========================================================== */
+
+@media (max-width: 768px) {
+
+    /* Página principal */
+
+    .inventory-page {
+        gap: 22px;
+    }
+
+    /* Encabezado */
+
+    .inventory-page__header {
+        flex-direction: column;
+    }
+
+    /* Botón principal */
+
+    .inventory-page__button {
+        width: 100%;
+    }
+
+    /* Tarjetas de resumen */
+
+    .inventory-summary {
+        grid-template-columns: 1fr;
+    }
+
+    /* Panel principal */
+
+    .inventory-panel {
+        padding: 18px;
+    }
+
+    /* Filtros */
+
+    .inventory-filters {
+        flex-direction: column;
+    }
+
+    /* Selectores */
+
+    .inventory-filter {
+        width: 100%;
+    }
+
+    /* Paginación */
+
+    .inventory-pagination {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    /* Botones de paginación */
+
+    .inventory-pagination__buttons {
+        flex-wrap: wrap;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 640px
+   Adaptaciones complementarias
+========================================================== */
+
+@media (max-width: 640px) {
+
+    /* Botones del encabezado */
+
+    .inventory-header-actions {
+        width: 100%;
+    }
+
+    .inventory-header-actions button {
+        flex: 1;
+    }
+
+    /* Acciones de productos */
+
+    .inventory-actions {
+        min-width: 190px;
+    }
+}

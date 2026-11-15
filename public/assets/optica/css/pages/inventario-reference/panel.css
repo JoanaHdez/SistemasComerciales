@@ -1,0 +1,45 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Panel principal del catálogo
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal
+========================================================== */
+
+.inventory-page .inventory-panel {
+    overflow: hidden;
+    border: 1px solid #e5ddea;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 16px 38px rgba(53, 34, 68, .07);
+}
+
+/* ==========================================================
+   Encabezado del panel
+========================================================== */
+
+.inventory-page .inventory-panel__header {
+    min-height: 82px;
+    padding: 18px 22px;
+    background: #fff;
+}
+
+/* ==========================================================
+   Título del catálogo
+========================================================== */
+
+.inventory-panel__header h2 {
+    font-size: 1.12rem;
+}
+
+/* ==========================================================
+   Descripción del catálogo
+========================================================== */
+
+.inventory-panel__header p {
+    margin: 4px 0 0;
+    color: #887d8e;
+    font-size: .78rem;
+}

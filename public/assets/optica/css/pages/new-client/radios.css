@@ -1,0 +1,49 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVO CLIENTE
+   Opciones de selección tipo radio
+========================================================== */
+
+/* ==========================================================
+   Contenedor de las opciones
+========================================================== */
+
+.radio-group {
+    min-height: 46px;
+    padding: 0 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    background: #faf8fc;
+    border: 1px solid #ded6e5;
+    border-radius: 11px;
+}
+
+/* ==========================================================
+   Etiquetas de las opciones
+========================================================== */
+
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #4f4655;
+    cursor: pointer;
+}
+
+/* ==========================================================
+   Botones de selección tipo radio
+========================================================== */
+
+.radio-group input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    min-height: auto;
+    padding: 0;
+
+    accent-color: #76539b;
+    box-shadow: none;
+}

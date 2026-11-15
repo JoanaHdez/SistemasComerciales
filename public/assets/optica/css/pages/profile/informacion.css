@@ -1,0 +1,51 @@
+
+/* ==========================================================
+   OPTICOOL - MI PERFIL
+   Información personal del usuario
+========================================================== */
+
+/* ==========================================================
+   Contenedor de información
+========================================================== */
+
+.profile-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 0 36px;
+}
+
+/* ==========================================================
+   Elementos individuales de información
+========================================================== */
+
+.profile-info__item {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eee8f1;
+}
+
+/* ==========================================================
+   Etiquetas de los datos
+========================================================== */
+
+.profile-info__item span {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #95899d;
+
+    font-size: .76rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Valores de los datos
+========================================================== */
+
+.profile-info__item strong {
+    color: #44364e;
+
+    font-size: .95rem;
+    font-weight: 700;
+}

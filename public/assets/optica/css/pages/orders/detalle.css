@@ -1,0 +1,133 @@
+
+/* ==========================================================
+   OPTICOOL - PEDIDOS
+   Detalle e historial de pedidos
+========================================================== */
+
+/* ==========================================================
+   Información del cliente
+========================================================== */
+
+.orders-detail__client {
+    margin: 6px 0 0;
+    color: #776b80;
+}
+
+/* ==========================================================
+   Estado actual del pedido
+========================================================== */
+
+.orders-detail__status {
+    width: max-content;
+    margin-bottom: 16px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #eee8f5;
+    color: #5d4579;
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Colores según el estado del pedido
+========================================================== */
+
+/* En laboratorio */
+
+.orders-detail__status[data-estado="En laboratorio"] {
+    background: #fff2db;
+    color: #936415;
+}
+
+/* Listo */
+
+.orders-detail__status[data-estado="Listo"] {
+    background: #e7f7f0;
+    color: #237557;
+}
+
+/* Entregado */
+
+.orders-detail__status[data-estado="Entregado"] {
+    background: #eaf3fd;
+    color: #326a9e;
+}
+
+/* ==========================================================
+   Metadatos del pedido
+========================================================== */
+
+.orders-detail__meta {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+    color: #776b80;
+    font-size: .85rem;
+}
+
+/* ==========================================================
+   Contenedor del historial
+========================================================== */
+
+.orders-history {
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px solid #e9e1ef;
+}
+
+/* ==========================================================
+   Título del historial
+========================================================== */
+
+.orders-history h3 {
+    margin: 0 0 14px;
+    color: #47345c;
+}
+
+/* ==========================================================
+   Lista de movimientos
+========================================================== */
+
+.orders-history ol {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding-left: 22px;
+}
+
+/* ==========================================================
+   Elementos del historial
+========================================================== */
+
+.orders-history li {
+    padding-left: 6px;
+    color: #655671;
+}
+
+/* ==========================================================
+   Descripción de cada movimiento
+========================================================== */
+
+.orders-history li p {
+    margin: 5px 0;
+}
+
+/* ==========================================================
+   Fecha y hora de los movimientos
+========================================================== */
+
+.orders-history time {
+    display: block;
+    margin-top: 4px;
+    color: #978ca1;
+    font-size: .78rem;
+}
+
+/* ==========================================================
+   Pie del modal de detalle
+========================================================== */
+
+.orders-detail__footer {
+    justify-content: space-between;
+}

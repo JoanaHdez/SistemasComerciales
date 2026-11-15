@@ -1,0 +1,225 @@
+
+/* ==========================================================
+   Historial de Ventas - Modal de detalle
+========================================================== */
+
+.sales-detail {
+    width: min(960px, calc(100% - 32px));
+    max-height: calc(100vh - 40px);
+    padding: 0;
+    color: #3e3247;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 24px 70px rgba(45, 32, 59, 0.28);
+}
+
+/* ==========================================================
+   Historial de Ventas - Fondo del modal
+========================================================== */
+
+.sales-detail::backdrop {
+    background: rgba(35, 25, 43, 0.55);
+}
+
+/* ==========================================================
+   Historial de Ventas - Encabezado
+========================================================== */
+
+.sales-detail__header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #fff;
+    border-bottom: 1px solid #ece5f1;
+}
+
+.sales-detail__header h2 {
+    margin: 4px 0 0;
+    color: #433252;
+}
+
+/* ==========================================================
+   Historial de Ventas - Botón cerrar
+========================================================== */
+
+.sales-detail__close {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    background: #f2edf5;
+    color: #684d86;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ==========================================================
+   Historial de Ventas - Contenido
+========================================================== */
+
+#sales-detail-content {
+    padding: 24px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Resumen de venta
+========================================================== */
+
+.sales-detail__summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.sales-detail__summary div {
+    padding: 14px;
+    background: #faf8fc;
+    border: 1px solid #ece5f1;
+    border-radius: 12px;
+}
+
+.sales-detail__summary span,
+.sales-detail__summary strong {
+    display: block;
+}
+
+.sales-detail__summary span {
+    margin-bottom: 6px;
+    color: #8a7f91;
+    font-size: 0.72rem;
+}
+
+/* ==========================================================
+   Historial de Ventas - Títulos de secciones
+========================================================== */
+
+.sales-detail h3 {
+    margin: 24px 0 10px;
+    color: #49365d;
+    font-size: 1rem;
+}
+
+/* ==========================================================
+   Historial de Ventas - Tablas
+========================================================== */
+
+.sales-detail__table {
+    overflow-x: auto;
+}
+
+.sales-detail table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sales-detail th,
+.sales-detail td {
+    padding: 10px;
+    border-bottom: 1px solid #ece5f1;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+/* ==========================================================
+   Historial de Ventas - Control de entrega
+========================================================== */
+
+.sales-delivery-control {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #65586e;
+    font-weight: 800;
+}
+
+.sales-delivery-control select {
+    min-height: 42px;
+    padding: 0 12px;
+    border: 1px solid #ddd4e5;
+    border-radius: 10px;
+    font: inherit;
+}
+
+/* ==========================================================
+   Historial de Ventas - Movimientos
+========================================================== */
+
+.sales-movements {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+    list-style: none;
+}
+
+.sales-movements li {
+    padding: 11px 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    background: #faf8fc;
+    border-radius: 10px;
+}
+
+.sales-movements li div span {
+    display: block;
+    margin-top: 4px;
+    color: #817587;
+    font-size: 0.76rem;
+}
+
+/* ==========================================================
+   Historial de Ventas - Botones de movimientos y acciones
+========================================================== */
+
+.sales-movements button,
+.sales-detail__actions button {
+    min-height: 38px;
+    padding: 0 14px;
+    border: 1px solid #d9cce3;
+    border-radius: 9px;
+    background: #fff;
+    color: #684d86;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ==========================================================
+   Historial de Ventas - Acciones del modal
+========================================================== */
+
+.sales-detail__actions {
+    margin-top: 26px;
+    padding-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    border-top: 1px solid #ece5f1;
+}
+
+.sales-detail__actions .danger {
+    color: #b43f4b;
+    border-color: #efc1c6;
+}
+
+/* ==========================================================
+   Historial de Ventas - Advertencias
+========================================================== */
+
+.sales-warning {
+    margin-bottom: 18px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #963843;
+    background: #fdebed;
+    border-radius: 12px;
+}

@@ -1,0 +1,92 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Tarjetas de resumen e indicadores
+========================================================== */
+
+/* ==========================================================
+   Contenedor de indicadores
+========================================================== */
+
+.inventory-page .inventory-summary {
+    gap: 12px;
+}
+
+/* ==========================================================
+   Tarjetas de indicadores
+========================================================== */
+
+.inventory-page .inventory-summary__card {
+    min-height: 108px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    align-items: center;
+    gap: 14px;
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(54, 35, 69, .055);
+}
+
+/* ==========================================================
+   Elementos decorativos
+========================================================== */
+
+.inventory-page .inventory-summary__card::after {
+    display: none;
+}
+
+/* ==========================================================
+   Iconos de indicadores
+========================================================== */
+
+.inventory-summary__icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 12px;
+    background: #f0e8f6;
+    color: #76539b;
+    font-size: .82rem;
+    font-weight: 900;
+}
+
+/* ==========================================================
+   Variantes de color de los indicadores
+========================================================== */
+
+.inventory-summary__card--blue .inventory-summary__icon {
+    background: #e9f1fb;
+    color: #4c70a3;
+}
+
+.inventory-summary__card--warning .inventory-summary__icon {
+    background: #fff3d9;
+    color: #9b6b19;
+}
+
+.inventory-summary__card--danger .inventory-summary__icon {
+    background: #fbe8eb;
+    color: #a94452;
+}
+
+/* ==========================================================
+   Etiquetas y descripciones
+========================================================== */
+
+.inventory-page .inventory-summary__label,
+.inventory-page .inventory-summary__detail {
+    display: block;
+    padding: 0;
+    font-size: .75rem;
+}
+
+/* ==========================================================
+   Valores principales
+========================================================== */
+
+.inventory-page .inventory-summary__value {
+    display: block;
+    margin: 4px 0;
+    font-size: 1.55rem;
+}

@@ -1,0 +1,80 @@
+
+/* ==========================================================
+   OPTICOOL - MI PERFIL
+   Botones y acciones
+========================================================== */
+
+/* ==========================================================
+   Botón para editar información
+========================================================== */
+
+.profile-card__action {
+    min-height: 42px;
+    padding: 0 18px;
+
+    border: 1px solid #d9cde2;
+    border-radius: 11px;
+
+    background: #fff;
+    color: #76539b;
+
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+/* ==========================================================
+   Efecto hover del botón editar
+========================================================== */
+
+.profile-card__action:hover {
+    background: #f5f1f8;
+    border-color: #76539b;
+}
+
+/* ==========================================================
+   Botón de seguridad
+========================================================== */
+
+.profile-security__button {
+    min-height: 46px;
+    padding: 0 20px;
+
+    flex-shrink: 0;
+
+    border: 0;
+    border-radius: 12px;
+
+    background: #76539b;
+    color: #fff;
+
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+/* ==========================================================
+   Efecto hover del botón de seguridad
+========================================================== */
+
+.profile-security__button:hover {
+    background: #624483;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Botón de seguridad deshabilitado
+========================================================== */
+
+.profile-security__button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}

@@ -1,0 +1,77 @@
+
+/* ==========================================================
+   Graduación - Responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 1050px
+========================================================== */
+
+@media (max-width: 1050px) {
+    .graduacion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .graduacion-right {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .graduacion-right .graduacion-actions {
+        align-items: flex-end;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 760px
+========================================================== */
+
+@media (max-width: 760px) {
+    .graduacion-page__header {
+        flex-direction: column;
+    }
+
+    .graduacion-page__back {
+        width: 100%;
+    }
+
+    .graduacion-page__heading {
+        font-size: 1.9rem;
+    }
+
+    .graduacion-section {
+        padding: 28px 22px;
+    }
+
+    .graduacion-section::before {
+        left: 22px;
+    }
+
+    .eye-grid,
+    .graduacion-right {
+        grid-template-columns: 1fr;
+    }
+
+    .graduacion-form__footer {
+        flex-direction: column-reverse;
+    }
+
+    .graduacion-form__footer .graduacion-button {
+        width: 100%;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 480px
+========================================================== */
+
+@media (max-width: 480px) {
+    .graduacion-section {
+        padding: 24px 18px;
+        border-radius: 17px;
+    }
+
+    .eye-card,
+    .graduacion-right {
+        padding: 18px;
+    }
+}

@@ -1,0 +1,92 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Paginación del catálogo de productos
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal de paginación
+========================================================== */
+
+.inventory-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    padding-top: 22px;
+}
+
+/* ==========================================================
+   Resumen de registros
+========================================================== */
+
+.inventory-pagination__summary {
+    font-size: 0.84rem;
+    color: #8d8496;
+}
+
+/* ==========================================================
+   Contenedor de botones
+========================================================== */
+
+.inventory-pagination__buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==========================================================
+   Botones de paginación
+========================================================== */
+
+.inventory-pagination__button {
+    min-width: 38px;
+    min-height: 38px;
+    padding: 0 12px;
+
+    border: 1px solid #ded5ea;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #645872;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+/* ==========================================================
+   Efecto hover de los botones habilitados
+========================================================== */
+
+.inventory-pagination__button:hover:not(:disabled) {
+    border-color: #7b5ca7;
+    color: #7350a0;
+}
+
+/* ==========================================================
+   Botón de página activa
+========================================================== */
+
+.inventory-pagination__button--active {
+    border-color: #7350a0;
+    background: #7350a0;
+    color: #ffffff;
+}
+
+/* ==========================================================
+   Botones deshabilitados
+========================================================== */
+
+.inventory-pagination__button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}

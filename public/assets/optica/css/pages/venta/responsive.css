@@ -1,0 +1,133 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVA VENTA
+   Diseño responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 1100px
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    /* Distribución principal */
+    .sale-layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* Resumen de venta */
+    .sale-summary {
+        position: static;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 900px
+========================================================== */
+
+@media (max-width: 900px) {
+
+    /* Herramientas de productos y métodos de pago */
+    .sale-product-tools,
+    .sale-payment-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Formulario de captura manual */
+    .sale-manual-product {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 760px
+========================================================== */
+
+@media (max-width: 760px) {
+
+    /* Encabezado principal */
+    .sale-page__header {
+        flex-direction: column;
+    }
+
+    /* Botón para regresar */
+    .sale-page__back {
+        width: 100%;
+    }
+
+    /* Título principal */
+    .sale-page__title {
+        font-size: 1.9rem;
+    }
+
+    /* Tarjetas */
+    .sale-card {
+        padding: 28px 22px;
+    }
+
+    /* Elemento decorativo de las tarjetas */
+    .sale-card::before {
+        left: 22px;
+    }
+
+    /* Clientes y datos generales */
+    .sale-client-row,
+    .sale-data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Acciones de clientes */
+    .sale-client-actions {
+        flex-direction: column;
+    }
+
+    /* Botones de clientes */
+    .sale-client-actions .sale-button {
+        width: 100%;
+    }
+
+    /* Encabezado de productos */
+    .sale-products__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* Botón para agregar productos */
+    .sale-add-product {
+        width: 100%;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 640px
+========================================================== */
+
+@media (max-width: 640px) {
+
+    /* Herramientas, pagos y captura manual */
+    .sale-product-tools,
+    .sale-payment-grid,
+    .sale-manual-product {
+        grid-template-columns: 1fr;
+    }
+
+    /* Barra de controles de prueba */
+    .sales-test-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 480px
+========================================================== */
+
+@media (max-width: 480px) {
+
+    /* Tarjetas y resumen de venta */
+    .sale-card,
+    .sale-summary {
+        padding: 22px 18px;
+        border-radius: 17px;
+    }
+}

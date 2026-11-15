@@ -1,0 +1,40 @@
+
+/* ==========================================================
+   OPTICOOL - BIENVENIDA
+   Botones y efectos de interacción
+========================================================== */
+
+/* ==========================================================
+   Botón principal de acceso
+========================================================== */
+
+.welcome__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 240px;
+    min-height: 58px;
+    padding: 0.9rem 2rem;
+
+    color: #111111;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* ==========================================================
+   Efecto al pasar el cursor sobre el botón
+========================================================== */
+
+.welcome__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}

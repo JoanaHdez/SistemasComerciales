@@ -1,0 +1,96 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVO CLIENTE
+   Encabezado de la página
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal del encabezado
+========================================================== */
+
+.new-client-page__header {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* ==========================================================
+   Texto superior del encabezado
+========================================================== */
+
+.new-client-page__eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #876ba5;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   Título principal
+========================================================== */
+
+.new-client-page__heading {
+    margin: 0;
+
+    color: #2d203b;
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+/* ==========================================================
+   Descripción del encabezado
+========================================================== */
+
+.new-client-page__description {
+    margin: 12px 0 0;
+
+    color: #776b80;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   Botón para regresar
+========================================================== */
+
+.new-client-page__back {
+    min-height: 48px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #684d86;
+    background: #ffffff;
+
+    border: 1px solid #ded4e6;
+    border-radius: 13px;
+
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    box-shadow: 0 8px 20px rgba(67, 48, 83, 0.05);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* ==========================================================
+   Efecto al pasar el cursor sobre el botón
+========================================================== */
+
+.new-client-page__back:hover {
+    background: #f7f3fa;
+    transform: translateY(-1px);
+}

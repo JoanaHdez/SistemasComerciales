@@ -1,0 +1,48 @@
+
+/* ==========================================================
+   OPTICOOL - MENÚ PRINCIPAL
+   Identidad visual y marca
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal de la marca
+========================================================== */
+
+.main-menu__brand {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+/* ==========================================================
+   Texto superior de la marca
+========================================================== */
+
+.main-menu__eyebrow {
+    color: #76539b;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+}
+
+/* ==========================================================
+   Título principal
+========================================================== */
+
+.main-menu__brand h1 {
+    margin: 8px 0 0;
+    font-size: clamp(3.3rem, 8vw, 6.5rem);
+    letter-spacing: -.07em;
+    color: #4b365f;
+}
+
+/* ==========================================================
+   Subtítulo de la marca
+========================================================== */
+
+.main-menu__brand p {
+    margin: 2px 0;
+    color: #776b80;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.25rem;
+}

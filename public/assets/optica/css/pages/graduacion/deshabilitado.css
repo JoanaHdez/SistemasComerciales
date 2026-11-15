@@ -1,0 +1,27 @@
+
+/* ==========================================================
+   Graduación - Graduación actual omitida
+========================================================== */
+
+.graduacion-section--disabled {
+    opacity: .62;
+}
+
+/* ==========================================================
+   Graduación - Tarjetas deshabilitadas
+========================================================== */
+
+.graduacion-section--disabled .eye-card,
+.graduacion-section--disabled .graduacion-right {
+    background: #f5f2f7;
+}
+
+/* ==========================================================
+   Graduación - Campos deshabilitados
+========================================================== */
+
+.graduacion-section--disabled input,
+.graduacion-section--disabled textarea,
+.graduacion-section--disabled select {
+    cursor: not-allowed;
+}

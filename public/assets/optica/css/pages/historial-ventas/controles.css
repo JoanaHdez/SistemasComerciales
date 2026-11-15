@@ -1,0 +1,56 @@
+
+/* ==========================================================
+   Historial de Ventas - Controles del frontend simulado
+========================================================== */
+
+.sales-test-toolbar {
+    margin-bottom: 24px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    color: #5f5268;
+    background: #f7f3fa;
+    border: 1px solid #e4d9ec;
+    border-radius: 14px;
+    font-size: 0.8rem;
+}
+
+/* ==========================================================
+   Historial de Ventas - Selectores de prueba
+========================================================== */
+
+.sales-test-toolbar select {
+    min-height: 36px;
+    padding: 0 10px;
+    border: 1px solid #d8cbe2;
+    border-radius: 9px;
+    background: #fff;
+    font: inherit;
+}
+
+/* ==========================================================
+   Historial de Ventas - Texto complementario
+========================================================== */
+
+.sales-test-toolbar small {
+    color: #8a7f91;
+}
+
+/* ==========================================================
+   Historial de Ventas - Estado vacío
+========================================================== */
+
+.sales-empty {
+    padding: 50px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    color: #817587;
+    background: #fff;
+    border: 1px dashed #d9cde2;
+    border-radius: 20px;
+    text-align: center;
+}

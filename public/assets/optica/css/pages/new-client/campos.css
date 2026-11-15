@@ -1,0 +1,92 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVO CLIENTE
+   Distribución y estilos de los campos
+========================================================== */
+
+/* ==========================================================
+   Distribución de datos personales e historial clínico
+========================================================== */
+
+.personal-data,
+.clinical-history {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px 34px;
+}
+
+/* ==========================================================
+   Campos que ocupan todas las columnas
+========================================================== */
+
+.form-group--full {
+    grid-column: 1 / -1;
+}
+
+/* ==========================================================
+   Contenedor de cada campo
+========================================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+/* ==========================================================
+   Etiquetas de los campos
+========================================================== */
+
+.form-group label,
+.form-group__label {
+    color: #5f5665;
+
+    font-size: 0.88rem;
+    font-weight: 650;
+}
+
+/* ==========================================================
+   Campos de texto y selectores
+========================================================== */
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 13px;
+
+    color: #332b39;
+    background: #faf8fc;
+
+    border: 1px solid #ded6e5;
+    border-radius: 11px;
+    outline: none;
+
+    font: inherit;
+    font-size: 0.92rem;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* ==========================================================
+   Efecto al pasar el cursor sobre los campos
+========================================================== */
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #cbbfd4;
+}
+
+/* ==========================================================
+   Efecto al seleccionar un campo
+========================================================== */
+
+.form-group input:focus,
+.form-group select:focus {
+    background: #ffffff;
+    border-color: #8468a8;
+    box-shadow: 0 0 0 4px rgba(132, 104, 168, 0.12);
+}

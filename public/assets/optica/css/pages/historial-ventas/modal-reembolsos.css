@@ -1,0 +1,133 @@
+
+/* ==========================================================
+   Historial de Ventas - Modal de registro de reembolsos
+========================================================== */
+
+.sales-refund-modal__content {
+    width: min(650px, 100%);
+}
+
+/* ==========================================================
+   Historial de Ventas - Información de la venta
+========================================================== */
+
+.sales-refund-modal__sale {
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.sales-refund-modal__sale > div {
+    min-width: 0;
+    padding: 14px 16px;
+    background: #faf8fc;
+    border: 1px solid #ebe2f0;
+    border-radius: 13px;
+}
+
+.sales-refund-modal__sale span,
+.sales-refund-modal__sale strong {
+    display: block;
+}
+
+.sales-refund-modal__sale span {
+    margin-bottom: 5px;
+    color: #897b93;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.sales-refund-modal__sale strong {
+    overflow-wrap: anywhere;
+    color: #49365d;
+    font-size: 0.98rem;
+}
+
+/* ==========================================================
+   Historial de Ventas - Importe disponible para reembolso
+========================================================== */
+
+.sales-refund-modal__available {
+    margin-bottom: 23px;
+    padding: 19px 20px;
+    color: #fff;
+    background: linear-gradient(135deg, #76539b, #8e6cb1);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(118, 83, 155, 0.2);
+}
+
+.sales-refund-modal__available span,
+.sales-refund-modal__available strong,
+.sales-refund-modal__available small {
+    display: block;
+}
+
+.sales-refund-modal__available span {
+    margin-bottom: 6px;
+    color: #eee4f7;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.sales-refund-modal__available strong {
+    font-size: 1.65rem;
+    line-height: 1.15;
+}
+
+.sales-refund-modal__available small {
+    margin-top: 7px;
+    color: #e8dcf2;
+    font-size: 0.7rem;
+}
+
+/* ==========================================================
+   Historial de Ventas - Campos del formulario
+========================================================== */
+
+.sales-refund-modal__fields {
+    display: grid;
+    gap: 18px;
+}
+
+.sales-refund-modal textarea {
+    min-height: 96px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   Historial de Ventas - Mensajes de validación
+========================================================== */
+
+.sales-refund-modal__message {
+    min-height: 20px;
+    margin: 12px 0 0;
+    color: #a33333;
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+.sales-refund-modal__message[data-estado="exito"] {
+    color: #267444;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Historial de Ventas - Pie del formulario
+========================================================== */
+
+.sales-refund-modal__footer {
+    margin-top: 21px;
+    padding-top: 20px;
+    border-top: 1px solid #eee7f2;
+}
+
+/* ==========================================================
+   Historial de Ventas - Botón deshabilitado
+========================================================== */
+
+.sales-refund-modal .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

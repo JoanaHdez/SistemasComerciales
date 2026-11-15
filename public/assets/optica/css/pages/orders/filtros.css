@@ -1,0 +1,94 @@
+
+/* ==========================================================
+   OPTICOOL - PEDIDOS
+   Filtros de búsqueda
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal de filtros
+========================================================== */
+
+.orders-filters {
+    display: grid;
+
+    grid-template-columns: minmax(240px, 1fr) repeat(3, minmax(160px, 220px));
+
+    gap: 16px;
+
+    padding: 22px;
+
+    background: #fff;
+
+    border: 1px solid #e9e1ef;
+
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, .06);
+}
+
+/* ==========================================================
+   Contenedor de filtros por fecha
+========================================================== */
+
+.orders-filters__date {
+    display: grid;
+    gap: 6px;
+    color: #776b80;
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Campos de fecha
+========================================================== */
+
+.orders-filters__date input {
+    min-height: 46px;
+    padding: 0 12px;
+    border: 1px solid #ddd4e5;
+    border-radius: 12px;
+    font: inherit;
+}
+
+/* ==========================================================
+   Botón para limpiar filtros
+========================================================== */
+
+.orders-filters__clear {
+    min-height: 46px;
+    padding: 0 18px;
+    background: #f1edf7;
+    color: #5d4579;
+}
+
+/* ==========================================================
+   Campos de búsqueda y selectores
+========================================================== */
+
+.orders-filters__search,
+.orders-filters__select {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 0 16px;
+
+    border: 1px solid #ddd4e5;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font: inherit;
+}
+
+/* ==========================================================
+   Efecto al seleccionar un campo
+========================================================== */
+
+.orders-filters__search:focus,
+.orders-filters__select:focus {
+    border-color: #76539b;
+
+    box-shadow: 0 0 0 4px rgba(118, 83, 155, .10);
+}

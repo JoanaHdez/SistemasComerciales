@@ -1,0 +1,112 @@
+
+/* ==========================================================
+   OPTICOOL - MI PERFIL
+   Formularios, selectores y mensajes
+========================================================== */
+
+/* ==========================================================
+   Selector de usuarios
+========================================================== */
+
+.profile-user-switch {
+    display: grid;
+    gap: 6px;
+
+    color: #776b80;
+
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Campo selector de usuarios
+========================================================== */
+
+.profile-user-switch select {
+    padding: 11px;
+
+    border: 1px solid #ded5ea;
+    border-radius: 12px;
+
+    background: #fff;
+}
+
+/* ==========================================================
+   Mensajes de notificación
+========================================================== */
+
+.profile-message {
+    padding: 12px 16px;
+
+    border-radius: 12px;
+
+    background: #edf8f3;
+    color: #237557;
+
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Mensajes de error
+========================================================== */
+
+.profile-message[data-tipo="error"] {
+    background: #fff0f1;
+    color: #a13c46;
+}
+
+/* ==========================================================
+   Distribución de los formularios
+========================================================== */
+
+.profile-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+/* ==========================================================
+   Etiquetas de los formularios
+========================================================== */
+
+.profile-form-grid label {
+    display: grid;
+    gap: 7px;
+
+    color: #4d4263;
+
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Campos de entrada y selectores
+========================================================== */
+
+.profile-form-grid input,
+.profile-form-grid select {
+    padding: 13px;
+
+    border: 1px solid #ded5ea;
+    border-radius: 12px;
+
+    font: inherit;
+}
+
+/* ==========================================================
+   Casillas de verificación
+========================================================== */
+
+.profile-check {
+    display: flex !important;
+    align-items: center;
+    flex-direction: row !important;
+}
+
+/* ==========================================================
+   Campo checkbox
+========================================================== */
+
+.profile-check input {
+    width: auto;
+}

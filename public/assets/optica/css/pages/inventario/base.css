@@ -1,0 +1,12 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Estructura principal de la página
+========================================================== */
+
+.inventory-page {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 8px 0 32px;
+}

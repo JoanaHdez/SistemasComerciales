@@ -1,0 +1,184 @@
+
+/* ==========================================================
+   Historial de Ventas - Modal de registro de abonos
+========================================================== */
+
+.sales-payment-modal__content {
+    width: min(680px, 100%);
+}
+
+/* ==========================================================
+   Historial de Ventas - Información de la venta
+========================================================== */
+
+.sales-payment-modal__sale {
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.sales-payment-modal__sale > div,
+.sales-payment-modal__totals > div {
+    padding: 15px 17px;
+    background: #faf8fc;
+    border: 1px solid #ebe2f0;
+    border-radius: 13px;
+}
+
+.sales-payment-modal__sale span,
+.sales-payment-modal__sale strong,
+.sales-payment-modal__totals span,
+.sales-payment-modal__totals strong {
+    display: block;
+}
+
+.sales-payment-modal__sale span,
+.sales-payment-modal__totals span {
+    margin-bottom: 5px;
+    color: #897b93;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.sales-payment-modal__sale strong,
+.sales-payment-modal__totals strong {
+    color: #49365d;
+    font-size: 1.05rem;
+}
+
+/* ==========================================================
+   Historial de Ventas - Métodos de pago
+========================================================== */
+
+.sales-payment-methods {
+    margin: 0 0 22px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    border: 0;
+}
+
+.sales-payment-methods legend {
+    grid-column: 1 / -1;
+    margin-bottom: 2px;
+    color: #4d4263;
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Historial de Ventas - Tarjetas de métodos de pago
+========================================================== */
+
+.sales-payment-method {
+    min-width: 0;
+    padding: 14px;
+    background: #ffffff;
+    border: 1px solid #ded5ea;
+    border-radius: 14px;
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ==========================================================
+   Historial de Ventas - Método seleccionado
+========================================================== */
+
+.sales-payment-method:has([data-payment-method]:checked) {
+    background: #f6f1fa;
+    border-color: #8468a8;
+    box-shadow: 0 0 0 3px rgba(132, 104, 168, 0.1);
+}
+
+/* ==========================================================
+   Historial de Ventas - Selector del método de pago
+========================================================== */
+
+.sales-payment-method__selector {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #4d3c5c;
+    font-size: 0.84rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.sales-payment-method__selector input {
+    width: 18px;
+    height: 18px;
+    accent-color: #76539b;
+}
+
+/* ==========================================================
+   Historial de Ventas - Importe del método de pago
+========================================================== */
+
+.sales-payment-method__amount {
+    margin-top: 12px;
+    display: block;
+}
+
+.sales-payment-method__amount[hidden] {
+    display: none;
+}
+
+.sales-payment-method__amount > span {
+    display: block;
+    margin-bottom: 6px;
+    color: #806f8b;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.sales-payment-method__amount input {
+    width: 100%;
+    min-height: 42px;
+    padding: 0 10px;
+    border: 1px solid #d9cee1;
+    border-radius: 10px;
+    outline: none;
+    font: inherit;
+}
+
+.sales-payment-method__amount input:focus {
+    border-color: #7b5ca7;
+    box-shadow: 0 0 0 3px rgba(123, 92, 167, 0.12);
+}
+
+/* ==========================================================
+   Historial de Ventas - Totales
+========================================================== */
+
+.sales-payment-modal__totals {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Mensajes de validación
+========================================================== */
+
+.sales-payment-modal__message {
+    min-height: 20px;
+    margin: 12px 0 0;
+    color: #a33333;
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+.sales-payment-modal__message[data-estado="valido"] {
+    color: #267444;
+}
+
+/* ==========================================================
+   Historial de Ventas - Botón deshabilitado
+========================================================== */
+
+.sales-payment-modal .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

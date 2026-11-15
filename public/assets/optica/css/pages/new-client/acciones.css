@@ -1,0 +1,54 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVO CLIENTE
+   Acciones del formulario
+========================================================== */
+
+/* ==========================================================
+   Contenedor de las acciones
+========================================================== */
+
+.new-client-page__actions {
+    padding-top: 4px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ==========================================================
+   Botón principal para guardar el cliente
+========================================================== */
+
+.new-client-page__button {
+    min-width: 150px;
+    min-height: 50px;
+    padding: 0 28px;
+
+    color: #ffffff;
+    background: #76539b;
+
+    border: 0;
+    border-radius: 13px;
+
+    font: inherit;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 24px rgba(78, 52, 104, 0.18);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* ==========================================================
+   Efecto al pasar el cursor sobre el botón
+========================================================== */
+
+.new-client-page__button:hover {
+    background: #624483;
+    transform: translateY(-1px);
+    box-shadow: 0 13px 28px rgba(78, 52, 104, 0.22);
+}

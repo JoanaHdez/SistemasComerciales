@@ -1,0 +1,48 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Filtros del catálogo de productos
+========================================================== */
+
+/* ==========================================================
+   Contenedor de filtros
+========================================================== */
+
+.inventory-filters {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ==========================================================
+   Selectores de filtros
+========================================================== */
+
+.inventory-filter {
+    min-height: 48px;
+    padding: 0 40px 0 14px;
+
+    border: 1px solid #ded5ea;
+    border-radius: 14px;
+
+    background-color: #ffffff;
+
+    font: inherit;
+    color: #50465f;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* ==========================================================
+   Efecto de enfoque de los filtros
+========================================================== */
+
+.inventory-filter:focus {
+    outline: 0;
+    border-color: #7b5ca7;
+    box-shadow: 0 0 0 3px rgba(123, 92, 167, 0.12);
+}

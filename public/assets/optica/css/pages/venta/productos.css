@@ -1,0 +1,117 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVA VENTA
+   Productos: búsqueda, herramientas y captura manual
+========================================================== */
+
+/* ==========================================================
+   Encabezado de la sección de productos
+========================================================== */
+
+.sale-products__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* ==========================================================
+   Botón para agregar productos
+========================================================== */
+
+.sale-add-product {
+    min-height: 44px;
+    padding: 0 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    color: #684d86;
+    background: #f1ebf5;
+
+    border: 0;
+    border-radius: 11px;
+
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+/* ==========================================================
+   Efecto hover del botón para agregar productos
+========================================================== */
+
+.sale-add-product:hover {
+    background: #e6daee;
+}
+
+/* ==========================================================
+   Icono o símbolo del botón
+========================================================== */
+
+.sale-add-product span {
+    font-size: 1.1rem;
+}
+
+/* ==========================================================
+   Herramientas de búsqueda y captura de productos
+========================================================== */
+
+.sale-product-tools {
+    margin: 18px 0 22px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    gap: 16px;
+    align-items: start;
+}
+
+/* ==========================================================
+   Formulario de captura manual de productos
+========================================================== */
+
+.sale-manual-product {
+    margin: 0;
+    padding: 14px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 80px 110px auto;
+    gap: 8px;
+
+    border: 1px solid #e4dbe9;
+    border-radius: 13px;
+}
+
+/* ==========================================================
+   Título del formulario de captura manual
+========================================================== */
+
+.sale-manual-product legend {
+    padding: 0 7px;
+
+    color: #65586e;
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Campos de captura de productos
+========================================================== */
+
+.sale-manual-product input,
+.sale-line-input,
+.sale-line-discount input,
+.sale-line-discount select {
+    min-width: 0;
+    min-height: 40px;
+    padding: 0 9px;
+
+    border: 1px solid #ded6e6;
+    border-radius: 9px;
+
+    font: inherit;
+}

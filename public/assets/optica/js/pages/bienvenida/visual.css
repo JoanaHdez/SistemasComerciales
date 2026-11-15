@@ -1,0 +1,37 @@
+
+/* ==========================================================
+   OPTICOOL - BIENVENIDA
+   Área visual y representación de lentes
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal del área visual
+========================================================== */
+
+.welcome__visual {
+    position: relative;
+    min-height: 620px;
+}
+
+/* ==========================================================
+   Espacio reservado para los lentes
+========================================================== */
+
+.welcome__glasses-placeholder {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+
+    width: 360px;
+    height: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 0.9rem;
+
+    border: 2px dashed rgba(0, 0, 0, 0.18);
+    border-radius: 1.25rem;
+}

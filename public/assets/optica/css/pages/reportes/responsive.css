@@ -1,0 +1,89 @@
+
+/* ==========================================================
+   OPTICOOL - REPORTES
+   Diseño responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 1000px
+========================================================== */
+
+@media (max-width: 1000px) {
+
+    /* Indicadores del resumen */
+    .reports-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Distribución de las tarjetas */
+    .reports-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tarjetas grandes */
+    .reports-card--large {
+        grid-column: auto;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 700px
+========================================================== */
+
+@media (max-width: 700px) {
+
+    /* Barra superior */
+    .reports-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    /* Selector de periodo */
+    .reports-toolbar__period select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Contenedor de acciones */
+    .reports-toolbar__actions {
+        width: 100%;
+    }
+
+    /* Botones */
+    .reports-button {
+        flex: 1;
+    }
+
+    /* Indicadores del resumen */
+    .reports-summary {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contenedor de la gráfica */
+    .reports-chart {
+        gap: 8px;
+    }
+
+    /* Barras de la gráfica */
+    .reports-chart span {
+        min-width: 20px;
+    }
+}
+
+/* ==========================================================
+   Ajustes adicionales para pantallas de hasta 700px
+   Conservados del CSS original
+========================================================== */
+
+@media (max-width: 700px) {
+
+    /* Contenedor del periodo */
+    .reports-toolbar__period {
+        align-items: stretch;
+    }
+
+    /* Elementos directos del periodo */
+    .reports-toolbar__period > * {
+        width: 100%;
+    }
+}

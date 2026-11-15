@@ -1,0 +1,196 @@
+
+/* ==========================================================
+   Historial de Ventas - Responsive
+========================================================== */
+
+/* ==========================================================
+   Pantallas de hasta 1000px
+   Resumen, filtros y tarjetas
+========================================================== */
+
+@media (max-width: 1000px) {
+    .sales-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sales-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .sale-card__body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 640px
+   Encabezado, resumen y tarjetas
+========================================================== */
+
+@media (max-width: 640px) {
+    .sales-history-page__header {
+        flex-direction: column;
+    }
+
+    .sales-history-page__button {
+        width: 100%;
+    }
+
+    .sales-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .sale-card__header {
+        flex-direction: column;
+    }
+
+    .sale-card__body {
+        grid-template-columns: 1fr;
+    }
+
+    .sale-card__footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sale-card__button {
+        width: 100%;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 700px
+   Modal de detalle y controles de prueba
+========================================================== */
+
+@media (max-width: 700px) {
+    .sales-detail__summary {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sales-test-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 640px
+   Modal de abonos
+========================================================== */
+
+@media (max-width: 640px) {
+    .sales-payment-methods {
+        grid-template-columns: 1fr;
+    }
+
+    .sales-payment-modal__sale,
+    .sales-payment-modal__totals {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 640px
+   Modal de cancelación
+========================================================== */
+
+@media (max-width: 640px) {
+    .sales-cancellation-modal__sale {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 640px
+   Modal de devoluciones
+========================================================== */
+
+@media (max-width: 640px) {
+    .sales-return-modal__content {
+        padding: 22px;
+    }
+
+    .sales-return-modal__heading {
+        gap: 11px;
+    }
+
+    .sales-return-modal__icon {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+        border-radius: 13px;
+    }
+
+    .sales-return-modal__heading .modal__title {
+        font-size: 1.4rem;
+    }
+
+    .sales-return-quantity {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sales-return-condition__options {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 640px
+   Modal de reembolsos
+========================================================== */
+
+@media (max-width: 640px) {
+    .sales-refund-modal__sale {
+        grid-template-columns: 1fr;
+    }
+
+    .sales-refund-modal__available strong {
+        font-size: 1.4rem;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 640px
+   Modal de impresión
+========================================================== */
+
+@media (max-width: 640px) {
+    .sales-print-formats__options {
+        grid-template-columns: 1fr;
+    }
+
+    .sales-print-format__card {
+        min-height: 122px;
+    }
+
+    .sales-print-modal__sale strong::after {
+        content: none;
+    }
+
+    .sales-print-modal__sale strong,
+    .sales-print-modal__sale span {
+        width: 100%;
+    }
+}
+
+/* ==========================================================
+   Pantallas de hasta 640px
+   Modal de pedidos
+========================================================== */
+
+@media (max-width: 640px) {
+    .sales-order-modal__sale {
+        flex-direction: column;
+    }
+
+    .sales-order-product {
+        grid-template-columns: auto 1fr;
+    }
+
+    .sales-order-product input[type="number"] {
+        grid-column: 2;
+    }
+}

@@ -1,0 +1,110 @@
+
+/* ==========================================================
+   Historial de Ventas - Filtros
+========================================================== */
+
+.sales-filters {
+    display: grid;
+
+    grid-template-columns: minmax(240px, 1fr) 210px 210px auto;
+
+    gap: 16px;
+
+    padding: 22px;
+
+    background: #fff;
+
+    border: 1px solid #e9e1ef;
+
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, .06);
+}
+
+/* ==========================================================
+   Historial de Ventas - Buscador y selectores
+========================================================== */
+
+.sales-filters__search,
+.sales-filters__select {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 0 16px;
+
+    border: 1px solid #ddd4e5;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font: inherit;
+}
+
+/* ==========================================================
+   Historial de Ventas - Focus de los campos
+========================================================== */
+
+.sales-filters__search:focus,
+.sales-filters__select:focus {
+    border-color: #76539b;
+
+    box-shadow: 0 0 0 4px rgba(118, 83, 155, .10);
+}
+
+/* ==========================================================
+   Historial de Ventas - Botón limpiar filtros
+========================================================== */
+
+.sales-filters__clear {
+    min-height: 48px;
+    padding: 0 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px solid #d8cbe2;
+    border-radius: 12px;
+
+    background: #f5f0f8;
+    color: #684d86;
+
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 700;
+    white-space: nowrap;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ==========================================================
+   Historial de Ventas - Icono del botón
+========================================================== */
+
+.sales-filters__clear svg {
+    width: 19px;
+    height: 19px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Hover del botón
+========================================================== */
+
+.sales-filters__clear:hover {
+    border-color: #bca9cb;
+    background: #ebe2f2;
+}
+
+/* ==========================================================
+   Historial de Ventas - Focus del botón
+========================================================== */
+
+.sales-filters__clear:focus-visible {
+    outline: none;
+    border-color: #76539b;
+    box-shadow: 0 0 0 4px rgba(118, 83, 155, .10);
+}

@@ -1,0 +1,220 @@
+
+/* ==========================================================
+   Historial de Ventas - Modal de formato de impresión
+========================================================== */
+
+.sales-print-modal__content {
+    width: min(720px, 100%);
+}
+
+/* ==========================================================
+   Historial de Ventas - Información de la venta
+========================================================== */
+
+.sales-print-modal__sale {
+    margin: -9px 0 24px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 9px;
+    color: #817388;
+    border-bottom: 1px solid #eee7f2;
+    font-size: 0.82rem;
+}
+
+.sales-print-modal__sale strong {
+    color: #574463;
+}
+
+.sales-print-modal__sale strong::after {
+    margin-left: 9px;
+    color: #b3a5ba;
+    content: "·";
+}
+
+/* ==========================================================
+   Historial de Ventas - Formatos de impresión
+========================================================== */
+
+.sales-print-formats {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.sales-print-formats legend {
+    margin-bottom: 14px;
+    color: #4d4263;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.sales-print-formats__options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Opción de formato
+========================================================== */
+
+.sales-print-format {
+    min-width: 0;
+    cursor: pointer;
+}
+
+.sales-print-format > input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* ==========================================================
+   Historial de Ventas - Tarjeta de formato
+========================================================== */
+
+.sales-print-format__card {
+    position: relative;
+    min-height: 150px;
+    padding: 21px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    color: #675873;
+    background: #fff;
+    border: 1px solid #ded4e6;
+    border-radius: 17px;
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.sales-print-format:hover .sales-print-format__card {
+    border-color: #bda9cf;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Historial de Ventas - Indicador de selección
+========================================================== */
+
+.sales-print-format__indicator {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #cfc2d8;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.2s ease;
+}
+
+/* ==========================================================
+   Historial de Ventas - Icono del formato
+========================================================== */
+
+.sales-print-format__icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    display: grid;
+    place-items: center;
+    color: #76539b;
+    background: #f2ebf7;
+    border-radius: 14px;
+}
+
+.sales-print-format__icon svg {
+    width: 27px;
+    height: 27px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Descripción del formato
+========================================================== */
+
+.sales-print-format__copy {
+    min-width: 0;
+    padding: 4px 22px 0 0;
+}
+
+.sales-print-format__copy strong,
+.sales-print-format__copy small {
+    display: block;
+}
+
+.sales-print-format__copy strong {
+    margin-bottom: 7px;
+    color: #49365d;
+    font-size: 1rem;
+}
+
+.sales-print-format__copy small {
+    color: #897c91;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   Historial de Ventas - Formato seleccionado
+========================================================== */
+
+.sales-print-format > input:checked + .sales-print-format__card {
+    background: #f7f2fa;
+    border-color: #7b5ca7;
+    box-shadow: 0 0 0 3px rgba(123, 92, 167, 0.11);
+}
+
+.sales-print-format > input:checked + .sales-print-format__card .sales-print-format__indicator {
+    border: 6px solid #76539b;
+}
+
+.sales-print-format > input:focus-visible + .sales-print-format__card {
+    outline: 3px solid rgba(123, 92, 167, 0.22);
+    outline-offset: 3px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Mensajes de validación
+========================================================== */
+
+.sales-print-modal__message {
+    min-height: 20px;
+    margin: 13px 0 0;
+    color: #a33333;
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+/* ==========================================================
+   Historial de Ventas - Pie del formulario
+========================================================== */
+
+.sales-print-modal__footer {
+    margin-top: 19px;
+    padding-top: 20px;
+    border-top: 1px solid #eee7f2;
+}
+
+/* ==========================================================
+   Historial de Ventas - Botón de impresión
+========================================================== */
+
+.sales-print-modal__submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.sales-print-modal__submit svg {
+    width: 19px;
+    height: 19px;
+}
+
+.sales-print-modal__submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

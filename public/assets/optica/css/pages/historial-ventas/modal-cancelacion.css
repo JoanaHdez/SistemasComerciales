@@ -1,0 +1,106 @@
+
+/* ==========================================================
+   Historial de Ventas - Modal de cancelación
+========================================================== */
+
+.sales-cancellation-modal__content {
+    width: min(640px, 100%);
+}
+
+/* ==========================================================
+   Historial de Ventas - Información de la venta
+========================================================== */
+
+.sales-cancellation-modal__sale {
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.sales-cancellation-modal__sale > div {
+    min-width: 0;
+    padding: 15px 17px;
+    background: #faf8fc;
+    border: 1px solid #ebe2f0;
+    border-radius: 13px;
+}
+
+.sales-cancellation-modal__sale span,
+.sales-cancellation-modal__sale strong {
+    display: block;
+}
+
+.sales-cancellation-modal__sale span {
+    margin-bottom: 5px;
+    color: #897b93;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.sales-cancellation-modal__sale strong {
+    overflow-wrap: anywhere;
+    color: #49365d;
+    font-size: 1.05rem;
+}
+
+/* ==========================================================
+   Historial de Ventas - Advertencia de cancelación
+========================================================== */
+
+.sales-cancellation-modal__warning {
+    margin-bottom: 22px;
+    padding: 15px 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #963843;
+    background: #fdebed;
+    border: 1px solid #f4ccd1;
+    border-radius: 13px;
+}
+
+.sales-cancellation-modal__warning span {
+    color: #8b4b53;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   Historial de Ventas - Motivo de cancelación
+========================================================== */
+
+.sales-cancellation-modal textarea {
+    min-height: 112px;
+    resize: vertical;
+}
+
+/* ==========================================================
+   Historial de Ventas - Mensajes de validación
+========================================================== */
+
+.sales-cancellation-modal__message {
+    min-height: 20px;
+    margin: 10px 0 0;
+    color: #a33333;
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+/* ==========================================================
+   Historial de Ventas - Botón confirmar cancelación
+========================================================== */
+
+.sales-cancellation-modal__confirm {
+    background: #a83d49;
+    color: #fff;
+}
+
+.sales-cancellation-modal__confirm:hover:not(:disabled) {
+    background: #8f313c;
+}
+
+.sales-cancellation-modal__confirm:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

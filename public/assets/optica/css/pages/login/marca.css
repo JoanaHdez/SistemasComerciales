@@ -1,0 +1,48 @@
+
+/* ==========================================================
+   OPTICOOL - LOGIN
+   Identidad visual y marca
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal de la marca
+========================================================== */
+
+.login-page__brand {
+    margin-bottom: 2.25rem;
+    text-align: center;
+}
+
+/* ==========================================================
+   Contenedor del logotipo
+========================================================== */
+
+.login-page__logo-placeholder {
+    min-width: 360px;
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #000000;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-weight: 400;
+    line-height: 1;
+
+    border: 2px dashed rgba(0, 0, 0, 0.14);
+    border-radius: 1rem;
+}
+
+/* ==========================================================
+   Subtítulo de la marca
+========================================================== */
+
+.login-page__subtitle {
+    margin: 0.75rem 0 0;
+
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-style: italic;
+}

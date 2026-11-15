@@ -1,0 +1,67 @@
+
+/* ==========================================================
+   OPTICOOL - PEDIDOS
+   Tarjetas de resumen e indicadores
+========================================================== */
+
+/* ==========================================================
+   Contenedor de indicadores
+========================================================== */
+
+.orders-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* ==========================================================
+   Tarjetas individuales
+========================================================== */
+
+.orders-summary__card {
+    padding: 24px;
+
+    background: #fff;
+
+    border: 1px solid #e9e1ef;
+
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(67, 48, 83, .06);
+}
+
+/* ==========================================================
+   Etiquetas de los indicadores
+========================================================== */
+
+.orders-summary__label {
+    display: block;
+
+    color: #8d7d99;
+
+    font-size: .74rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Valores principales
+========================================================== */
+
+.orders-summary__value {
+    display: block;
+
+    margin: 14px 0 8px;
+
+    color: #47345c;
+
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Texto complementario
+========================================================== */
+
+.orders-summary__card small {
+    color: #9a909f;
+}

@@ -1,0 +1,52 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVA VENTA
+   Controles del frontend simulado
+========================================================== */
+
+/* ==========================================================
+   Barra de herramientas de prueba
+========================================================== */
+
+.sales-test-toolbar {
+    margin-bottom: 24px;
+    padding: 14px 18px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+
+    color: #5f5268;
+    background: #f7f3fa;
+
+    border: 1px solid #e4d9ec;
+    border-radius: 14px;
+
+    font-size: 0.8rem;
+}
+
+/* ==========================================================
+   Selectores de la barra de pruebas
+========================================================== */
+
+.sales-test-toolbar select {
+    min-height: 36px;
+    padding: 0 10px;
+
+    border: 1px solid #d8cbe2;
+    border-radius: 9px;
+
+    background: #fff;
+
+    font: inherit;
+}
+
+/* ==========================================================
+   Textos informativos de las pruebas
+========================================================== */
+
+.sales-test-toolbar small {
+    color: #8a7f91;
+}
+

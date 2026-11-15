@@ -1,0 +1,169 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVA VENTA
+   Clientes: búsqueda, selección y acciones
+========================================================== */
+
+/* ==========================================================
+   Distribución de la sección de clientes
+========================================================== */
+
+.sale-client-row {
+    margin-top: 24px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
+    align-items: start;
+}
+
+/* ==========================================================
+   Contenedor de búsqueda
+========================================================== */
+
+.sale-client-search {
+    display: grid;
+    gap: 10px;
+}
+
+/* ==========================================================
+   Campo de búsqueda de clientes
+========================================================== */
+
+.sale-client-search input {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 15px;
+
+    color: #332b39;
+    background: #faf8fc;
+
+    border: 1px solid #ded6e5;
+    border-radius: 12px;
+    outline: none;
+
+    font: inherit;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* ==========================================================
+   Campo de búsqueda enfocado
+========================================================== */
+
+.sale-client-search input:focus {
+    background: #ffffff;
+    border-color: #8468a8;
+    box-shadow: 0 0 0 4px rgba(132, 104, 168, 0.12);
+}
+
+/* ==========================================================
+   Nombre del cliente seleccionado
+========================================================== */
+
+.sale-client-name {
+    color: #8b8191;
+    font-size: 0.84rem;
+}
+
+/* ==========================================================
+   Acciones relacionadas con clientes
+========================================================== */
+
+.sale-client-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* ==========================================================
+   Contenedor de resultados de búsqueda
+========================================================== */
+
+.sale-search-results {
+    margin-top: 12px;
+    padding: 8px;
+
+    display: grid;
+    gap: 6px;
+
+    background: #fff;
+
+    border: 1px solid #e2d8ea;
+    border-radius: 13px;
+
+    box-shadow: 0 12px 26px rgba(67, 48, 83, 0.09);
+}
+
+/* ==========================================================
+   Ocultar resultados cuando corresponda
+========================================================== */
+
+.sale-search-results[hidden] {
+    display: none;
+}
+
+/* ==========================================================
+   Opciones individuales de búsqueda
+========================================================== */
+
+.sale-search-option {
+    width: 100%;
+    padding: 11px 13px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    color: #49365d;
+    background: #fff;
+
+    border: 0;
+    border-radius: 9px;
+
+    text-align: left;
+    font: inherit;
+
+    cursor: pointer;
+}
+
+/* ==========================================================
+   Efectos de interacción de las opciones
+========================================================== */
+
+.sale-search-option:hover,
+.sale-search-option:focus-visible {
+    background: #f0e9f6;
+    outline: none;
+}
+
+/* ==========================================================
+   Información secundaria de cada opción
+========================================================== */
+
+.sale-search-option span {
+    color: #8a7f91;
+    font-size: 0.75rem;
+}
+
+/* ==========================================================
+   Mensaje cuando no existen coincidencias
+========================================================== */
+
+.sale-search-empty {
+    margin: 0;
+    padding: 10px;
+
+    color: #8a7f91;
+}
+
+/* ==========================================================
+   Contenedor de consulta de clientes
+========================================================== */
+
+.sale-consultation {
+    margin-top: 18px;
+}

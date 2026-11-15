@@ -1,0 +1,95 @@
+
+/* ==========================================================
+   OPTICOOL - REPORTES
+   Gráficas y barras estadísticas
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal de la gráfica
+========================================================== */
+
+.reports-chart {
+    height: 260px;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+
+    padding-top: 20px;
+}
+
+/* ==========================================================
+   Barras generales de la gráfica
+========================================================== */
+
+.reports-chart span {
+    flex: 1;
+
+    min-width: 34px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #8b68b1 0%,
+            #654487 100%
+        );
+
+    border-radius: 12px 12px 4px 4px;
+}
+
+/* ==========================================================
+   Ajustes adicionales del contenedor
+   Conservados del CSS original
+========================================================== */
+
+.reports-chart {
+    display: flex !important;
+    align-items: flex-end !important;
+    gap: 10px !important;
+    min-height: 240px;
+}
+
+/* ==========================================================
+   Contenedor individual de cada barra
+========================================================== */
+
+.report-bar {
+    height: 210px;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    min-width: 28px;
+}
+
+/* ==========================================================
+   Barra estadística individual
+========================================================== */
+
+.report-bar span {
+    width: 70%;
+
+    background: linear-gradient(#9c7bc0, #76539b);
+
+    border-radius: 8px 8px 2px 2px;
+}
+
+/* ==========================================================
+   Etiquetas inferiores de las barras
+========================================================== */
+
+.report-bar small {
+    width: 100%;
+    margin-top: 7px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+
+    font-size: .62rem;
+    color: #8d7d99;
+}

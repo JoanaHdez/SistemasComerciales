@@ -1,0 +1,305 @@
+
+/* ==========================================================
+   Historial de Ventas - Modal de registro de devoluciones
+========================================================== */
+
+.sales-return-modal__content {
+    width: min(720px, 100%);
+    padding: 30px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Encabezado
+========================================================== */
+
+.sales-return-modal__header {
+    margin-bottom: 22px;
+}
+
+.sales-return-modal__heading {
+    min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Icono del encabezado
+========================================================== */
+
+.sales-return-modal__icon {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    display: grid;
+    place-items: center;
+    color: #76539b;
+    background: #f0e8f7;
+    border: 1px solid #e3d5ef;
+    border-radius: 16px;
+}
+
+.sales-return-modal__icon svg {
+    width: 27px;
+    height: 27px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Título y descripción
+========================================================== */
+
+.sales-return-modal__heading .modal__title {
+    margin: 4px 0 0;
+    font-size: 1.7rem;
+}
+
+.sales-return-modal__heading p {
+    margin: 7px 0 0;
+    overflow-wrap: anywhere;
+    color: #817388;
+    font-size: 0.82rem;
+}
+
+.sales-return-modal__heading p strong {
+    color: #574463;
+}
+
+/* ==========================================================
+   Historial de Ventas - Aviso informativo
+========================================================== */
+
+.sales-return-modal__notice {
+    margin-bottom: 24px;
+    padding: 15px 17px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #5d4971;
+    background: #f5effa;
+    border: 1px solid #e4d7ef;
+    border-radius: 15px;
+}
+
+.sales-return-modal__notice-icon {
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: #8060a3;
+    border-radius: 50%;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.sales-return-modal__notice strong,
+.sales-return-modal__notice div > span {
+    display: block;
+}
+
+.sales-return-modal__notice strong {
+    margin-bottom: 4px;
+    font-size: 0.86rem;
+}
+
+.sales-return-modal__notice div > span {
+    color: #83718f;
+    font-size: 0.76rem;
+    line-height: 1.45;
+}
+
+/* ==========================================================
+   Historial de Ventas - Campos del formulario
+========================================================== */
+
+.sales-return-modal__fields {
+    display: grid;
+    gap: 21px;
+}
+
+.sales-return-modal .form-group {
+    gap: 9px;
+}
+
+.sales-return-modal .form-group > label,
+.sales-return-condition legend {
+    color: #493b55;
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.sales-return-modal select,
+.sales-return-modal textarea {
+    background: #fff;
+}
+
+.sales-return-modal textarea {
+    min-height: 108px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   Historial de Ventas - Control de cantidades
+========================================================== */
+
+.sales-return-quantity {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sales-return-quantity__control {
+    display: inline-grid;
+    grid-template-columns: 44px 62px 44px;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #dcd0e6;
+    border-radius: 13px;
+    background: #fff;
+}
+
+.sales-return-quantity__control button {
+    height: 44px;
+    border: 0;
+    color: #6f4f91;
+    background: #f4eef8;
+    font: inherit;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sales-return-quantity__control button:hover:not(:disabled) {
+    color: #fff;
+    background: #76539b;
+}
+
+.sales-return-quantity__control button:disabled {
+    color: #b6aabb;
+    background: #f7f4f9;
+    cursor: not-allowed;
+}
+
+.sales-return-quantity__control output {
+    display: grid;
+    place-items: center;
+    min-height: 44px;
+    color: #3f304a;
+    border-right: 1px solid #e5dcea;
+    border-left: 1px solid #e5dcea;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.sales-return-quantity__available {
+    padding: 8px 12px;
+    color: #705989;
+    background: #f5f0f8;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Historial de Ventas - Estado del producto
+========================================================== */
+
+.sales-return-condition {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.sales-return-condition legend {
+    margin-bottom: 10px;
+}
+
+.sales-return-condition__options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.sales-return-condition__options label {
+    min-width: 0;
+    cursor: pointer;
+}
+
+.sales-return-condition__options input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.sales-return-condition__options span {
+    min-height: 43px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b5b75;
+    background: #fff;
+    border: 1px solid #ded4e6;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+/* ==========================================================
+   Historial de Ventas - Estado seleccionado
+========================================================== */
+
+.sales-return-condition__options input:checked + span {
+    color: #fff;
+    background: #76539b;
+    border-color: #76539b;
+    box-shadow: 0 5px 15px rgba(118, 83, 155, 0.22);
+}
+
+.sales-return-condition__options input:focus-visible + span {
+    outline: 3px solid rgba(123, 92, 167, 0.2);
+    outline-offset: 2px;
+}
+
+/* ==========================================================
+   Historial de Ventas - Mensajes de validación
+========================================================== */
+
+.sales-return-modal__message {
+    min-height: 20px;
+    margin: 13px 0 0;
+    color: #a33333;
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+.sales-return-modal__message[data-estado="exito"] {
+    color: #267444;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Historial de Ventas - Pie del formulario
+========================================================== */
+
+.sales-return-modal__footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee7f2;
+}
+
+/* ==========================================================
+   Historial de Ventas - Botón deshabilitado
+========================================================== */
+
+.sales-return-modal .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

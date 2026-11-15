@@ -1,0 +1,52 @@
+
+/* ==========================================================
+   OPTICOOL - NUEVA VENTA
+   Mensajes, notificaciones y textos de ayuda
+========================================================== */
+
+/* ==========================================================
+   Mensajes generales del formulario
+========================================================== */
+
+.sale-form__message {
+    margin-bottom: 20px;
+    padding: 14px 18px;
+
+    border-radius: 12px;
+
+    background: #fff2f2;
+    border: 1px solid #f1c5c5;
+
+    color: #a33333;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   Ocultar mensajes cuando corresponda
+========================================================== */
+
+.sale-form__message[hidden] {
+    display: none;
+}
+
+/* ==========================================================
+   Mensajes de éxito
+========================================================== */
+
+.sale-form__message[data-tipo="exito"] {
+    background: #f1faf4;
+    border-color: #b9e1c5;
+    color: #267444;
+}
+
+/* ==========================================================
+   Textos de ayuda
+========================================================== */
+
+.sale-help {
+    margin: 12px 0 0;
+
+    color: #8a7f91;
+    font-size: 0.78rem;
+}
+

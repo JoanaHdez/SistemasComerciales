@@ -1,0 +1,39 @@
+
+/* ==========================================================
+   OPTICOOL - REPORTES
+   Listas de información
+========================================================== */
+
+/* ==========================================================
+   Contenedor principal de las listas
+========================================================== */
+
+.reports-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+/* ==========================================================
+   Elementos individuales de las listas
+========================================================== */
+
+.reports-list li {
+    padding: 14px 0;
+
+    color: #5d5165;
+
+    border-bottom: 1px solid #eee8f1;
+
+    font-size: 0.88rem;
+    font-weight: 650;
+}
+
+/* ==========================================================
+   Último elemento de la lista
+========================================================== */
+
+.reports-list li:last-child {
+    border-bottom: 0;
+}

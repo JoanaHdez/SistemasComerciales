@@ -1,1 +1,23 @@
-.main-menu{position:relative;min-height:100vh;overflow:hidden;padding:clamp(24px,5vw,70px);background:linear-gradient(145deg,#f6f1fb 0%,#e9def5 55%,#ddd0ed 100%);color:#332743}.main-menu__container{position:relative;z-index:2;width:min(1180px,100%);margin:auto}.main-menu__brand{text-align:center;margin-bottom:42px}.main-menu__eyebrow{color:#76539b;font-size:.75rem;font-weight:800;letter-spacing:.14em}.main-menu__brand h1{margin:8px 0 0;font-size:clamp(3.3rem,8vw,6.5rem);letter-spacing:-.07em;color:#4b365f}.main-menu__brand p{margin:2px 0;color:#776b80;font-family:Georgia,serif;font-style:italic;font-size:1.25rem}.main-menu__actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.main-menu__button{min-height:132px;padding:22px;display:flex;align-items:center;gap:16px;color:#433252;background:rgba(255,255,255,.9);border:1px solid rgba(118,83,155,.12);border-radius:22px;box-shadow:0 14px 35px rgba(67,48,83,.08);text-decoration:none;transition:.2s}.main-menu__button:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(67,48,83,.14)}.main-menu__button>span:last-child{display:grid;gap:5px}.main-menu__button strong{font-size:1rem}.main-menu__button small{color:#8d7d99;line-height:1.4}.main-menu__icon{width:45px;height:45px;flex:0 0 45px;display:grid;place-items:center;border-radius:14px;background:#eee8f5;color:#76539b;font-weight:900;font-size:1.25rem}.main-menu__footer-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:32px}.main-menu__footer-actions a{padding:10px 15px;color:#5d4579;background:rgba(255,255,255,.55);border-radius:999px;text-decoration:none;font-size:.82rem;font-weight:700}.main-menu__decorations span{position:absolute;width:230px;height:230px;border-radius:50%;background:rgba(155,118,195,.12);filter:blur(2px)}.main-menu__decorations span:nth-child(1){top:-90px;left:-70px}.main-menu__decorations span:nth-child(2){right:-80px;top:20%}.main-menu__decorations span:nth-child(3){left:18%;bottom:-150px}@media(max-width:1000px){.main-menu__actions{grid-template-columns:repeat(2,1fr)}}@media(max-width:580px){.main-menu{padding:24px 16px}.main-menu__actions{grid-template-columns:1fr}.main-menu__button{min-height:105px}.main-menu__footer-actions{align-items:stretch}.main-menu__footer-actions a{flex:1 1 42%;text-align:center}}
+
+/* ==========================================================
+   OPTICOOL - MENÚ PRINCIPAL
+   Archivo principal de estilos
+========================================================== */
+
+/* 01. Estructura general */
+@import url("./main-menu/base.css");
+
+/* 02. Identidad visual y marca */
+@import url("./main-menu/marca.css");
+
+/* 03. Tarjetas y acciones de navegación */
+@import url("./main-menu/acciones.css");
+
+/* 04. Acciones y enlaces inferiores */
+@import url("./main-menu/footer.css");
+
+/* 05. Elementos decorativos del fondo */
+@import url("./main-menu/decoraciones.css");
+
+/* 06. Adaptaciones responsive */
+@import url("./main-menu/responsive.css");

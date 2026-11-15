@@ -1,0 +1,139 @@
+
+/* ==========================================================
+   OPTICOOL - INVENTARIO
+   Formulario de registro y edición de productos
+========================================================== */
+
+/* ==========================================================
+   Contenedor del formulario
+========================================================== */
+
+.inventory-product-modal__form {
+    padding: 24px;
+}
+
+/* ==========================================================
+   Separación entre secciones del formulario
+========================================================== */
+
+.inventory-form-section + .inventory-form-section {
+    margin-top: 24px;
+    padding-top: 22px;
+    border-top: 1px solid #ede7f0;
+}
+
+/* ==========================================================
+   Encabezado de cada sección
+========================================================== */
+
+.inventory-form-section__header {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+/* ==========================================================
+   Indicador de sección
+========================================================== */
+
+.inventory-form-section__header > span {
+    display: grid;
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    place-items: center;
+    border-radius: 8px;
+    background: #eee6f4;
+    color: #684d80;
+    font-size: .68rem;
+    font-weight: 900;
+}
+
+/* ==========================================================
+   Título de sección
+========================================================== */
+
+.inventory-form-section__header h3 {
+    margin: 0;
+    font-size: .95rem;
+}
+
+/* ==========================================================
+   Descripción de sección
+========================================================== */
+
+.inventory-form-section__header p {
+    margin: 3px 0 0;
+    color: #8c8192;
+    font-size: .72rem;
+}
+
+/* ==========================================================
+   Distribución de campos en tres columnas
+========================================================== */
+
+.inventory-product-modal .modal__grid--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* ==========================================================
+   Textos de ayuda de los campos
+========================================================== */
+
+.inventory-product-modal .form-group small {
+    color: #918795;
+    font-size: .68rem;
+}
+
+/* ==========================================================
+   Campos de captura
+========================================================== */
+
+.inventory-product-modal .form-group input {
+    min-height: 44px;
+    border-radius: 10px;
+}
+
+/* ==========================================================
+   Contenedor de importes monetarios
+========================================================== */
+
+.inventory-money-field {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ded5ea;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* ==========================================================
+   Efecto de enfoque en importes
+========================================================== */
+
+.inventory-money-field:focus-within {
+    border-color: #76539b;
+    box-shadow: 0 0 0 3px rgba(118, 83, 155, .12);
+}
+
+/* ==========================================================
+   Símbolo monetario
+========================================================== */
+
+.inventory-money-field > span {
+    padding-left: 12px;
+    color: #76539b;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   Campo numérico del importe
+========================================================== */
+
+.inventory-product-modal .inventory-money-field input {
+    min-width: 0;
+    border: 0;
+    box-shadow: none;
+}
